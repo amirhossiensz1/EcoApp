@@ -1,0 +1,3720 @@
+[1mdiff --git a/.vs/Eco/v16/.suo b/.vs/Eco/v16/.suo[m
+[1mindex 17d50e2..3c287ab 100644[m
+Binary files a/.vs/Eco/v16/.suo and b/.vs/Eco/v16/.suo differ
+[1mdiff --git a/BLL/ScheduleGroupBll.cs b/BLL/ScheduleGroupBll.cs[m
+[1mindex f82dbf5..acad4c2 100644[m
+[1m--- a/BLL/ScheduleGroupBll.cs[m
+[1m+++ b/BLL/ScheduleGroupBll.cs[m
+[36m@@ -18,11 +18,6 @@[m [mnamespace BLL[m
+             return _schGroupDb.SelectAll();[m
+         }[m
+ [m
+[31m-        public List<ScheduleGroupViewModel> SelectAllForView()[m
+[31m-        {[m
+[31m-            return _schGroupDb.SelectAllForView();[m
+[31m-        }[m
+[31m-[m
+         public int Update(ScheduleGroup schGroup)[m
+         {[m
+             return _schGroupDb.Update(schGroup);[m
+[1mdiff --git a/BLL/bin/Debug/BLL.dll b/BLL/bin/Debug/BLL.dll[m
+[1mindex db84842..2729419 100644[m
+Binary files a/BLL/bin/Debug/BLL.dll and b/BLL/bin/Debug/BLL.dll differ
+[1mdiff --git a/BLL/bin/Debug/BLL.pdb b/BLL/bin/Debug/BLL.pdb[m
+[1mindex 9ba61f2..1591af7 100644[m
+Binary files a/BLL/bin/Debug/BLL.pdb and b/BLL/bin/Debug/BLL.pdb differ
+[1mdiff --git a/BLL/bin/Debug/DBLayer.dll b/BLL/bin/Debug/DBLayer.dll[m
+[1mindex 9aaad8a..f076985 100644[m
+Binary files a/BLL/bin/Debug/DBLayer.dll and b/BLL/bin/Debug/DBLayer.dll differ
+[1mdiff --git a/BLL/bin/Debug/DBLayer.pdb b/BLL/bin/Debug/DBLayer.pdb[m
+[1mindex d5b383f..cb91a3e 100644[m
+Binary files a/BLL/bin/Debug/DBLayer.pdb and b/BLL/bin/Debug/DBLayer.pdb differ
+[1mdiff --git a/BLL/bin/Debug/Interop.zkemkeeper.dll b/BLL/bin/Debug/Interop.zkemkeeper.dll[m
+[1mindex f9d5a86..97c4485 100644[m
+Binary files a/BLL/bin/Debug/Interop.zkemkeeper.dll and b/BLL/bin/Debug/Interop.zkemkeeper.dll differ
+[1mdiff --git a/BLL/bin/Debug/Model.dll b/BLL/bin/Debug/Model.dll[m
+[1mindex ef7ddbf..6d01c4f 100644[m
+Binary files a/BLL/bin/Debug/Model.dll and b/BLL/bin/Debug/Model.dll differ
+[1mdiff --git a/BLL/bin/Debug/Model.pdb b/BLL/bin/Debug/Model.pdb[m
+[1mindex ae63f26..bb01b4b 100644[m
+Binary files a/BLL/bin/Debug/Model.pdb and b/BLL/bin/Debug/Model.pdb differ
+[1mdiff --git a/BLL/obj/Debug/BLL.csproj.AssemblyReference.cache b/BLL/obj/Debug/BLL.csproj.AssemblyReference.cache[m
+[1mindex 57fdedc..19e04d7 100644[m
+Binary files a/BLL/obj/Debug/BLL.csproj.AssemblyReference.cache and b/BLL/obj/Debug/BLL.csproj.AssemblyReference.cache differ
+[1mdiff --git a/BLL/obj/Debug/BLL.csproj.FileListAbsolute.txt b/BLL/obj/Debug/BLL.csproj.FileListAbsolute.txt[m
+[1mindex 39a5d0f..119ea11 100644[m
+[1m--- a/BLL/obj/Debug/BLL.csproj.FileListAbsolute.txt[m
+[1m+++ b/BLL/obj/Debug/BLL.csproj.FileListAbsolute.txt[m
+[36m@@ -374,10 +374,10 @@[m [mD:\Project\C#Project\ControllerProject\ECOApp\BLL\bin\Debug\EntityFramework.xml[m
+ D:\Project\C#Project\ControllerProject\ECOApp\BLL\bin\Debug\EntityFramework.SqlServer.xml[m
+ D:\Project\C#Project\ControllerProject\ECOApp\BLL\bin\Debug\Newtonsoft.Json.xml[m
+ D:\Project\C#Project\ControllerProject\ECOApp\BLL\bin\Debug\Interop.zkemkeeper.dll[m
+[31m-D:\Project\C#Project\ControllerProject\ECOApp\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache[m
+ D:\Project\C#Project\ControllerProject\ECOApp\BLL\obj\Debug\Interop.zkemkeeper.dll[m
+ D:\Project\C#Project\ControllerProject\ECOApp\BLL\obj\Debug\BLL.csproj.ResolveComReference.cache[m
+ D:\Project\C#Project\ControllerProject\ECOApp\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache[m
+ D:\Project\C#Project\ControllerProject\ECOApp\BLL\obj\Debug\BLL.csproj.CopyComplete[m
+ D:\Project\C#Project\ControllerProject\ECOApp\BLL\obj\Debug\BLL.dll[m
+ D:\Project\C#Project\ControllerProject\ECOApp\BLL\obj\Debug\BLL.pdb[m
+[32m+[m[32mD:\Project\C#Project\ControllerProject\ECOApp\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache[m
+[1mdiff --git a/BLL/obj/Debug/BLL.dll b/BLL/obj/Debug/BLL.dll[m
+[1mindex db84842..2729419 100644[m
+Binary files a/BLL/obj/Debug/BLL.dll and b/BLL/obj/Debug/BLL.dll differ
+[1mdiff --git a/BLL/obj/Debug/BLL.pdb b/BLL/obj/Debug/BLL.pdb[m
+[1mindex 9ba61f2..1591af7 100644[m
+Binary files a/BLL/obj/Debug/BLL.pdb and b/BLL/obj/Debug/BLL.pdb differ
+[1mdiff --git a/BLL/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache b/BLL/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache[m
+[1mindex f02e132..8603a79 100644[m
+Binary files a/BLL/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache and b/BLL/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache differ
+[1mdiff --git a/BLL/obj/Debug/Interop.zkemkeeper.dll b/BLL/obj/Debug/Interop.zkemkeeper.dll[m
+[1mindex f9d5a86..97c4485 100644[m
+Binary files a/BLL/obj/Debug/Interop.zkemkeeper.dll and b/BLL/obj/Debug/Interop.zkemkeeper.dll differ
+[1mdiff --git a/DBLayer/ScheduleGroupDB.cs b/DBLayer/ScheduleGroupDB.cs[m
+[1mindex 0fcc58f..f01d828 100644[m
+[1m--- a/DBLayer/ScheduleGroupDB.cs[m
+[1m+++ b/DBLayer/ScheduleGroupDB.cs[m
+[36m@@ -37,25 +37,6 @@[m [mnamespace DBLayer[m
+             }[m
+         }[m
+ [m
+[31m-        public List<ScheduleGroupViewModel> SelectAllForView()[m
+[31m-        {[m
+[31m-            try[m
+[31m-            {[m
+[31m-                _ecoDbEntities.ScheduleGroups.Load();[m
+[31m-                return  _ecoDbEntities.ScheduleGroups.Local.ToList()[m
+[31m-                    .Select(x => new ScheduleGroupViewModel()[m
+[31m-                    {[m
+[31m-                        ID =x.ID,[m
+[31m-                        Name = x.Name,[m
+[31m-                        NameId = x.Name + " ("+ x.ID +")"[m
+[31m-                    }).ToList();[m
+[31m-            }[m
+[31m-            catch (Exception)[m
+[31m-            {[m
+[31m-                throw;[m
+[31m-            }[m
+[31m-        }[m
+[31m-[m
+         public int Update(ScheduleGroup schGroup)[m
+         {[m
+             try[m
+[1mdiff --git a/DBLayer/bin/Debug/DBLayer.dll b/DBLayer/bin/Debug/DBLayer.dll[m
+[1mindex 9aaad8a..f076985 100644[m
+Binary files a/DBLayer/bin/Debug/DBLayer.dll and b/DBLayer/bin/Debug/DBLayer.dll differ
+[1mdiff --git a/DBLayer/bin/Debug/DBLayer.pdb b/DBLayer/bin/Debug/DBLayer.pdb[m
+[1mindex d5b383f..cb91a3e 100644[m
+Binary files a/DBLayer/bin/Debug/DBLayer.pdb and b/DBLayer/bin/Debug/DBLayer.pdb differ
+[1mdiff --git a/DBLayer/bin/Debug/Model.dll b/DBLayer/bin/Debug/Model.dll[m
+[1mindex ef7ddbf..6d01c4f 100644[m
+Binary files a/DBLayer/bin/Debug/Model.dll and b/DBLayer/bin/Debug/Model.dll differ
+[1mdiff --git a/DBLayer/bin/Debug/Model.pdb b/DBLayer/bin/Debug/Model.pdb[m
+[1mindex ae63f26..bb01b4b 100644[m
+Binary files a/DBLayer/bin/Debug/Model.pdb and b/DBLayer/bin/Debug/Model.pdb differ
+[1mdiff --git a/DBLayer/obj/Debug/DBLayer.csproj.AssemblyReference.cache b/DBLayer/obj/Debug/DBLayer.csproj.AssemblyReference.cache[m
+[1mindex f328abc..44c6c05 100644[m
+Binary files a/DBLayer/obj/Debug/DBLayer.csproj.AssemblyReference.cache and b/DBLayer/obj/Debug/DBLayer.csproj.AssemblyReference.cache differ
+[1mdiff --git a/DBLayer/obj/Debug/DBLayer.csproj.FileListAbsolute.txt b/DBLayer/obj/Debug/DBLayer.csproj.FileListAbsolute.txt[m
+[1mindex 88790c8..76695b4 100644[m
+[1m--- a/DBLayer/obj/Debug/DBLayer.csproj.FileListAbsolute.txt[m
+[1m+++ b/DBLayer/obj/Debug/DBLayer.csproj.FileListAbsolute.txt[m
+[36m@@ -292,8 +292,8 @@[m [mD:\Project\C#Project\ControllerProject\ECOApp\DBLayer\bin\Debug\de\DevExpress.Da[m
+ D:\Project\C#Project\ControllerProject\ECOApp\DBLayer\bin\Debug\es\DevExpress.Data.v15.1.resources.dll[m
+ D:\Project\C#Project\ControllerProject\ECOApp\DBLayer\bin\Debug\ja\DevExpress.Data.v15.1.resources.dll[m
+ D:\Project\C#Project\ControllerProject\ECOApp\DBLayer\bin\Debug\ru\DevExpress.Data.v15.1.resources.dll[m
+[31m-D:\Project\C#Project\ControllerProject\ECOApp\DBLayer\obj\Debug\DBLayer.csproj.AssemblyReference.cache[m
+ D:\Project\C#Project\ControllerProject\ECOApp\DBLayer\obj\Debug\DBLayer.csproj.CoreCompileInputs.cache[m
+ D:\Project\C#Project\ControllerProject\ECOApp\DBLayer\obj\Debug\DBLayer.csproj.CopyComplete[m
+ D:\Project\C#Project\ControllerProject\ECOApp\DBLayer\obj\Debug\DBLayer.dll[m
+ D:\Project\C#Project\ControllerProject\ECOApp\DBLayer\obj\Debug\DBLayer.pdb[m
+[32m+[m[32mD:\Project\C#Project\ControllerProject\ECOApp\DBLayer\obj\Debug\DBLayer.csproj.AssemblyReference.cache[m
+[1mdiff --git a/DBLayer/obj/Debug/DBLayer.dll b/DBLayer/obj/Debug/DBLayer.dll[m
+[1mindex 9aaad8a..f076985 100644[m
+Binary files a/DBLayer/obj/Debug/DBLayer.dll and b/DBLayer/obj/Debug/DBLayer.dll differ
+[1mdiff --git a/DBLayer/obj/Debug/DBLayer.pdb b/DBLayer/obj/Debug/DBLayer.pdb[m
+[1mindex d5b383f..cb91a3e 100644[m
+Binary files a/DBLayer/obj/Debug/DBLayer.pdb and b/DBLayer/obj/Debug/DBLayer.pdb differ
+[1mdiff --git a/Model/Model.csproj b/Model/Model.csproj[m
+[1mindex 68d1f18..467f994 100644[m
+[1m--- a/Model/Model.csproj[m
+[1m+++ b/Model/Model.csproj[m
+[36m@@ -152,7 +152,6 @@[m
+     <Compile Include="ScheduleGroup.cs">[m
+       <DependentUpon>Model.tt</DependentUpon>[m
+     </Compile>[m
+[31m-    <Compile Include="ScheduleGroupViewModel.cs" />[m
+     <Compile Include="Setting.cs">[m
+       <DependentUpon>Model.tt</DependentUpon>[m
+     </Compile>[m
+[1mdiff --git a/Model/ScheduleGroupViewModel.cs b/Model/ScheduleGroupViewModel.cs[m
+[1mdeleted file mode 100644[m
+[1mindex 77b8e9b..0000000[m
+[1m--- a/Model/ScheduleGroupViewModel.cs[m
+[1m+++ /dev/null[m
+[36m@@ -1,28 +0,0 @@[m
+[31m-﻿using System;[m
+[31m-using System.Collections.Generic;[m
+[31m-using System.Linq;[m
+[31m-using System.Text;[m
+[31m-using System.Threading.Tasks;[m
+[31m-[m
+[31m-namespace Model[m
+[31m-{[m
+[31m-    public class ScheduleGroupViewModel[m
+[31m-    {[m
+[31m-        public int ID { get; set; }[m
+[31m-        public string Name { get; set; }[m
+[31m-[m
+[31m-        private string nameId;[m
+[31m-[m
+[31m-        public string NameId[m
+[31m-        {[m
+[31m-            get[m
+[31m-            {[m
+[31m-                return nameId;[m
+[31m-            }[m
+[31m-            set[m
+[31m-            {[m
+[31m-                nameId = value;[m
+[31m-            }[m
+[31m-        }[m
+[31m-    }[m
+[31m-}[m
+[1mdiff --git a/Model/bin/Debug/Model.dll b/Model/bin/Debug/Model.dll[m
+[1mindex ef7ddbf..6d01c4f 100644[m
+Binary files a/Model/bin/Debug/Model.dll and b/Model/bin/Debug/Model.dll differ
+[1mdiff --git a/Model/bin/Debug/Model.pdb b/Model/bin/Debug/Model.pdb[m
+[1mindex ae63f26..bb01b4b 100644[m
+Binary files a/Model/bin/Debug/Model.pdb and b/Model/bin/Debug/Model.pdb differ
+[1mdiff --git a/Model/obj/Debug/Model.csproj.AssemblyReference.cache b/Model/obj/Debug/Model.csproj.AssemblyReference.cache[m
+[1mindex 2781c77..df3b599 100644[m
+Binary files a/Model/obj/Debug/Model.csproj.AssemblyReference.cache and b/Model/obj/Debug/Model.csproj.AssemblyReference.cache differ
+[1mdiff --git a/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache b/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache[m
+[1mindex 4afdefd..d92f646 100644[m
+[1m--- a/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache[m
+[1m+++ b/Model/obj/Debug/Model.csproj.CoreCompileInputs.cache[m
+[36m@@ -1 +1 @@[m
+[31m-0fc14d3ca522532dd93f02d403744036b38a1370[m
+[32m+[m[32m23d7e1b25f2103f9c1612b82ae17e202174f683f[m
+[1mdiff --git a/Model/obj/Debug/Model.csproj.FileListAbsolute.txt b/Model/obj/Debug/Model.csproj.FileListAbsolute.txt[m
+[1mindex e645692..0338d3f 100644[m
+[1m--- a/Model/obj/Debug/Model.csproj.FileListAbsolute.txt[m
+[1m+++ b/Model/obj/Debug/Model.csproj.FileListAbsolute.txt[m
+[36m@@ -263,8 +263,8 @@[m [mD:\Project\C#Project\ControllerProject\ECOApp\Model\bin\Debug\EntityFramework.Sq[m
+ D:\Project\C#Project\ControllerProject\ECOApp\Model\bin\Debug\dotMemory.Unit.xml[m
+ D:\Project\C#Project\ControllerProject\ECOApp\Model\bin\Debug\EntityFramework.xml[m
+ D:\Project\C#Project\ControllerProject\ECOApp\Model\bin\Debug\EntityFramework.SqlServer.xml[m
+[31m-D:\Project\C#Project\ControllerProject\ECOApp\Model\obj\Debug\Model.csproj.AssemblyReference.cache[m
+ D:\Project\C#Project\ControllerProject\ECOApp\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache[m
+ D:\Project\C#Project\ControllerProject\ECOApp\Model\obj\Debug\Model.csproj.CopyComplete[m
+ D:\Project\C#Project\ControllerProject\ECOApp\Model\obj\Debug\Model.dll[m
+ D:\Project\C#Project\ControllerProject\ECOApp\Model\obj\Debug\Model.pdb[m
+[32m+[m[32mD:\Project\C#Project\ControllerProject\ECOApp\Model\obj\Debug\Model.csproj.AssemblyReference.cache[m
+[1mdiff --git a/Model/obj/Debug/Model.dll b/Model/obj/Debug/Model.dll[m
+[1mindex ef7ddbf..6d01c4f 100644[m
+Binary files a/Model/obj/Debug/Model.dll and b/Model/obj/Debug/Model.dll differ
+[1mdiff --git a/Model/obj/Debug/Model.pdb b/Model/obj/Debug/Model.pdb[m
+[1mindex ae63f26..bb01b4b 100644[m
+Binary files a/Model/obj/Debug/Model.pdb and b/Model/obj/Debug/Model.pdb differ
+[1mdiff --git a/README.md b/README.md[m
+[1mdeleted file mode 100644[m
+[1mindex 0ca446a..0000000[m
+[1m--- a/README.md[m
+[1m+++ /dev/null[m
+[36m@@ -1,20 +0,0 @@[m
+[31m-# Introduction [m
+[31m-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. [m
+[31m-[m
+[31m-# Getting Started[m
+[31m-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:[m
+[31m-1.	Installation process[m
+[31m-2.	Software dependencies[m
+[31m-3.	Latest releases[m
+[31m-4.	API references[m
+[31m-[m
+[31m-# Build and Test[m
+[31m-TODO: Describe and show how to build your code and run the tests. [m
+[31m-[m
+[31m-# Contribute[m
+[31m-TODO: Explain how other users and developers can contribute to make your code better. [m
+[31m-[m
+[31m-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:[m
+[31m-- [ASP.NET Core](https://github.com/aspnet/Home)[m
+[31m-- [Visual Studio Code](https://github.com/Microsoft/vscode)[m
+[31m-- [Chakra Core](https://github.com/Microsoft/ChakraCore)[m
+\ No newline at end of file[m
+[1mdiff --git a/UI/FrmScheduleGroup.Designer.cs b/UI/FrmScheduleGroup.Designer.cs[m
+[1mindex 8de3ddc..3adb502 100644[m
+[1m--- a/UI/FrmScheduleGroup.Designer.cs[m
+[1m+++ b/UI/FrmScheduleGroup.Designer.cs[m
+[36m@@ -150,10 +150,9 @@[m
+             // chkSchGroupListBox[m
+             // [m
+             this.chkSchGroupListBox.CheckOnClick = true;[m
+[31m-            this.chkSchGroupListBox.DisplayMember = "NameId";[m
+[32m+[m[32m            this.chkSchGroupListBox.DisplayMember = "Name";[m
+             this.chkSchGroupListBox.HotTrackSelectMode = DevExpress.XtraEditors.HotTrackSelectMode.SelectItemOnClick;[m
+             this.chkSchGroupListBox.Location = new System.Drawing.Point(6, 48);[m
+[31m-            this.chkSchGroupListBox.MultiColumn = true;[m
+             this.chkSchGroupListBox.Name = "chkSchGroupListBox";[m
+             this.chkSchGroupListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;[m
+             this.chkSchGroupListBox.Size = new System.Drawing.Size(310, 517);[m
+[1mdiff --git a/UI/FrmScheduleGroup.cs b/UI/FrmScheduleGroup.cs[m
+[1mindex ede318b..f839c43 100644[m
+[1m--- a/UI/FrmScheduleGroup.cs[m
+[1m+++ b/UI/FrmScheduleGroup.cs[m
+[36m@@ -4,7 +4,6 @@[m [musing System.ComponentModel;[m
+ using System.Data;[m
+ using System.Diagnostics;[m
+ using System.Drawing;[m
+[31m-using System.Globalization;[m
+ using System.IO;[m
+ using System.Linq;[m
+ using System.Reflection;[m
+[36m@@ -12,7 +11,7 @@[m [musing System.Text;[m
+ using System.Windows.Forms;[m
+ using BLL;[m
+ using DevExpress.XtraEditors;[m
+[31m-//using FarsiLibrary.Utils;[m
+[32m+[m[32musing FarsiLibrary.Utils;[m
+ using Model;[m
+ using Telerik.WinControls;[m
+ using Telerik.WinControls.UI.Gauges;[m
+[36m@@ -59,8 +58,8 @@[m [mnamespace Eco[m
+ [m
+         private void SetYearSpinEditor()[m
+         {[m
+[31m-            var persianDate = DateTime.Now;[m
+[31m-            YearSpinEditor.Value = Convert.ToInt32(persianDate.Date.ToString().Substring(6,4));[m
+[32m+[m[32m            var persianDate = PersianDate.Now;[m
+[32m+[m[32m            YearSpinEditor.Value = persianDate.Year;[m
+         }[m
+ [m
+         private void LoadHolidayCombobox()[m
+[36m@@ -193,7 +192,7 @@[m [mnamespace Eco[m
+         public DataTable ConvertToDataTable<T>(IList<T> data)[m
+         {[m
+             var properties =[m
+[31m-                TypeDescriptor.GetProperties(typeof(T));[m
+[32m+[m[32m                TypeDescriptor.GetProperties(typeof (T));[m
+             var table = new DataTable();[m
+             foreach (PropertyDescriptor prop in properties)[m
+                 table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);[m
+[36m@@ -241,13 +240,18 @@[m [mnamespace Eco[m
+ [m
+                     if (rst >= 0)[m
+                     {[m
+[31m-                        CreateSchFile(schGroupId, YearSpinEditor.Text);[m
+[32m+[m[32m                        //CreateSchFile(schGroupId, YearSpinEditor.Text);[m
+                         SendTimeZoneToDevices(schGroupId);[m
+                         MessageBox.Show(@"عملیات با موفقیت انجام شد", @"پیغام", MessageBoxButtons.OK,[m
+                             MessageBoxIcon.None, MessageBoxDefaultButton.Button1,[m
+                             MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);[m
+                         LoadScheduleGroupListBox();[m
+ [m
+[32m+[m
+[32m+[m[41m                          [m
+[32m+[m
+[32m+[m
+[32m+[m
+                         chkSchGroupListBox.SetItemCheckState(CheckedItemIndex, CheckState.Checked);[m
+                     }[m
+                     else[m
+[36m@@ -267,14 +271,14 @@[m [mnamespace Eco[m
+ [m
+                     if (result >= 0)[m
+                     {[m
+[31m-                        CreateSchFile(schGroupId, YearSpinEditor.Text);[m
+[32m+[m[32m                        //  CreateSchFile(schGroupId, YearSpinEditor.Text);[m
+                         SendTimeZoneToDevices(schGroupId);[m
+                         MessageBox.Show(@"عملیات با موفقیت انجام شد", @"هشدار", MessageBoxButtons.OK,[m
+                             MessageBoxIcon.None, MessageBoxDefaultButton.Button1,[m
+                             MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);[m
+                         LoadScheduleGroupListBox();[m
+[31m-[m
+[31m-[m
+[32m+[m[41m                        [m
+[32m+[m[41m                        [m
+ [m
+                         ResetFrm();[m
+                         EditFlag = false;[m
+[36m@@ -283,7 +287,7 @@[m [mnamespace Eco[m
+             }[m
+             catch (Exception ex)[m
+             {[m
+[31m-                MessageBox.Show(ex.Message);[m
+[32m+[m[32m                throw;[m
+             }[m
+         }[m
+ [m
+[36m@@ -293,36 +297,15 @@[m [mnamespace Eco[m
+             {[m
+                 DeviceBLL deviceBll = new DeviceBLL();[m
+                 WeekScheduleBll weekScheduleBll = new WeekScheduleBll();[m
+[31m-[m
+[32m+[m[41m               [m
+                 var weekSchedule = weekScheduleBll.SelectWeekDaysBySchGroupId(schGroupId);[m
+ [m
+                 List<string> TimeZoneInfo = new List<string>();[m
+ [m
+[31m-               [m
+                 for (int i = 0; i < 7; i++)[m
+                 {[m
+[31m-                    int j;[m
+[31m-                 [m
+[31m-                    for (j = 0; j < weekSchedule.Count; j++)[m
+[31m-                    {[m
+[31m-                        if (weekSchedule[j].weekday == i)[m
+[31m-                        {[m
+[31m-                            if (weekSchedule[j].DayType.DaySchedules.ToList()[m
+[31m-                                .FirstOrDefault(c => c.AccessTypeID == 3) != null)[m
+[31m-                            {[m
+[31m-[m
+[31m-                                TimeZoneInfo.Add(weekSchedule[j].DayType.DaySchedules.ToList()[m
+[31m-                                                     .FirstOrDefault(c => c.AccessTypeID == 3).StartTime.Substring(0, 4)[m
+[31m-                                                 + weekSchedule[j].DayType.DaySchedules.ToList()[m
+[31m-                                                     .FirstOrDefault(c => c.AccessTypeID == 3).EndTime.Substring(0, 4));[m
+[31m-                                break;[m
+[31m-                            }[m
+[31m-                            TimeZoneInfo.Add("00000000");[m
+[31m-                            break;[m
+[31m-                        }[m
+[31m-                    }[m
+[31m-                    if(j == weekSchedule.Count)[m
+[31m-                        TimeZoneInfo.Add("00000000");[m
+[32m+[m[32m                    TimeZoneInfo.Add(weekSchedule[i].DayType.DaySchedules.ToList().Where(c => c.AccessTypeID == 3).ToList()[0].StartTime.Substring(0, 4)[m
+[32m+[m[32m                                    + weekSchedule[i].DayType.DaySchedules.ToList().Where(c => c.AccessTypeID == 3).ToList()[0].EndTime.Substring(0, 4));[m
+                 }[m
+ [m
+ [m
+[36m@@ -330,29 +313,22 @@[m [mnamespace Eco[m
+ [m
+                 var devices = deviceBll.SelectDevices().Where(d => d.DeviceType.ID == 4);[m
+ [m
+[31m-                foreach (var device in devices)[m
+[31m-                {[m
+[31m-                    if (deviceBll.Ping(device.IP, device.Port))[m
+[32m+[m[32m                 foreach (var device in devices)[m
+[32m+[m[32m                 {[m
+[32m+[m[32m                     _czkem = new CZKEMClass();[m
+[32m+[m[41m                   [m
+[32m+[m[32m                     if (_czkem.Connect_Net(device.IP, (int)device.Port))[m
+                     {[m
+[31m-                        _czkem = new CZKEMClass();[m
+[31m-[m
+[31m-                        if (_czkem.Connect_Net(device.IP, (int)device.Port))[m
+[31m-                        {[m
+[31m-                            var a = _czkem.SetTZInfo(1, schGroupId, TimeZoneInfo[1] + TimeZoneInfo[2] + TimeZoneInfo[3] + TimeZoneInfo[4] + TimeZoneInfo[5] + TimeZoneInfo[6] + TimeZoneInfo[0]);[m
+[31m-                            //if (a)[m
+[31m-                            //    return true;[m
+[31m-                            //return false;[m
+[31m-                        }[m
+[31m-[m
+[31m-                        // return false;[m
+[32m+[m[32m                        var a = _czkem.SetTZInfo(1, schGroupId, TimeZoneInfo[0] + TimeZoneInfo[1] + TimeZoneInfo[2] + TimeZoneInfo[3] + TimeZoneInfo[4] + TimeZoneInfo[5] + TimeZoneInfo[6]);[m
+[32m+[m[32m                        //fhgdjfghdfjgh[m
+                     }[m
+[31m-                    // return false;[m
+                 }[m
+ [m
+             }[m
+             catch (Exception e)[m
+             {[m
+                 Console.WriteLine(e);[m
+[32m+[m[32m                throw;[m
+             }[m
+         }[m
+ [m
+[36m@@ -396,25 +372,25 @@[m [mnamespace Eco[m
+                         File.Delete(file);[m
+                     }[m
+                 }[m
+[31m-                PersianCalendar pc = new PersianCalendar();[m
+[31m-                DateTime dPersian = new DateTime();[m
+[31m-                [m
+[31m-                [m
+[32m+[m
+[32m+[m[32m                var pdate = new PersianDate {Year = Convert.ToInt32(year)};[m
+[32m+[m
+[32m+[m
+                 for (var i = 1; i <= 12; i++)[m
+                 {[m
+[31m-                    for (var j = 1; j <= pc.GetDaysInMonth(Convert.ToInt32(year), Convert.ToInt32(i),PersianCalendar.PersianEra); j++)[m
+[32m+[m[32m                    pdate.Month = i;[m
+[32m+[m[32m                    for (var j = 1; j <= pdate.MonthDays; j++)[m
+                     {[m
+[31m-                        dPersian = pc.ToDateTime(Convert.ToInt32(year), Convert.ToInt32(i), j, 0, 0, 0, 0, PersianCalendar.CurrentEra);[m
+[31m-                        var day = (int) pc.GetDayOfWeek(dPersian);[m
+[31m-                        day = GetDayOfWeek(day);[m
+[31m-                        if (!daySchedules.ContainsKey(day) || holidaysDic.ContainsKey(dPersian.ToString("yyyy/mm/dd")))[m
+[32m+[m[32m                        pdate.Day = j;[m
+[32m+[m[32m                        var day = (int) pdate.DayOfWeek;[m
+[32m+[m[32m                        if (!daySchedules.ContainsKey(day) || holidaysDic.ContainsKey(pdate.ToString("yyyy/mm/dd")))[m
+                             continue;[m
+ [m
+                         foreach (var daysch in daySchedules[day])[m
+                         {[m
+                             if (daysch.AccessTypeID == 4) continue;[m
+[31m-                            var sch = year +i.ToString("00") + j.ToString("00") + ";" +[m
+[31m-                                      year + i.ToString("00") + j.ToString("00") + ";" +[m
+[32m+[m[32m                            var sch = pdate.Year + addZero(pdate.Month.ToString()) + addZero(pdate.Day.ToString()) + ";" +[m
+[32m+[m[32m                                      pdate.Year + addZero(pdate.Month.ToString()) + addZero(pdate.Day.ToString()) + ";" +[m
+                                       daysch.StartTime + ";" + daysch.EndTime + ";" +[m
+                                       (daysch.AccessTypeID - 1) + "\r\n";[m
+                             File.AppendAllText(schPath + "\\" + schGroupId + ".sch", sch, Encoding.ASCII);[m
+[36m@@ -433,13 +409,6 @@[m [mnamespace Eco[m
+             }[m
+         }[m
+ [m
+[31m-        private int GetDayOfWeek(int day)[m
+[31m-        {[m
+[31m-            if (day == 6) return 0;[m
+[31m-            return day + 1;[m
+[31m-[m
+[31m-        }[m
+[31m-[m
+         private string addZero(string p)[m
+         {[m
+             try[m
+[36m@@ -461,9 +430,9 @@[m [mnamespace Eco[m
+             {[m
+                 var holiDaysSchGroupBll = new HoliDaysSchGroupBll();[m
+                 var holiDaysSchGroup = new HoliDaysSchGroup();[m
+[31m-                if ((int)comboHoliDayGroup.SelectedValue != 0)[m
+[32m+[m[32m                if ((int) comboHoliDayGroup.SelectedValue != 0)[m
+                 {[m
+[31m-                    holiDaysSchGroup.HoliDaysGroupID = (int)comboHoliDayGroup.SelectedValue;[m
+[32m+[m[32m                    holiDaysSchGroup.HoliDaysGroupID = (int) comboHoliDayGroup.SelectedValue;[m
+                     holiDaysSchGroup.SchGroupID = schGroupId;[m
+                     return holiDaysSchGroupBll.UpdateAndAdd(holiDaysSchGroup);[m
+                 }[m
+[36m@@ -492,9 +461,9 @@[m [mnamespace Eco[m
+                     switch (i)[m
+                     {[m
+                         case 0:[m
+[31m-                            if ((int)combosat.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) combosat.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)combosat.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) combosat.SelectedValue;[m
+                                 weekScheduleBll.UpdateAndAdd(weekSchedule);[m
+                             }[m
+                             else[m
+[36m@@ -504,9 +473,9 @@[m [mnamespace Eco[m
+ [m
+                             break;[m
+                         case 1:[m
+[31m-                            if ((int)comboSun.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) comboSun.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)comboSun.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) comboSun.SelectedValue;[m
+                                 weekScheduleBll.UpdateAndAdd(weekSchedule);[m
+                             }[m
+                             else[m
+[36m@@ -516,9 +485,9 @@[m [mnamespace Eco[m
+ [m
+                             break;[m
+                         case 2:[m
+[31m-                            if ((int)comboMon.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) comboMon.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)comboMon.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) comboMon.SelectedValue;[m
+                                 weekScheduleBll.UpdateAndAdd(weekSchedule);[m
+                             }[m
+                             else[m
+[36m@@ -528,9 +497,9 @@[m [mnamespace Eco[m
+ [m
+                             break;[m
+                         case 3:[m
+[31m-                            if ((int)combotu.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) combotu.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)combotu.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) combotu.SelectedValue;[m
+                                 weekScheduleBll.UpdateAndAdd(weekSchedule);[m
+                             }[m
+                             else[m
+[36m@@ -540,9 +509,9 @@[m [mnamespace Eco[m
+ [m
+                             break;[m
+                         case 4:[m
+[31m-                            if ((int)combowed.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) combowed.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)combowed.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) combowed.SelectedValue;[m
+                                 weekScheduleBll.UpdateAndAdd(weekSchedule);[m
+                             }[m
+                             else[m
+[36m@@ -551,9 +520,9 @@[m [mnamespace Eco[m
+                             }[m
+                             break;[m
+                         case 5:[m
+[31m-                            if ((int)combothr.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) combothr.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)combothr.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) combothr.SelectedValue;[m
+                                 weekScheduleBll.UpdateAndAdd(weekSchedule);[m
+                             }[m
+                             else[m
+[36m@@ -563,9 +532,9 @@[m [mnamespace Eco[m
+ [m
+                             break;[m
+                         case 6:[m
+[31m-                            if ((int)combofri.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) combofri.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)combofri.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) combofri.SelectedValue;[m
+                                 weekScheduleBll.UpdateAndAdd(weekSchedule);[m
+                             }[m
+                             else[m
+[36m@@ -596,7 +565,7 @@[m [mnamespace Eco[m
+                 }[m
+                 var schGroupBll = new ScheduleGroupBll();[m
+                 //   _schGroup.ID =(int) chkSchGroupListBox.SelectedValue;[m
+[31m-                _schGroup.Name = txtSchGroup.Text.Substring(0, txtSchGroup.Text.Length - 4);[m
+[32m+[m[32m                _schGroup.Name = txtSchGroup.Text;[m
+                 _schGroup.year = YearSpinEditor.Text;[m
+                 return schGroupBll.Update(_schGroup);[m
+             }[m
+[36m@@ -611,7 +580,7 @@[m [mnamespace Eco[m
+             try[m
+             {[m
+                 var schGroupBll = new ScheduleGroupBll();[m
+[31m-                chkSchGroupListBox.DataSource = schGroupBll.SelectAllForView();[m
+[32m+[m[32m                chkSchGroupListBox.DataSource = schGroupBll.SelectAll();[m
+             }[m
+             catch (Exception)[m
+             {[m
+[36m@@ -625,9 +594,9 @@[m [mnamespace Eco[m
+             {[m
+                 var holiDaysSchGroupBll = new HoliDaysSchGroupBll();[m
+                 var holiDaysSchGroup = new HoliDaysSchGroup();[m
+[31m-                if ((int)comboHoliDayGroup.SelectedValue != 0)[m
+[32m+[m[32m                if ((int) comboHoliDayGroup.SelectedValue != 0)[m
+                 {[m
+[31m-                    holiDaysSchGroup.HoliDaysGroupID = (int)comboHoliDayGroup.SelectedValue;[m
+[32m+[m[32m                    holiDaysSchGroup.HoliDaysGroupID = (int) comboHoliDayGroup.SelectedValue;[m
+                     holiDaysSchGroup.SchGroupID = schGroupId;[m
+                     return holiDaysSchGroupBll.Insert(holiDaysSchGroup);[m
+                 }[m
+[36m@@ -654,57 +623,57 @@[m [mnamespace Eco[m
+                     switch (i)[m
+                     {[m
+                         case 0:[m
+[31m-                            if ((int)combosat.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) combosat.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)combosat.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) combosat.SelectedValue;[m
+                                 weekScheduleBll.Insert(weekSchedule);[m
+                             }[m
+ [m
+                             break;[m
+                         case 1:[m
+[31m-                            if ((int)comboSun.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) comboSun.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)comboSun.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) comboSun.SelectedValue;[m
+                                 weekScheduleBll.Insert(weekSchedule);[m
+                             }[m
+ [m
+                             break;[m
+                         case 2:[m
+[31m-                            if ((int)comboMon.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) comboMon.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)comboMon.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) comboMon.SelectedValue;[m
+                                 weekScheduleBll.Insert(weekSchedule);[m
+                             }[m
+ [m
+                             break;[m
+                         case 3:[m
+[31m-                            if ((int)combotu.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) combotu.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)combotu.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) combotu.SelectedValue;[m
+                                 weekScheduleBll.Insert(weekSchedule);[m
+                             }[m
+ [m
+                             break;[m
+                         case 4:[m
+[31m-                            if ((int)combowed.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) combowed.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)combowed.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) combowed.SelectedValue;[m
+                                 weekScheduleBll.Insert(weekSchedule);[m
+                             }[m
+ [m
+                             break;[m
+                         case 5:[m
+[31m-                            if ((int)combothr.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) combothr.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)combothr.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) combothr.SelectedValue;[m
+                                 weekScheduleBll.Insert(weekSchedule);[m
+                             }[m
+ [m
+                             break;[m
+                         case 6:[m
+[31m-                            if ((int)combofri.SelectedValue != 0)[m
+[32m+[m[32m                            if ((int) combofri.SelectedValue != 0)[m
+                             {[m
+[31m-                                weekSchedule.DayTypeID = (int)combofri.SelectedValue;[m
+[32m+[m[32m                                weekSchedule.DayTypeID = (int) combofri.SelectedValue;[m
+                                 weekScheduleBll.Insert(weekSchedule);[m
+                             }[m
+ [m
+[36m@@ -756,7 +725,7 @@[m [mnamespace Eco[m
+             {[m
+                 var dayScheduleBll = new DayScheduleBll();[m
+                 ClearLinearGuageBar(satLinearGauge);[m
+[31m-                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int)combosat.SelectedValue);[m
+[32m+[m[32m                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int) combosat.SelectedValue);[m
+                 foreach (var daySch in daySchs)[m
+                 {[m
+                     SetLinearGaugeBar(satLinearGauge, daySch);[m
+[36m@@ -812,7 +781,7 @@[m [mnamespace Eco[m
+                 var dayScheduleBll = new DayScheduleBll();[m
+                 ClearLinearGuageBar(sunLinearGauge);[m
+ [m
+[31m-                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int)comboSun.SelectedValue);[m
+[32m+[m[32m                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int) comboSun.SelectedValue);[m
+                 foreach (var daySch in daySchs)[m
+                 {[m
+                     SetLinearGaugeBar(sunLinearGauge, daySch);[m
+[36m@@ -830,7 +799,7 @@[m [mnamespace Eco[m
+             {[m
+                 var dayScheduleBll = new DayScheduleBll();[m
+                 ClearLinearGuageBar(MonLinearGauge);[m
+[31m-                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int)comboMon.SelectedValue);[m
+[32m+[m[32m                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int) comboMon.SelectedValue);[m
+                 foreach (var daySch in daySchs)[m
+                 {[m
+                     SetLinearGaugeBar(MonLinearGauge, daySch);[m
+[36m@@ -848,7 +817,7 @@[m [mnamespace Eco[m
+             {[m
+                 var dayScheduleBll = new DayScheduleBll();[m
+                 ClearLinearGuageBar(tuLinearGauge);[m
+[31m-                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int)combotu.SelectedValue);[m
+[32m+[m[32m                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int) combotu.SelectedValue);[m
+                 foreach (var daySch in daySchs)[m
+                 {[m
+                     SetLinearGaugeBar(tuLinearGauge, daySch);[m
+[36m@@ -866,7 +835,7 @@[m [mnamespace Eco[m
+             {[m
+                 var dayScheduleBll = new DayScheduleBll();[m
+                 ClearLinearGuageBar(wedLinearGauge);[m
+[31m-                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int)combowed.SelectedValue);[m
+[32m+[m[32m                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int) combowed.SelectedValue);[m
+                 foreach (var daySch in daySchs)[m
+                 {[m
+                     SetLinearGaugeBar(wedLinearGauge, daySch);[m
+[36m@@ -884,7 +853,7 @@[m [mnamespace Eco[m
+             {[m
+                 var dayScheduleBll = new DayScheduleBll();[m
+                 ClearLinearGuageBar(thrLinearGauge);[m
+[31m-                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int)combothr.SelectedValue);[m
+[32m+[m[32m                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int) combothr.SelectedValue);[m
+                 foreach (var daySch in daySchs)[m
+                 {[m
+                     SetLinearGaugeBar(thrLinearGauge, daySch);[m
+[36m@@ -902,7 +871,7 @@[m [mnamespace Eco[m
+             {[m
+                 var dayScheduleBll = new DayScheduleBll();[m
+                 ClearLinearGuageBar(friLinearGauge);[m
+[31m-                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int)combofri.SelectedValue);[m
+[32m+[m[32m                var daySchs = dayScheduleBll.SelectDaySchWithDayTypeId((int) combofri.SelectedValue);[m
+                 foreach (var daySch in daySchs)[m
+                 {[m
+                     SetLinearGaugeBar(friLinearGauge, daySch);[m
+[36m@@ -919,7 +888,7 @@[m [mnamespace Eco[m
+         {[m
+             var timeSpan = new TimeSpan(0, Convert.ToInt32(time.Substring(0, 2)), Convert.ToInt32(time.Substring(2, 2)),[m
+                 Convert.ToInt32(time.Substring(4, 2)));[m
+[31m-            return (float)timeSpan.TotalHours;[m
+[32m+[m[32m            return (float) timeSpan.TotalHours;[m
+         }[m
+ [m
+         private void chkSchGroupListBox_ItemCheck(object sender, ItemCheckEventArgs e)[m
+[36m@@ -945,7 +914,7 @@[m [mnamespace Eco[m
+             //   ResetFrm();[m
+             EditFlag = true;[m
+             CheckedItemIndex = e.Index;[m
+[31m-            var schGroupId = (int)chkSchGroupListBox.GetItemValue(e.Index);[m
+[32m+[m[32m            var schGroupId = (int) chkSchGroupListBox.GetItemValue(e.Index);[m
+             txtSchGroup.Text = chkSchGroupListBox.GetItemText(e.Index);[m
+             YearSpinEditor.Text = schGroupBll.SelectYear(schGroupId);[m
+             _schGroup.ID = schGroupId;[m
+[36m@@ -1086,7 +1055,7 @@[m [mnamespace Eco[m
+         {[m
+             try[m
+             {[m
+[31m-                var week = new List<int> { 0, 1, 2, 3, 4, 5, 6 };[m
+[32m+[m[32m                var week = new List<int> {0, 1, 2, 3, 4, 5, 6};[m
+                 var a = new List<int>();[m
+ [m
+                 for (var i = 0; i < 7; i++)[m
+[36m@@ -1125,11 +1094,11 @@[m [mnamespace Eco[m
+         {[m
+             try[m
+             {[m
+[31m-                var chkSchGroupList = (CheckedListBoxControl)sender1;[m
+[32m+[m[32m                var chkSchGroupList = (CheckedListBoxControl) sender1;[m
+                 var indexFromPoint = chkSchGroupList.IndexFromPoint(location);[m
+                 if (indexFromPoint == -1)[m
+                     return;[m
+[31m-                var id = (int)chkSchGroupList.GetItemValue(indexFromPoint);[m
+[32m+[m[32m                var id = (int) chkSchGroupList.GetItemValue(indexFromPoint);[m
+                 var groupName = chkSchGroupList.GetItemText(indexFromPoint);[m
+                 var dialogResult = MessageBox.Show(@"آیا مطمئن به حذف گروه زمانبندی " + groupName + @" هستید ",[m
+                     @"هشدار", MessageBoxButtons.YesNo,[m
+[1mdiff --git a/UI/bin/Debug/BLL.dll b/UI/bin/Debug/BLL.dll[m
+[1mindex db84842..2729419 100644[m
+Binary files a/UI/bin/Debug/BLL.dll and b/UI/bin/Debug/BLL.dll differ
+[1mdiff --git a/UI/bin/Debug/BLL.pdb b/UI/bin/Debug/BLL.pdb[m
+[1mindex 9ba61f2..1591af7 100644[m
+Binary files a/UI/bin/Debug/BLL.pdb and b/UI/bin/Debug/BLL.pdb differ
+[1mdiff --git a/UI/bin/Debug/DBLayer.dll b/UI/bin/Debug/DBLayer.dll[m
+[1mindex 9aaad8a..f076985 100644[m
+Binary files a/UI/bin/Debug/DBLayer.dll and b/UI/bin/Debug/DBLayer.dll differ
+[1mdiff --git a/UI/bin/Debug/DBLayer.pdb b/UI/bin/Debug/DBLayer.pdb[m
+[1mindex d5b383f..cb91a3e 100644[m
+Binary files a/UI/bin/Debug/DBLayer.pdb and b/UI/bin/Debug/DBLayer.pdb differ
+[1mdiff --git a/UI/bin/Debug/Eco.application b/UI/bin/Debug/Eco.application[m
+[1mindex d721d3d..3b8cce3 100644[m
+[1m--- a/UI/bin/Debug/Eco.application[m
+[1m+++ b/UI/bin/Debug/Eco.application[m
+[36m@@ -14,7 +14,7 @@[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>HAnqN5XUylLwKaM6ZW37NQpZSugbiFrdVGuNADUUyDI=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>VFUg9pWpzhDK/qs65y1cG18Wf7LUAj5lbi2ErZeLFQw=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[1mdiff --git a/UI/bin/Debug/Eco.exe b/UI/bin/Debug/Eco.exe[m
+[1mindex 00e882f..06ac66d 100644[m
+Binary files a/UI/bin/Debug/Eco.exe and b/UI/bin/Debug/Eco.exe differ
+[1mdiff --git a/UI/bin/Debug/Eco.exe.manifest b/UI/bin/Debug/Eco.exe.manifest[m
+[1mindex 3d22bf5..a3ea0d1 100644[m
+[1m--- a/UI/bin/Debug/Eco.exe.manifest[m
+[1m+++ b/UI/bin/Debug/Eco.exe.manifest[m
+[36m@@ -43,26 +43,26 @@[m
+     </dependentAssembly>[m
+   </dependency>[m
+   <dependency>[m
+[31m-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLL.dll" size="74752">[m
+[32m+[m[32m    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLL.dll" size="74240">[m
+       <assemblyIdentity name="BLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />[m
+       <hash>[m
+         <dsig:Transforms>[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>yRiyYaqFOAihw3Gkp+BvkJ1YEbhGpF2mUzTHmTzJCv8=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>Zxb9WNy9Rj6MMmo2fwv5ptdXhS3h89xSM8OcxdZs3yA=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+   <dependency>[m
+[31m-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DBLayer.dll" size="88576">[m
+[32m+[m[32m    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DBLayer.dll" size="88064">[m
+       <assemblyIdentity name="DBLayer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />[m
+       <hash>[m
+         <dsig:Transforms>[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>4vj1ViYOkMKyOzN7V9BFIGdmfF4yVWCaAYcMygqtFtM=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>nZdWjACfSaoo0LSqHDlFsO6DUOa2Mt2UiuAKUJeTQsU=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[36m@@ -1939,14 +1939,14 @@[m
+     </dependentAssembly>[m
+   </dependency>[m
+   <dependency>[m
+[31m-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="855552">[m
+[32m+[m[32m    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="855040">[m
+       <assemblyIdentity name="Eco" version="1.0.0.0" language="neutral" processorArchitecture="msil" />[m
+       <hash>[m
+         <dsig:Transforms>[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>TQ2c7NINwCp1SUpTr4QjIrN1B+bTx0dEiKk100S7B8o=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>+UJRYrs+k8dC20I8UEOPCxHK0k2EhYqtAfGhOZS7eVk=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[36m@@ -1958,7 +1958,7 @@[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>A+KBdNWkxQgbhmSTl2dXpH4jLdXdNsStPuFCGnWdnqk=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>DVSSPUFrv6tt9kO4lsfZDSZDV/2sMcqkb2Aqzs+xEwI=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[36m@@ -1970,7 +1970,7 @@[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>Ze4OtRyU2rQ/7O66IUGjGSSX7JG3Yvximw6hlIIsPyw=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>rd3tnxZgJyTBOklkDqkOu8JsKd7X73mUUtwti1pHZhM=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[36m@@ -2042,7 +2042,7 @@[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>6Zk/JSro+Xycn/Q7q3yimK3PqAXTSVzxpEosFM6so9g=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>CZZakOklR6+I4lM65ewsVs0C+OJV2qExhYPND4X1uPo=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[36m@@ -2054,7 +2054,7 @@[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>tqmeg90B83gGf+KTCIK2IPDDj5CigFBCgOsl4gjVSaU=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>57K0nJsDJn9s9Qo6i/w6AIhOnAvF7vmy9Ou6MxBt5hQ=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[1mdiff --git a/UI/bin/Debug/Eco.pdb b/UI/bin/Debug/Eco.pdb[m
+[1mindex ae02ee9..0a2b0e5 100644[m
+Binary files a/UI/bin/Debug/Eco.pdb and b/UI/bin/Debug/Eco.pdb differ
+[1mdiff --git a/UI/bin/Debug/Interop.zkemkeeper.dll b/UI/bin/Debug/Interop.zkemkeeper.dll[m
+[1mindex 0abad82..492d104 100644[m
+Binary files a/UI/bin/Debug/Interop.zkemkeeper.dll and b/UI/bin/Debug/Interop.zkemkeeper.dll differ
+[1mdiff --git a/UI/bin/Debug/Model.dll b/UI/bin/Debug/Model.dll[m
+[1mindex ef7ddbf..6d01c4f 100644[m
+Binary files a/UI/bin/Debug/Model.dll and b/UI/bin/Debug/Model.dll differ
+[1mdiff --git a/UI/bin/Debug/Model.pdb b/UI/bin/Debug/Model.pdb[m
+[1mindex ae63f26..bb01b4b 100644[m
+Binary files a/UI/bin/Debug/Model.pdb and b/UI/bin/Debug/Model.pdb differ
+[1mdiff --git a/UI/bin/Debug/SCH/1.sch b/UI/bin/Debug/SCH/1.sch[m
+[1mdeleted file mode 100644[m
+[1mindex a6acbbb..0000000[m
+[1m--- a/UI/bin/Debug/SCH/1.sch[m
+[1m+++ /dev/null[m
+[36m@@ -1,365 +0,0 @@[m
+[31m-14000101;14000101;000000;235959;2[m
+[31m-14000102;14000102;000000;235959;2[m
+[31m-14000103;14000103;000000;235959;2[m
+[31m-14000104;14000104;000000;235959;2[m
+[31m-14000105;14000105;000000;235959;2[m
+[31m-14000106;14000106;000000;235959;2[m
+[31m-14000107;14000107;000000;040000;0[m
+[31m-14000108;14000108;000000;235959;2[m
+[31m-14000109;14000109;000000;235959;2[m
+[31m-14000110;14000110;000000;235959;2[m
+[31m-14000111;14000111;000000;235959;2[m
+[31m-14000112;14000112;000000;235959;2[m
+[31m-14000113;14000113;000000;235959;2[m
+[31m-14000114;14000114;000000;040000;0[m
+[31m-14000115;14000115;000000;235959;2[m
+[31m-14000116;14000116;000000;235959;2[m
+[31m-14000117;14000117;000000;235959;2[m
+[31m-14000118;14000118;000000;235959;2[m
+[31m-14000119;14000119;000000;235959;2[m
+[31m-14000120;14000120;000000;235959;2[m
+[31m-14000121;14000121;000000;040000;0[m
+[31m-14000122;14000122;000000;235959;2[m
+[31m-14000123;14000123;000000;235959;2[m
+[31m-14000124;14000124;000000;235959;2[m
+[31m-14000125;14000125;000000;235959;2[m
+[31m-14000126;14000126;000000;235959;2[m
+[31m-14000127;14000127;000000;235959;2[m
+[31m-14000128;14000128;000000;040000;0[m
+[31m-14000129;14000129;000000;235959;2[m
+[31m-14000130;14000130;000000;235959;2[m
+[31m-14000131;14000131;000000;235959;2[m
+[31m-14000201;14000201;000000;235959;2[m
+[31m-14000202;14000202;000000;235959;2[m
+[31m-14000203;14000203;000000;235959;2[m
+[31m-14000204;14000204;000000;040000;0[m
+[31m-14000205;14000205;000000;235959;2[m
+[31m-14000206;14000206;000000;235959;2[m
+[31m-14000207;14000207;000000;235959;2[m
+[31m-14000208;14000208;000000;235959;2[m
+[31m-14000209;14000209;000000;235959;2[m
+[31m-14000210;14000210;000000;235959;2[m
+[31m-14000211;14000211;000000;040000;0[m
+[31m-14000212;14000212;000000;235959;2[m
+[31m-14000213;14000213;000000;235959;2[m
+[31m-14000214;14000214;000000;235959;2[m
+[31m-14000215;14000215;000000;235959;2[m
+[31m-14000216;14000216;000000;235959;2[m
+[31m-14000217;14000217;000000;235959;2[m
+[31m-14000218;14000218;000000;040000;0[m
+[31m-14000219;14000219;000000;235959;2[m
+[31m-14000220;14000220;000000;235959;2[m
+[31m-14000221;14000221;000000;235959;2[m
+[31m-14000222;14000222;000000;235959;2[m
+[31m-14000223;14000223;000000;235959;2[m
+[31m-14000224;14000224;000000;235959;2[m
+[31m-14000225;14000225;000000;040000;0[m
+[31m-14000226;14000226;000000;235959;2[m
+[31m-14000227;14000227;000000;235959;2[m
+[31m-14000228;14000228;000000;235959;2[m
+[31m-14000229;14000229;000000;235959;2[m
+[31m-14000230;14000230;000000;235959;2[m
+[31m-14000231;14000231;000000;235959;2[m
+[31m-14000301;14000301;000000;040000;0[m
+[31m-14000302;14000302;000000;235959;2[m
+[31m-14000303;14000303;000000;235959;2[m
+[31m-14000304;14000304;000000;235959;2[m
+[31m-14000305;14000305;000000;235959;2[m
+[31m-14000306;14000306;000000;235959;2[m
+[31m-14000307;14000307;000000;235959;2[m
+[31m-14000308;14000308;000000;040000;0[m
+[31m-14000309;14000309;000000;235959;2[m
+[31m-14000310;14000310;000000;235959;2[m
+[31m-14000311;14000311;000000;235959;2[m
+[31m-14000312;14000312;000000;235959;2[m
+[31m-14000313;14000313;000000;235959;2[m
+[31m-14000314;14000314;000000;235959;2[m
+[31m-14000315;14000315;000000;040000;0[m
+[31m-14000316;14000316;000000;235959;2[m
+[31m-14000317;14000317;000000;235959;2[m
+[31m-14000318;14000318;000000;235959;2[m
+[31m-14000319;14000319;000000;235959;2[m
+[31m-14000320;14000320;000000;235959;2[m
+[31m-14000321;14000321;000000;235959;2[m
+[31m-14000322;14000322;000000;040000;0[m
+[31m-14000323;14000323;000000;235959;2[m
+[31m-14000324;14000324;000000;235959;2[m
+[31m-14000325;14000325;000000;235959;2[m
+[31m-14000326;14000326;000000;235959;2[m
+[31m-14000327;14000327;000000;235959;2[m
+[31m-14000328;14000328;000000;235959;2[m
+[31m-14000329;14000329;000000;040000;0[m
+[31m-14000330;14000330;000000;235959;2[m
+[31m-14000331;14000331;000000;235959;2[m
+[31m-14000401;14000401;000000;235959;2[m
+[31m-14000402;14000402;000000;235959;2[m
+[31m-14000403;14000403;000000;235959;2[m
+[31m-14000404;14000404;000000;235959;2[m
+[31m-14000405;14000405;000000;040000;0[m
+[31m-14000406;14000406;000000;235959;2[m
+[31m-14000407;14000407;000000;235959;2[m
+[31m-14000408;14000408;000000;235959;2[m
+[31m-14000409;14000409;000000;235959;2[m
+[31m-14000410;14000410;000000;235959;2[m
+[31m-14000411;14000411;000000;235959;2[m
+[31m-14000412;14000412;000000;040000;0[m
+[31m-14000413;14000413;000000;235959;2[m
+[31m-14000414;14000414;000000;235959;2[m
+[31m-14000415;14000415;000000;235959;2[m
+[31m-14000416;14000416;000000;235959;2[m
+[31m-14000417;14000417;000000;235959;2[m
+[31m-14000418;14000418;000000;235959;2[m
+[31m-14000419;14000419;000000;040000;0[m
+[31m-14000420;14000420;000000;235959;2[m
+[31m-14000421;14000421;000000;235959;2[m
+[31m-14000422;14000422;000000;235959;2[m
+[31m-14000423;14000423;000000;235959;2[m
+[31m-14000424;14000424;000000;235959;2[m
+[31m-14000425;14000425;000000;235959;2[m
+[31m-14000426;14000426;000000;040000;0[m
+[31m-14000427;14000427;000000;235959;2[m
+[31m-14000428;14000428;000000;235959;2[m
+[31m-14000429;14000429;000000;235959;2[m
+[31m-14000430;14000430;000000;235959;2[m
+[31m-14000431;14000431;000000;235959;2[m
+[31m-14000501;14000501;000000;235959;2[m
+[31m-14000502;14000502;000000;040000;0[m
+[31m-14000503;14000503;000000;235959;2[m
+[31m-14000504;14000504;000000;235959;2[m
+[31m-14000505;14000505;000000;235959;2[m
+[31m-14000506;14000506;000000;235959;2[m
+[31m-14000507;14000507;000000;235959;2[m
+[31m-14000508;14000508;000000;235959;2[m
+[31m-14000509;14000509;000000;040000;0[m
+[31m-14000510;14000510;000000;235959;2[m
+[31m-14000511;14000511;000000;235959;2[m
+[31m-14000512;14000512;000000;235959;2[m
+[31m-14000513;14000513;000000;235959;2[m
+[31m-14000514;14000514;000000;235959;2[m
+[31m-14000515;14000515;000000;235959;2[m
+[31m-14000516;14000516;000000;040000;0[m
+[31m-14000517;14000517;000000;235959;2[m
+[31m-14000518;14000518;000000;235959;2[m
+[31m-14000519;14000519;000000;235959;2[m
+[31m-14000520;14000520;000000;235959;2[m
+[31m-14000521;14000521;000000;235959;2[m
+[31m-14000522;14000522;000000;235959;2[m
+[31m-14000523;14000523;000000;040000;0[m
+[31m-14000524;14000524;000000;235959;2[m
+[31m-14000525;14000525;000000;235959;2[m
+[31m-14000526;14000526;000000;235959;2[m
+[31m-14000527;14000527;000000;235959;2[m
+[31m-14000528;14000528;000000;235959;2[m
+[31m-14000529;14000529;000000;235959;2[m
+[31m-14000530;14000530;000000;040000;0[m
+[31m-14000531;14000531;000000;235959;2[m
+[31m-14000601;14000601;000000;235959;2[m
+[31m-14000602;14000602;000000;235959;2[m
+[31m-14000603;14000603;000000;235959;2[m
+[31m-14000604;14000604;000000;235959;2[m
+[31m-14000605;14000605;000000;235959;2[m
+[31m-14000606;14000606;000000;040000;0[m
+[31m-14000607;14000607;000000;235959;2[m
+[31m-14000608;14000608;000000;235959;2[m
+[31m-14000609;14000609;000000;235959;2[m
+[31m-14000610;14000610;000000;235959;2[m
+[31m-14000611;14000611;000000;235959;2[m
+[31m-14000612;14000612;000000;235959;2[m
+[31m-14000613;14000613;000000;040000;0[m
+[31m-14000614;14000614;000000;235959;2[m
+[31m-14000615;14000615;000000;235959;2[m
+[31m-14000616;14000616;000000;235959;2[m
+[31m-14000617;14000617;000000;235959;2[m
+[31m-14000618;14000618;000000;235959;2[m
+[31m-14000619;14000619;000000;235959;2[m
+[31m-14000620;14000620;000000;040000;0[m
+[31m-14000621;14000621;000000;235959;2[m
+[31m-14000622;14000622;000000;235959;2[m
+[31m-14000623;14000623;000000;235959;2[m
+[31m-14000624;14000624;000000;235959;2[m
+[31m-14000625;14000625;000000;235959;2[m
+[31m-14000626;14000626;000000;235959;2[m
+[31m-14000627;14000627;000000;040000;0[m
+[31m-14000628;14000628;000000;235959;2[m
+[31m-14000629;14000629;000000;235959;2[m
+[31m-14000630;14000630;000000;235959;2[m
+[31m-14000631;14000631;000000;235959;2[m
+[31m-14000701;14000701;000000;235959;2[m
+[31m-14000702;14000702;000000;235959;2[m
+[31m-14000703;14000703;000000;040000;0[m
+[31m-14000704;14000704;000000;235959;2[m
+[31m-14000705;14000705;000000;235959;2[m
+[31m-14000706;14000706;000000;235959;2[m
+[31m-14000707;14000707;000000;235959;2[m
+[31m-14000708;14000708;000000;235959;2[m
+[31m-14000709;14000709;000000;235959;2[m
+[31m-14000710;14000710;000000;040000;0[m
+[31m-14000711;14000711;000000;235959;2[m
+[31m-14000712;14000712;000000;235959;2[m
+[31m-14000713;14000713;000000;235959;2[m
+[31m-14000714;14000714;000000;235959;2[m
+[31m-14000715;14000715;000000;235959;2[m
+[31m-14000716;14000716;000000;235959;2[m
+[31m-14000717;14000717;000000;040000;0[m
+[31m-14000718;14000718;000000;235959;2[m
+[31m-14000719;14000719;000000;235959;2[m
+[31m-14000720;14000720;000000;235959;2[m
+[31m-14000721;14000721;000000;235959;2[m
+[31m-14000722;14000722;000000;235959;2[m
+[31m-14000723;14000723;000000;235959;2[m
+[31m-14000724;14000724;000000;040000;0[m
+[31m-14000725;14000725;000000;235959;2[m
+[31m-14000726;14000726;000000;235959;2[m
+[31m-14000727;14000727;000000;235959;2[m
+[31m-14000728;14000728;000000;235959;2[m
+[31m-14000729;14000729;000000;235959;2[m
+[31m-14000730;14000730;000000;235959;2[m
+[31m-14000801;14000801;000000;040000;0[m
+[31m-14000802;14000802;000000;235959;2[m
+[31m-14000803;14000803;000000;235959;2[m
+[31m-14000804;14000804;000000;235959;2[m
+[31m-14000805;14000805;000000;235959;2[m
+[31m-14000806;14000806;000000;235959;2[m
+[31m-14000807;14000807;000000;235959;2[m
+[31m-14000808;14000808;000000;040000;0[m
+[31m-14000809;14000809;000000;235959;2[m
+[31m-14000810;14000810;000000;235959;2[m
+[31m-14000811;14000811;000000;235959;2[m
+[31m-14000812;14000812;000000;235959;2[m
+[31m-14000813;14000813;000000;235959;2[m
+[31m-14000814;14000814;000000;235959;2[m
+[31m-14000815;14000815;000000;040000;0[m
+[31m-14000816;14000816;000000;235959;2[m
+[31m-14000817;14000817;000000;235959;2[m
+[31m-14000818;14000818;000000;235959;2[m
+[31m-14000819;14000819;000000;235959;2[m
+[31m-14000820;14000820;000000;235959;2[m
+[31m-14000821;14000821;000000;235959;2[m
+[31m-14000822;14000822;000000;040000;0[m
+[31m-14000823;14000823;000000;235959;2[m
+[31m-14000824;14000824;000000;235959;2[m
+[31m-14000825;14000825;000000;235959;2[m
+[31m-14000826;14000826;000000;235959;2[m
+[31m-14000827;14000827;000000;235959;2[m
+[31m-14000828;14000828;000000;235959;2[m
+[31m-14000829;14000829;000000;040000;0[m
+[31m-14000830;14000830;000000;235959;2[m
+[31m-14000901;14000901;000000;235959;2[m
+[31m-14000902;14000902;000000;235959;2[m
+[31m-14000903;14000903;000000;235959;2[m
+[31m-14000904;14000904;000000;235959;2[m
+[31m-14000905;14000905;000000;235959;2[m
+[31m-14000906;14000906;000000;040000;0[m
+[31m-14000907;14000907;000000;235959;2[m
+[31m-14000908;14000908;000000;235959;2[m
+[31m-14000909;14000909;000000;235959;2[m
+[31m-14000910;14000910;000000;235959;2[m
+[31m-14000911;14000911;000000;235959;2[m
+[31m-14000912;14000912;000000;235959;2[m
+[31m-14000913;14000913;000000;040000;0[m
+[31m-14000914;14000914;000000;235959;2[m
+[31m-14000915;14000915;000000;235959;2[m
+[31m-14000916;14000916;000000;235959;2[m
+[31m-14000917;14000917;000000;235959;2[m
+[31m-14000918;14000918;000000;235959;2[m
+[31m-14000919;14000919;000000;235959;2[m
+[31m-14000920;14000920;000000;040000;0[m
+[31m-14000921;14000921;000000;235959;2[m
+[31m-14000922;14000922;000000;235959;2[m
+[31m-14000923;14000923;000000;235959;2[m
+[31m-14000924;14000924;000000;235959;2[m
+[31m-14000925;14000925;000000;235959;2[m
+[31m-14000926;14000926;000000;235959;2[m
+[31m-14000927;14000927;000000;040000;0[m
+[31m-14000928;14000928;000000;235959;2[m
+[31m-14000929;14000929;000000;235959;2[m
+[31m-14000930;14000930;000000;235959;2[m
+[31m-14001001;14001001;000000;235959;2[m
+[31m-14001002;14001002;000000;235959;2[m
+[31m-14001003;14001003;000000;235959;2[m
+[31m-14001004;14001004;000000;040000;0[m
+[31m-14001005;14001005;000000;235959;2[m
+[31m-14001006;14001006;000000;235959;2[m
+[31m-14001007;14001007;000000;235959;2[m
+[31m-14001008;14001008;000000;235959;2[m
+[31m-14001009;14001009;000000;235959;2[m
+[31m-14001010;14001010;000000;235959;2[m
+[31m-14001011;14001011;000000;040000;0[m
+[31m-14001012;14001012;000000;235959;2[m
+[31m-14001013;14001013;000000;235959;2[m
+[31m-14001014;14001014;000000;235959;2[m
+[31m-14001015;14001015;000000;235959;2[m
+[31m-14001016;14001016;000000;235959;2[m
+[31m-14001017;14001017;000000;235959;2[m
+[31m-14001018;14001018;000000;040000;0[m
+[31m-14001019;14001019;000000;235959;2[m
+[31m-14001020;14001020;000000;235959;2[m
+[31m-14001021;14001021;000000;235959;2[m
+[31m-14001022;14001022;000000;235959;2[m
+[31m-14001023;14001023;000000;235959;2[m
+[31m-14001024;14001024;000000;235959;2[m
+[31m-14001025;14001025;000000;040000;0[m
+[31m-14001026;14001026;000000;235959;2[m
+[31m-14001027;14001027;000000;235959;2[m
+[31m-14001028;14001028;000000;235959;2[m
+[31m-14001029;14001029;000000;235959;2[m
+[31m-14001030;14001030;000000;235959;2[m
+[31m-14001101;14001101;000000;235959;2[m
+[31m-14001102;14001102;000000;040000;0[m
+[31m-14001103;14001103;000000;235959;2[m
+[31m-14001104;14001104;000000;235959;2[m
+[31m-14001105;14001105;000000;235959;2[m
+[31m-14001106;14001106;000000;235959;2[m
+[31m-14001107;14001107;000000;235959;2[m
+[31m-14001108;14001108;000000;235959;2[m
+[31m-14001109;14001109;000000;040000;0[m
+[31m-14001110;14001110;000000;235959;2[m
+[31m-14001111;14001111;000000;235959;2[m
+[31m-14001112;14001112;000000;235959;2[m
+[31m-14001113;14001113;000000;235959;2[m
+[31m-14001114;14001114;000000;235959;2[m
+[31m-14001115;14001115;000000;235959;2[m
+[31m-14001116;14001116;000000;040000;0[m
+[31m-14001117;14001117;000000;235959;2[m
+[31m-14001118;14001118;000000;235959;2[m
+[31m-14001119;14001119;000000;235959;2[m
+[31m-14001120;14001120;000000;235959;2[m
+[31m-14001121;14001121;000000;235959;2[m
+[31m-14001122;14001122;000000;235959;2[m
+[31m-14001123;14001123;000000;040000;0[m
+[31m-14001124;14001124;000000;235959;2[m
+[31m-14001125;14001125;000000;235959;2[m
+[31m-14001126;14001126;000000;235959;2[m
+[31m-14001127;14001127;000000;235959;2[m
+[31m-14001128;14001128;000000;235959;2[m
+[31m-14001129;14001129;000000;235959;2[m
+[31m-14001130;14001130;000000;040000;0[m
+[31m-14001201;14001201;000000;235959;2[m
+[31m-14001202;14001202;000000;235959;2[m
+[31m-14001203;14001203;000000;235959;2[m
+[31m-14001204;14001204;000000;235959;2[m
+[31m-14001205;14001205;000000;235959;2[m
+[31m-14001206;14001206;000000;235959;2[m
+[31m-14001207;14001207;000000;040000;0[m
+[31m-14001208;14001208;000000;235959;2[m
+[31m-14001209;14001209;000000;235959;2[m
+[31m-14001210;14001210;000000;235959;2[m
+[31m-14001211;14001211;000000;235959;2[m
+[31m-14001212;14001212;000000;235959;2[m
+[31m-14001213;14001213;000000;235959;2[m
+[31m-14001214;14001214;000000;040000;0[m
+[31m-14001215;14001215;000000;235959;2[m
+[31m-14001216;14001216;000000;235959;2[m
+[31m-14001217;14001217;000000;235959;2[m
+[31m-14001218;14001218;000000;235959;2[m
+[31m-14001219;14001219;000000;235959;2[m
+[31m-14001220;14001220;000000;235959;2[m
+[31m-14001221;14001221;000000;040000;0[m
+[31m-14001222;14001222;000000;235959;2[m
+[31m-14001223;14001223;000000;235959;2[m
+[31m-14001224;14001224;000000;235959;2[m
+[31m-14001225;14001225;000000;235959;2[m
+[31m-14001226;14001226;000000;235959;2[m
+[31m-14001227;14001227;000000;235959;2[m
+[31m-14001228;14001228;000000;040000;0[m
+[31m-14001229;14001229;000000;235959;2[m
+[1mdiff --git a/UI/bin/Debug/SCH/14.sch b/UI/bin/Debug/SCH/14.sch[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f4d3704[m
+Binary files /dev/null and b/UI/bin/Debug/SCH/14.sch differ
+[1mdiff --git a/UI/bin/Debug/SCH/18.sch b/UI/bin/Debug/SCH/18.sch[m
+[1mnew file mode 100644[m
+[1mindex 0000000..687ae55[m
+Binary files /dev/null and b/UI/bin/Debug/SCH/18.sch differ
+[1mdiff --git a/UI/bin/Debug/SCH/19.sch b/UI/bin/Debug/SCH/19.sch[m
+[1mdeleted file mode 100644[m
+[1mindex 18c8277..0000000[m
+[1m--- a/UI/bin/Debug/SCH/19.sch[m
+[1m+++ /dev/null[m
+[36m@@ -1,365 +0,0 @@[m
+[31m-14020101;14020101;000000;235959;2[m
+[31m-14020102;14020102;000000;235959;2[m
+[31m-14020103;14020103;000000;235959;2[m
+[31m-14020104;14020104;000000;235959;2[m
+[31m-14020105;14020105;000000;235959;2[m
+[31m-14020106;14020106;000000;235959;2[m
+[31m-14020107;14020107;000000;235959;2[m
+[31m-14020108;14020108;000000;235959;2[m
+[31m-14020109;14020109;000000;235959;2[m
+[31m-14020110;14020110;000000;235959;2[m
+[31m-14020111;14020111;000000;235959;2[m
+[31m-14020112;14020112;000000;235959;2[m
+[31m-14020113;14020113;000000;235959;2[m
+[31m-14020114;14020114;000000;235959;2[m
+[31m-14020115;14020115;000000;235959;2[m
+[31m-14020116;14020116;000000;235959;2[m
+[31m-14020117;14020117;000000;235959;2[m
+[31m-14020118;14020118;000000;235959;2[m
+[31m-14020119;14020119;000000;235959;2[m
+[31m-14020120;14020120;000000;235959;2[m
+[31m-14020121;14020121;000000;235959;2[m
+[31m-14020122;14020122;000000;235959;2[m
+[31m-14020123;14020123;000000;235959;2[m
+[31m-14020124;14020124;000000;235959;2[m
+[31m-14020125;14020125;000000;235959;2[m
+[31m-14020126;14020126;000000;235959;2[m
+[31m-14020127;14020127;000000;235959;2[m
+[31m-14020128;14020128;000000;235959;2[m
+[31m-14020129;14020129;000000;235959;2[m
+[31m-14020130;14020130;000000;235959;2[m
+[31m-14020131;14020131;000000;235959;2[m
+[31m-14020201;14020201;000000;235959;2[m
+[31m-14020202;14020202;000000;235959;2[m
+[31m-14020203;14020203;000000;235959;2[m
+[31m-14020204;14020204;000000;235959;2[m
+[31m-14020205;14020205;000000;235959;2[m
+[31m-14020206;14020206;000000;235959;2[m
+[31m-14020207;14020207;000000;235959;2[m
+[31m-14020208;14020208;000000;235959;2[m
+[31m-14020209;14020209;000000;235959;2[m
+[31m-14020210;14020210;000000;235959;2[m
+[31m-14020211;14020211;000000;235959;2[m
+[31m-14020212;14020212;000000;235959;2[m
+[31m-14020213;14020213;000000;235959;2[m
+[31m-14020214;14020214;000000;235959;2[m
+[31m-14020215;14020215;000000;235959;2[m
+[31m-14020216;14020216;000000;235959;2[m
+[31m-14020217;14020217;000000;235959;2[m
+[31m-14020218;14020218;000000;235959;2[m
+[31m-14020219;14020219;000000;235959;2[m
+[31m-14020220;14020220;000000;235959;2[m
+[31m-14020221;14020221;000000;235959;2[m
+[31m-14020222;14020222;000000;235959;2[m
+[31m-14020223;14020223;000000;235959;2[m
+[31m-14020224;14020224;000000;235959;2[m
+[31m-14020225;14020225;000000;235959;2[m
+[31m-14020226;14020226;000000;235959;2[m
+[31m-14020227;14020227;000000;235959;2[m
+[31m-14020228;14020228;000000;235959;2[m
+[31m-14020229;14020229;000000;235959;2[m
+[31m-14020230;14020230;000000;235959;2[m
+[31m-14020231;14020231;000000;235959;2[m
+[31m-14020301;14020301;000000;235959;2[m
+[31m-14020302;14020302;000000;235959;2[m
+[31m-14020303;14020303;000000;235959;2[m
+[31m-14020304;14020304;000000;235959;2[m
+[31m-14020305;14020305;000000;235959;2[m
+[31m-14020306;14020306;000000;235959;2[m
+[31m-14020307;14020307;000000;235959;2[m
+[31m-14020308;14020308;000000;235959;2[m
+[31m-14020309;14020309;000000;235959;2[m
+[31m-14020310;14020310;000000;235959;2[m
+[31m-14020311;14020311;000000;235959;2[m
+[31m-14020312;14020312;000000;235959;2[m
+[31m-14020313;14020313;000000;235959;2[m
+[31m-14020314;14020314;000000;235959;2[m
+[31m-14020315;14020315;000000;235959;2[m
+[31m-14020316;14020316;000000;235959;2[m
+[31m-14020317;14020317;000000;235959;2[m
+[31m-14020318;14020318;000000;235959;2[m
+[31m-14020319;14020319;000000;235959;2[m
+[31m-14020320;14020320;000000;235959;2[m
+[31m-14020321;14020321;000000;235959;2[m
+[31m-14020322;14020322;000000;235959;2[m
+[31m-14020323;14020323;000000;235959;2[m
+[31m-14020324;14020324;000000;235959;2[m
+[31m-14020325;14020325;000000;235959;2[m
+[31m-14020326;14020326;000000;235959;2[m
+[31m-14020327;14020327;000000;235959;2[m
+[31m-14020328;14020328;000000;235959;2[m
+[31m-14020329;14020329;000000;235959;2[m
+[31m-14020330;14020330;000000;235959;2[m
+[31m-14020331;14020331;000000;235959;2[m
+[31m-14020401;14020401;000000;235959;2[m
+[31m-14020402;14020402;000000;235959;2[m
+[31m-14020403;14020403;000000;235959;2[m
+[31m-14020404;14020404;000000;235959;2[m
+[31m-14020405;14020405;000000;235959;2[m
+[31m-14020406;14020406;000000;235959;2[m
+[31m-14020407;14020407;000000;235959;2[m
+[31m-14020408;14020408;000000;235959;2[m
+[31m-14020409;14020409;000000;235959;2[m
+[31m-14020410;14020410;000000;235959;2[m
+[31m-14020411;14020411;000000;235959;2[m
+[31m-14020412;14020412;000000;235959;2[m
+[31m-14020413;14020413;000000;235959;2[m
+[31m-14020414;14020414;000000;235959;2[m
+[31m-14020415;14020415;000000;235959;2[m
+[31m-14020416;14020416;000000;235959;2[m
+[31m-14020417;14020417;000000;235959;2[m
+[31m-14020418;14020418;000000;235959;2[m
+[31m-14020419;14020419;000000;235959;2[m
+[31m-14020420;14020420;000000;235959;2[m
+[31m-14020421;14020421;000000;235959;2[m
+[31m-14020422;14020422;000000;235959;2[m
+[31m-14020423;14020423;000000;235959;2[m
+[31m-14020424;14020424;000000;235959;2[m
+[31m-14020425;14020425;000000;235959;2[m
+[31m-14020426;14020426;000000;235959;2[m
+[31m-14020427;14020427;000000;235959;2[m
+[31m-14020428;14020428;000000;235959;2[m
+[31m-14020429;14020429;000000;235959;2[m
+[31m-14020430;14020430;000000;235959;2[m
+[31m-14020431;14020431;000000;235959;2[m
+[31m-14020501;14020501;000000;235959;2[m
+[31m-14020502;14020502;000000;235959;2[m
+[31m-14020503;14020503;000000;235959;2[m
+[31m-14020504;14020504;000000;235959;2[m
+[31m-14020505;14020505;000000;235959;2[m
+[31m-14020506;14020506;000000;235959;2[m
+[31m-14020507;14020507;000000;235959;2[m
+[31m-14020508;14020508;000000;235959;2[m
+[31m-14020509;14020509;000000;235959;2[m
+[31m-14020510;14020510;000000;235959;2[m
+[31m-14020511;14020511;000000;235959;2[m
+[31m-14020512;14020512;000000;235959;2[m
+[31m-14020513;14020513;000000;235959;2[m
+[31m-14020514;14020514;000000;235959;2[m
+[31m-14020515;14020515;000000;235959;2[m
+[31m-14020516;14020516;000000;235959;2[m
+[31m-14020517;14020517;000000;235959;2[m
+[31m-14020518;14020518;000000;235959;2[m
+[31m-14020519;14020519;000000;235959;2[m
+[31m-14020520;14020520;000000;235959;2[m
+[31m-14020521;14020521;000000;235959;2[m
+[31m-14020522;14020522;000000;235959;2[m
+[31m-14020523;14020523;000000;235959;2[m
+[31m-14020524;14020524;000000;235959;2[m
+[31m-14020525;14020525;000000;235959;2[m
+[31m-14020526;14020526;000000;235959;2[m
+[31m-14020527;14020527;000000;235959;2[m
+[31m-14020528;14020528;000000;235959;2[m
+[31m-14020529;14020529;000000;235959;2[m
+[31m-14020530;14020530;000000;235959;2[m
+[31m-14020531;14020531;000000;235959;2[m
+[31m-14020601;14020601;000000;235959;2[m
+[31m-14020602;14020602;000000;235959;2[m
+[31m-14020603;14020603;000000;235959;2[m
+[31m-14020604;14020604;000000;235959;2[m
+[31m-14020605;14020605;000000;235959;2[m
+[31m-14020606;14020606;000000;235959;2[m
+[31m-14020607;14020607;000000;235959;2[m
+[31m-14020608;14020608;000000;235959;2[m
+[31m-14020609;14020609;000000;235959;2[m
+[31m-14020610;14020610;000000;235959;2[m
+[31m-14020611;14020611;000000;235959;2[m
+[31m-14020612;14020612;000000;235959;2[m
+[31m-14020613;14020613;000000;235959;2[m
+[31m-14020614;14020614;000000;235959;2[m
+[31m-14020615;14020615;000000;235959;2[m
+[31m-14020616;14020616;000000;235959;2[m
+[31m-14020617;14020617;000000;235959;2[m
+[31m-14020618;14020618;000000;235959;2[m
+[31m-14020619;14020619;000000;235959;2[m
+[31m-14020620;14020620;000000;235959;2[m
+[31m-14020621;14020621;000000;235959;2[m
+[31m-14020622;14020622;000000;235959;2[m
+[31m-14020623;14020623;000000;235959;2[m
+[31m-14020624;14020624;000000;235959;2[m
+[31m-14020625;14020625;000000;235959;2[m
+[31m-14020626;14020626;000000;235959;2[m
+[31m-14020627;14020627;000000;235959;2[m
+[31m-14020628;14020628;000000;235959;2[m
+[31m-14020629;14020629;000000;235959;2[m
+[31m-14020630;14020630;000000;235959;2[m
+[31m-14020631;14020631;000000;235959;2[m
+[31m-14020701;14020701;000000;235959;2[m
+[31m-14020702;14020702;000000;235959;2[m
+[31m-14020703;14020703;000000;235959;2[m
+[31m-14020704;14020704;000000;235959;2[m
+[31m-14020705;14020705;000000;235959;2[m
+[31m-14020706;14020706;000000;235959;2[m
+[31m-14020707;14020707;000000;235959;2[m
+[31m-14020708;14020708;000000;235959;2[m
+[31m-14020709;14020709;000000;235959;2[m
+[31m-14020710;14020710;000000;235959;2[m
+[31m-14020711;14020711;000000;235959;2[m
+[31m-14020712;14020712;000000;235959;2[m
+[31m-14020713;14020713;000000;235959;2[m
+[31m-14020714;14020714;000000;235959;2[m
+[31m-14020715;14020715;000000;235959;2[m
+[31m-14020716;14020716;000000;235959;2[m
+[31m-14020717;14020717;000000;235959;2[m
+[31m-14020718;14020718;000000;235959;2[m
+[31m-14020719;14020719;000000;235959;2[m
+[31m-14020720;14020720;000000;235959;2[m
+[31m-14020721;14020721;000000;235959;2[m
+[31m-14020722;14020722;000000;235959;2[m
+[31m-14020723;14020723;000000;235959;2[m
+[31m-14020724;14020724;000000;235959;2[m
+[31m-14020725;14020725;000000;235959;2[m
+[31m-14020726;14020726;000000;235959;2[m
+[31m-14020727;14020727;000000;235959;2[m
+[31m-14020728;14020728;000000;235959;2[m
+[31m-14020729;14020729;000000;235959;2[m
+[31m-14020730;14020730;000000;235959;2[m
+[31m-14020801;14020801;000000;235959;2[m
+[31m-14020802;14020802;000000;235959;2[m
+[31m-14020803;14020803;000000;235959;2[m
+[31m-14020804;14020804;000000;235959;2[m
+[31m-14020805;14020805;000000;235959;2[m
+[31m-14020806;14020806;000000;235959;2[m
+[31m-14020807;14020807;000000;235959;2[m
+[31m-14020808;14020808;000000;235959;2[m
+[31m-14020809;14020809;000000;235959;2[m
+[31m-14020810;14020810;000000;235959;2[m
+[31m-14020811;14020811;000000;235959;2[m
+[31m-14020812;14020812;000000;235959;2[m
+[31m-14020813;14020813;000000;235959;2[m
+[31m-14020814;14020814;000000;235959;2[m
+[31m-14020815;14020815;000000;235959;2[m
+[31m-14020816;14020816;000000;235959;2[m
+[31m-14020817;14020817;000000;235959;2[m
+[31m-14020818;14020818;000000;235959;2[m
+[31m-14020819;14020819;000000;235959;2[m
+[31m-14020820;14020820;000000;235959;2[m
+[31m-14020821;14020821;000000;235959;2[m
+[31m-14020822;14020822;000000;235959;2[m
+[31m-14020823;14020823;000000;235959;2[m
+[31m-14020824;14020824;000000;235959;2[m
+[31m-14020825;14020825;000000;235959;2[m
+[31m-14020826;14020826;000000;235959;2[m
+[31m-14020827;14020827;000000;235959;2[m
+[31m-14020828;14020828;000000;235959;2[m
+[31m-14020829;14020829;000000;235959;2[m
+[31m-14020830;14020830;000000;235959;2[m
+[31m-14020901;14020901;000000;235959;2[m
+[31m-14020902;14020902;000000;235959;2[m
+[31m-14020903;14020903;000000;235959;2[m
+[31m-14020904;14020904;000000;235959;2[m
+[31m-14020905;14020905;000000;235959;2[m
+[31m-14020906;14020906;000000;235959;2[m
+[31m-14020907;14020907;000000;235959;2[m
+[31m-14020908;14020908;000000;235959;2[m
+[31m-14020909;14020909;000000;235959;2[m
+[31m-14020910;14020910;000000;235959;2[m
+[31m-14020911;14020911;000000;235959;2[m
+[31m-14020912;14020912;000000;235959;2[m
+[31m-14020913;14020913;000000;235959;2[m
+[31m-14020914;14020914;000000;235959;2[m
+[31m-14020915;14020915;000000;235959;2[m
+[31m-14020916;14020916;000000;235959;2[m
+[31m-14020917;14020917;000000;235959;2[m
+[31m-14020918;14020918;000000;235959;2[m
+[31m-14020919;14020919;000000;235959;2[m
+[31m-14020920;14020920;000000;235959;2[m
+[31m-14020921;14020921;000000;235959;2[m
+[31m-14020922;14020922;000000;235959;2[m
+[31m-14020923;14020923;000000;235959;2[m
+[31m-14020924;14020924;000000;235959;2[m
+[31m-14020925;14020925;000000;235959;2[m
+[31m-14020926;14020926;000000;235959;2[m
+[31m-14020927;14020927;000000;235959;2[m
+[31m-14020928;14020928;000000;235959;2[m
+[31m-14020929;14020929;000000;235959;2[m
+[31m-14020930;14020930;000000;235959;2[m
+[31m-14021001;14021001;000000;235959;2[m
+[31m-14021002;14021002;000000;235959;2[m
+[31m-14021003;14021003;000000;235959;2[m
+[31m-14021004;14021004;000000;235959;2[m
+[31m-14021005;14021005;000000;235959;2[m
+[31m-14021006;14021006;000000;235959;2[m
+[31m-14021007;14021007;000000;235959;2[m
+[31m-14021008;14021008;000000;235959;2[m
+[31m-14021009;14021009;000000;235959;2[m
+[31m-14021010;14021010;000000;235959;2[m
+[31m-14021011;14021011;000000;235959;2[m
+[31m-14021012;14021012;000000;235959;2[m
+[31m-14021013;14021013;000000;235959;2[m
+[31m-14021014;14021014;000000;235959;2[m
+[31m-14021015;14021015;000000;235959;2[m
+[31m-14021016;14021016;000000;235959;2[m
+[31m-14021017;14021017;000000;235959;2[m
+[31m-14021018;14021018;000000;235959;2[m
+[31m-14021019;14021019;000000;235959;2[m
+[31m-14021020;14021020;000000;235959;2[m
+[31m-14021021;14021021;000000;235959;2[m
+[31m-14021022;14021022;000000;235959;2[m
+[31m-14021023;14021023;000000;235959;2[m
+[31m-14021024;14021024;000000;235959;2[m
+[31m-14021025;14021025;000000;235959;2[m
+[31m-14021026;14021026;000000;235959;2[m
+[31m-14021027;14021027;000000;235959;2[m
+[31m-14021028;14021028;000000;235959;2[m
+[31m-14021029;14021029;000000;235959;2[m
+[31m-14021030;14021030;000000;235959;2[m
+[31m-14021101;14021101;000000;235959;2[m
+[31m-14021102;14021102;000000;235959;2[m
+[31m-14021103;14021103;000000;235959;2[m
+[31m-14021104;14021104;000000;235959;2[m
+[31m-14021105;14021105;000000;235959;2[m
+[31m-14021106;14021106;000000;235959;2[m
+[31m-14021107;14021107;000000;235959;2[m
+[31m-14021108;14021108;000000;235959;2[m
+[31m-14021109;14021109;000000;235959;2[m
+[31m-14021110;14021110;000000;235959;2[m
+[31m-14021111;14021111;000000;235959;2[m
+[31m-14021112;14021112;000000;235959;2[m
+[31m-14021113;14021113;000000;235959;2[m
+[31m-14021114;14021114;000000;235959;2[m
+[31m-14021115;14021115;000000;235959;2[m
+[31m-14021116;14021116;000000;235959;2[m
+[31m-14021117;14021117;000000;235959;2[m
+[31m-14021118;14021118;000000;235959;2[m
+[31m-14021119;14021119;000000;235959;2[m
+[31m-14021120;14021120;000000;235959;2[m
+[31m-14021121;14021121;000000;235959;2[m
+[31m-14021122;14021122;000000;235959;2[m
+[31m-14021123;14021123;000000;235959;2[m
+[31m-14021124;14021124;000000;235959;2[m
+[31m-14021125;14021125;000000;235959;2[m
+[31m-14021126;14021126;000000;235959;2[m
+[31m-14021127;14021127;000000;235959;2[m
+[31m-14021128;14021128;000000;235959;2[m
+[31m-14021129;14021129;000000;235959;2[m
+[31m-14021130;14021130;000000;235959;2[m
+[31m-14021201;14021201;000000;235959;2[m
+[31m-14021202;14021202;000000;235959;2[m
+[31m-14021203;14021203;000000;235959;2[m
+[31m-14021204;14021204;000000;235959;2[m
+[31m-14021205;14021205;000000;235959;2[m
+[31m-14021206;14021206;000000;235959;2[m
+[31m-14021207;14021207;000000;235959;2[m
+[31m-14021208;14021208;000000;235959;2[m
+[31m-14021209;14021209;000000;235959;2[m
+[31m-14021210;14021210;000000;235959;2[m
+[31m-14021211;14021211;000000;235959;2[m
+[31m-14021212;14021212;000000;235959;2[m
+[31m-14021213;14021213;000000;235959;2[m
+[31m-14021214;14021214;000000;235959;2[m
+[31m-14021215;14021215;000000;235959;2[m
+[31m-14021216;14021216;000000;235959;2[m
+[31m-14021217;14021217;000000;235959;2[m
+[31m-14021218;14021218;000000;235959;2[m
+[31m-14021219;14021219;000000;235959;2[m
+[31m-14021220;14021220;000000;235959;2[m
+[31m-14021221;14021221;000000;235959;2[m
+[31m-14021222;14021222;000000;235959;2[m
+[31m-14021223;14021223;000000;235959;2[m
+[31m-14021224;14021224;000000;235959;2[m
+[31m-14021225;14021225;000000;235959;2[m
+[31m-14021226;14021226;000000;235959;2[m
+[31m-14021227;14021227;000000;235959;2[m
+[31m-14021228;14021228;000000;235959;2[m
+[31m-14021229;14021229;000000;235959;2[m
+[1mdiff --git a/UI/bin/Debug/SCH/2.sch b/UI/bin/Debug/SCH/2.sch[m
+[1mindex ebb8cc6..e5da380 100644[m
+Binary files a/UI/bin/Debug/SCH/2.sch and b/UI/bin/Debug/SCH/2.sch differ
+[1mdiff --git a/UI/bin/Debug/SCH/20.sch b/UI/bin/Debug/SCH/20.sch[m
+[1mdeleted file mode 100644[m
+[1mindex 44d4d44..0000000[m
+[1m--- a/UI/bin/Debug/SCH/20.sch[m
+[1m+++ /dev/null[m
+[36m@@ -1,52 +0,0 @@[m
+[31m-14020105;14020105;000000;235959;2[m
+[31m-14020112;14020112;000000;235959;2[m
+[31m-14020119;14020119;000000;235959;2[m
+[31m-14020126;14020126;000000;235959;2[m
+[31m-14020202;14020202;000000;235959;2[m
+[31m-14020209;14020209;000000;235959;2[m
+[31m-14020216;14020216;000000;235959;2[m
+[31m-14020223;14020223;000000;235959;2[m
+[31m-14020230;14020230;000000;235959;2[m
+[31m-14020306;14020306;000000;235959;2[m
+[31m-14020313;14020313;000000;235959;2[m
+[31m-14020320;14020320;000000;235959;2[m
+[31m-14020327;14020327;000000;235959;2[m
+[31m-14020403;14020403;000000;235959;2[m
+[31m-14020410;14020410;000000;235959;2[m
+[31m-14020417;14020417;000000;235959;2[m
+[31m-14020424;14020424;000000;235959;2[m
+[31m-14020431;14020431;000000;235959;2[m
+[31m-14020507;14020507;000000;235959;2[m
+[31m-14020514;14020514;000000;235959;2[m
+[31m-14020521;14020521;000000;235959;2[m
+[31m-14020528;14020528;000000;235959;2[m
+[31m-14020604;14020604;000000;235959;2[m
+[31m-14020611;14020611;000000;235959;2[m
+[31m-14020618;14020618;000000;235959;2[m
+[31m-14020625;14020625;000000;235959;2[m
+[31m-14020701;14020701;000000;235959;2[m
+[31m-14020708;14020708;000000;235959;2[m
+[31m-14020715;14020715;000000;235959;2[m
+[31m-14020722;14020722;000000;235959;2[m
+[31m-14020729;14020729;000000;235959;2[m
+[31m-14020806;14020806;000000;235959;2[m
+[31m-14020813;14020813;000000;235959;2[m
+[31m-14020820;14020820;000000;235959;2[m
+[31m-14020827;14020827;000000;235959;2[m
+[31m-14020904;14020904;000000;235959;2[m
+[31m-14020911;14020911;000000;235959;2[m
+[31m-14020918;14020918;000000;235959;2[m
+[31m-14020925;14020925;000000;235959;2[m
+[31m-14021002;14021002;000000;235959;2[m
+[31m-14021009;14021009;000000;235959;2[m
+[31m-14021016;14021016;000000;235959;2[m
+[31m-14021023;14021023;000000;235959;2[m
+[31m-14021030;14021030;000000;235959;2[m
+[31m-14021107;14021107;000000;235959;2[m
+[31m-14021114;14021114;000000;235959;2[m
+[31m-14021121;14021121;000000;235959;2[m
+[31m-14021128;14021128;000000;235959;2[m
+[31m-14021205;14021205;000000;235959;2[m
+[31m-14021212;14021212;000000;235959;2[m
+[31m-14021219;14021219;000000;235959;2[m
+[31m-14021226;14021226;000000;235959;2[m
+[1mdiff --git a/UI/bin/Debug/SCH/3.sch b/UI/bin/Debug/SCH/3.sch[m
+[1mindex 07d3895..2f23642 100644[m
+[1m--- a/UI/bin/Debug/SCH/3.sch[m
+[1m+++ b/UI/bin/Debug/SCH/3.sch[m
+[36m@@ -1,211 +1,52 @@[m
+[31m-14000101;14000101;000000;013000;1[m
+[31m-14000101;14000101;013000;050000;2[m
+[31m-14000101;14000101;050000;235959;0[m
+[31m-14000107;14000107;000000;235959;2[m
+[31m-14000108;14000108;000000;013000;1[m
+[31m-14000108;14000108;013000;050000;2[m
+[31m-14000108;14000108;050000;235959;0[m
+[31m-14000114;14000114;000000;235959;2[m
+[31m-14000115;14000115;000000;013000;1[m
+[31m-14000115;14000115;013000;050000;2[m
+[31m-14000115;14000115;050000;235959;0[m
+[31m-14000121;14000121;000000;235959;2[m
+[31m-14000122;14000122;000000;013000;1[m
+[31m-14000122;14000122;013000;050000;2[m
+[31m-14000122;14000122;050000;235959;0[m
+[31m-14000128;14000128;000000;235959;2[m
+[31m-14000129;14000129;000000;013000;1[m
+[31m-14000129;14000129;013000;050000;2[m
+[31m-14000129;14000129;050000;235959;0[m
+[31m-14000204;14000204;000000;235959;2[m
+[31m-14000205;14000205;000000;013000;1[m
+[31m-14000205;14000205;013000;050000;2[m
+[31m-14000205;14000205;050000;235959;0[m
+[31m-14000211;14000211;000000;235959;2[m
+[31m-14000212;14000212;000000;013000;1[m
+[31m-14000212;14000212;013000;050000;2[m
+[31m-14000212;14000212;050000;235959;0[m
+[31m-14000218;14000218;000000;235959;2[m
+[31m-14000219;14000219;000000;013000;1[m
+[31m-14000219;14000219;013000;050000;2[m
+[31m-14000219;14000219;050000;235959;0[m
+[31m-14000225;14000225;000000;235959;2[m
+[31m-14000226;14000226;000000;013000;1[m
+[31m-14000226;14000226;013000;050000;2[m
+[31m-14000226;14000226;050000;235959;0[m
+[31m-14000301;14000301;000000;235959;2[m
+[31m-14000302;14000302;000000;013000;1[m
+[31m-14000302;14000302;013000;050000;2[m
+[31m-14000302;14000302;050000;235959;0[m
+[31m-14000308;14000308;000000;235959;2[m
+[31m-14000309;14000309;000000;013000;1[m
+[31m-14000309;14000309;013000;050000;2[m
+[31m-14000309;14000309;050000;235959;0[m
+[31m-14000315;14000315;000000;235959;2[m
+[31m-14000316;14000316;000000;013000;1[m
+[31m-14000316;14000316;013000;050000;2[m
+[31m-14000316;14000316;050000;235959;0[m
+[31m-14000322;14000322;000000;235959;2[m
+[31m-14000323;14000323;000000;013000;1[m
+[31m-14000323;14000323;013000;050000;2[m
+[31m-14000323;14000323;050000;235959;0[m
+[31m-14000329;14000329;000000;235959;2[m
+[31m-14000330;14000330;000000;013000;1[m
+[31m-14000330;14000330;013000;050000;2[m
+[31m-14000330;14000330;050000;235959;0[m
+[31m-14000405;14000405;000000;235959;2[m
+[31m-14000406;14000406;000000;013000;1[m
+[31m-14000406;14000406;013000;050000;2[m
+[31m-14000406;14000406;050000;235959;0[m
+[31m-14000412;14000412;000000;235959;2[m
+[31m-14000413;14000413;000000;013000;1[m
+[31m-14000413;14000413;013000;050000;2[m
+[31m-14000413;14000413;050000;235959;0[m
+[31m-14000419;14000419;000000;235959;2[m
+[31m-14000420;14000420;000000;013000;1[m
+[31m-14000420;14000420;013000;050000;2[m
+[31m-14000420;14000420;050000;235959;0[m
+[31m-14000426;14000426;000000;235959;2[m
+[31m-14000427;14000427;000000;013000;1[m
+[31m-14000427;14000427;013000;050000;2[m
+[31m-14000427;14000427;050000;235959;0[m
+[31m-14000502;14000502;000000;235959;2[m
+[31m-14000503;14000503;000000;013000;1[m
+[31m-14000503;14000503;013000;050000;2[m
+[31m-14000503;14000503;050000;235959;0[m
+[31m-14000509;14000509;000000;235959;2[m
+[31m-14000510;14000510;000000;013000;1[m
+[31m-14000510;14000510;013000;050000;2[m
+[31m-14000510;14000510;050000;235959;0[m
+[31m-14000516;14000516;000000;235959;2[m
+[31m-14000517;14000517;000000;013000;1[m
+[31m-14000517;14000517;013000;050000;2[m
+[31m-14000517;14000517;050000;235959;0[m
+[31m-14000523;14000523;000000;235959;2[m
+[31m-14000524;14000524;000000;013000;1[m
+[31m-14000524;14000524;013000;050000;2[m
+[31m-14000524;14000524;050000;235959;0[m
+[31m-14000530;14000530;000000;235959;2[m
+[31m-14000531;14000531;000000;013000;1[m
+[31m-14000531;14000531;013000;050000;2[m
+[31m-14000531;14000531;050000;235959;0[m
+[31m-14000606;14000606;000000;235959;2[m
+[31m-14000607;14000607;000000;013000;1[m
+[31m-14000607;14000607;013000;050000;2[m
+[31m-14000607;14000607;050000;235959;0[m
+[31m-14000613;14000613;000000;235959;2[m
+[31m-14000614;14000614;000000;013000;1[m
+[31m-14000614;14000614;013000;050000;2[m
+[31m-14000614;14000614;050000;235959;0[m
+[31m-14000620;14000620;000000;235959;2[m
+[31m-14000621;14000621;000000;013000;1[m
+[31m-14000621;14000621;013000;050000;2[m
+[31m-14000621;14000621;050000;235959;0[m
+[31m-14000627;14000627;000000;235959;2[m
+[31m-14000628;14000628;000000;013000;1[m
+[31m-14000628;14000628;013000;050000;2[m
+[31m-14000628;14000628;050000;235959;0[m
+[31m-14000703;14000703;000000;235959;2[m
+[31m-14000704;14000704;000000;013000;1[m
+[31m-14000704;14000704;013000;050000;2[m
+[31m-14000704;14000704;050000;235959;0[m
+[31m-14000710;14000710;000000;235959;2[m
+[31m-14000711;14000711;000000;013000;1[m
+[31m-14000711;14000711;013000;050000;2[m
+[31m-14000711;14000711;050000;235959;0[m
+[31m-14000717;14000717;000000;235959;2[m
+[31m-14000718;14000718;000000;013000;1[m
+[31m-14000718;14000718;013000;050000;2[m
+[31m-14000718;14000718;050000;235959;0[m
+[31m-14000724;14000724;000000;235959;2[m
+[31m-14000725;14000725;000000;013000;1[m
+[31m-14000725;14000725;013000;050000;2[m
+[31m-14000725;14000725;050000;235959;0[m
+[31m-14000801;14000801;000000;235959;2[m
+[31m-14000802;14000802;000000;013000;1[m
+[31m-14000802;14000802;013000;050000;2[m
+[31m-14000802;14000802;050000;235959;0[m
+[31m-14000808;14000808;000000;235959;2[m
+[31m-14000809;14000809;000000;013000;1[m
+[31m-14000809;14000809;013000;050000;2[m
+[31m-14000809;14000809;050000;235959;0[m
+[31m-14000815;14000815;000000;235959;2[m
+[31m-14000816;14000816;000000;013000;1[m
+[31m-14000816;14000816;013000;050000;2[m
+[31m-14000816;14000816;050000;235959;0[m
+[31m-14000822;14000822;000000;235959;2[m
+[31m-14000823;14000823;000000;013000;1[m
+[31m-14000823;14000823;013000;050000;2[m
+[31m-14000823;14000823;050000;235959;0[m
+[31m-14000829;14000829;000000;235959;2[m
+[31m-14000830;14000830;000000;013000;1[m
+[31m-14000830;14000830;013000;050000;2[m
+[31m-14000830;14000830;050000;235959;0[m
+[31m-14000906;14000906;000000;235959;2[m
+[31m-14000907;14000907;000000;013000;1[m
+[31m-14000907;14000907;013000;050000;2[m
+[31m-14000907;14000907;050000;235959;0[m
+[31m-14000913;14000913;000000;235959;2[m
+[31m-14000914;14000914;000000;013000;1[m
+[31m-14000914;14000914;013000;050000;2[m
+[31m-14000914;14000914;050000;235959;0[m
+[31m-14000920;14000920;000000;235959;2[m
+[31m-14000921;14000921;000000;013000;1[m
+[31m-14000921;14000921;013000;050000;2[m
+[31m-14000921;14000921;050000;235959;0[m
+[31m-14000927;14000927;000000;235959;2[m
+[31m-14000928;14000928;000000;013000;1[m
+[31m-14000928;14000928;013000;050000;2[m
+[31m-14000928;14000928;050000;235959;0[m
+[31m-14001004;14001004;000000;235959;2[m
+[31m-14001005;14001005;000000;013000;1[m
+[31m-14001005;14001005;013000;050000;2[m
+[31m-14001005;14001005;050000;235959;0[m
+[31m-14001011;14001011;000000;235959;2[m
+[31m-14001012;14001012;000000;013000;1[m
+[31m-14001012;14001012;013000;050000;2[m
+[31m-14001012;14001012;050000;235959;0[m
+[31m-14001018;14001018;000000;235959;2[m
+[31m-14001019;14001019;000000;013000;1[m
+[31m-14001019;14001019;013000;050000;2[m
+[31m-14001019;14001019;050000;235959;0[m
+[31m-14001025;14001025;000000;235959;2[m
+[31m-14001026;14001026;000000;013000;1[m
+[31m-14001026;14001026;013000;050000;2[m
+[31m-14001026;14001026;050000;235959;0[m
+[31m-14001102;14001102;000000;235959;2[m
+[31m-14001103;14001103;000000;013000;1[m
+[31m-14001103;14001103;013000;050000;2[m
+[31m-14001103;14001103;050000;235959;0[m
+[31m-14001109;14001109;000000;235959;2[m
+[31m-14001110;14001110;000000;013000;1[m
+[31m-14001110;14001110;013000;050000;2[m
+[31m-14001110;14001110;050000;235959;0[m
+[31m-14001116;14001116;000000;235959;2[m
+[31m-14001117;14001117;000000;013000;1[m
+[31m-14001117;14001117;013000;050000;2[m
+[31m-14001117;14001117;050000;235959;0[m
+[31m-14001123;14001123;000000;235959;2[m
+[31m-14001124;14001124;000000;013000;1[m
+[31m-14001124;14001124;013000;050000;2[m
+[31m-14001124;14001124;050000;235959;0[m
+[31m-14001130;14001130;000000;235959;2[m
+[31m-14001201;14001201;000000;013000;1[m
+[31m-14001201;14001201;013000;050000;2[m
+[31m-14001201;14001201;050000;235959;0[m
+[31m-14001207;14001207;000000;235959;2[m
+[31m-14001208;14001208;000000;013000;1[m
+[31m-14001208;14001208;013000;050000;2[m
+[31m-14001208;14001208;050000;235959;0[m
+[31m-14001214;14001214;000000;235959;2[m
+[31m-14001215;14001215;000000;013000;1[m
+[31m-14001215;14001215;013000;050000;2[m
+[31m-14001215;14001215;050000;235959;0[m
+[31m-14001221;14001221;000000;235959;2[m
+[31m-14001222;14001222;000000;013000;1[m
+[31m-14001222;14001222;013000;050000;2[m
+[31m-14001222;14001222;050000;235959;0[m
+[31m-14001228;14001228;000000;235959;2[m
+[31m-14001229;14001229;000000;013000;1[m
+[31m-14001229;14001229;013000;050000;2[m
+[31m-14001229;14001229;050000;235959;0[m
+[32m+[m[32m14000107;14000107;000000;235959;0[m
+[32m+[m[32m14000114;14000114;000000;235959;0[m
+[32m+[m[32m14000121;14000121;000000;235959;0[m
+[32m+[m[32m14000128;14000128;000000;235959;0[m
+[32m+[m[32m14000204;14000204;000000;235959;0[m
+[32m+[m[32m14000211;14000211;000000;235959;0[m
+[32m+[m[32m14000218;14000218;000000;235959;0[m
+[32m+[m[32m14000225;14000225;000000;235959;0[m
+[32m+[m[32m14000301;14000301;000000;235959;0[m
+[32m+[m[32m14000308;14000308;000000;235959;0[m
+[32m+[m[32m14000315;14000315;000000;235959;0[m
+[32m+[m[32m14000322;14000322;000000;235959;0[m
+[32m+[m[32m14000329;14000329;000000;235959;0[m
+[32m+[m[32m14000405;14000405;000000;235959;0[m
+[32m+[m[32m14000412;14000412;000000;235959;0[m
+[32m+[m[32m14000419;14000419;000000;235959;0[m
+[32m+[m[32m14000426;14000426;000000;235959;0[m
+[32m+[m[32m14000502;14000502;000000;235959;0[m
+[32m+[m[32m14000509;14000509;000000;235959;0[m
+[32m+[m[32m14000516;14000516;000000;235959;0[m
+[32m+[m[32m14000523;14000523;000000;235959;0[m
+[32m+[m[32m14000530;14000530;000000;235959;0[m
+[32m+[m[32m14000606;14000606;000000;235959;0[m
+[32m+[m[32m14000613;14000613;000000;235959;0[m
+[32m+[m[32m14000620;14000620;000000;235959;0[m
+[32m+[m[32m14000627;14000627;000000;235959;0[m
+[32m+[m[32m14000703;14000703;000000;235959;0[m
+[32m+[m[32m14000710;14000710;000000;235959;0[m
+[32m+[m[32m14000717;14000717;000000;235959;0[m
+[32m+[m[32m14000724;14000724;000000;235959;0[m
+[32m+[m[32m14000801;14000801;000000;235959;0[m
+[32m+[m[32m14000808;14000808;000000;235959;0[m
+[32m+[m[32m14000815;14000815;000000;235959;0[m
+[32m+[m[32m14000822;14000822;000000;235959;0[m
+[32m+[m[32m14000829;14000829;000000;235959;0[m
+[32m+[m[32m14000906;14000906;000000;235959;0[m
+[32m+[m[32m14000913;14000913;000000;235959;0[m
+[32m+[m[32m14000920;14000920;000000;235959;0[m
+[32m+[m[32m14000927;14000927;000000;235959;0[m
+[32m+[m[32m14001004;14001004;000000;235959;0[m
+[32m+[m[32m14001011;14001011;000000;235959;0[m
+[32m+[m[32m14001018;14001018;000000;235959;0[m
+[32m+[m[32m14001025;14001025;000000;235959;0[m
+[32m+[m[32m14001102;14001102;000000;235959;0[m
+[32m+[m[32m14001109;14001109;000000;235959;0[m
+[32m+[m[32m14001116;14001116;000000;235959;0[m
+[32m+[m[32m14001123;14001123;000000;235959;0[m
+[32m+[m[32m14001130;14001130;000000;235959;0[m
+[32m+[m[32m14001207;14001207;000000;235959;0[m
+[32m+[m[32m14001214;14001214;000000;235959;0[m
+[32m+[m[32m14001221;14001221;000000;235959;0[m
+[32m+[m[32m14001228;14001228;000000;235959;0[m
+[1mdiff --git a/UI/bin/Debug/SCH/4.sch b/UI/bin/Debug/SCH/4.sch[m
+[1mindex b912d5e..4e8baab 100644[m
+[1m--- a/UI/bin/Debug/SCH/4.sch[m
+[1m+++ b/UI/bin/Debug/SCH/4.sch[m
+[36m@@ -1,366 +1,732 @@[m
+[31m-13990101;13990101;000000;040000;0[m
+[31m-13990102;13990102;000000;040000;0[m
+[31m-13990103;13990103;000000;040000;0[m
+[31m-13990104;13990104;000000;040000;0[m
+[31m-13990105;13990105;000000;040000;0[m
+[31m-13990106;13990106;000000;040000;0[m
+[31m-13990107;13990107;000000;040000;0[m
+[31m-13990108;13990108;000000;040000;0[m
+[31m-13990109;13990109;000000;040000;0[m
+[31m-13990110;13990110;000000;040000;0[m
+[31m-13990111;13990111;000000;040000;0[m
+[31m-13990112;13990112;000000;040000;0[m
+[31m-13990113;13990113;000000;040000;0[m
+[31m-13990114;13990114;000000;040000;0[m
+[31m-13990115;13990115;000000;040000;0[m
+[31m-13990116;13990116;000000;040000;0[m
+[31m-13990117;13990117;000000;040000;0[m
+[31m-13990118;13990118;000000;040000;0[m
+[31m-13990119;13990119;000000;040000;0[m
+[31m-13990120;13990120;000000;040000;0[m
+[31m-13990121;13990121;000000;040000;0[m
+[31m-13990122;13990122;000000;040000;0[m
+[31m-13990123;13990123;000000;040000;0[m
+[31m-13990124;13990124;000000;040000;0[m
+[31m-13990125;13990125;000000;040000;0[m
+[31m-13990126;13990126;000000;040000;0[m
+[31m-13990127;13990127;000000;040000;0[m
+[31m-13990128;13990128;000000;040000;0[m
+[31m-13990129;13990129;000000;040000;0[m
+[31m-13990130;13990130;000000;040000;0[m
+[31m-13990131;13990131;000000;040000;0[m
+[31m-13990201;13990201;000000;040000;0[m
+[31m-13990202;13990202;000000;040000;0[m
+[31m-13990203;13990203;000000;040000;0[m
+[31m-13990204;13990204;000000;040000;0[m
+[31m-13990205;13990205;000000;040000;0[m
+[31m-13990206;13990206;000000;040000;0[m
+[31m-13990207;13990207;000000;040000;0[m
+[31m-13990208;13990208;000000;040000;0[m
+[31m-13990209;13990209;000000;040000;0[m
+[31m-13990210;13990210;000000;040000;0[m
+[31m-13990211;13990211;000000;040000;0[m
+[31m-13990212;13990212;000000;040000;0[m
+[31m-13990213;13990213;000000;040000;0[m
+[31m-13990214;13990214;000000;040000;0[m
+[31m-13990215;13990215;000000;040000;0[m
+[31m-13990216;13990216;000000;040000;0[m
+[31m-13990217;13990217;000000;040000;0[m
+[31m-13990218;13990218;000000;040000;0[m
+[31m-13990219;13990219;000000;040000;0[m
+[31m-13990220;13990220;000000;040000;0[m
+[31m-13990221;13990221;000000;040000;0[m
+[31m-13990222;13990222;000000;040000;0[m
+[31m-13990223;13990223;000000;040000;0[m
+[31m-13990224;13990224;000000;040000;0[m
+[31m-13990225;13990225;000000;040000;0[m
+[31m-13990226;13990226;000000;040000;0[m
+[31m-13990227;13990227;000000;040000;0[m
+[31m-13990228;13990228;000000;040000;0[m
+[31m-13990229;13990229;000000;040000;0[m
+[31m-13990230;13990230;000000;040000;0[m
+[31m-13990231;13990231;000000;040000;0[m
+[31m-13990301;13990301;000000;040000;0[m
+[31m-13990302;13990302;000000;040000;0[m
+[31m-13990303;13990303;000000;040000;0[m
+[31m-13990304;13990304;000000;040000;0[m
+[31m-13990305;13990305;000000;040000;0[m
+[31m-13990306;13990306;000000;040000;0[m
+[31m-13990307;13990307;000000;040000;0[m
+[31m-13990308;13990308;000000;040000;0[m
+[31m-13990309;13990309;000000;040000;0[m
+[31m-13990310;13990310;000000;040000;0[m
+[31m-13990311;13990311;000000;040000;0[m
+[31m-13990312;13990312;000000;040000;0[m
+[31m-13990313;13990313;000000;040000;0[m
+[31m-13990314;13990314;000000;040000;0[m
+[31m-13990315;13990315;000000;040000;0[m
+[31m-13990316;13990316;000000;040000;0[m
+[31m-13990317;13990317;000000;040000;0[m
+[31m-13990318;13990318;000000;040000;0[m
+[31m-13990319;13990319;000000;040000;0[m
+[31m-13990320;13990320;000000;040000;0[m
+[31m-13990321;13990321;000000;040000;0[m
+[31m-13990322;13990322;000000;040000;0[m
+[31m-13990323;13990323;000000;040000;0[m
+[31m-13990324;13990324;000000;040000;0[m
+[31m-13990325;13990325;000000;040000;0[m
+[31m-13990326;13990326;000000;040000;0[m
+[31m-13990327;13990327;000000;040000;0[m
+[31m-13990328;13990328;000000;040000;0[m
+[31m-13990329;13990329;000000;040000;0[m
+[31m-13990330;13990330;000000;040000;0[m
+[31m-13990331;13990331;000000;040000;0[m
+[31m-13990401;13990401;000000;040000;0[m
+[31m-13990402;13990402;000000;040000;0[m
+[31m-13990403;13990403;000000;040000;0[m
+[31m-13990404;13990404;000000;040000;0[m
+[31m-13990405;13990405;000000;040000;0[m
+[31m-13990406;13990406;000000;040000;0[m
+[31m-13990407;13990407;000000;040000;0[m
+[31m-13990408;13990408;000000;040000;0[m
+[31m-13990409;13990409;000000;040000;0[m
+[31m-13990410;13990410;000000;040000;0[m
+[31m-13990411;13990411;000000;040000;0[m
+[31m-13990412;13990412;000000;040000;0[m
+[31m-13990413;13990413;000000;040000;0[m
+[31m-13990414;13990414;000000;040000;0[m
+[31m-13990415;13990415;000000;040000;0[m
+[31m-13990416;13990416;000000;040000;0[m
+[31m-13990417;13990417;000000;040000;0[m
+[31m-13990418;13990418;000000;040000;0[m
+[31m-13990419;13990419;000000;040000;0[m
+[31m-13990420;13990420;000000;040000;0[m
+[31m-13990421;13990421;000000;040000;0[m
+[31m-13990422;13990422;000000;040000;0[m
+[31m-13990423;13990423;000000;040000;0[m
+[31m-13990424;13990424;000000;040000;0[m
+[31m-13990425;13990425;000000;040000;0[m
+[31m-13990426;13990426;000000;040000;0[m
+[31m-13990427;13990427;000000;040000;0[m
+[31m-13990428;13990428;000000;040000;0[m
+[31m-13990429;13990429;000000;040000;0[m
+[31m-13990430;13990430;000000;040000;0[m
+[31m-13990431;13990431;000000;040000;0[m
+[31m-13990501;13990501;000000;040000;0[m
+[31m-13990502;13990502;000000;040000;0[m
+[31m-13990503;13990503;000000;040000;0[m
+[31m-13990504;13990504;000000;040000;0[m
+[31m-13990505;13990505;000000;040000;0[m
+[31m-13990506;13990506;000000;040000;0[m
+[31m-13990507;13990507;000000;040000;0[m
+[31m-13990508;13990508;000000;040000;0[m
+[31m-13990509;13990509;000000;040000;0[m
+[31m-13990510;13990510;000000;040000;0[m
+[31m-13990511;13990511;000000;040000;0[m
+[31m-13990512;13990512;000000;040000;0[m
+[31m-13990513;13990513;000000;040000;0[m
+[31m-13990514;13990514;000000;040000;0[m
+[31m-13990515;13990515;000000;040000;0[m
+[31m-13990516;13990516;000000;040000;0[m
+[31m-13990517;13990517;000000;040000;0[m
+[31m-13990518;13990518;000000;040000;0[m
+[31m-13990519;13990519;000000;040000;0[m
+[31m-13990520;13990520;000000;040000;0[m
+[31m-13990521;13990521;000000;040000;0[m
+[31m-13990522;13990522;000000;040000;0[m
+[31m-13990523;13990523;000000;040000;0[m
+[31m-13990524;13990524;000000;040000;0[m
+[31m-13990525;13990525;000000;040000;0[m
+[31m-13990526;13990526;000000;040000;0[m
+[31m-13990527;13990527;000000;040000;0[m
+[31m-13990528;13990528;000000;040000;0[m
+[31m-13990529;13990529;000000;040000;0[m
+[31m-13990530;13990530;000000;040000;0[m
+[31m-13990531;13990531;000000;040000;0[m
+[31m-13990601;13990601;000000;040000;0[m
+[31m-13990602;13990602;000000;040000;0[m
+[31m-13990603;13990603;000000;040000;0[m
+[31m-13990604;13990604;000000;040000;0[m
+[31m-13990605;13990605;000000;040000;0[m
+[31m-13990606;13990606;000000;040000;0[m
+[31m-13990607;13990607;000000;040000;0[m
+[31m-13990608;13990608;000000;040000;0[m
+[31m-13990609;13990609;000000;040000;0[m
+[31m-13990610;13990610;000000;040000;0[m
+[31m-13990611;13990611;000000;040000;0[m
+[31m-13990612;13990612;000000;040000;0[m
+[31m-13990613;13990613;000000;040000;0[m
+[31m-13990614;13990614;000000;040000;0[m
+[31m-13990615;13990615;000000;040000;0[m
+[31m-13990616;13990616;000000;040000;0[m
+[31m-13990617;13990617;000000;040000;0[m
+[31m-13990618;13990618;000000;040000;0[m
+[31m-13990619;13990619;000000;040000;0[m
+[31m-13990620;13990620;000000;040000;0[m
+[31m-13990621;13990621;000000;040000;0[m
+[31m-13990622;13990622;000000;040000;0[m
+[31m-13990623;13990623;000000;040000;0[m
+[31m-13990624;13990624;000000;040000;0[m
+[31m-13990625;13990625;000000;040000;0[m
+[31m-13990626;13990626;000000;040000;0[m
+[31m-13990627;13990627;000000;040000;0[m
+[31m-13990628;13990628;000000;040000;0[m
+[31m-13990629;13990629;000000;040000;0[m
+[31m-13990630;13990630;000000;040000;0[m
+[31m-13990631;13990631;000000;040000;0[m
+[31m-13990701;13990701;000000;040000;0[m
+[31m-13990702;13990702;000000;040000;0[m
+[31m-13990703;13990703;000000;040000;0[m
+[31m-13990704;13990704;000000;040000;0[m
+[31m-13990705;13990705;000000;040000;0[m
+[31m-13990706;13990706;000000;040000;0[m
+[31m-13990707;13990707;000000;040000;0[m
+[31m-13990708;13990708;000000;040000;0[m
+[31m-13990709;13990709;000000;040000;0[m
+[31m-13990710;13990710;000000;040000;0[m
+[31m-13990711;13990711;000000;040000;0[m
+[31m-13990712;13990712;000000;040000;0[m
+[31m-13990713;13990713;000000;040000;0[m
+[31m-13990714;13990714;000000;040000;0[m
+[31m-13990715;13990715;000000;040000;0[m
+[31m-13990716;13990716;000000;040000;0[m
+[31m-13990717;13990717;000000;040000;0[m
+[31m-13990718;13990718;000000;040000;0[m
+[31m-13990719;13990719;000000;040000;0[m
+[31m-13990720;13990720;000000;040000;0[m
+[31m-13990721;13990721;000000;040000;0[m
+[31m-13990722;13990722;000000;040000;0[m
+[31m-13990723;13990723;000000;040000;0[m
+[31m-13990724;13990724;000000;040000;0[m
+[31m-13990725;13990725;000000;040000;0[m
+[31m-13990726;13990726;000000;040000;0[m
+[31m-13990727;13990727;000000;040000;0[m
+[31m-13990728;13990728;000000;040000;0[m
+[31m-13990729;13990729;000000;040000;0[m
+[31m-13990730;13990730;000000;040000;0[m
+[31m-13990801;13990801;000000;040000;0[m
+[31m-13990802;13990802;000000;040000;0[m
+[31m-13990803;13990803;000000;040000;0[m
+[31m-13990804;13990804;000000;040000;0[m
+[31m-13990805;13990805;000000;040000;0[m
+[31m-13990806;13990806;000000;040000;0[m
+[31m-13990807;13990807;000000;040000;0[m
+[31m-13990808;13990808;000000;040000;0[m
+[31m-13990809;13990809;000000;040000;0[m
+[31m-13990810;13990810;000000;040000;0[m
+[31m-13990811;13990811;000000;040000;0[m
+[31m-13990812;13990812;000000;040000;0[m
+[31m-13990813;13990813;000000;040000;0[m
+[31m-13990814;13990814;000000;040000;0[m
+[31m-13990815;13990815;000000;040000;0[m
+[31m-13990816;13990816;000000;040000;0[m
+[31m-13990817;13990817;000000;040000;0[m
+[31m-13990818;13990818;000000;040000;0[m
+[31m-13990819;13990819;000000;040000;0[m
+[31m-13990820;13990820;000000;040000;0[m
+[31m-13990821;13990821;000000;040000;0[m
+[31m-13990822;13990822;000000;040000;0[m
+[31m-13990823;13990823;000000;040000;0[m
+[31m-13990824;13990824;000000;040000;0[m
+[31m-13990825;13990825;000000;040000;0[m
+[31m-13990826;13990826;000000;040000;0[m
+[31m-13990827;13990827;000000;040000;0[m
+[31m-13990828;13990828;000000;040000;0[m
+[31m-13990829;13990829;000000;040000;0[m
+[31m-13990830;13990830;000000;040000;0[m
+[31m-13990901;13990901;000000;040000;0[m
+[31m-13990902;13990902;000000;040000;0[m
+[31m-13990903;13990903;000000;040000;0[m
+[31m-13990904;13990904;000000;040000;0[m
+[31m-13990905;13990905;000000;040000;0[m
+[31m-13990906;13990906;000000;040000;0[m
+[31m-13990907;13990907;000000;040000;0[m
+[31m-13990908;13990908;000000;040000;0[m
+[31m-13990909;13990909;000000;040000;0[m
+[31m-13990910;13990910;000000;040000;0[m
+[31m-13990911;13990911;000000;040000;0[m
+[31m-13990912;13990912;000000;040000;0[m
+[31m-13990913;13990913;000000;040000;0[m
+[31m-13990914;13990914;000000;040000;0[m
+[31m-13990915;13990915;000000;040000;0[m
+[31m-13990916;13990916;000000;040000;0[m
+[31m-13990917;13990917;000000;040000;0[m
+[31m-13990918;13990918;000000;040000;0[m
+[31m-13990919;13990919;000000;040000;0[m
+[31m-13990920;13990920;000000;040000;0[m
+[31m-13990921;13990921;000000;040000;0[m
+[31m-13990922;13990922;000000;040000;0[m
+[31m-13990923;13990923;000000;040000;0[m
+[31m-13990924;13990924;000000;040000;0[m
+[31m-13990925;13990925;000000;040000;0[m
+[31m-13990926;13990926;000000;040000;0[m
+[31m-13990927;13990927;000000;040000;0[m
+[31m-13990928;13990928;000000;040000;0[m
+[31m-13990929;13990929;000000;040000;0[m
+[31m-13990930;13990930;000000;040000;0[m
+[31m-13991001;13991001;000000;040000;0[m
+[31m-13991002;13991002;000000;040000;0[m
+[31m-13991003;13991003;000000;040000;0[m
+[31m-13991004;13991004;000000;040000;0[m
+[31m-13991005;13991005;000000;040000;0[m
+[31m-13991006;13991006;000000;040000;0[m
+[31m-13991007;13991007;000000;040000;0[m
+[31m-13991008;13991008;000000;040000;0[m
+[31m-13991009;13991009;000000;040000;0[m
+[31m-13991010;13991010;000000;040000;0[m
+[31m-13991011;13991011;000000;040000;0[m
+[31m-13991012;13991012;000000;040000;0[m
+[31m-13991013;13991013;000000;040000;0[m
+[31m-13991014;13991014;000000;040000;0[m
+[31m-13991015;13991015;000000;040000;0[m
+[31m-13991016;13991016;000000;040000;0[m
+[31m-13991017;13991017;000000;040000;0[m
+[31m-13991018;13991018;000000;040000;0[m
+[31m-13991019;13991019;000000;040000;0[m
+[31m-13991020;13991020;000000;040000;0[m
+[31m-13991021;13991021;000000;040000;0[m
+[31m-13991022;13991022;000000;040000;0[m
+[31m-13991023;13991023;000000;040000;0[m
+[31m-13991024;13991024;000000;040000;0[m
+[31m-13991025;13991025;000000;040000;0[m
+[31m-13991026;13991026;000000;040000;0[m
+[31m-13991027;13991027;000000;040000;0[m
+[31m-13991028;13991028;000000;040000;0[m
+[31m-13991029;13991029;000000;040000;0[m
+[31m-13991030;13991030;000000;040000;0[m
+[31m-13991101;13991101;000000;040000;0[m
+[31m-13991102;13991102;000000;040000;0[m
+[31m-13991103;13991103;000000;040000;0[m
+[31m-13991104;13991104;000000;040000;0[m
+[31m-13991105;13991105;000000;040000;0[m
+[31m-13991106;13991106;000000;040000;0[m
+[31m-13991107;13991107;000000;040000;0[m
+[31m-13991108;13991108;000000;040000;0[m
+[31m-13991109;13991109;000000;040000;0[m
+[31m-13991110;13991110;000000;040000;0[m
+[31m-13991111;13991111;000000;040000;0[m
+[31m-13991112;13991112;000000;040000;0[m
+[31m-13991113;13991113;000000;040000;0[m
+[31m-13991114;13991114;000000;040000;0[m
+[31m-13991115;13991115;000000;040000;0[m
+[31m-13991116;13991116;000000;040000;0[m
+[31m-13991117;13991117;000000;040000;0[m
+[31m-13991118;13991118;000000;040000;0[m
+[31m-13991119;13991119;000000;040000;0[m
+[31m-13991120;13991120;000000;040000;0[m
+[31m-13991121;13991121;000000;040000;0[m
+[31m-13991122;13991122;000000;040000;0[m
+[31m-13991123;13991123;000000;040000;0[m
+[31m-13991124;13991124;000000;040000;0[m
+[31m-13991125;13991125;000000;040000;0[m
+[31m-13991126;13991126;000000;040000;0[m
+[31m-13991127;13991127;000000;040000;0[m
+[31m-13991128;13991128;000000;040000;0[m
+[31m-13991129;13991129;000000;040000;0[m
+[31m-13991130;13991130;000000;040000;0[m
+[31m-13991201;13991201;000000;040000;0[m
+[31m-13991202;13991202;000000;040000;0[m
+[31m-13991203;13991203;000000;040000;0[m
+[31m-13991204;13991204;000000;040000;0[m
+[31m-13991205;13991205;000000;040000;0[m
+[31m-13991206;13991206;000000;040000;0[m
+[31m-13991207;13991207;000000;040000;0[m
+[31m-13991208;13991208;000000;040000;0[m
+[31m-13991209;13991209;000000;040000;0[m
+[31m-13991210;13991210;000000;040000;0[m
+[31m-13991211;13991211;000000;040000;0[m
+[31m-13991212;13991212;000000;040000;0[m
+[31m-13991213;13991213;000000;040000;0[m
+[31m-13991214;13991214;000000;040000;0[m
+[31m-13991215;13991215;000000;040000;0[m
+[31m-13991216;13991216;000000;040000;0[m
+[31m-13991217;13991217;000000;040000;0[m
+[31m-13991218;13991218;000000;040000;0[m
+[31m-13991219;13991219;000000;040000;0[m
+[31m-13991220;13991220;000000;040000;0[m
+[31m-13991221;13991221;000000;040000;0[m
+[31m-13991222;13991222;000000;040000;0[m
+[31m-13991223;13991223;000000;040000;0[m
+[31m-13991224;13991224;000000;040000;0[m
+[31m-13991225;13991225;000000;040000;0[m
+[31m-13991226;13991226;000000;040000;0[m
+[31m-13991227;13991227;000000;040000;0[m
+[31m-13991228;13991228;000000;040000;0[m
+[31m-13991229;13991229;000000;040000;0[m
+[31m-13991230;13991230;000000;040000;0[m
+[32m+[m[32m13990101;13990101;120000;170000;2[m
+[32m+[m[32m13990101;13990101;000000;120000;2[m
+[32m+[m[32m13990102;13990102;120000;170000;2[m
+[32m+[m[32m13990102;13990102;000000;120000;2[m
+[32m+[m[32m13990103;13990103;120000;170000;2[m
+[32m+[m[32m13990103;13990103;000000;120000;2[m
+[32m+[m[32m13990104;13990104;120000;170000;2[m
+[32m+[m[32m13990104;13990104;000000;120000;2[m
+[32m+[m[32m13990105;13990105;120000;170000;2[m
+[32m+[m[32m13990105;13990105;000000;120000;2[m
+[32m+[m[32m13990106;13990106;120000;170000;2[m
+[32m+[m[32m13990106;13990106;000000;120000;2[m
+[32m+[m[32m13990107;13990107;120000;170000;2[m
+[32m+[m[32m13990107;13990107;000000;120000;2[m
+[32m+[m[32m13990108;13990108;120000;170000;2[m
+[32m+[m[32m13990108;13990108;000000;120000;2[m
+[32m+[m[32m13990109;13990109;120000;170000;2[m
+[32m+[m[32m13990109;13990109;000000;120000;2[m
+[32m+[m[32m13990110;13990110;120000;170000;2[m
+[32m+[m[32m13990110;13990110;000000;120000;2[m
+[32m+[m[32m13990111;13990111;120000;170000;2[m
+[32m+[m[32m13990111;13990111;000000;120000;2[m
+[32m+[m[32m13990112;13990112;120000;170000;2[m
+[32m+[m[32m13990112;13990112;000000;120000;2[m
+[32m+[m[32m13990113;13990113;120000;170000;2[m
+[32m+[m[32m13990113;13990113;000000;120000;2[m
+[32m+[m[32m13990114;13990114;120000;170000;2[m
+[32m+[m[32m13990114;13990114;000000;120000;2[m
+[32m+[m[32m13990115;13990115;120000;170000;2[m
+[32m+[m[32m13990115;13990115;000000;120000;2[m
+[32m+[m[32m13990116;13990116;120000;170000;2[m
+[32m+[m[32m13990116;13990116;000000;120000;2[m
+[32m+[m[32m13990117;13990117;120000;170000;2[m
+[32m+[m[32m13990117;13990117;000000;120000;2[m
+[32m+[m[32m13990118;13990118;120000;170000;2[m
+[32m+[m[32m13990118;13990118;000000;120000;2[m
+[32m+[m[32m13990119;13990119;120000;170000;2[m
+[32m+[m[32m13990119;13990119;000000;120000;2[m
+[32m+[m[32m13990120;13990120;120000;170000;2[m
+[32m+[m[32m13990120;13990120;000000;120000;2[m
+[32m+[m[32m13990121;13990121;120000;170000;2[m
+[32m+[m[32m13990121;13990121;000000;120000;2[m
+[32m+[m[32m13990122;13990122;120000;170000;2[m
+[32m+[m[32m13990122;13990122;000000;120000;2[m
+[32m+[m[32m13990123;13990123;120000;170000;2[m
+[32m+[m[32m13990123;13990123;000000;120000;2[m
+[32m+[m[32m13990124;13990124;120000;170000;2[m
+[32m+[m[32m13990124;13990124;000000;120000;2[m
+[32m+[m[32m13990125;13990125;120000;170000;2[m
+[32m+[m[32m13990125;13990125;000000;120000;2[m
+[32m+[m[32m13990126;13990126;120000;170000;2[m
+[32m+[m[32m13990126;13990126;000000;120000;2[m
+[32m+[m[32m13990127;13990127;120000;170000;2[m
+[32m+[m[32m13990127;13990127;000000;120000;2[m
+[32m+[m[32m13990128;13990128;120000;170000;2[m
+[32m+[m[32m13990128;13990128;000000;120000;2[m
+[32m+[m[32m13990129;13990129;120000;170000;2[m
+[32m+[m[32m13990129;13990129;000000;120000;2[m
+[32m+[m[32m13990130;13990130;120000;170000;2[m
+[32m+[m[32m13990130;13990130;000000;120000;2[m
+[32m+[m[32m13990131;13990131;120000;170000;2[m
+[32m+[m[32m13990131;13990131;000000;120000;2[m
+[32m+[m[32m13990201;13990201;120000;170000;2[m
+[32m+[m[32m13990201;13990201;000000;120000;2[m
+[32m+[m[32m13990202;13990202;120000;170000;2[m
+[32m+[m[32m13990202;13990202;000000;120000;2[m
+[32m+[m[32m13990203;13990203;120000;170000;2[m
+[32m+[m[32m13990203;13990203;000000;120000;2[m
+[32m+[m[32m13990204;13990204;120000;170000;2[m
+[32m+[m[32m13990204;13990204;000000;120000;2[m
+[32m+[m[32m13990205;13990205;120000;170000;2[m
+[32m+[m[32m13990205;13990205;000000;120000;2[m
+[32m+[m[32m13990206;13990206;120000;170000;2[m
+[32m+[m[32m13990206;13990206;000000;120000;2[m
+[32m+[m[32m13990207;13990207;120000;170000;2[m
+[32m+[m[32m13990207;13990207;000000;120000;2[m
+[32m+[m[32m13990208;13990208;120000;170000;2[m
+[32m+[m[32m13990208;13990208;000000;120000;2[m
+[32m+[m[32m13990209;13990209;120000;170000;2[m
+[32m+[m[32m13990209;13990209;000000;120000;2[m
+[32m+[m[32m13990210;13990210;120000;170000;2[m
+[32m+[m[32m13990210;13990210;000000;120000;2[m
+[32m+[m[32m13990211;13990211;120000;170000;2[m
+[32m+[m[32m13990211;13990211;000000;120000;2[m
+[32m+[m[32m13990212;13990212;120000;170000;2[m
+[32m+[m[32m13990212;13990212;000000;120000;2[m
+[32m+[m[32m13990213;13990213;120000;170000;2[m
+[32m+[m[32m13990213;13990213;000000;120000;2[m
+[32m+[m[32m13990214;13990214;120000;170000;2[m
+[32m+[m[32m13990214;13990214;000000;120000;2[m
+[32m+[m[32m13990215;13990215;120000;170000;2[m
+[32m+[m[32m13990215;13990215;000000;120000;2[m
+[32m+[m[32m13990216;13990216;120000;170000;2[m
+[32m+[m[32m13990216;13990216;000000;120000;2[m
+[32m+[m[32m13990217;13990217;120000;170000;2[m
+[32m+[m[32m13990217;13990217;000000;120000;2[m
+[32m+[m[32m13990218;13990218;120000;170000;2[m
+[32m+[m[32m13990218;13990218;000000;120000;2[m
+[32m+[m[32m13990219;13990219;120000;170000;2[m
+[32m+[m[32m13990219;13990219;000000;120000;2[m
+[32m+[m[32m13990220;13990220;120000;170000;2[m
+[32m+[m[32m13990220;13990220;000000;120000;2[m
+[32m+[m[32m13990221;13990221;120000;170000;2[m
+[32m+[m[32m13990221;13990221;000000;120000;2[m
+[32m+[m[32m13990222;13990222;120000;170000;2[m
+[32m+[m[32m13990222;13990222;000000;120000;2[m
+[32m+[m[32m13990223;13990223;120000;170000;2[m
+[32m+[m[32m13990223;13990223;000000;120000;2[m
+[32m+[m[32m13990224;13990224;120000;170000;2[m
+[32m+[m[32m13990224;13990224;000000;120000;2[m
+[32m+[m[32m13990225;13990225;120000;170000;2[m
+[32m+[m[32m13990225;13990225;000000;120000;2[m
+[32m+[m[32m13990226;13990226;120000;170000;2[m
+[32m+[m[32m13990226;13990226;000000;120000;2[m
+[32m+[m[32m13990227;13990227;120000;170000;2[m
+[32m+[m[32m13990227;13990227;000000;120000;2[m
+[32m+[m[32m13990228;13990228;120000;170000;2[m
+[32m+[m[32m13990228;13990228;000000;120000;2[m
+[32m+[m[32m13990229;13990229;120000;170000;2[m
+[32m+[m[32m13990229;13990229;000000;120000;2[m
+[32m+[m[32m13990230;13990230;120000;170000;2[m
+[32m+[m[32m13990230;13990230;000000;120000;2[m
+[32m+[m[32m13990231;13990231;120000;170000;2[m
+[32m+[m[32m13990231;13990231;000000;120000;2[m
+[32m+[m[32m13990301;13990301;120000;170000;2[m
+[32m+[m[32m13990301;13990301;000000;120000;2[m
+[32m+[m[32m13990302;13990302;120000;170000;2[m
+[32m+[m[32m13990302;13990302;000000;120000;2[m
+[32m+[m[32m13990303;13990303;120000;170000;2[m
+[32m+[m[32m13990303;13990303;000000;120000;2[m
+[32m+[m[32m13990304;13990304;120000;170000;2[m
+[32m+[m[32m13990304;13990304;000000;120000;2[m
+[32m+[m[32m13990305;13990305;120000;170000;2[m
+[32m+[m[32m13990305;13990305;000000;120000;2[m
+[32m+[m[32m13990306;13990306;120000;170000;2[m
+[32m+[m[32m13990306;13990306;000000;120000;2[m
+[32m+[m[32m13990307;13990307;120000;170000;2[m
+[32m+[m[32m13990307;13990307;000000;120000;2[m
+[32m+[m[32m13990308;13990308;120000;170000;2[m
+[32m+[m[32m13990308;13990308;000000;120000;2[m
+[32m+[m[32m13990309;13990309;120000;170000;2[m
+[32m+[m[32m13990309;13990309;000000;120000;2[m
+[32m+[m[32m13990310;13990310;120000;170000;2[m
+[32m+[m[32m13990310;13990310;000000;120000;2[m
+[32m+[m[32m13990311;13990311;120000;170000;2[m
+[32m+[m[32m13990311;13990311;000000;120000;2[m
+[32m+[m[32m13990312;13990312;120000;170000;2[m
+[32m+[m[32m13990312;13990312;000000;120000;2[m
+[32m+[m[32m13990313;13990313;120000;170000;2[m
+[32m+[m[32m13990313;13990313;000000;120000;2[m
+[32m+[m[32m13990314;13990314;120000;170000;2[m
+[32m+[m[32m13990314;13990314;000000;120000;2[m
+[32m+[m[32m13990315;13990315;120000;170000;2[m
+[32m+[m[32m13990315;13990315;000000;120000;2[m
+[32m+[m[32m13990316;13990316;120000;170000;2[m
+[32m+[m[32m13990316;13990316;000000;120000;2[m
+[32m+[m[32m13990317;13990317;120000;170000;2[m
+[32m+[m[32m13990317;13990317;000000;120000;2[m
+[32m+[m[32m13990318;13990318;120000;170000;2[m
+[32m+[m[32m13990318;13990318;000000;120000;2[m
+[32m+[m[32m13990319;13990319;120000;170000;2[m
+[32m+[m[32m13990319;13990319;000000;120000;2[m
+[32m+[m[32m13990320;13990320;120000;170000;2[m
+[32m+[m[32m13990320;13990320;000000;120000;2[m
+[32m+[m[32m13990321;13990321;120000;170000;2[m
+[32m+[m[32m13990321;13990321;000000;120000;2[m
+[32m+[m[32m13990322;13990322;120000;170000;2[m
+[32m+[m[32m13990322;13990322;000000;120000;2[m
+[32m+[m[32m13990323;13990323;120000;170000;2[m
+[32m+[m[32m13990323;13990323;000000;120000;2[m
+[32m+[m[32m13990324;13990324;120000;170000;2[m
+[32m+[m[32m13990324;13990324;000000;120000;2[m
+[32m+[m[32m13990325;13990325;120000;170000;2[m
+[32m+[m[32m13990325;13990325;000000;120000;2[m
+[32m+[m[32m13990326;13990326;120000;170000;2[m
+[32m+[m[32m13990326;13990326;000000;120000;2[m
+[32m+[m[32m13990327;13990327;120000;170000;2[m
+[32m+[m[32m13990327;13990327;000000;120000;2[m
+[32m+[m[32m13990328;13990328;120000;170000;2[m
+[32m+[m[32m13990328;13990328;000000;120000;2[m
+[32m+[m[32m13990329;13990329;120000;170000;2[m
+[32m+[m[32m13990329;13990329;000000;120000;2[m
+[32m+[m[32m13990330;13990330;120000;170000;2[m
+[32m+[m[32m13990330;13990330;000000;120000;2[m
+[32m+[m[32m13990331;13990331;120000;170000;2[m
+[32m+[m[32m13990331;13990331;000000;120000;2[m
+[32m+[m[32m13990401;13990401;120000;170000;2[m
+[32m+[m[32m13990401;13990401;000000;120000;2[m
+[32m+[m[32m13990402;13990402;120000;170000;2[m
+[32m+[m[32m13990402;13990402;000000;120000;2[m
+[32m+[m[32m13990403;13990403;120000;170000;2[m
+[32m+[m[32m13990403;13990403;000000;120000;2[m
+[32m+[m[32m13990404;13990404;120000;170000;2[m
+[32m+[m[32m13990404;13990404;000000;120000;2[m
+[32m+[m[32m13990405;13990405;120000;170000;2[m
+[32m+[m[32m13990405;13990405;000000;120000;2[m
+[32m+[m[32m13990406;13990406;120000;170000;2[m
+[32m+[m[32m13990406;13990406;000000;120000;2[m
+[32m+[m[32m13990407;13990407;120000;170000;2[m
+[32m+[m[32m13990407;13990407;000000;120000;2[m
+[32m+[m[32m13990408;13990408;120000;170000;2[m
+[32m+[m[32m13990408;13990408;000000;120000;2[m
+[32m+[m[32m13990409;13990409;120000;170000;2[m
+[32m+[m[32m13990409;13990409;000000;120000;2[m
+[32m+[m[32m13990410;13990410;120000;170000;2[m
+[32m+[m[32m13990410;13990410;000000;120000;2[m
+[32m+[m[32m13990411;13990411;120000;170000;2[m
+[32m+[m[32m13990411;13990411;000000;120000;2[m
+[32m+[m[32m13990412;13990412;120000;170000;2[m
+[32m+[m[32m13990412;13990412;000000;120000;2[m
+[32m+[m[32m13990413;13990413;120000;170000;2[m
+[32m+[m[32m13990413;13990413;000000;120000;2[m
+[32m+[m[32m13990414;13990414;120000;170000;2[m
+[32m+[m[32m13990414;13990414;000000;120000;2[m
+[32m+[m[32m13990415;13990415;120000;170000;2[m
+[32m+[m[32m13990415;13990415;000000;120000;2[m
+[32m+[m[32m13990416;13990416;120000;170000;2[m
+[32m+[m[32m13990416;13990416;000000;120000;2[m
+[32m+[m[32m13990417;13990417;120000;170000;2[m
+[32m+[m[32m13990417;13990417;000000;120000;2[m
+[32m+[m[32m13990418;13990418;120000;170000;2[m
+[32m+[m[32m13990418;13990418;000000;120000;2[m
+[32m+[m[32m13990419;13990419;120000;170000;2[m
+[32m+[m[32m13990419;13990419;000000;120000;2[m
+[32m+[m[32m13990420;13990420;120000;170000;2[m
+[32m+[m[32m13990420;13990420;000000;120000;2[m
+[32m+[m[32m13990421;13990421;120000;170000;2[m
+[32m+[m[32m13990421;13990421;000000;120000;2[m
+[32m+[m[32m13990422;13990422;120000;170000;2[m
+[32m+[m[32m13990422;13990422;000000;120000;2[m
+[32m+[m[32m13990423;13990423;120000;170000;2[m
+[32m+[m[32m13990423;13990423;000000;120000;2[m
+[32m+[m[32m13990424;13990424;120000;170000;2[m
+[32m+[m[32m13990424;13990424;000000;120000;2[m
+[32m+[m[32m13990425;13990425;120000;170000;2[m
+[32m+[m[32m13990425;13990425;000000;120000;2[m
+[32m+[m[32m13990426;13990426;120000;170000;2[m
+[32m+[m[32m13990426;13990426;000000;120000;2[m
+[32m+[m[32m13990427;13990427;120000;170000;2[m
+[32m+[m[32m13990427;13990427;000000;120000;2[m
+[32m+[m[32m13990428;13990428;120000;170000;2[m
+[32m+[m[32m13990428;13990428;000000;120000;2[m
+[32m+[m[32m13990429;13990429;120000;170000;2[m
+[32m+[m[32m13990429;13990429;000000;120000;2[m
+[32m+[m[32m13990430;13990430;120000;170000;2[m
+[32m+[m[32m13990430;13990430;000000;120000;2[m
+[32m+[m[32m13990431;13990431;120000;170000;2[m
+[32m+[m[32m13990431;13990431;000000;120000;2[m
+[32m+[m[32m13990501;13990501;120000;170000;2[m
+[32m+[m[32m13990501;13990501;000000;120000;2[m
+[32m+[m[32m13990502;13990502;120000;170000;2[m
+[32m+[m[32m13990502;13990502;000000;120000;2[m
+[32m+[m[32m13990503;13990503;120000;170000;2[m
+[32m+[m[32m13990503;13990503;000000;120000;2[m
+[32m+[m[32m13990504;13990504;120000;170000;2[m
+[32m+[m[32m13990504;13990504;000000;120000;2[m
+[32m+[m[32m13990505;13990505;120000;170000;2[m
+[32m+[m[32m13990505;13990505;000000;120000;2[m
+[32m+[m[32m13990506;13990506;120000;170000;2[m
+[32m+[m[32m13990506;13990506;000000;120000;2[m
+[32m+[m[32m13990507;13990507;120000;170000;2[m
+[32m+[m[32m13990507;13990507;000000;120000;2[m
+[32m+[m[32m13990508;13990508;120000;170000;2[m
+[32m+[m[32m13990508;13990508;000000;120000;2[m
+[32m+[m[32m13990509;13990509;120000;170000;2[m
+[32m+[m[32m13990509;13990509;000000;120000;2[m
+[32m+[m[32m13990510;13990510;120000;170000;2[m
+[32m+[m[32m13990510;13990510;000000;120000;2[m
+[32m+[m[32m13990511;13990511;120000;170000;2[m
+[32m+[m[32m13990511;13990511;000000;120000;2[m
+[32m+[m[32m13990512;13990512;120000;170000;2[m
+[32m+[m[32m13990512;13990512;000000;120000;2[m
+[32m+[m[32m13990513;13990513;120000;170000;2[m
+[32m+[m[32m13990513;13990513;000000;120000;2[m
+[32m+[m[32m13990514;13990514;120000;170000;2[m
+[32m+[m[32m13990514;13990514;000000;120000;2[m
+[32m+[m[32m13990515;13990515;120000;170000;2[m
+[32m+[m[32m13990515;13990515;000000;120000;2[m
+[32m+[m[32m13990516;13990516;120000;170000;2[m
+[32m+[m[32m13990516;13990516;000000;120000;2[m
+[32m+[m[32m13990517;13990517;120000;170000;2[m
+[32m+[m[32m13990517;13990517;000000;120000;2[m
+[32m+[m[32m13990518;13990518;120000;170000;2[m
+[32m+[m[32m13990518;13990518;000000;120000;2[m
+[32m+[m[32m13990519;13990519;120000;170000;2[m
+[32m+[m[32m13990519;13990519;000000;120000;2[m
+[32m+[m[32m13990520;13990520;120000;170000;2[m
+[32m+[m[32m13990520;13990520;000000;120000;2[m
+[32m+[m[32m13990521;13990521;120000;170000;2[m
+[32m+[m[32m13990521;13990521;000000;120000;2[m
+[32m+[m[32m13990522;13990522;120000;170000;2[m
+[32m+[m[32m13990522;13990522;000000;120000;2[m
+[32m+[m[32m13990523;13990523;120000;170000;2[m
+[32m+[m[32m13990523;13990523;000000;120000;2[m
+[32m+[m[32m13990524;13990524;120000;170000;2[m
+[32m+[m[32m13990524;13990524;000000;120000;2[m
+[32m+[m[32m13990525;13990525;120000;170000;2[m
+[32m+[m[32m13990525;13990525;000000;120000;2[m
+[32m+[m[32m13990526;13990526;120000;170000;2[m
+[32m+[m[32m13990526;13990526;000000;120000;2[m
+[32m+[m[32m13990527;13990527;120000;170000;2[m
+[32m+[m[32m13990527;13990527;000000;120000;2[m
+[32m+[m[32m13990528;13990528;120000;170000;2[m
+[32m+[m[32m13990528;13990528;000000;120000;2[m
+[32m+[m[32m13990529;13990529;120000;170000;2[m
+[32m+[m[32m13990529;13990529;000000;120000;2[m
+[32m+[m[32m13990530;13990530;120000;170000;2[m
+[32m+[m[32m13990530;13990530;000000;120000;2[m
+[32m+[m[32m13990531;13990531;120000;170000;2[m
+[32m+[m[32m13990531;13990531;000000;120000;2[m
+[32m+[m[32m13990601;13990601;120000;170000;2[m
+[32m+[m[32m13990601;13990601;000000;120000;2[m
+[32m+[m[32m13990602;13990602;120000;170000;2[m
+[32m+[m[32m13990602;13990602;000000;120000;2[m
+[32m+[m[32m13990603;13990603;120000;170000;2[m
+[32m+[m[32m13990603;13990603;000000;120000;2[m
+[32m+[m[32m13990604;13990604;120000;170000;2[m
+[32m+[m[32m13990604;13990604;000000;120000;2[m
+[32m+[m[32m13990605;13990605;120000;170000;2[m
+[32m+[m[32m13990605;13990605;000000;120000;2[m
+[32m+[m[32m13990606;13990606;120000;170000;2[m
+[32m+[m[32m13990606;13990606;000000;120000;2[m
+[32m+[m[32m13990607;13990607;120000;170000;2[m
+[32m+[m[32m13990607;13990607;000000;120000;2[m
+[32m+[m[32m13990608;13990608;120000;170000;2[m
+[32m+[m[32m13990608;13990608;000000;120000;2[m
+[32m+[m[32m13990609;13990609;120000;170000;2[m
+[32m+[m[32m13990609;13990609;000000;120000;2[m
+[32m+[m[32m13990610;13990610;120000;170000;2[m
+[32m+[m[32m13990610;13990610;000000;120000;2[m
+[32m+[m[32m13990611;13990611;120000;170000;2[m
+[32m+[m[32m13990611;13990611;000000;120000;2[m
+[32m+[m[32m13990612;13990612;120000;170000;2[m
+[32m+[m[32m13990612;13990612;000000;120000;2[m
+[32m+[m[32m13990613;13990613;120000;170000;2[m
+[32m+[m[32m13990613;13990613;000000;120000;2[m
+[32m+[m[32m13990614;13990614;120000;170000;2[m
+[32m+[m[32m13990614;13990614;000000;120000;2[m
+[32m+[m[32m13990615;13990615;120000;170000;2[m
+[32m+[m[32m13990615;13990615;000000;120000;2[m
+[32m+[m[32m13990616;13990616;120000;170000;2[m
+[32m+[m[32m13990616;13990616;000000;120000;2[m
+[32m+[m[32m13990617;13990617;120000;170000;2[m
+[32m+[m[32m13990617;13990617;000000;120000;2[m
+[32m+[m[32m13990618;13990618;120000;170000;2[m
+[32m+[m[32m13990618;13990618;000000;120000;2[m
+[32m+[m[32m13990619;13990619;120000;170000;2[m
+[32m+[m[32m13990619;13990619;000000;120000;2[m
+[32m+[m[32m13990620;13990620;120000;170000;2[m
+[32m+[m[32m13990620;13990620;000000;120000;2[m
+[32m+[m[32m13990621;13990621;120000;170000;2[m
+[32m+[m[32m13990621;13990621;000000;120000;2[m
+[32m+[m[32m13990622;13990622;120000;170000;2[m
+[32m+[m[32m13990622;13990622;000000;120000;2[m
+[32m+[m[32m13990623;13990623;120000;170000;2[m
+[32m+[m[32m13990623;13990623;000000;120000;2[m
+[32m+[m[32m13990624;13990624;120000;170000;2[m
+[32m+[m[32m13990624;13990624;000000;120000;2[m
+[32m+[m[32m13990625;13990625;120000;170000;2[m
+[32m+[m[32m13990625;13990625;000000;120000;2[m
+[32m+[m[32m13990626;13990626;120000;170000;2[m
+[32m+[m[32m13990626;13990626;000000;120000;2[m
+[32m+[m[32m13990627;13990627;120000;170000;2[m
+[32m+[m[32m13990627;13990627;000000;120000;2[m
+[32m+[m[32m13990628;13990628;120000;170000;2[m
+[32m+[m[32m13990628;13990628;000000;120000;2[m
+[32m+[m[32m13990629;13990629;120000;170000;2[m
+[32m+[m[32m13990629;13990629;000000;120000;2[m
+[32m+[m[32m13990630;13990630;120000;170000;2[m
+[32m+[m[32m13990630;13990630;000000;120000;2[m
+[32m+[m[32m13990631;13990631;120000;170000;2[m
+[32m+[m[32m13990631;13990631;000000;120000;2[m
+[32m+[m[32m13990701;13990701;120000;170000;2[m
+[32m+[m[32m13990701;13990701;000000;120000;2[m
+[32m+[m[32m13990702;13990702;120000;170000;2[m
+[32m+[m[32m13990702;13990702;000000;120000;2[m
+[32m+[m[32m13990703;13990703;120000;170000;2[m
+[32m+[m[32m13990703;13990703;000000;120000;2[m
+[32m+[m[32m13990704;13990704;120000;170000;2[m
+[32m+[m[32m13990704;13990704;000000;120000;2[m
+[32m+[m[32m13990705;13990705;120000;170000;2[m
+[32m+[m[32m13990705;13990705;000000;120000;2[m
+[32m+[m[32m13990706;13990706;120000;170000;2[m
+[32m+[m[32m13990706;13990706;000000;120000;2[m
+[32m+[m[32m13990707;13990707;120000;170000;2[m
+[32m+[m[32m13990707;13990707;000000;120000;2[m
+[32m+[m[32m13990708;13990708;120000;170000;2[m
+[32m+[m[32m13990708;13990708;000000;120000;2[m
+[32m+[m[32m13990709;13990709;120000;170000;2[m
+[32m+[m[32m13990709;13990709;000000;120000;2[m
+[32m+[m[32m13990710;13990710;120000;170000;2[m
+[32m+[m[32m13990710;13990710;000000;120000;2[m
+[32m+[m[32m13990711;13990711;120000;170000;2[m
+[32m+[m[32m13990711;13990711;000000;120000;2[m
+[32m+[m[32m13990712;13990712;120000;170000;2[m
+[32m+[m[32m13990712;13990712;000000;120000;2[m
+[32m+[m[32m13990713;13990713;120000;170000;2[m
+[32m+[m[32m13990713;13990713;000000;120000;2[m
+[32m+[m[32m13990714;13990714;120000;170000;2[m
+[32m+[m[32m13990714;13990714;000000;120000;2[m
+[32m+[m[32m13990715;13990715;120000;170000;2[m
+[32m+[m[32m13990715;13990715;000000;120000;2[m
+[32m+[m[32m13990716;13990716;120000;170000;2[m
+[32m+[m[32m13990716;13990716;000000;120000;2[m
+[32m+[m[32m13990717;13990717;120000;170000;2[m
+[32m+[m[32m13990717;13990717;000000;120000;2[m
+[32m+[m[32m13990718;13990718;120000;170000;2[m
+[32m+[m[32m13990718;13990718;000000;120000;2[m
+[32m+[m[32m13990719;13990719;120000;170000;2[m
+[32m+[m[32m13990719;13990719;000000;120000;2[m
+[32m+[m[32m13990720;13990720;120000;170000;2[m
+[32m+[m[32m13990720;13990720;000000;120000;2[m
+[32m+[m[32m13990721;13990721;120000;170000;2[m
+[32m+[m[32m13990721;13990721;000000;120000;2[m
+[32m+[m[32m13990722;13990722;120000;170000;2[m
+[32m+[m[32m13990722;13990722;000000;120000;2[m
+[32m+[m[32m13990723;13990723;120000;170000;2[m
+[32m+[m[32m13990723;13990723;000000;120000;2[m
+[32m+[m[32m13990724;13990724;120000;170000;2[m
+[32m+[m[32m13990724;13990724;000000;120000;2[m
+[32m+[m[32m13990725;13990725;120000;170000;2[m
+[32m+[m[32m13990725;13990725;000000;120000;2[m
+[32m+[m[32m13990726;13990726;120000;170000;2[m
+[32m+[m[32m13990726;13990726;000000;120000;2[m
+[32m+[m[32m13990727;13990727;120000;170000;2[m
+[32m+[m[32m13990727;13990727;000000;120000;2[m
+[32m+[m[32m13990728;13990728;120000;170000;2[m
+[32m+[m[32m13990728;13990728;000000;120000;2[m
+[32m+[m[32m13990729;13990729;120000;170000;2[m
+[32m+[m[32m13990729;13990729;000000;120000;2[m
+[32m+[m[32m13990730;13990730;120000;170000;2[m
+[32m+[m[32m13990730;13990730;000000;120000;2[m
+[32m+[m[32m13990801;13990801;120000;170000;2[m
+[32m+[m[32m13990801;13990801;000000;120000;2[m
+[32m+[m[32m13990802;13990802;120000;170000;2[m
+[32m+[m[32m13990802;13990802;000000;120000;2[m
+[32m+[m[32m13990803;13990803;120000;170000;2[m
+[32m+[m[32m13990803;13990803;000000;120000;2[m
+[32m+[m[32m13990804;13990804;120000;170000;2[m
+[32m+[m[32m13990804;13990804;000000;120000;2[m
+[32m+[m[32m13990805;13990805;120000;170000;2[m
+[32m+[m[32m13990805;13990805;000000;120000;2[m
+[32m+[m[32m13990806;13990806;120000;170000;2[m
+[32m+[m[32m13990806;13990806;000000;120000;2[m
+[32m+[m[32m13990807;13990807;120000;170000;2[m
+[32m+[m[32m13990807;13990807;000000;120000;2[m
+[32m+[m[32m13990808;13990808;120000;170000;2[m
+[32m+[m[32m13990808;13990808;000000;120000;2[m
+[32m+[m[32m13990809;13990809;120000;170000;2[m
+[32m+[m[32m13990809;13990809;000000;120000;2[m
+[32m+[m[32m13990810;13990810;120000;170000;2[m
+[32m+[m[32m13990810;13990810;000000;120000;2[m
+[32m+[m[32m13990811;13990811;120000;170000;2[m
+[32m+[m[32m13990811;13990811;000000;120000;2[m
+[32m+[m[32m13990812;13990812;120000;170000;2[m
+[32m+[m[32m13990812;13990812;000000;120000;2[m
+[32m+[m[32m13990813;13990813;120000;170000;2[m
+[32m+[m[32m13990813;13990813;000000;120000;2[m
+[32m+[m[32m13990814;13990814;120000;170000;2[m
+[32m+[m[32m13990814;13990814;000000;120000;2[m
+[32m+[m[32m13990815;13990815;120000;170000;2[m
+[32m+[m[32m13990815;13990815;000000;120000;2[m
+[32m+[m[32m13990816;13990816;120000;170000;2[m
+[32m+[m[32m13990816;13990816;000000;120000;2[m
+[32m+[m[32m13990817;13990817;120000;170000;2[m
+[32m+[m[32m13990817;13990817;000000;120000;2[m
+[32m+[m[32m13990818;13990818;120000;170000;2[m
+[32m+[m[32m13990818;13990818;000000;120000;2[m
+[32m+[m[32m13990819;13990819;120000;170000;2[m
+[32m+[m[32m13990819;13990819;000000;120000;2[m
+[32m+[m[32m13990820;13990820;120000;170000;2[m
+[32m+[m[32m13990820;13990820;000000;120000;2[m
+[32m+[m[32m13990821;13990821;120000;170000;2[m
+[32m+[m[32m13990821;13990821;000000;120000;2[m
+[32m+[m[32m13990822;13990822;120000;170000;2[m
+[32m+[m[32m13990822;13990822;000000;120000;2[m
+[32m+[m[32m13990823;13990823;120000;170000;2[m
+[32m+[m[32m13990823;13990823;000000;120000;2[m
+[32m+[m[32m13990824;13990824;120000;170000;2[m
+[32m+[m[32m13990824;13990824;000000;120000;2[m
+[32m+[m[32m13990825;13990825;120000;170000;2[m
+[32m+[m[32m13990825;13990825;000000;120000;2[m
+[32m+[m[32m13990826;13990826;120000;170000;2[m
+[32m+[m[32m13990826;13990826;000000;120000;2[m
+[32m+[m[32m13990827;13990827;120000;170000;2[m
+[32m+[m[32m13990827;13990827;000000;120000;2[m
+[32m+[m[32m13990828;13990828;120000;170000;2[m
+[32m+[m[32m13990828;13990828;000000;120000;2[m
+[32m+[m[32m13990829;13990829;120000;170000;2[m
+[32m+[m[32m13990829;13990829;000000;120000;2[m
+[32m+[m[32m13990830;13990830;120000;170000;2[m
+[32m+[m[32m13990830;13990830;000000;120000;2[m
+[32m+[m[32m13990901;13990901;120000;170000;2[m
+[32m+[m[32m13990901;13990901;000000;120000;2[m
+[32m+[m[32m13990902;13990902;120000;170000;2[m
+[32m+[m[32m13990902;13990902;000000;120000;2[m
+[32m+[m[32m13990903;13990903;120000;170000;2[m
+[32m+[m[32m13990903;13990903;000000;120000;2[m
+[32m+[m[32m13990904;13990904;120000;170000;2[m
+[32m+[m[32m13990904;13990904;000000;120000;2[m
+[32m+[m[32m13990905;13990905;120000;170000;2[m
+[32m+[m[32m13990905;13990905;000000;120000;2[m
+[32m+[m[32m13990906;13990906;120000;170000;2[m
+[32m+[m[32m13990906;13990906;000000;120000;2[m
+[32m+[m[32m13990907;13990907;120000;170000;2[m
+[32m+[m[32m13990907;13990907;000000;120000;2[m
+[32m+[m[32m13990908;13990908;120000;170000;2[m
+[32m+[m[32m13990908;13990908;000000;120000;2[m
+[32m+[m[32m13990909;13990909;120000;170000;2[m
+[32m+[m[32m13990909;13990909;000000;120000;2[m
+[32m+[m[32m13990910;13990910;120000;170000;2[m
+[32m+[m[32m13990910;13990910;000000;120000;2[m
+[32m+[m[32m13990911;13990911;120000;170000;2[m
+[32m+[m[32m13990911;13990911;000000;120000;2[m
+[32m+[m[32m13990912;13990912;120000;170000;2[m
+[32m+[m[32m13990912;13990912;000000;120000;2[m
+[32m+[m[32m13990913;13990913;120000;170000;2[m
+[32m+[m[32m13990913;13990913;000000;120000;2[m
+[32m+[m[32m13990914;13990914;120000;170000;2[m
+[32m+[m[32m13990914;13990914;000000;120000;2[m
+[32m+[m[32m13990915;13990915;120000;170000;2[m
+[32m+[m[32m13990915;13990915;000000;120000;2[m
+[32m+[m[32m13990916;13990916;120000;170000;2[m
+[32m+[m[32m13990916;13990916;000000;120000;2[m
+[32m+[m[32m13990917;13990917;120000;170000;2[m
+[32m+[m[32m13990917;13990917;000000;120000;2[m
+[32m+[m[32m13990918;13990918;120000;170000;2[m
+[32m+[m[32m13990918;13990918;000000;120000;2[m
+[32m+[m[32m13990919;13990919;120000;170000;2[m
+[32m+[m[32m13990919;13990919;000000;120000;2[m
+[32m+[m[32m13990920;13990920;120000;170000;2[m
+[32m+[m[32m13990920;13990920;000000;120000;2[m
+[32m+[m[32m13990921;13990921;120000;170000;2[m
+[32m+[m[32m13990921;13990921;000000;120000;2[m
+[32m+[m[32m13990922;13990922;120000;170000;2[m
+[32m+[m[32m13990922;13990922;000000;120000;2[m
+[32m+[m[32m13990923;13990923;120000;170000;2[m
+[32m+[m[32m13990923;13990923;000000;120000;2[m
+[32m+[m[32m13990924;13990924;120000;170000;2[m
+[32m+[m[32m13990924;13990924;000000;120000;2[m
+[32m+[m[32m13990925;13990925;120000;170000;2[m
+[32m+[m[32m13990925;13990925;000000;120000;2[m
+[32m+[m[32m13990926;13990926;120000;170000;2[m
+[32m+[m[32m13990926;13990926;000000;120000;2[m
+[32m+[m[32m13990927;13990927;120000;170000;2[m
+[32m+[m[32m13990927;13990927;000000;120000;2[m
+[32m+[m[32m13990928;13990928;120000;170000;2[m
+[32m+[m[32m13990928;13990928;000000;120000;2[m
+[32m+[m[32m13990929;13990929;120000;170000;2[m
+[32m+[m[32m13990929;13990929;000000;120000;2[m
+[32m+[m[32m13990930;13990930;120000;170000;2[m
+[32m+[m[32m13990930;13990930;000000;120000;2[m
+[32m+[m[32m13991001;13991001;120000;170000;2[m
+[32m+[m[32m13991001;13991001;000000;120000;2[m
+[32m+[m[32m13991002;13991002;120000;170000;2[m
+[32m+[m[32m13991002;13991002;000000;120000;2[m
+[32m+[m[32m13991003;13991003;120000;170000;2[m
+[32m+[m[32m13991003;13991003;000000;120000;2[m
+[32m+[m[32m13991004;13991004;120000;170000;2[m
+[32m+[m[32m13991004;13991004;000000;120000;2[m
+[32m+[m[32m13991005;13991005;120000;170000;2[m
+[32m+[m[32m13991005;13991005;000000;120000;2[m
+[32m+[m[32m13991006;13991006;120000;170000;2[m
+[32m+[m[32m13991006;13991006;000000;120000;2[m
+[32m+[m[32m13991007;13991007;120000;170000;2[m
+[32m+[m[32m13991007;13991007;000000;120000;2[m
+[32m+[m[32m13991008;13991008;120000;170000;2[m
+[32m+[m[32m13991008;13991008;000000;120000;2[m
+[32m+[m[32m13991009;13991009;120000;170000;2[m
+[32m+[m[32m13991009;13991009;000000;120000;2[m
+[32m+[m[32m13991010;13991010;120000;170000;2[m
+[32m+[m[32m13991010;13991010;000000;120000;2[m
+[32m+[m[32m13991011;13991011;120000;170000;2[m
+[32m+[m[32m13991011;13991011;000000;120000;2[m
+[32m+[m[32m13991012;13991012;120000;170000;2[m
+[32m+[m[32m13991012;13991012;000000;120000;2[m
+[32m+[m[32m13991013;13991013;120000;170000;2[m
+[32m+[m[32m13991013;13991013;000000;120000;2[m
+[32m+[m[32m13991014;13991014;120000;170000;2[m
+[32m+[m[32m13991014;13991014;000000;120000;2[m
+[32m+[m[32m13991015;13991015;120000;170000;2[m
+[32m+[m[32m13991015;13991015;000000;120000;2[m
+[32m+[m[32m13991016;13991016;120000;170000;2[m
+[32m+[m[32m13991016;13991016;000000;120000;2[m
+[32m+[m[32m13991017;13991017;120000;170000;2[m
+[32m+[m[32m13991017;13991017;000000;120000;2[m
+[32m+[m[32m13991018;13991018;120000;170000;2[m
+[32m+[m[32m13991018;13991018;000000;120000;2[m
+[32m+[m[32m13991019;13991019;120000;170000;2[m
+[32m+[m[32m13991019;13991019;000000;120000;2[m
+[32m+[m[32m13991020;13991020;120000;170000;2[m
+[32m+[m[32m13991020;13991020;000000;120000;2[m
+[32m+[m[32m13991021;13991021;120000;170000;2[m
+[32m+[m[32m13991021;13991021;000000;120000;2[m
+[32m+[m[32m13991022;13991022;120000;170000;2[m
+[32m+[m[32m13991022;13991022;000000;120000;2[m
+[32m+[m[32m13991023;13991023;120000;170000;2[m
+[32m+[m[32m13991023;13991023;000000;120000;2[m
+[32m+[m[32m13991024;13991024;120000;170000;2[m
+[32m+[m[32m13991024;13991024;000000;120000;2[m
+[32m+[m[32m13991025;13991025;120000;170000;2[m
+[32m+[m[32m13991025;13991025;000000;120000;2[m
+[32m+[m[32m13991026;13991026;120000;170000;2[m
+[32m+[m[32m13991026;13991026;000000;120000;2[m
+[32m+[m[32m13991027;13991027;120000;170000;2[m
+[32m+[m[32m13991027;13991027;000000;120000;2[m
+[32m+[m[32m13991028;13991028;120000;170000;2[m
+[32m+[m[32m13991028;13991028;000000;120000;2[m
+[32m+[m[32m13991029;13991029;120000;170000;2[m
+[32m+[m[32m13991029;13991029;000000;120000;2[m
+[32m+[m[32m13991030;13991030;120000;170000;2[m
+[32m+[m[32m13991030;13991030;000000;120000;2[m
+[32m+[m[32m13991101;13991101;120000;170000;2[m
+[32m+[m[32m13991101;13991101;000000;120000;2[m
+[32m+[m[32m13991102;13991102;120000;170000;2[m
+[32m+[m[32m13991102;13991102;000000;120000;2[m
+[32m+[m[32m13991103;13991103;120000;170000;2[m
+[32m+[m[32m13991103;13991103;000000;120000;2[m
+[32m+[m[32m13991104;13991104;120000;170000;2[m
+[32m+[m[32m13991104;13991104;000000;120000;2[m
+[32m+[m[32m13991105;13991105;120000;170000;2[m
+[32m+[m[32m13991105;13991105;000000;120000;2[m
+[32m+[m[32m13991106;13991106;120000;170000;2[m
+[32m+[m[32m13991106;13991106;000000;120000;2[m
+[32m+[m[32m13991107;13991107;120000;170000;2[m
+[32m+[m[32m13991107;13991107;000000;120000;2[m
+[32m+[m[32m13991108;13991108;120000;170000;2[m
+[32m+[m[32m13991108;13991108;000000;120000;2[m
+[32m+[m[32m13991109;13991109;120000;170000;2[m
+[32m+[m[32m13991109;13991109;000000;120000;2[m
+[32m+[m[32m13991110;13991110;120000;170000;2[m
+[32m+[m[32m13991110;13991110;000000;120000;2[m
+[32m+[m[32m13991111;13991111;120000;170000;2[m
+[32m+[m[32m13991111;13991111;000000;120000;2[m
+[32m+[m[32m13991112;13991112;120000;170000;2[m
+[32m+[m[32m13991112;13991112;000000;120000;2[m
+[32m+[m[32m13991113;13991113;120000;170000;2[m
+[32m+[m[32m13991113;13991113;000000;120000;2[m
+[32m+[m[32m13991114;13991114;120000;170000;2[m
+[32m+[m[32m13991114;13991114;000000;120000;2[m
+[32m+[m[32m13991115;13991115;120000;170000;2[m
+[32m+[m[32m13991115;13991115;000000;120000;2[m
+[32m+[m[32m13991116;13991116;120000;170000;2[m
+[32m+[m[32m13991116;13991116;000000;120000;2[m
+[32m+[m[32m13991117;13991117;120000;170000;2[m
+[32m+[m[32m13991117;13991117;000000;120000;2[m
+[32m+[m[32m13991118;13991118;120000;170000;2[m
+[32m+[m[32m13991118;13991118;000000;120000;2[m
+[32m+[m[32m13991119;13991119;120000;170000;2[m
+[32m+[m[32m13991119;13991119;000000;120000;2[m
+[32m+[m[32m13991120;13991120;120000;170000;2[m
+[32m+[m[32m13991120;13991120;000000;120000;2[m
+[32m+[m[32m13991121;13991121;120000;170000;2[m
+[32m+[m[32m13991121;13991121;000000;120000;2[m
+[32m+[m[32m13991122;13991122;120000;170000;2[m
+[32m+[m[32m13991122;13991122;000000;120000;2[m
+[32m+[m[32m13991123;13991123;120000;170000;2[m
+[32m+[m[32m13991123;13991123;000000;120000;2[m
+[32m+[m[32m13991124;13991124;120000;170000;2[m
+[32m+[m[32m13991124;13991124;000000;120000;2[m
+[32m+[m[32m13991125;13991125;120000;170000;2[m
+[32m+[m[32m13991125;13991125;000000;120000;2[m
+[32m+[m[32m13991126;13991126;120000;170000;2[m
+[32m+[m[32m13991126;13991126;000000;120000;2[m
+[32m+[m[32m13991127;13991127;120000;170000;2[m
+[32m+[m[32m13991127;13991127;000000;120000;2[m
+[32m+[m[32m13991128;13991128;120000;170000;2[m
+[32m+[m[32m13991128;13991128;000000;120000;2[m
+[32m+[m[32m13991129;13991129;120000;170000;2[m
+[32m+[m[32m13991129;13991129;000000;120000;2[m
+[32m+[m[32m13991130;13991130;120000;170000;2[m
+[32m+[m[32m13991130;13991130;000000;120000;2[m
+[32m+[m[32m13991201;13991201;120000;170000;2[m
+[32m+[m[32m13991201;13991201;000000;120000;2[m
+[32m+[m[32m13991202;13991202;120000;170000;2[m
+[32m+[m[32m13991202;13991202;000000;120000;2[m
+[32m+[m[32m13991203;13991203;120000;170000;2[m
+[32m+[m[32m13991203;13991203;000000;120000;2[m
+[32m+[m[32m13991204;13991204;120000;170000;2[m
+[32m+[m[32m13991204;13991204;000000;120000;2[m
+[32m+[m[32m13991205;13991205;120000;170000;2[m
+[32m+[m[32m13991205;13991205;000000;120000;2[m
+[32m+[m[32m13991206;13991206;120000;170000;2[m
+[32m+[m[32m13991206;13991206;000000;120000;2[m
+[32m+[m[32m13991207;13991207;120000;170000;2[m
+[32m+[m[32m13991207;13991207;000000;120000;2[m
+[32m+[m[32m13991208;13991208;120000;170000;2[m
+[32m+[m[32m13991208;13991208;000000;120000;2[m
+[32m+[m[32m13991209;13991209;120000;170000;2[m
+[32m+[m[32m13991209;13991209;000000;120000;2[m
+[32m+[m[32m13991210;13991210;120000;170000;2[m
+[32m+[m[32m13991210;13991210;000000;120000;2[m
+[32m+[m[32m13991211;13991211;120000;170000;2[m
+[32m+[m[32m13991211;13991211;000000;120000;2[m
+[32m+[m[32m13991212;13991212;120000;170000;2[m
+[32m+[m[32m13991212;13991212;000000;120000;2[m
+[32m+[m[32m13991213;13991213;120000;170000;2[m
+[32m+[m[32m13991213;13991213;000000;120000;2[m
+[32m+[m[32m13991214;13991214;120000;170000;2[m
+[32m+[m[32m13991214;13991214;000000;120000;2[m
+[32m+[m[32m13991215;13991215;120000;170000;2[m
+[32m+[m[32m13991215;13991215;000000;120000;2[m
+[32m+[m[32m13991216;13991216;120000;170000;2[m
+[32m+[m[32m13991216;13991216;000000;120000;2[m
+[32m+[m[32m13991217;13991217;120000;170000;2[m
+[32m+[m[32m13991217;13991217;000000;120000;2[m
+[32m+[m[32m13991218;13991218;120000;170000;2[m
+[32m+[m[32m13991218;13991218;000000;120000;2[m
+[32m+[m[32m13991219;13991219;120000;170000;2[m
+[32m+[m[32m13991219;13991219;000000;120000;2[m
+[32m+[m[32m13991220;13991220;120000;170000;2[m
+[32m+[m[32m13991220;13991220;000000;120000;2[m
+[32m+[m[32m13991221;13991221;120000;170000;2[m
+[32m+[m[32m13991221;13991221;000000;120000;2[m
+[32m+[m[32m13991222;13991222;120000;170000;2[m
+[32m+[m[32m13991222;13991222;000000;120000;2[m
+[32m+[m[32m13991223;13991223;120000;170000;2[m
+[32m+[m[32m13991223;13991223;000000;120000;2[m
+[32m+[m[32m13991224;13991224;120000;170000;2[m
+[32m+[m[32m13991224;13991224;000000;120000;2[m
+[32m+[m[32m13991225;13991225;120000;170000;2[m
+[32m+[m[32m13991225;13991225;000000;120000;2[m
+[32m+[m[32m13991226;13991226;120000;170000;2[m
+[32m+[m[32m13991226;13991226;000000;120000;2[m
+[32m+[m[32m13991227;13991227;120000;170000;2[m
+[32m+[m[32m13991227;13991227;000000;120000;2[m
+[32m+[m[32m13991228;13991228;120000;170000;2[m
+[32m+[m[32m13991228;13991228;000000;120000;2[m
+[32m+[m[32m13991229;13991229;120000;170000;2[m
+[32m+[m[32m13991229;13991229;000000;120000;2[m
+[32m+[m[32m13991230;13991230;120000;170000;2[m
+[32m+[m[32m13991230;13991230;000000;120000;2[m
+[1mdiff --git a/UI/bin/Debug/SCH/5.sch b/UI/bin/Debug/SCH/5.sch[m
+[1mdeleted file mode 100644[m
+[1mindex 7e2bc87..0000000[m
+[1m--- a/UI/bin/Debug/SCH/5.sch[m
+[1m+++ /dev/null[m
+[36m@@ -1,470 +0,0 @@[m
+[31m-13990101;13990101;000000;070000;2[m
+[31m-13990102;13990102;000000;040000;0[m
+[31m-13990103;13990103;000000;235959;2[m
+[31m-13990104;13990104;000000;235959;2[m
+[31m-13990105;13990105;000000;070000;0[m
+[31m-13990106;13990106;000000;013000;1[m
+[31m-13990106;13990106;013000;050000;2[m
+[31m-13990106;13990106;050000;235959;0[m
+[31m-13990107;13990107;160000;235959;1[m
+[31m-13990108;13990108;000000;070000;2[m
+[31m-13990109;13990109;000000;040000;0[m
+[31m-13990110;13990110;000000;235959;2[m
+[31m-13990111;13990111;000000;235959;2[m
+[31m-13990112;13990112;000000;070000;0[m
+[31m-13990113;13990113;000000;013000;1[m
+[31m-13990113;13990113;013000;050000;2[m
+[31m-13990113;13990113;050000;235959;0[m
+[31m-13990114;13990114;160000;235959;1[m
+[31m-13990115;13990115;000000;070000;2[m
+[31m-13990116;13990116;000000;040000;0[m
+[31m-13990117;13990117;000000;235959;2[m
+[31m-13990118;13990118;000000;235959;2[m
+[31m-13990119;13990119;000000;070000;0[m
+[31m-13990120;13990120;000000;013000;1[m
+[31m-13990120;13990120;013000;050000;2[m
+[31m-13990120;13990120;050000;235959;0[m
+[31m-13990121;13990121;160000;235959;1[m
+[31m-13990122;13990122;000000;070000;2[m
+[31m-13990123;13990123;000000;040000;0[m
+[31m-13990124;13990124;000000;235959;2[m
+[31m-13990125;13990125;000000;235959;2[m
+[31m-13990126;13990126;000000;070000;0[m
+[31m-13990127;13990127;000000;013000;1[m
+[31m-13990127;13990127;013000;050000;2[m
+[31m-13990127;13990127;050000;235959;0[m
+[31m-13990128;13990128;160000;235959;1[m
+[31m-13990129;13990129;000000;070000;2[m
+[31m-13990130;13990130;000000;040000;0[m
+[31m-13990131;13990131;000000;235959;2[m
+[31m-13990201;13990201;000000;235959;2[m
+[31m-13990202;13990202;000000;070000;0[m
+[31m-13990203;13990203;000000;013000;1[m
+[31m-13990203;13990203;013000;050000;2[m
+[31m-13990203;13990203;050000;235959;0[m
+[31m-13990204;13990204;160000;235959;1[m
+[31m-13990205;13990205;000000;070000;2[m
+[31m-13990206;13990206;000000;040000;0[m
+[31m-13990207;13990207;000000;235959;2[m
+[31m-13990208;13990208;000000;235959;2[m
+[31m-13990209;13990209;000000;070000;0[m
+[31m-13990210;13990210;000000;013000;1[m
+[31m-13990210;13990210;013000;050000;2[m
+[31m-13990210;13990210;050000;235959;0[m
+[31m-13990211;13990211;160000;235959;1[m
+[31m-13990212;13990212;000000;070000;2[m
+[31m-13990213;13990213;000000;040000;0[m
+[31m-13990214;13990214;000000;235959;2[m
+[31m-13990215;13990215;000000;235959;2[m
+[31m-13990216;13990216;000000;070000;0[m
+[31m-13990217;13990217;000000;013000;1[m
+[31m-13990217;13990217;013000;050000;2[m
+[31m-13990217;13990217;050000;235959;0[m
+[31m-13990218;13990218;160000;235959;1[m
+[31m-13990219;13990219;000000;070000;2[m
+[31m-13990220;13990220;000000;040000;0[m
+[31m-13990221;13990221;000000;235959;2[m
+[31m-13990222;13990222;000000;235959;2[m
+[31m-13990223;13990223;000000;070000;0[m
+[31m-13990224;13990224;000000;013000;1[m
+[31m-13990224;13990224;013000;050000;2[m
+[31m-13990224;13990224;050000;235959;0[m
+[31m-13990225;13990225;160000;235959;1[m
+[31m-13990226;13990226;000000;070000;2[m
+[31m-13990227;13990227;000000;040000;0[m
+[31m-13990228;13990228;000000;235959;2[m
+[31m-13990229;13990229;000000;235959;2[m
+[31m-13990230;13990230;000000;070000;0[m
+[31m-13990231;13990231;000000;013000;1[m
+[31m-13990231;13990231;013000;050000;2[m
+[31m-13990231;13990231;050000;235959;0[m
+[31m-13990301;13990301;160000;235959;1[m
+[31m-13990302;13990302;000000;070000;2[m
+[31m-13990303;13990303;000000;040000;0[m
+[31m-13990304;13990304;000000;235959;2[m
+[31m-13990305;13990305;000000;235959;2[m
+[31m-13990306;13990306;000000;070000;0[m
+[31m-13990307;13990307;000000;013000;1[m
+[31m-13990307;13990307;013000;050000;2[m
+[31m-13990307;13990307;050000;235959;0[m
+[31m-13990308;13990308;160000;235959;1[m
+[31m-13990309;13990309;000000;070000;2[m
+[31m-13990310;13990310;000000;040000;0[m
+[31m-13990311;13990311;000000;235959;2[m
+[31m-13990312;13990312;000000;235959;2[m
+[31m-13990313;13990313;000000;070000;0[m
+[31m-13990314;13990314;000000;013000;1[m
+[31m-13990314;13990314;013000;050000;2[m
+[31m-13990314;13990314;050000;235959;0[m
+[31m-13990315;13990315;160000;235959;1[m
+[31m-13990316;13990316;000000;070000;2[m
+[31m-13990317;13990317;000000;040000;0[m
+[31m-13990318;13990318;000000;235959;2[m
+[31m-13990319;13990319;000000;235959;2[m
+[31m-13990320;13990320;000000;070000;0[m
+[31m-13990321;13990321;000000;013000;1[m
+[31m-13990321;13990321;013000;050000;2[m
+[31m-13990321;13990321;050000;235959;0[m
+[31m-13990322;13990322;160000;235959;1[m
+[31m-13990323;13990323;000000;070000;2[m
+[31m-13990324;13990324;000000;040000;0[m
+[31m-13990325;13990325;000000;235959;2[m
+[31m-13990326;13990326;000000;235959;2[m
+[31m-13990327;13990327;000000;070000;0[m
+[31m-13990328;13990328;000000;013000;1[m
+[31m-13990328;13990328;013000;050000;2[m
+[31m-13990328;13990328;050000;235959;0[m
+[31m-13990329;13990329;160000;235959;1[m
+[31m-13990330;13990330;000000;070000;2[m
+[31m-13990331;13990331;000000;040000;0[m
+[31m-13990401;13990401;000000;235959;2[m
+[31m-13990402;13990402;000000;235959;2[m
+[31m-13990403;13990403;000000;070000;0[m
+[31m-13990404;13990404;000000;013000;1[m
+[31m-13990404;13990404;013000;050000;2[m
+[31m-13990404;13990404;050000;235959;0[m
+[31m-13990405;13990405;160000;235959;1[m
+[31m-13990406;13990406;000000;070000;2[m
+[31m-13990407;13990407;000000;040000;0[m
+[31m-13990408;13990408;000000;235959;2[m
+[31m-13990409;13990409;000000;235959;2[m
+[31m-13990410;13990410;000000;070000;0[m
+[31m-13990411;13990411;000000;013000;1[m
+[31m-13990411;13990411;013000;050000;2[m
+[31m-13990411;13990411;050000;235959;0[m
+[31m-13990412;13990412;160000;235959;1[m
+[31m-13990413;13990413;000000;070000;2[m
+[31m-13990414;13990414;000000;040000;0[m
+[31m-13990415;13990415;000000;235959;2[m
+[31m-13990416;13990416;000000;235959;2[m
+[31m-13990417;13990417;000000;070000;0[m
+[31m-13990418;13990418;000000;013000;1[m
+[31m-13990418;13990418;013000;050000;2[m
+[31m-13990418;13990418;050000;235959;0[m
+[31m-13990419;13990419;160000;235959;1[m
+[31m-13990420;13990420;000000;070000;2[m
+[31m-13990421;13990421;000000;040000;0[m
+[31m-13990422;13990422;000000;235959;2[m
+[31m-13990423;13990423;000000;235959;2[m
+[31m-13990424;13990424;000000;070000;0[m
+[31m-13990425;13990425;000000;013000;1[m
+[31m-13990425;13990425;013000;050000;2[m
+[31m-13990425;13990425;050000;235959;0[m
+[31m-13990426;13990426;160000;235959;1[m
+[31m-13990427;13990427;000000;070000;2[m
+[31m-13990428;13990428;000000;040000;0[m
+[31m-13990429;13990429;000000;235959;2[m
+[31m-13990430;13990430;000000;235959;2[m
+[31m-13990431;13990431;000000;070000;0[m
+[31m-13990501;13990501;000000;013000;1[m
+[31m-13990501;13990501;013000;050000;2[m
+[31m-13990501;13990501;050000;235959;0[m
+[31m-13990502;13990502;160000;235959;1[m
+[31m-13990503;13990503;000000;070000;2[m
+[31m-13990504;13990504;000000;040000;0[m
+[31m-13990505;13990505;000000;235959;2[m
+[31m-13990506;13990506;000000;235959;2[m
+[31m-13990507;13990507;000000;070000;0[m
+[31m-13990508;13990508;000000;013000;1[m
+[31m-13990508;13990508;013000;050000;2[m
+[31m-13990508;13990508;050000;235959;0[m
+[31m-13990509;13990509;160000;235959;1[m
+[31m-13990510;13990510;000000;070000;2[m
+[31m-13990511;13990511;000000;040000;0[m
+[31m-13990512;13990512;000000;235959;2[m
+[31m-13990513;13990513;000000;235959;2[m
+[31m-13990514;13990514;000000;070000;0[m
+[31m-13990515;13990515;000000;013000;1[m
+[31m-13990515;13990515;013000;050000;2[m
+[31m-13990515;13990515;050000;235959;0[m
+[31m-13990516;13990516;160000;235959;1[m
+[31m-13990517;13990517;000000;070000;2[m
+[31m-13990518;13990518;000000;040000;0[m
+[31m-13990519;13990519;000000;235959;2[m
+[31m-13990520;13990520;000000;235959;2[m
+[31m-13990521;13990521;000000;070000;0[m
+[31m-13990522;13990522;000000;013000;1[m
+[31m-13990522;13990522;013000;050000;2[m
+[31m-13990522;13990522;050000;235959;0[m
+[31m-13990523;13990523;160000;235959;1[m
+[31m-13990524;13990524;000000;070000;2[m
+[31m-13990525;13990525;000000;040000;0[m
+[31m-13990526;13990526;000000;235959;2[m
+[31m-13990527;13990527;000000;235959;2[m
+[31m-13990528;13990528;000000;070000;0[m
+[31m-13990529;13990529;000000;013000;1[m
+[31m-13990529;13990529;013000;050000;2[m
+[31m-13990529;13990529;050000;235959;0[m
+[31m-13990530;13990530;160000;235959;1[m
+[31m-13990531;13990531;000000;070000;2[m
+[31m-13990601;13990601;000000;040000;0[m
+[31m-13990602;13990602;000000;235959;2[m
+[31m-13990603;13990603;000000;235959;2[m
+[31m-13990604;13990604;000000;070000;0[m
+[31m-13990605;13990605;000000;013000;1[m
+[31m-13990605;13990605;013000;050000;2[m
+[31m-13990605;13990605;050000;235959;0[m
+[31m-13990606;13990606;160000;235959;1[m
+[31m-13990607;13990607;000000;070000;2[m
+[31m-13990608;13990608;000000;040000;0[m
+[31m-13990609;13990609;000000;235959;2[m
+[31m-13990610;13990610;000000;235959;2[m
+[31m-13990611;13990611;000000;070000;0[m
+[31m-13990612;13990612;000000;013000;1[m
+[31m-13990612;13990612;013000;050000;2[m
+[31m-13990612;13990612;050000;235959;0[m
+[31m-13990613;13990613;160000;235959;1[m
+[31m-13990614;13990614;000000;070000;2[m
+[31m-13990615;13990615;000000;040000;0[m
+[31m-13990616;13990616;000000;235959;2[m
+[31m-13990617;13990617;000000;235959;2[m
+[31m-13990618;13990618;000000;070000;0[m
+[31m-13990619;13990619;000000;013000;1[m
+[31m-13990619;13990619;013000;050000;2[m
+[31m-13990619;13990619;050000;235959;0[m
+[31m-13990620;13990620;160000;235959;1[m
+[31m-13990621;13990621;000000;070000;2[m
+[31m-13990622;13990622;000000;040000;0[m
+[31m-13990623;13990623;000000;235959;2[m
+[31m-13990624;13990624;000000;235959;2[m
+[31m-13990625;13990625;000000;070000;0[m
+[31m-13990626;13990626;000000;013000;1[m
+[31m-13990626;13990626;013000;050000;2[m
+[31m-13990626;13990626;050000;235959;0[m
+[31m-13990627;13990627;160000;235959;1[m
+[31m-13990628;13990628;000000;070000;2[m
+[31m-13990629;13990629;000000;040000;0[m
+[31m-13990630;13990630;000000;235959;2[m
+[31m-13990631;13990631;000000;235959;2[m
+[31m-13990701;13990701;000000;070000;0[m
+[31m-13990702;13990702;000000;013000;1[m
+[31m-13990702;13990702;013000;050000;2[m
+[31m-13990702;13990702;050000;235959;0[m
+[31m-13990703;13990703;160000;235959;1[m
+[31m-13990704;13990704;000000;070000;2[m
+[31m-13990705;13990705;000000;040000;0[m
+[31m-13990706;13990706;000000;235959;2[m
+[31m-13990707;13990707;000000;235959;2[m
+[31m-13990708;13990708;000000;070000;0[m
+[31m-13990709;13990709;000000;013000;1[m
+[31m-13990709;13990709;013000;050000;2[m
+[31m-13990709;13990709;050000;235959;0[m
+[31m-13990710;13990710;160000;235959;1[m
+[31m-13990711;13990711;000000;070000;2[m
+[31m-13990712;13990712;000000;040000;0[m
+[31m-13990713;13990713;000000;235959;2[m
+[31m-13990714;13990714;000000;235959;2[m
+[31m-13990715;13990715;000000;070000;0[m
+[31m-13990716;13990716;000000;013000;1[m
+[31m-13990716;13990716;013000;050000;2[m
+[31m-13990716;13990716;050000;235959;0[m
+[31m-13990717;13990717;160000;235959;1[m
+[31m-13990718;13990718;000000;070000;2[m
+[31m-13990719;13990719;000000;040000;0[m
+[31m-13990720;13990720;000000;235959;2[m
+[31m-13990721;13990721;000000;235959;2[m
+[31m-13990722;13990722;000000;070000;0[m
+[31m-13990723;13990723;000000;013000;1[m
+[31m-13990723;13990723;013000;050000;2[m
+[31m-13990723;13990723;050000;235959;0[m
+[31m-13990724;13990724;160000;235959;1[m
+[31m-13990725;13990725;000000;070000;2[m
+[31m-13990726;13990726;000000;040000;0[m
+[31m-13990727;13990727;000000;235959;2[m
+[31m-13990728;13990728;000000;235959;2[m
+[31m-13990729;13990729;000000;070000;0[m
+[31m-13990730;13990730;000000;013000;1[m
+[31m-13990730;13990730;013000;050000;2[m
+[31m-13990730;13990730;050000;235959;0[m
+[31m-13990801;13990801;160000;235959;1[m
+[31m-13990802;13990802;000000;070000;2[m
+[31m-13990803;13990803;000000;040000;0[m
+[31m-13990804;13990804;000000;235959;2[m
+[31m-13990805;13990805;000000;235959;2[m
+[31m-13990806;13990806;000000;070000;0[m
+[31m-13990807;13990807;000000;013000;1[m
+[31m-13990807;13990807;013000;050000;2[m
+[31m-13990807;13990807;050000;235959;0[m
+[31m-13990808;13990808;160000;235959;1[m
+[31m-13990809;13990809;000000;070000;2[m
+[31m-13990810;13990810;000000;040000;0[m
+[31m-13990811;13990811;000000;235959;2[m
+[31m-13990812;13990812;000000;235959;2[m
+[31m-13990813;13990813;000000;070000;0[m
+[31m-13990814;13990814;000000;013000;1[m
+[31m-13990814;13990814;013000;050000;2[m
+[31m-13990814;13990814;050000;235959;0[m
+[31m-13990815;13990815;160000;235959;1[m
+[31m-13990816;13990816;000000;070000;2[m
+[31m-13990817;13990817;000000;040000;0[m
+[31m-13990818;13990818;000000;235959;2[m
+[31m-13990819;13990819;000000;235959;2[m
+[31m-13990820;13990820;000000;070000;0[m
+[31m-13990821;13990821;000000;013000;1[m
+[31m-13990821;13990821;013000;050000;2[m
+[31m-13990821;13990821;050000;235959;0[m
+[31m-13990822;13990822;160000;235959;1[m
+[31m-13990823;13990823;000000;070000;2[m
+[31m-13990824;13990824;000000;040000;0[m
+[31m-13990825;13990825;000000;235959;2[m
+[31m-13990826;13990826;000000;235959;2[m
+[31m-13990827;13990827;000000;070000;0[m
+[31m-13990828;13990828;000000;013000;1[m
+[31m-13990828;13990828;013000;050000;2[m
+[31m-13990828;13990828;050000;235959;0[m
+[31m-13990829;13990829;160000;235959;1[m
+[31m-13990830;13990830;000000;070000;2[m
+[31m-13990901;13990901;000000;040000;0[m
+[31m-13990902;13990902;000000;235959;2[m
+[31m-13990903;13990903;000000;235959;2[m
+[31m-13990904;13990904;000000;070000;0[m
+[31m-13990905;13990905;000000;013000;1[m
+[31m-13990905;13990905;013000;050000;2[m
+[31m-13990905;13990905;050000;235959;0[m
+[31m-13990906;13990906;160000;235959;1[m
+[31m-13990907;13990907;000000;070000;2[m
+[31m-13990908;13990908;000000;040000;0[m
+[31m-13990909;13990909;000000;235959;2[m
+[31m-13990910;13990910;000000;235959;2[m
+[31m-13990911;13990911;000000;070000;0[m
+[31m-13990912;13990912;000000;013000;1[m
+[31m-13990912;13990912;013000;050000;2[m
+[31m-13990912;13990912;050000;235959;0[m
+[31m-13990913;13990913;160000;235959;1[m
+[31m-13990914;13990914;000000;070000;2[m
+[31m-13990915;13990915;000000;040000;0[m
+[31m-13990916;13990916;000000;235959;2[m
+[31m-13990917;13990917;000000;235959;2[m
+[31m-13990918;13990918;000000;070000;0[m
+[31m-13990919;13990919;000000;013000;1[m
+[31m-13990919;13990919;013000;050000;2[m
+[31m-13990919;13990919;050000;235959;0[m
+[31m-13990920;13990920;160000;235959;1[m
+[31m-13990921;13990921;000000;070000;2[m
+[31m-13990922;13990922;000000;040000;0[m
+[31m-13990923;13990923;000000;235959;2[m
+[31m-13990924;13990924;000000;235959;2[m
+[31m-13990925;13990925;000000;070000;0[m
+[31m-13990926;13990926;000000;013000;1[m
+[31m-13990926;13990926;013000;050000;2[m
+[31m-13990926;13990926;050000;235959;0[m
+[31m-13990927;13990927;160000;235959;1[m
+[31m-13990928;13990928;000000;070000;2[m
+[31m-13990929;13990929;000000;040000;0[m
+[31m-13990930;13990930;000000;235959;2[m
+[31m-13991001;13991001;000000;235959;2[m
+[31m-13991002;13991002;000000;070000;0[m
+[31m-13991003;13991003;000000;013000;1[m
+[31m-13991003;13991003;013000;050000;2[m
+[31m-13991003;13991003;050000;235959;0[m
+[31m-13991004;13991004;160000;235959;1[m
+[31m-13991005;13991005;000000;070000;2[m
+[31m-13991006;13991006;000000;040000;0[m
+[31m-13991007;13991007;000000;235959;2[m
+[31m-13991008;13991008;000000;235959;2[m
+[31m-13991009;13991009;000000;070000;0[m
+[31m-13991010;13991010;000000;013000;1[m
+[31m-13991010;13991010;013000;050000;2[m
+[31m-13991010;13991010;050000;235959;0[m
+[31m-13991011;13991011;160000;235959;1[m
+[31m-13991012;13991012;000000;070000;2[m
+[31m-13991013;13991013;000000;040000;0[m
+[31m-13991014;13991014;000000;235959;2[m
+[31m-13991015;13991015;000000;235959;2[m
+[31m-13991016;13991016;000000;070000;0[m
+[31m-13991017;13991017;000000;013000;1[m
+[31m-13991017;13991017;013000;050000;2[m
+[31m-13991017;13991017;050000;235959;0[m
+[31m-13991018;13991018;160000;235959;1[m
+[31m-13991019;13991019;000000;070000;2[m
+[31m-13991020;13991020;000000;040000;0[m
+[31m-13991021;13991021;000000;235959;2[m
+[31m-13991022;13991022;000000;235959;2[m
+[31m-13991023;13991023;000000;070000;0[m
+[31m-13991024;13991024;000000;013000;1[m
+[31m-13991024;13991024;013000;050000;2[m
+[31m-13991024;13991024;050000;235959;0[m
+[31m-13991025;13991025;160000;235959;1[m
+[31m-13991026;13991026;000000;070000;2[m
+[31m-13991027;13991027;000000;040000;0[m
+[31m-13991028;13991028;000000;235959;2[m
+[31m-13991029;13991029;000000;235959;2[m
+[31m-13991030;13991030;000000;070000;0[m
+[31m-13991101;13991101;000000;013000;1[m
+[31m-13991101;13991101;013000;050000;2[m
+[31m-13991101;13991101;050000;235959;0[m
+[31m-13991102;13991102;160000;235959;1[m
+[31m-13991103;13991103;000000;070000;2[m
+[31m-13991104;13991104;000000;040000;0[m
+[31m-13991105;13991105;000000;235959;2[m
+[31m-13991106;13991106;000000;235959;2[m
+[31m-13991107;13991107;000000;070000;0[m
+[31m-13991108;13991108;000000;013000;1[m
+[31m-13991108;13991108;013000;050000;2[m
+[31m-13991108;13991108;050000;235959;0[m
+[31m-13991109;13991109;160000;235959;1[m
+[31m-13991110;13991110;000000;070000;2[m
+[31m-13991111;13991111;000000;040000;0[m
+[31m-13991112;13991112;000000;235959;2[m
+[31m-13991113;13991113;000000;235959;2[m
+[31m-13991114;13991114;000000;070000;0[m
+[31m-13991115;13991115;000000;013000;1[m
+[31m-13991115;13991115;013000;050000;2[m
+[31m-13991115;13991115;050000;235959;0[m
+[31m-13991116;13991116;160000;235959;1[m
+[31m-13991117;13991117;000000;070000;2[m
+[31m-13991118;13991118;000000;040000;0[m
+[31m-13991119;13991119;000000;235959;2[m
+[31m-13991120;13991120;000000;235959;2[m
+[31m-13991121;13991121;000000;070000;0[m
+[31m-13991122;13991122;000000;013000;1[m
+[31m-13991122;13991122;013000;050000;2[m
+[31m-13991122;13991122;050000;235959;0[m
+[31m-13991123;13991123;160000;235959;1[m
+[31m-13991124;13991124;000000;070000;2[m
+[31m-13991125;13991125;000000;040000;0[m
+[31m-13991126;13991126;000000;235959;2[m
+[31m-13991127;13991127;000000;235959;2[m
+[31m-13991128;13991128;000000;070000;0[m
+[31m-13991129;13991129;000000;013000;1[m
+[31m-13991129;13991129;013000;050000;2[m
+[31m-13991129;13991129;050000;235959;0[m
+[31m-13991130;13991130;160000;235959;1[m
+[31m-13991201;13991201;000000;070000;2[m
+[31m-13991202;13991202;000000;040000;0[m
+[31m-13991203;13991203;000000;235959;2[m
+[31m-13991204;13991204;000000;235959;2[m
+[31m-13991205;13991205;000000;070000;0[m
+[31m-13991206;13991206;000000;013000;1[m
+[31m-13991206;13991206;013000;050000;2[m
+[31m-13991206;13991206;050000;235959;0[m
+[31m-13991207;13991207;160000;235959;1[m
+[31m-13991208;13991208;000000;070000;2[m
+[31m-13991209;13991209;000000;040000;0[m
+[31m-13991210;13991210;000000;235959;2[m
+[31m-13991211;13991211;000000;235959;2[m
+[31m-13991212;13991212;000000;070000;0[m
+[31m-13991213;13991213;000000;013000;1[m
+[31m-13991213;13991213;013000;050000;2[m
+[31m-13991213;13991213;050000;235959;0[m
+[31m-13991214;13991214;160000;235959;1[m
+[31m-13991215;13991215;000000;070000;2[m
+[31m-13991216;13991216;000000;040000;0[m
+[31m-13991217;13991217;000000;235959;2[m
+[31m-13991218;13991218;000000;235959;2[m
+[31m-13991219;13991219;000000;070000;0[m
+[31m-13991220;13991220;000000;013000;1[m
+[31m-13991220;13991220;013000;050000;2[m
+[31m-13991220;13991220;050000;235959;0[m
+[31m-13991221;13991221;160000;235959;1[m
+[31m-13991222;13991222;000000;070000;2[m
+[31m-13991223;13991223;000000;040000;0[m
+[31m-13991224;13991224;000000;235959;2[m
+[31m-13991225;13991225;000000;235959;2[m
+[31m-13991226;13991226;000000;070000;0[m
+[31m-13991227;13991227;000000;013000;1[m
+[31m-13991227;13991227;013000;050000;2[m
+[31m-13991227;13991227;050000;235959;0[m
+[31m-13991228;13991228;160000;235959;1[m
+[31m-13991229;13991229;000000;070000;2[m
+[31m-13991230;13991230;000000;040000;0[m
+[1mdiff --git a/UI/bin/Debug/SCH/6.sch b/UI/bin/Debug/SCH/6.sch[m
+[1mindex 71d2cc3..d2b73ff 100644[m
+Binary files a/UI/bin/Debug/SCH/6.sch and b/UI/bin/Debug/SCH/6.sch differ
+[1mdiff --git a/UI/bin/Debug/SCH/7.sch b/UI/bin/Debug/SCH/7.sch[m
+[1mindex 86de9d6..f5a3cb7 100644[m
+Binary files a/UI/bin/Debug/SCH/7.sch and b/UI/bin/Debug/SCH/7.sch differ
+[1mdiff --git a/UI/bin/Debug/af-ZA/Eco.resources.dll b/UI/bin/Debug/af-ZA/Eco.resources.dll[m
+[1mindex d63a37a..bf9fead 100644[m
+Binary files a/UI/bin/Debug/af-ZA/Eco.resources.dll and b/UI/bin/Debug/af-ZA/Eco.resources.dll differ
+[1mdiff --git a/UI/bin/Debug/app.publish/Eco.exe b/UI/bin/Debug/app.publish/Eco.exe[m
+[1mindex 00e882f..06ac66d 100644[m
+Binary files a/UI/bin/Debug/app.publish/Eco.exe and b/UI/bin/Debug/app.publish/Eco.exe differ
+[1mdiff --git a/UI/bin/Debug/fa/Eco.resources.dll b/UI/bin/Debug/fa/Eco.resources.dll[m
+[1mindex fb42bf9..7267fbf 100644[m
+Binary files a/UI/bin/Debug/fa/Eco.resources.dll and b/UI/bin/Debug/fa/Eco.resources.dll differ
+[1mdiff --git a/UI/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache b/UI/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache[m
+[1mindex 1cf2b89..21f5dd3 100644[m
+Binary files a/UI/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache and b/UI/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache differ
+[1mdiff --git a/UI/obj/Debug/Eco.application b/UI/obj/Debug/Eco.application[m
+[1mindex d721d3d..3b8cce3 100644[m
+[1m--- a/UI/obj/Debug/Eco.application[m
+[1m+++ b/UI/obj/Debug/Eco.application[m
+[36m@@ -14,7 +14,7 @@[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>HAnqN5XUylLwKaM6ZW37NQpZSugbiFrdVGuNADUUyDI=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>VFUg9pWpzhDK/qs65y1cG18Wf7LUAj5lbi2ErZeLFQw=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[1mdiff --git a/UI/obj/Debug/Eco.exe b/UI/obj/Debug/Eco.exe[m
+[1mindex 00e882f..06ac66d 100644[m
+Binary files a/UI/obj/Debug/Eco.exe and b/UI/obj/Debug/Eco.exe differ
+[1mdiff --git a/UI/obj/Debug/Eco.exe.manifest b/UI/obj/Debug/Eco.exe.manifest[m
+[1mindex 3d22bf5..a3ea0d1 100644[m
+[1m--- a/UI/obj/Debug/Eco.exe.manifest[m
+[1m+++ b/UI/obj/Debug/Eco.exe.manifest[m
+[36m@@ -43,26 +43,26 @@[m
+     </dependentAssembly>[m
+   </dependency>[m
+   <dependency>[m
+[31m-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLL.dll" size="74752">[m
+[32m+[m[32m    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLL.dll" size="74240">[m
+       <assemblyIdentity name="BLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />[m
+       <hash>[m
+         <dsig:Transforms>[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>yRiyYaqFOAihw3Gkp+BvkJ1YEbhGpF2mUzTHmTzJCv8=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>Zxb9WNy9Rj6MMmo2fwv5ptdXhS3h89xSM8OcxdZs3yA=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+   <dependency>[m
+[31m-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DBLayer.dll" size="88576">[m
+[32m+[m[32m    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DBLayer.dll" size="88064">[m
+       <assemblyIdentity name="DBLayer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />[m
+       <hash>[m
+         <dsig:Transforms>[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>4vj1ViYOkMKyOzN7V9BFIGdmfF4yVWCaAYcMygqtFtM=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>nZdWjACfSaoo0LSqHDlFsO6DUOa2Mt2UiuAKUJeTQsU=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[36m@@ -1939,14 +1939,14 @@[m
+     </dependentAssembly>[m
+   </dependency>[m
+   <dependency>[m
+[31m-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="855552">[m
+[32m+[m[32m    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="855040">[m
+       <assemblyIdentity name="Eco" version="1.0.0.0" language="neutral" processorArchitecture="msil" />[m
+       <hash>[m
+         <dsig:Transforms>[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>TQ2c7NINwCp1SUpTr4QjIrN1B+bTx0dEiKk100S7B8o=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>+UJRYrs+k8dC20I8UEOPCxHK0k2EhYqtAfGhOZS7eVk=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[36m@@ -1958,7 +1958,7 @@[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>A+KBdNWkxQgbhmSTl2dXpH4jLdXdNsStPuFCGnWdnqk=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>DVSSPUFrv6tt9kO4lsfZDSZDV/2sMcqkb2Aqzs+xEwI=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[36m@@ -1970,7 +1970,7 @@[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>Ze4OtRyU2rQ/7O66IUGjGSSX7JG3Yvximw6hlIIsPyw=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>rd3tnxZgJyTBOklkDqkOu8JsKd7X73mUUtwti1pHZhM=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[36m@@ -2042,7 +2042,7 @@[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>6Zk/JSro+Xycn/Q7q3yimK3PqAXTSVzxpEosFM6so9g=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>CZZakOklR6+I4lM65ewsVs0C+OJV2qExhYPND4X1uPo=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[36m@@ -2054,7 +2054,7 @@[m
+           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />[m
+         </dsig:Transforms>[m
+         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />[m
+[31m-        <dsig:DigestValue>tqmeg90B83gGf+KTCIK2IPDDj5CigFBCgOsl4gjVSaU=</dsig:DigestValue>[m
+[32m+[m[32m        <dsig:DigestValue>57K0nJsDJn9s9Qo6i/w6AIhOnAvF7vmy9Ou6MxBt5hQ=</dsig:DigestValue>[m
+       </hash>[m
+     </dependentAssembly>[m
+   </dependency>[m
+[1mdiff --git a/UI/obj/Debug/Eco.pdb b/UI/obj/Debug/Eco.pdb[m
+[1mindex ae02ee9..0a2b0e5 100644[m
+Binary files a/UI/obj/Debug/Eco.pdb and b/UI/obj/Debug/Eco.pdb differ
+[1mdiff --git a/UI/obj/Debug/Interop.zkemkeeper.dll b/UI/obj/Debug/Interop.zkemkeeper.dll[m
+[1mindex 0abad82..492d104 100644[m
+Binary files a/UI/obj/Debug/Interop.zkemkeeper.dll and b/UI/obj/Debug/Interop.zkemkeeper.dll differ
+[1mdiff --git a/UI/obj/Debug/UI.csproj.FileListAbsolute.txt b/UI/obj/Debug/UI.csproj.FileListAbsolute.txt[m
+[1mindex 9e60bca..30c7cc2 100644[m
+[1m--- a/UI/obj/Debug/UI.csproj.FileListAbsolute.txt[m
+[1m+++ b/UI/obj/Debug/UI.csproj.FileListAbsolute.txt[m
+[36m@@ -1755,7 +1755,6 @@[m [mD:\Project\C#Project\ControllerProject\ECOApp\UI\bin\Debug\de\DevExpress.XtraSpe[m
+ D:\Project\C#Project\ControllerProject\ECOApp\UI\bin\Debug\es\DevExpress.XtraSpellChecker.v15.1.resources.dll[m
+ D:\Project\C#Project\ControllerProject\ECOApp\UI\bin\Debug\ja\DevExpress.XtraSpellChecker.v15.1.resources.dll[m
+ D:\Project\C#Project\ControllerProject\ECOApp\UI\bin\Debug\ru\DevExpress.XtraSpellChecker.v15.1.resources.dll[m
+[31m-D:\Project\C#Project\ControllerProject\ECOApp\UI\obj\Debug\UI.csproj.AssemblyReference.cache[m
+ D:\Project\C#Project\ControllerProject\ECOApp\UI\obj\Debug\Interop.zkemkeeper.dll[m
+ D:\Project\C#Project\ControllerProject\ECOApp\UI\obj\Debug\UI.csproj.ResolveComReference.cache[m
+ D:\Project\C#Project\ControllerProject\ECOApp\UI\obj\Debug\Eco.CustomAppointmentForm.resources[m
+[36m@@ -1801,3 +1800,4 @@[m [mD:\Project\C#Project\ControllerProject\ECOApp\UI\obj\Debug\Eco.application[m
+ D:\Project\C#Project\ControllerProject\ECOApp\UI\obj\Debug\UI.csproj.CopyComplete[m
+ D:\Project\C#Project\ControllerProject\ECOApp\UI\obj\Debug\Eco.exe[m
+ D:\Project\C#Project\ControllerProject\ECOApp\UI\obj\Debug\Eco.pdb[m
+[32m+[m[32mD:\Project\C#Project\ControllerProject\ECOApp\UI\obj\Debug\UI.csproj.AssemblyReference.cache[m
+[1mdiff --git a/UI/obj/Debug/UI.csproj.GenerateResource.cache b/UI/obj/Debug/UI.csproj.GenerateResource.cache[m
+[1mindex 25998b7..b63f13a 100644[m
+Binary files a/UI/obj/Debug/UI.csproj.GenerateResource.cache and b/UI/obj/Debug/UI.csproj.GenerateResource.cache differ
+[1mdiff --git a/UI/obj/Debug/af-ZA/Eco.resources.dll b/UI/obj/Debug/af-ZA/Eco.resources.dll[m
+[1mindex d63a37a..bf9fead 100644[m
+Binary files a/UI/obj/Debug/af-ZA/Eco.resources.dll and b/UI/obj/Debug/af-ZA/Eco.resources.dll differ
+[1mdiff --git a/UI/obj/Debug/fa/Eco.resources.dll b/UI/obj/Debug/fa/Eco.resources.dll[m
+[1mindex fb42bf9..7267fbf 100644[m
+Binary files a/UI/obj/Debug/fa/Eco.resources.dll and b/UI/obj/Debug/fa/Eco.resources.dll differ

@@ -1,0 +1,1378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CheckEdit.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit.NullText" xml:space="preserve">
+    <value>""</value>
+  </data>
+  <metadata name="dockManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>79</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1084, 572</value>
+  </data>
+  <data name="MainPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 122</value>
+  </data>
+  <data name="MainPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>845, 178</value>
+  </data>
+  <data name="MainPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.Name" xml:space="preserve">
+    <value>MainPanel</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GrpOnDvc.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GrpOnDvc.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GrpOnDvc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="GrpOnDvc.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="GrpOnDvc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>843, 107</value>
+  </data>
+  <data name="GrpOnDvc.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GrpOnDvc.Text" xml:space="preserve">
+    <value>نمایش آنلاین دستگاه</value>
+  </data>
+  <data name="&gt;&gt;GrpOnDvc.Name" xml:space="preserve">
+    <value>GrpOnDvc</value>
+  </data>
+  <data name="&gt;&gt;GrpOnDvc.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrpOnDvc.Parent" xml:space="preserve">
+    <value>panelOnDvc</value>
+  </data>
+  <data name="&gt;&gt;GrpOnDvc.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelOnDvc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 306</value>
+  </data>
+  <data name="panelOnDvc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>847, 111</value>
+  </data>
+  <data name="panelOnDvc.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="panelOnDvc.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelOnDvc.Name" xml:space="preserve">
+    <value>panelOnDvc</value>
+  </data>
+  <data name="&gt;&gt;panelOnDvc.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panelOnDvc.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelOnDvc.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gridViewDevice.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridViewDevice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="grdViewDevice.Appearance.GroupPanel.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="grdViewDevice.Appearance.GroupPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>DarkGray</value>
+  </data>
+  <data name="grdViewDevice.Appearance.ViewCaption.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="grdViewDevice.Appearance.ViewCaption.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="GrdName.Caption" xml:space="preserve">
+    <value>نام دستگاه</value>
+  </data>
+  <data name="GrdName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GrdName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GrdIP.Caption" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="GrdIP.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GrdIP.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GrdPort.Caption" xml:space="preserve">
+    <value>پورت</value>
+  </data>
+  <data name="GrdPort.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GrdPort.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="grdTftpPort.Caption" xml:space="preserve">
+    <value>پورت TFTP</value>
+  </data>
+  <data name="grdTftpPort.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="grdTftpPort.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gridViewDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>394, 131</value>
+  </data>
+  <data name="gridViewDevice.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gridViewDevice.Name" xml:space="preserve">
+    <value>gridViewDevice</value>
+  </data>
+  <data name="&gt;&gt;gridViewDevice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridViewDevice.Parent" xml:space="preserve">
+    <value>panelDevice</value>
+  </data>
+  <data name="&gt;&gt;gridViewDevice.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelDevice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>682, 431</value>
+  </data>
+  <data name="panelDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 135</value>
+  </data>
+  <data name="panelDevice.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="panelDevice.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelDevice.Name" xml:space="preserve">
+    <value>panelDevice</value>
+  </data>
+  <data name="&gt;&gt;panelDevice.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panelDevice.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelDevice.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gridViewGuest.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridViewGuest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="NameCol.Caption" xml:space="preserve">
+    <value>نام </value>
+  </data>
+  <data name="NameCol.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="NameCol.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="CardNumber.Caption" xml:space="preserve">
+    <value>شماره کارت</value>
+  </data>
+  <data name="CardNumber.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CardNumber.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridViewGuest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>853, 88</value>
+  </data>
+  <data name="gridViewGuest.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gridViewGuest.Name" xml:space="preserve">
+    <value>gridViewGuest</value>
+  </data>
+  <data name="&gt;&gt;gridViewGuest.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridViewGuest.Parent" xml:space="preserve">
+    <value>panelGuest</value>
+  </data>
+  <data name="&gt;&gt;gridViewGuest.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelGuest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 24</value>
+  </data>
+  <data name="panelGuest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>857, 92</value>
+  </data>
+  <data name="panelGuest.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="panelGuest.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelGuest.Name" xml:space="preserve">
+    <value>panelGuest</value>
+  </data>
+  <data name="&gt;&gt;panelGuest.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panelGuest.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelGuest.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CmbBxType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="CmbBxType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>603, 12</value>
+  </data>
+  <data name="CmbBxType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 24</value>
+  </data>
+  <data name="CmbBxType.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;CmbBxType.Name" xml:space="preserve">
+    <value>CmbBxType</value>
+  </data>
+  <data name="&gt;&gt;CmbBxType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CmbBxType.Parent" xml:space="preserve">
+    <value>panelEmp</value>
+  </data>
+  <data name="&gt;&gt;CmbBxType.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblTypeExport.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTypeExport.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="lblTypeExport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>731, 15</value>
+  </data>
+  <data name="lblTypeExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 16</value>
+  </data>
+  <data name="lblTypeExport.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lblTypeExport.Text" xml:space="preserve">
+    <value>انتخاب نوع خروجی:</value>
+  </data>
+  <data name="&gt;&gt;lblTypeExport.Name" xml:space="preserve">
+    <value>lblTypeExport</value>
+  </data>
+  <data name="&gt;&gt;lblTypeExport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTypeExport.Parent" xml:space="preserve">
+    <value>panelEmp</value>
+  </data>
+  <data name="&gt;&gt;lblTypeExport.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>437, 12</value>
+  </data>
+  <data name="BtnPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="BtnPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="BtnPrint.Text" xml:space="preserve">
+    <value>چاپ</value>
+  </data>
+  <data name="&gt;&gt;BtnPrint.Name" xml:space="preserve">
+    <value>BtnPrint</value>
+  </data>
+  <data name="&gt;&gt;BtnPrint.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnPrint.Parent" xml:space="preserve">
+    <value>panelEmp</value>
+  </data>
+  <data name="&gt;&gt;BtnPrint.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BtnExport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>522, 12</value>
+  </data>
+  <data name="BtnExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="BtnExport.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="BtnExport.Text" xml:space="preserve">
+    <value>خروجی </value>
+  </data>
+  <data name="&gt;&gt;BtnExport.Name" xml:space="preserve">
+    <value>BtnExport</value>
+  </data>
+  <data name="&gt;&gt;BtnExport.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnExport.Parent" xml:space="preserve">
+    <value>panelEmp</value>
+  </data>
+  <data name="&gt;&gt;BtnExport.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="grdViewEmp.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grdViewEmp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="gridViewEmp.Appearance.GroupPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>OldLace</value>
+  </data>
+  <data name="gridViewEmp.Appearance.OddRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Linen</value>
+  </data>
+  <data name="GrdopertCode.Caption" xml:space="preserve">
+    <value>کدکاربری</value>
+  </data>
+  <data name="GrdopertCode.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GrdopertCode.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GrdopertCode.Width" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="GrdFName.Caption" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="GrdFName.ImageAlignment" type="System.Drawing.StringAlignment, System.Drawing">
+    <value>Center</value>
+  </data>
+  <data name="GrdFName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GrdFName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="GrdFName.Width" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="GrdLName.Caption" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="GrdLName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GrdLName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="GrdLName.Width" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="GrdEmpID.Caption" xml:space="preserve">
+    <value>شماره کارمندی</value>
+  </data>
+  <data name="GrdEmpID.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GrdEmpID.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="GrdEmpID.Width" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="GrdOrganization.Caption" xml:space="preserve">
+    <value>سمت سازمانی</value>
+  </data>
+  <data name="GrdOrganization.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GrdOrganization.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="GrdOrganization.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="GrdAcsGRoup.Caption" xml:space="preserve">
+    <value>گروه دسترسی</value>
+  </data>
+  <data name="GrdCard.Caption" xml:space="preserve">
+    <value>کارت</value>
+  </data>
+  <data name="GrdCard.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GrdCard.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="GrdCard.Width" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="GrdFinger.Caption" xml:space="preserve">
+    <value>اثر انگشت</value>
+  </data>
+  <data name="GrdFinger.Width" type="System.Int32, mscorlib">
+    <value>126</value>
+  </data>
+  <data name="GrdPicture.Caption" xml:space="preserve">
+    <value>تصویر</value>
+  </data>
+  <data name="GrdPicture.ImageAlignment" type="System.Drawing.StringAlignment, System.Drawing">
+    <value>Center</value>
+  </data>
+  <data name="GrdPicture.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GrdPicture.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="GrdPicture.Width" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="grdViewEmp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 145</value>
+  </data>
+  <data name="grdViewEmp.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;grdViewEmp.Name" xml:space="preserve">
+    <value>grdViewEmp</value>
+  </data>
+  <data name="&gt;&gt;grdViewEmp.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;grdViewEmp.Parent" xml:space="preserve">
+    <value>panelEmp</value>
+  </data>
+  <data name="&gt;&gt;grdViewEmp.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panelEmp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 423</value>
+  </data>
+  <data name="panelEmp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>449, 149</value>
+  </data>
+  <data name="panelEmp.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="panelEmp.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelEmp.Name" xml:space="preserve">
+    <value>panelEmp</value>
+  </data>
+  <data name="&gt;&gt;panelEmp.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panelEmp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelEmp.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="menu.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Lavender</value>
+  </data>
+  <data name="menu.Appearance.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>192, 192, 255</value>
+  </data>
+  <data name="menu.Appearance.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>192, 192, 255</value>
+  </data>
+  <data name="menu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="navBarMonitor.Caption" xml:space="preserve">
+    <value>نظارتهای آنلاین</value>
+  </data>
+  <data name="navBarOnlinePdp.Caption" xml:space="preserve">
+    <value>نمایش دستگاههای آنلاین</value>
+  </data>
+  <data name="navBarOnlineTrafic.AppearanceHotTracked.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>255, 128, 128</value>
+  </data>
+  <data name="navBarOnlineTrafic.AppearancePressed.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Red</value>
+  </data>
+  <data name="navBarOnlineTrafic.Caption" xml:space="preserve">
+    <value>نمایش آنلاین ترددها</value>
+  </data>
+  <data name="nvBrCtrlMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="navBarDevices.Caption" xml:space="preserve">
+    <value>مدیریت دستگاه ها</value>
+  </data>
+  <data name="navBarAddDevice.Caption" xml:space="preserve">
+    <value>اضافه کردن دستگاه</value>
+  </data>
+  <data name="navBarSetting.Caption" xml:space="preserve">
+    <value>پیکربندی</value>
+  </data>
+  <data name="navBarFirmWare.Caption" xml:space="preserve">
+    <value>بروزرسانی FirmWare</value>
+  </data>
+  <data name="navBarEmployee.AppearancePressed.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="navBarEmployee.Caption" xml:space="preserve">
+    <value>مدیریت کارمندان</value>
+  </data>
+  <data name="navBarAddEmp.Caption" xml:space="preserve">
+    <value>اضافه کردن کارمندان</value>
+  </data>
+  <data name="navBarSendEmp.Caption" xml:space="preserve">
+    <value>ارسال همه کارمندان به دستگاه</value>
+  </data>
+  <data name="EmployeeGroup.Caption" xml:space="preserve">
+    <value>چارت سازمانی</value>
+  </data>
+  <data name="navSchaduler.Caption" xml:space="preserve">
+    <value>کنترل دسترسی</value>
+  </data>
+  <data name="DayType.Caption" xml:space="preserve">
+    <value>نوع روز</value>
+  </data>
+  <data name="SchGroup.Caption" xml:space="preserve">
+    <value>گروه زمانبندی</value>
+  </data>
+  <data name="AccessArea.Caption" xml:space="preserve">
+    <value>ناحیه دسترسی</value>
+  </data>
+  <data name="AcessGroup.Caption" xml:space="preserve">
+    <value>گروه دسترسی</value>
+  </data>
+  <data name="Holidays.Caption" xml:space="preserve">
+    <value>گروه تعطیلات</value>
+  </data>
+  <data name="navBarGuest.Caption" xml:space="preserve">
+    <value>مهمان</value>
+  </data>
+  <data name="navBarAllGuest.Caption" xml:space="preserve">
+    <value>نمایش کارتهای مهمان</value>
+  </data>
+  <data name="navBarAddGuest.Caption" xml:space="preserve">
+    <value>تعریف کارت مهمان</value>
+  </data>
+  <data name="navBarLog.Caption" xml:space="preserve">
+    <value>گزارش تردد</value>
+  </data>
+  <data name="navBarAllLog.Caption" xml:space="preserve">
+    <value>گزارش کلیه تردد ها</value>
+  </data>
+  <data name="navbarChartTraffic.Caption" xml:space="preserve">
+    <value>گزارش تعداد تردد</value>
+  </data>
+  <data name="navBarShowDevice.Caption" xml:space="preserve">
+    <value>نمایش کلیه دستگاه ها</value>
+  </data>
+  <data name="nvBrCtrlMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="resource.ExpandedWidth" type="System.Int32, mscorlib">
+    <value>219</value>
+  </data>
+  <data name="nvBrCtrlMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 521</value>
+  </data>
+  <data name="nvBrCtrlMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="nvBrCtrlMenu.Text" xml:space="preserve">
+    <value>nvBrCtrlMenu</value>
+  </data>
+  <data name="&gt;&gt;nvBrCtrlMenu.Name" xml:space="preserve">
+    <value>nvBrCtrlMenu</value>
+  </data>
+  <data name="&gt;&gt;nvBrCtrlMenu.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarControl, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;nvBrCtrlMenu.Parent" xml:space="preserve">
+    <value>dockPanel_Container</value>
+  </data>
+  <data name="&gt;&gt;nvBrCtrlMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dockPanel_Container.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="dockPanel_Container.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 521</value>
+  </data>
+  <data name="dockPanel_Container.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_Container.Name" xml:space="preserve">
+    <value>dockPanel_Container</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_Container.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_Container.Parent" xml:space="preserve">
+    <value>menu</value>
+  </data>
+  <data name="&gt;&gt;dockPanel_Container.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="menu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="menu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>On</value>
+  </data>
+  <data name="menu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="menu.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 548</value>
+  </data>
+  <data name="menu.Text" xml:space="preserve">
+    <value>فهرست</value>
+  </data>
+  <data name="&gt;&gt;menu.Name" xml:space="preserve">
+    <value>menu</value>
+  </data>
+  <data name="&gt;&gt;menu.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;menu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menu.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="TopMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>429, 17</value>
+  </metadata>
+  <data name="TopMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt</value>
+  </data>
+  <data name="ClientMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="ClientMenu.Text" xml:space="preserve">
+    <value>تعریف کلاینت</value>
+  </data>
+  <data name="OpertManagerMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="OpertManagerMenuItem.Text" xml:space="preserve">
+    <value>مدیریت کاربران</value>
+  </data>
+  <data name="مدیریتنقشدردستگاهToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="مدیریتنقشدردستگاهToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="مدیریتنقشدردستگاهToolStripMenuItem.Text" xml:space="preserve">
+    <value>مدیریت نقش در دستگاه</value>
+  </data>
+  <data name="BasicInfoMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 20</value>
+  </data>
+  <data name="BasicInfoMenuItem.Text" xml:space="preserve">
+    <value>تنظیمات اولیه</value>
+  </data>
+  <data name="ImportEmployeeStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="ImportEmployeeStripMenuItem.Text" xml:space="preserve">
+    <value>وارد کردن اطلاعات کارمندان</value>
+  </data>
+  <data name="ImportFingerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="ImportFingerToolStripMenuItem.Text" xml:space="preserve">
+    <value>وارد کردن اثر انگشت به پایگاه داده</value>
+  </data>
+  <data name="ImportFingerToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="اطلاعاتToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="اطلاعاتToolStripMenuItem.Text" xml:space="preserve">
+    <value>مدیریت اطلاعات</value>
+  </data>
+  <data name="TopMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TopMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1084, 24</value>
+  </data>
+  <data name="TopMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;TopMenu.Name" xml:space="preserve">
+    <value>TopMenu</value>
+  </data>
+  <data name="&gt;&gt;TopMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TopMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TopMenu.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAANrY1gDc2tgAxsTAAL+8uAC/vLgAv7y4AL+8uAC/vLgAv7y4AL+8
+        uAC/vLgAv7y4AL+8uAC/vLgAv7y4AL+8uAC/vLgAv7y4AL+8uAC/vLgAv7y4AL+8uAC/vLgAxsPAANrY
+        1gDY1tQAAAAAAAAAAAAAAAAAAAAAAP///wDZ19UA5ePiAP///wD18/AI6ufkCOro5Ajq6OQI6ujkCOro
+        5Ajq6OQI6ujkCOro5Ajq6OQI6ujkCOro5Ajq6OQI6ujkCOro5Ajq6OQI6ujkCOro5Ajq6OQI6ujkCOrn
+        5Aj18/AI////AOHg3gDU09EA////AAAAAAAAAAAA////ANzb2QDv7+4ftbOvjJmVkcGVko3BlZKNwZWS
+        jcGVko3BlZKNwZWSjcGVko3BlZKNwZWSjcGVko3BlZKNwZWSjcGVko3BlZKNwZWSjcGVko3BlZKNwZWS
+        jcGVko3BlZKNwZmVkcGzsK2M7OvqH9fV1AD///8AAAAAAAAAAADs6+oA////BMXDv6WLh4L/enZx/3p3
+        c/96d3T/end0/3p3dP96d3T/end0/3p3dP96d3T/end0/3p3dP95d3T/enZy/3p2cf96dnH/endy/3p3
+        cv96d3L/endy/3p3cv96d3L/enZx/4uHgv/CwLyl////BOnn5gAAAAAAAAAAAMfEwQDl4+IIqKSfwpWQ
+        iv+PiHz/kHtd/5R8Wv+UfFr/lHxa/5R8Wv+UfFr/lHxa/5R8Wv+UfFr/lXxa/5+DXP+Xi3r/ko2H/46J
+        gv+GgXv/hoF6/4aBev+GgXr/hoF6/4aBev+GgXv/jYiB/6ejnsLi4eAIxcK/AAAAAAAAAAAAv7y4ANLQ
+        zQippZ/Bp6Of/4t9ZP+QWAb/m1sC/5pbAv+aWwL/mlsC/5pbAv+aWwL/mloC/5pbAv+uZgL/xnMF/6WG
+        Xf+Sjon/gX13/4eCfP+KhX7/ioV+/4qFfv+KhX7/ioV+/4iDff+Cfnj/o5+ZwdrY1gi/vLgAAAAAAAAA
+        AAC/vLgA0dDNCKqmocGqpaL/i31j/5BXA/+bWgD/mloA/5paAP+aWgD/mloA/5paAP+aWgD/rWUA/8dz
+        AP/JdAL/pYVb/5GNiP9/enT/hoF7/4aCe/+Hgnv/hoJ7/4aCe/+Ggnz/hoJ7/4F8d/+inpjB3NvYCL+8
+        uAAAAAAAAAAAAL+8uADR0M0Iqqagwaqlov+LfWP/kFgE/5taAP+aWgD/mloA/5paAP+aWgD/mloA/61k
+        AP/HcwD/yXQA/8l0A/+lhVv/kY2I/396dP+FgXr/hoF7/4aBe/+GgXv/hoF7/4aBe/+GgXv/gXx3/6Ke
+        mMHc29gIv7y4AAAAAAAAAAAAv7y4ANHQzQiqpqDBqqWi/4t9Y/+QWAT/m1oA/5paAP+aWgD/mloA/5pa
+        AP+tZAD/xnMA/8l0AP/JdAD/yXQD/6WFW/+RjYj/f3p0/4WBev+GgXv/hoF7/4aBe/+GgXv/hoJ7/4aB
+        e/+BfHf/op6Ywdzb2Ai/vLgAAAAAAAAAAAC/vLgA0dDNCKqmoMGqpaL/i31j/5BYBP+bWgD/mloA/5pa
+        AP+aWgD/rGQA/8ZzAP/JdAD/yXQA/8l0AP/JdAP/pYVb/5GNiP9/enT/hYF7/4aBe/+Ggnv/hoF7/4aB
+        e/+Ggnv/hoF7/4F8d/+inpjB3NvYCL+8uAAAAAAAAAAAAL+8uADR0M0Iqqagwaqlov+LfWP/kFgE/5ta
+        AP+aWgD/mloA/6tkAP/GcgD/yXQA/8l0AP/JdAD/yXQA/8l0A/+lhVv/kY2I/396dP+FgHr/hYB6/4WB
+        ev+FgXr/hoF6/4WBev+GgXv/gXx3/6KemMHc29gIv7y4AAAAAAAAAAAAv7y4ANHQzQiqpqDBqqWi/4t9
+        Y/+QWAT/m1oA/5paAP+rZAD/xnIA/8l0AP/JdAD/yXQA/8l0AP/JdAD/yXQD/6WFW/+RjYj/f3t1/5CL
+        hf+dmJP/nZmT/56Zk/+emZP/npmT/5WQi/+CfXf/op6Ywdzb2Ai/vLgAAAAAAAAAAAC/vLgA0dDNCKqm
+        oMGqpaL/i31j/5BXBP+aWgD/q2MA/8ZyAP/JdAD/yXQA/8l0AP/JdAD/yXQA/8l0AP/JdAP/pYVb/5GN
+        iP97d3H/dHBr/6Cbl/+inZ7/l5KY/5yXmv+oo5//eXRv/3p1cP+jnpnB3NvYCL+8uAAAAAAAAAAAAL+8
+        uADR0M0Iqqagwaqlov+LfWP/kFcE/6tjAP/FcgD/yXQA/8l0AP/JdAD/yXQA/8l0AP/JdAD/yXQA/8l0
+        A/+lhVv/kY2I/3t3cf9kYVz/bGhh/0pHjP8fHsH/NzSg/2ZiYP9YU07/eXRu/6OfmcHc29gIv7y4AAAA
+        AAAAAAAAv7y4ANHQzQiqpqDBqaWi/4t9Y/+gYAT/xnIA/8l0AP/JdAD/yXQA/8l0AP/JdAD/yXQA/8l0
+        AP/JdAD/yXQD/6WFW/+RjYj/e3dx/2ViXv9gXFX/PTmE/xoZxP8yL5H/UUxK/1dSTv95dG//o5+Zwdzb
+        2Ai/vLgAAAAAAAAAAAC/vLgA0dDNCKqmoMGppaL/jn9j/7ZsBP/LdQD/yXQA/8l0AP/JdAD/yXQA/8l0
+        AP/JdAD/yXQA/8l0AP/IdAP/o4Rb/5GNiP97d3H/ZWJd/2FdWP9bV1r/UExW/1FMT/9TTkr/V1JO/3l0
+        b/+jn5nB3NvYCL+8uAAAAAAAAAAAAL+8uADR0M0Iqqagwamlov+Of2P/t20E/8p0AP/JdAD/yXQA/8l0
+        AP/JdAD/yXQA/8l0AP/JdAD/yXQA/7RpA/+Yflv/ko6I/3t3cf9lYl7/X1tY/1hUT/9TTkn/U05K/1NO
+        Sv9XUk7/eXRv/6OfmcHc29gIv7y4AAAAAAAAAAAAv7y4ANHQzQiqpqDBqaWi/45/Y/+3bQT/ynQA/8l0
+        AP/JdAD/yXQA/8l0AP/JdAD/yXQA/8l0AP+1aQD/nFsD/5V8W/+Sjoj/e3dx/2VhXP9XUk7/Uk1J/1JN
+        Sf9STUn/Uk1J/1dSTv96dW//o5+Zwdza2Ai/vLgAAAAAAAAAAAC/vLgA0dDNCKqmoMGppaL/jn9j/7dt
+        BP/KdAD/yXQA/8l0AP/JdAD/yXQA/8l0AP/JdAD/tWkA/5xbAP+aWgP/lX1b/5OPif+AfHb/b2tm/2Rg
+        W/9lYFv/ZWBb/2VgW/9kX1v/bGdi/355c/+inpjB3tzaCL+8uAAAAAAAAAAAAL+8uADR0M0Iqqagwaml
+        ov+Of2P/t20E/8p0AP/JdAD/yXQA/8l0AP/JdAD/yXQA/7ZqAP+cWwD/mloA/5paA/+VfVv/k4+K/4+K
+        hP+Hgnz/hoF7/4aBe/+GgXv/hoF7/4aCe/+EgHr/endy/5+blsHk4t8IwL25AAAAAAAAAAAAv7y4ANHQ
+        zQiqpqDBqaWi/45/Y/+3bQT/ynQA/8l0AP/JdAD/yXQA/8l0AP+3agD/nVsA/5paAP+aWgD/mloD/5V9
+        W/+Tj4n/k46H/5SPiP+Uj4j/lI+I/5SPiP+Uj4j/lI+I/46Jg/94dG//npuVweXi4AjAvbkAAAAAAAAA
+        AAC/vLgA0dDNCKqmoMGppaL/jn9j/7dtBP/KdAD/yXQA/8l0AP/JdAD/t2oA/5xcAP+aWgD/mloA/5pa
+        AP+aWgP/lX1b/5OPif+Tjof/k46H/5OOh/+Uj4f/ko2G/4aBe/+Qi4T/jomD/3h0b/+em5XB5eLgCMC9
+        uQAAAAAAAAAAAL+8uADR0M0Iqqagwamlov+Of2P/t20E/8p0AP/JdAD/yXQA/7dqAP+dXAD/mloA/5pa
+        AP+aWgD/mloA/5paA/+VfVv/k4+J/5OOh/+Tjof/kYyF/4mEfv+SjYb/jomC/5GMhf+OiYP/eHRv/56b
+        lcHl4uAIwL25AAAAAAAAAAAAv7y4ANHQzQiqpqDBqaWi/45/Y/+4bgP/zHUA/8p0AP+5awD/nlwA/5pa
+        AP+bWgD/m1oA/5taAP+bWgD/m1oC/5Z9W/+Tj4n/k46H/5OOh/+SjYb/iYR+/5GNhv+Tjof/lI+H/4+K
+        gv94dG//npuVweXi4AjAvbkAAAAAAAAAAAC/vLcA0c/MCKqmoMGppaL/jH5k/6ZmB/+4bQP/rGcD/5NZ
+        A/+PVwP/kFcD/5BXA/+QVwP/kFcD/5BXA/+PWAb/kXxd/5OPif+Tjof/k46H/5OOh/+Tjof/k46H/5OO
+        hv+Hg5H/gX2L/3h1b/+empXB5OLfCMC9uQAAAAAAAAAAAMfFwQDf3twIramkw6qlof+Wj4T/jH5k/45+
+        Yv+MfWL/inxi/4p8Yv+KfGL/inxi/4p8Yv+KfGL/inxi/4p9Y/+Si4D/l5KM/5aRi/+WkYv/lpGL/5aR
+        i/+WkYv/mZSJ/2Jfrv9XVaH/endt/6KemcLt6+kIx8TAAAAAAAAAAAAA4d/dAP///wG2sq55p6Oe+6ql
+        oP+ppaH/qaWi/6qlov+qpaL/qqWi/6qlov+qpaL/qqWi/6qlov+qpaL/qqWh/6mkoP+ppJ//qaSf/6mk
+        n/+ppJ//qaSf/6mkn/+sp57/ama6/1VTo/+QjIL/xcK/pf///wTr6egAAAAAAAAAAADc2tgAw8G9ALay
+        rwa3tK95ramjw6mloMGppaDBqaWgwamloMGppaDBqaWgwamloMGppaDBqaWgwamloMGppaDBqaWgwaml
+        oMGppaDBqaWgwamloMGppaDBqaWgwaunnsF6d7zBeHa4wcK+tYzv7+4f3dvZAP///wAAAAAAAAAAAAAA
+        AAC1sq0Aw8G9AP///wHh4N4I0tDOCNLR0AjS0dAI0tHQCNLR0AjS0dAI0tHQCNLR0AjS0dAI0tHQCNLR
+        0AjS0dAI0tHQCNLR0AjS0dAI0tHQCNLR0AjS0dAI09HPCMC/2gjR0OsI////AOXj4gDZ19UA4+PjAAAA
+        AAAAAAAAAAAAAAAAAADc29gA4d/dAMfFwQC/vLgAv7y5AL+8uQC/vLkAv7y5AL+8uQC/vLkAv7y5AL+8
+        uQC/vLkAv7y5AL+8uQC/vLkAv7y5AL+8uQC/vLkAv7y5AL+8uQDAvbgAnpzMAKWj0gDj4dkA3NrXAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAQCBAIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA
+        AAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAEAAAAAAAAAAQAAAAAAAAABAAAABgAAAAA=
+</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>مدیریت کنترلر</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit.Name" xml:space="preserve">
+    <value>CheckEdit</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPictureEdit2.Name" xml:space="preserve">
+    <value>repositoryItemPictureEdit2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPictureEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit, DevExpress.XtraEditors.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dockManager1.Name" xml:space="preserve">
+    <value>dockManager1</value>
+  </data>
+  <data name="&gt;&gt;dockManager1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockManager, DevExpress.XtraBars.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarMonitor.Name" xml:space="preserve">
+    <value>navBarMonitor</value>
+  </data>
+  <data name="&gt;&gt;navBarMonitor.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarGroup, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridViewEmp.Name" xml:space="preserve">
+    <value>gridViewEmp</value>
+  </data>
+  <data name="&gt;&gt;gridViewEmp.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdopertCode.Name" xml:space="preserve">
+    <value>GrdopertCode</value>
+  </data>
+  <data name="&gt;&gt;GrdopertCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdFName.Name" xml:space="preserve">
+    <value>GrdFName</value>
+  </data>
+  <data name="&gt;&gt;GrdFName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdLName.Name" xml:space="preserve">
+    <value>GrdLName</value>
+  </data>
+  <data name="&gt;&gt;GrdLName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdEmpID.Name" xml:space="preserve">
+    <value>GrdEmpID</value>
+  </data>
+  <data name="&gt;&gt;GrdEmpID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdOrganization.Name" xml:space="preserve">
+    <value>GrdOrganization</value>
+  </data>
+  <data name="&gt;&gt;GrdOrganization.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdAcsGRoup.Name" xml:space="preserve">
+    <value>GrdAcsGRoup</value>
+  </data>
+  <data name="&gt;&gt;GrdAcsGRoup.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdCard.Name" xml:space="preserve">
+    <value>GrdCard</value>
+  </data>
+  <data name="&gt;&gt;GrdCard.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdFinger.Name" xml:space="preserve">
+    <value>GrdFinger</value>
+  </data>
+  <data name="&gt;&gt;GrdFinger.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdPicture.Name" xml:space="preserve">
+    <value>GrdPicture</value>
+  </data>
+  <data name="&gt;&gt;GrdPicture.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarOnlinePdp.Name" xml:space="preserve">
+    <value>navBarOnlinePdp</value>
+  </data>
+  <data name="&gt;&gt;navBarOnlinePdp.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarOnlineTrafic.Name" xml:space="preserve">
+    <value>navBarOnlineTrafic</value>
+  </data>
+  <data name="&gt;&gt;navBarOnlineTrafic.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarDevices.Name" xml:space="preserve">
+    <value>navBarDevices</value>
+  </data>
+  <data name="&gt;&gt;navBarDevices.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarGroup, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarAddDevice.Name" xml:space="preserve">
+    <value>navBarAddDevice</value>
+  </data>
+  <data name="&gt;&gt;navBarAddDevice.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarSetting.Name" xml:space="preserve">
+    <value>navBarSetting</value>
+  </data>
+  <data name="&gt;&gt;navBarSetting.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarFirmWare.Name" xml:space="preserve">
+    <value>navBarFirmWare</value>
+  </data>
+  <data name="&gt;&gt;navBarFirmWare.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarEmployee.Name" xml:space="preserve">
+    <value>navBarEmployee</value>
+  </data>
+  <data name="&gt;&gt;navBarEmployee.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarGroup, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarAddEmp.Name" xml:space="preserve">
+    <value>navBarAddEmp</value>
+  </data>
+  <data name="&gt;&gt;navBarAddEmp.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarSendEmp.Name" xml:space="preserve">
+    <value>navBarSendEmp</value>
+  </data>
+  <data name="&gt;&gt;navBarSendEmp.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;EmployeeGroup.Name" xml:space="preserve">
+    <value>EmployeeGroup</value>
+  </data>
+  <data name="&gt;&gt;EmployeeGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navSchaduler.Name" xml:space="preserve">
+    <value>navSchaduler</value>
+  </data>
+  <data name="&gt;&gt;navSchaduler.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarGroup, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DayType.Name" xml:space="preserve">
+    <value>DayType</value>
+  </data>
+  <data name="&gt;&gt;DayType.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SchGroup.Name" xml:space="preserve">
+    <value>SchGroup</value>
+  </data>
+  <data name="&gt;&gt;SchGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;AccessArea.Name" xml:space="preserve">
+    <value>AccessArea</value>
+  </data>
+  <data name="&gt;&gt;AccessArea.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;AcessGroup.Name" xml:space="preserve">
+    <value>AcessGroup</value>
+  </data>
+  <data name="&gt;&gt;AcessGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Holidays.Name" xml:space="preserve">
+    <value>Holidays</value>
+  </data>
+  <data name="&gt;&gt;Holidays.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarGuest.Name" xml:space="preserve">
+    <value>navBarGuest</value>
+  </data>
+  <data name="&gt;&gt;navBarGuest.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarGroup, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarAllGuest.Name" xml:space="preserve">
+    <value>navBarAllGuest</value>
+  </data>
+  <data name="&gt;&gt;navBarAllGuest.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarAddGuest.Name" xml:space="preserve">
+    <value>navBarAddGuest</value>
+  </data>
+  <data name="&gt;&gt;navBarAddGuest.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarLog.Name" xml:space="preserve">
+    <value>navBarLog</value>
+  </data>
+  <data name="&gt;&gt;navBarLog.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarGroup, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarAllLog.Name" xml:space="preserve">
+    <value>navBarAllLog</value>
+  </data>
+  <data name="&gt;&gt;navBarAllLog.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navbarChartTraffic.Name" xml:space="preserve">
+    <value>navbarChartTraffic</value>
+  </data>
+  <data name="&gt;&gt;navbarChartTraffic.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarShowDevice.Name" xml:space="preserve">
+    <value>navBarShowDevice</value>
+  </data>
+  <data name="&gt;&gt;navBarShowDevice.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;grdViewGuest.Name" xml:space="preserve">
+    <value>grdViewGuest</value>
+  </data>
+  <data name="&gt;&gt;grdViewGuest.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;NameCol.Name" xml:space="preserve">
+    <value>NameCol</value>
+  </data>
+  <data name="&gt;&gt;NameCol.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CardNumber.Name" xml:space="preserve">
+    <value>CardNumber</value>
+  </data>
+  <data name="&gt;&gt;CardNumber.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;grdViewDevice.Name" xml:space="preserve">
+    <value>grdViewDevice</value>
+  </data>
+  <data name="&gt;&gt;grdViewDevice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdName.Name" xml:space="preserve">
+    <value>GrdName</value>
+  </data>
+  <data name="&gt;&gt;GrdName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdIP.Name" xml:space="preserve">
+    <value>GrdIP</value>
+  </data>
+  <data name="&gt;&gt;GrdIP.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GrdPort.Name" xml:space="preserve">
+    <value>GrdPort</value>
+  </data>
+  <data name="&gt;&gt;GrdPort.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;grdTftpPort.Name" xml:space="preserve">
+    <value>grdTftpPort</value>
+  </data>
+  <data name="&gt;&gt;grdTftpPort.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker1.Name" xml:space="preserve">
+    <value>backgroundWorker1</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker1.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BasicInfoMenuItem.Name" xml:space="preserve">
+    <value>BasicInfoMenuItem</value>
+  </data>
+  <data name="&gt;&gt;BasicInfoMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ClientMenu.Name" xml:space="preserve">
+    <value>ClientMenu</value>
+  </data>
+  <data name="&gt;&gt;ClientMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpertManagerMenuItem.Name" xml:space="preserve">
+    <value>OpertManagerMenuItem</value>
+  </data>
+  <data name="&gt;&gt;OpertManagerMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;مدیریتنقشدردستگاهToolStripMenuItem.Name" xml:space="preserve">
+    <value>مدیریتنقشدردستگاهToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;مدیریتنقشدردستگاهToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;اطلاعاتToolStripMenuItem.Name" xml:space="preserve">
+    <value>اطلاعاتToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;اطلاعاتToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ImportEmployeeStripMenuItem.Name" xml:space="preserve">
+    <value>ImportEmployeeStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ImportEmployeeStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ImportFingerToolStripMenuItem.Name" xml:space="preserve">
+    <value>ImportFingerToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ImportFingerToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker2.Name" xml:space="preserve">
+    <value>backgroundWorker2</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker2.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TrafficMenuItem.Name" xml:space="preserve">
+    <value>TrafficMenuItem</value>
+  </data>
+  <data name="&gt;&gt;TrafficMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OfflineLogMenuItem.Name" xml:space="preserve">
+    <value>OfflineLogMenuItem</value>
+  </data>
+  <data name="&gt;&gt;OfflineLogMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OnlineLogToolStripMenuItem.Name" xml:space="preserve">
+    <value>OnlineLogToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;OnlineLogToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewOpert.Name" xml:space="preserve">
+    <value>NewOpert</value>
+  </data>
+  <data name="&gt;&gt;NewOpert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditOpert.Name" xml:space="preserve">
+    <value>EditOpert</value>
+  </data>
+  <data name="&gt;&gt;EditOpert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainFrm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>265, 17</value>
+  </metadata>
+  <metadata name="backgroundWorker2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>533, 17</value>
+  </metadata>
+  <data name="TrafficMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="TrafficMenuItem.Text" xml:space="preserve">
+    <value>گزارش کلیه تردد ها</value>
+  </data>
+  <data name="OfflineLogMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="OfflineLogMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="OfflineLogMenuItem.Text" xml:space="preserve">
+    <value>گزارش ترددهای آفلاین</value>
+  </data>
+  <data name="OnlineLogToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="OnlineLogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="OnlineLogToolStripMenuItem.Text" xml:space="preserve">
+    <value>گزارش تردد های آنلاین</value>
+  </data>
+  <data name="NewOpert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 19</value>
+  </data>
+  <data name="EditOpert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 19</value>
+  </data>
+</root>

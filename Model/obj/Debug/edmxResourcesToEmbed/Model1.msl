@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EchoDBModelStoreContainer" CdmEntityContainer="EchoDBEntities1">
+    <EntitySetMapping Name="AccessAreas">
+      <EntityTypeMapping TypeName="EchoDBModel.AccessArea">
+        <MappingFragment StoreEntitySet="AccessArea">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccessGroups">
+      <EntityTypeMapping TypeName="EchoDBModel.AccessGroup">
+        <MappingFragment StoreEntitySet="AccessGroup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccessTypes">
+      <EntityTypeMapping TypeName="EchoDBModel.AccessType">
+        <MappingFragment StoreEntitySet="AccessType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AcsGroupAcsAreas">
+      <EntityTypeMapping TypeName="EchoDBModel.AcsGroupAcsArea">
+        <MappingFragment StoreEntitySet="AcsGroupAcsArea">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AcsGroupID" ColumnName="AcsGroupID" />
+          <ScalarProperty Name="AcsAreaID" ColumnName="AcsAreaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cards">
+      <EntityTypeMapping TypeName="EchoDBModel.Card">
+        <MappingFragment StoreEntitySet="Card">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="CardData" ColumnName="CardData" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="IsGuest" ColumnName="IsGuest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="EchoDBModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ClientIP" ColumnName="ClientIP" />
+          <ScalarProperty Name="ClientPort" ColumnName="ClientPort" />
+          <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaySchedules">
+      <EntityTypeMapping TypeName="EchoDBModel.DaySchedule">
+        <MappingFragment StoreEntitySet="DaySchedule">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="AccessTypeID" ColumnName="AccessTypeID" />
+          <ScalarProperty Name="DayTypeID" ColumnName="DayTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DayTypes">
+      <EntityTypeMapping TypeName="EchoDBModel.DayType">
+        <MappingFragment StoreEntitySet="DayType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Devices">
+      <EntityTypeMapping TypeName="EchoDBModel.Device">
+        <MappingFragment StoreEntitySet="Device">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="SettingID" ColumnName="SettingID" />
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="UDPPort" ColumnName="UDPPort" />
+          <ScalarProperty Name="DeviceSerial" ColumnName="DeviceSerial" />
+          <ScalarProperty Name="RegistrationCode" ColumnName="RegistrationCode" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+          <ScalarProperty Name="webUser" ColumnName="webUser" />
+          <ScalarProperty Name="webPass" ColumnName="webPass" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceEmps">
+      <EntityTypeMapping TypeName="EchoDBModel.DeviceEmp">
+        <MappingFragment StoreEntitySet="DeviceEmp">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Finger" ColumnName="Finger" />
+          <ScalarProperty Name="Db" ColumnName="Db" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceSchGroups">
+      <EntityTypeMapping TypeName="EchoDBModel.DeviceSchGroup">
+        <MappingFragment StoreEntitySet="DeviceSchGroup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AcsAreaID" ColumnName="AcsAreaID" />
+          <ScalarProperty Name="SchgroupID" ColumnName="SchgroupID" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceTypes">
+      <EntityTypeMapping TypeName="EchoDBModel.DeviceType">
+        <MappingFragment StoreEntitySet="DeviceType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="EchoDBModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="AcsGroupID" ColumnName="AcsGroupID" />
+          <ScalarProperty Name="EmpFname" ColumnName="EmpFname" />
+          <ScalarProperty Name="EmpLname" ColumnName="EmpLname" />
+          <ScalarProperty Name="EmpNationalCode" ColumnName="EmpNationalCode" />
+          <ScalarProperty Name="PersonalNum" ColumnName="PersonalNum" />
+          <ScalarProperty Name="EmpPinCode" ColumnName="EmpPinCode" />
+          <ScalarProperty Name="AuthenticationMode" ColumnName="AuthenticationMode" />
+          <ScalarProperty Name="TelePhone" ColumnName="TelePhone" />
+          <ScalarProperty Name="Post" ColumnName="Post" />
+          <ScalarProperty Name="HasFinger" ColumnName="HasFinger" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="HasCard" ColumnName="HasCard" />
+          <ScalarProperty Name="MenuAccess" ColumnName="MenuAccess" />
+          <ScalarProperty Name="IsGuest" ColumnName="IsGuest" />
+          <ScalarProperty Name="PrivateAccess" ColumnName="PrivateAccess" />
+          <ScalarProperty Name="SendToZK" ColumnName="SendToZK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Faces">
+      <EntityTypeMapping TypeName="EchoDBModel.Face">
+        <MappingFragment StoreEntitySet="Face">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FaceData" ColumnName="FaceData" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="PersonalNum" ColumnName="PersonalNum" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fingers">
+      <EntityTypeMapping TypeName="EchoDBModel.Finger">
+        <MappingFragment StoreEntitySet="Finger">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="FingerNum" ColumnName="FingerNum" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Md5" ColumnName="Md5" />
+          <ScalarProperty Name="DataLength" ColumnName="DataLength" />
+          <ScalarProperty Name="EnrollTime" ColumnName="EnrollTime" />
+          <ScalarProperty Name="fingerQuality" ColumnName="fingerQuality" />
+          <ScalarProperty Name="PdpID" ColumnName="PdpID" />
+          <ScalarProperty Name="DataStr" ColumnName="DataStr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoliDays">
+      <EntityTypeMapping TypeName="EchoDBModel.HoliDay">
+        <MappingFragment StoreEntitySet="HoliDays">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="HolidaysGrpID" ColumnName="HolidaysGrpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoliDaysGroups">
+      <EntityTypeMapping TypeName="EchoDBModel.HoliDaysGroup">
+        <MappingFragment StoreEntitySet="HoliDaysGroup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoliDaysSchGroups">
+      <EntityTypeMapping TypeName="EchoDBModel.HoliDaysSchGroup">
+        <MappingFragment StoreEntitySet="HoliDaysSchGroup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HoliDaysGroupID" ColumnName="HoliDaysGroupID" />
+          <ScalarProperty Name="SchGroupID" ColumnName="SchGroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operators">
+      <EntityTypeMapping TypeName="EchoDBModel.Operator">
+        <MappingFragment StoreEntitySet="Operator">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organizations">
+      <EntityTypeMapping TypeName="EchoDBModel.Organization">
+        <MappingFragment StoreEntitySet="Organization">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AcsGroupID" ColumnName="AcsGroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScheduleGroups">
+      <EntityTypeMapping TypeName="EchoDBModel.ScheduleGroup">
+        <MappingFragment StoreEntitySet="ScheduleGroup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="EchoDBModel.Setting">
+        <MappingFragment StoreEntitySet="Setting">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="EchoDir" ColumnName="EchoDir" />
+          <ScalarProperty Name="EchoName" ColumnName="EchoName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DHCP" ColumnName="DHCP" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Subnet" ColumnName="Subnet" />
+          <ScalarProperty Name="gateway" ColumnName="gateway" />
+          <ScalarProperty Name="ServerEnabled" ColumnName="ServerEnabled" />
+          <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+          <ScalarProperty Name="ServerPort" ColumnName="ServerPort" />
+          <ScalarProperty Name="UDPPort" ColumnName="UDPPort" />
+          <ScalarProperty Name="TimeOutMenu" ColumnName="TimeOutMenu" />
+          <ScalarProperty Name="NormalBrightness" ColumnName="NormalBrightness" />
+          <ScalarProperty Name="SleepBrightness" ColumnName="SleepBrightness" />
+          <ScalarProperty Name="LockHomeScreen" ColumnName="LockHomeScreen" />
+          <ScalarProperty Name="VacationDuty" ColumnName="VacationDuty" />
+          <ScalarProperty Name="DeviceInfo" ColumnName="DeviceInfo" />
+          <ScalarProperty Name="AuthenticationType" ColumnName="AuthenticationType" />
+          <ScalarProperty Name="Relay" ColumnName="Relay" />
+          <ScalarProperty Name="RelayDuration" ColumnName="RelayDuration" />
+          <ScalarProperty Name="RelayDriven" ColumnName="RelayDriven" />
+          <ScalarProperty Name="Audio" ColumnName="Audio" />
+          <ScalarProperty Name="PreventConsecutive" ColumnName="PreventConsecutive" />
+          <ScalarProperty Name="ConsecutivePassessDelay" ColumnName="ConsecutivePassessDelay" />
+          <ScalarProperty Name="WebUser" ColumnName="WebUser" />
+          <ScalarProperty Name="WebPass" ColumnName="WebPass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="EchoDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrafficLogs">
+      <EntityTypeMapping TypeName="EchoDBModel.TrafficLog">
+        <MappingFragment StoreEntitySet="TrafficLog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="DeviceSerialNumber" ColumnName="DeviceSerialNumber" />
+          <ScalarProperty Name="ReaderNo" ColumnName="ReaderNo" />
+          <ScalarProperty Name="PersonalNum" ColumnName="PersonalNum" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="SuccessPass" ColumnName="SuccessPass" />
+          <ScalarProperty Name="TimeOfSpi" ColumnName="TimeOfSpi" />
+          <ScalarProperty Name="Access" ColumnName="Access" />
+          <ScalarProperty Name="ReqType" ColumnName="ReqType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeekSchedules">
+      <EntityTypeMapping TypeName="EchoDBModel.WeekSchedule">
+        <MappingFragment StoreEntitySet="WeekSchedule">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="weekday" ColumnName="weekday" />
+          <ScalarProperty Name="SchGroupID" ColumnName="SchGroupID" />
+          <ScalarProperty Name="DayTypeID" ColumnName="DayTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="EchoDBModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_checkPermission" FunctionName="EchoDBModel.Store.sp_checkPermission" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="EchoDBModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="EchoDBModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="EchoDBModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EchoDBModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="EchoDBModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EchoDBModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="EchoDBModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_reportTrafficStatistics" FunctionName="EchoDBModel.Store.sp_reportTrafficStatistics">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EchoDBModel.sp_reportTrafficStatistics_Result">
+          <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+          <ScalarProperty Name="countTraffic" ColumnName="countTraffic" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="EchoDBModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

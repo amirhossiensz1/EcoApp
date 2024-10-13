@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EchoDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EchoDBEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="spSelectDevice" ReturnType="Collection(EchoDBModel.spSelectDevice_Result)" />
+    <FunctionImport Name="spSelectDevice1" ReturnType="Collection(EchoDBModel.spSelectDevice1_Result)" />
+    <FunctionImport Name="spSelectDevice2" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(EchoDBModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(EchoDBModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="Cards" EntityType="EchoDBModel.Card" />
+    <EntitySet Name="Devices" EntityType="EchoDBModel.Device" />
+    <EntitySet Name="DeviceEmps" EntityType="EchoDBModel.DeviceEmp" />
+    <EntitySet Name="DeviseScreens" EntityType="EchoDBModel.DeviseScreen" />
+    <EntitySet Name="Employees" EntityType="EchoDBModel.Employee" />
+    <EntitySet Name="EmpZones" EntityType="EchoDBModel.EmpZone" />
+    <EntitySet Name="Fingers" EntityType="EchoDBModel.Finger" />
+    <EntitySet Name="Images" EntityType="EchoDBModel.Image" />
+    <EntitySet Name="OnlineDeviceLogs" EntityType="EchoDBModel.OnlineDeviceLog" />
+    <EntitySet Name="Operators" EntityType="EchoDBModel.Operator" />
+    <EntitySet Name="Settings" EntityType="EchoDBModel.Setting" />
+    <EntitySet Name="sysdiagrams" EntityType="EchoDBModel.sysdiagram" />
+    <EntitySet Name="TrafficLogs" EntityType="EchoDBModel.TrafficLog" />
+    <EntitySet Name="Zones" EntityType="EchoDBModel.Zone" />
+    <AssociationSet Name="FK_Card_Employee" Association="EchoDBModel.FK_Card_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Card" EntitySet="Cards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Device_Zone" Association="EchoDBModel.FK_Device_Zone">
+      <End Role="Zone" EntitySet="Zones" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeviceEmp_Device" Association="EchoDBModel.FK_DeviceEmp_Device">
+      <End Role="Device" EntitySet="Devices" />
+      <End Role="DeviceEmp" EntitySet="DeviceEmps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeviseScreen_Device" Association="EchoDBModel.FK_DeviseScreen_Device">
+      <End Role="Device" EntitySet="Devices" />
+      <End Role="DeviseScreen" EntitySet="DeviseScreens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OnlineDeviceLog_Device" Association="EchoDBModel.FK_OnlineDeviceLog_Device">
+      <End Role="Device" EntitySet="Devices" />
+      <End Role="OnlineDeviceLog" EntitySet="OnlineDeviceLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Setting_Device" Association="EchoDBModel.FK_Setting_Device">
+      <End Role="Device" EntitySet="Devices" />
+      <End Role="Setting" EntitySet="Settings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeviceEmp_Employee" Association="EchoDBModel.FK_DeviceEmp_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="DeviceEmp" EntitySet="DeviceEmps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeviseScreen_Image" Association="EchoDBModel.FK_DeviseScreen_Image">
+      <End Role="Image" EntitySet="Images" />
+      <End Role="DeviseScreen" EntitySet="DeviseScreens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Finger_Employee" Association="EchoDBModel.FK_Finger_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Finger" EntitySet="Fingers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpZone_Zone" Association="EchoDBModel.FK_EmpZone_Zone">
+      <End Role="Zone" EntitySet="Zones" />
+      <End Role="EmpZone" EntitySet="EmpZones" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="spSelectDevice_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Device_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPAdress" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="PortNum" Nullable="true" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="spSelectDevice1_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Device_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IPAdress" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="PortNum" Nullable="true" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Card">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CardData" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="EndDate" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="EmpID" Type="Int32" />
+    <NavigationProperty Name="Employee" Relationship="EchoDBModel.FK_Card_Employee" FromRole="Card" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IP" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Port" Type="Int32" Nullable="false" />
+    <Property Name="SettingID" Type="Int32" />
+    <Property Name="ZoneID" Type="Int32" />
+    <Property Name="UDPPort" Type="Int32" />
+    <Property Name="DeviceSerial" Type="Int32" />
+    <Property Name="RegistrationCode" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="ActivationCode" Type="String" MaxLength="65" FixedLength="false" Unicode="true" />
+    <Property Name="ServerIP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="webUser" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="webPass" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Zone" Relationship="EchoDBModel.FK_Device_Zone" FromRole="Device" ToRole="Zone" />
+    <NavigationProperty Name="DeviceEmps" Relationship="EchoDBModel.FK_DeviceEmp_Device" FromRole="Device" ToRole="DeviceEmp" />
+    <NavigationProperty Name="DeviseScreens" Relationship="EchoDBModel.FK_DeviseScreen_Device" FromRole="Device" ToRole="DeviseScreen" />
+    <NavigationProperty Name="OnlineDeviceLogs" Relationship="EchoDBModel.FK_OnlineDeviceLog_Device" FromRole="Device" ToRole="OnlineDeviceLog" />
+    <NavigationProperty Name="Settings" Relationship="EchoDBModel.FK_Setting_Device" FromRole="Device" ToRole="Setting" />
+  </EntityType>
+  <EntityType Name="DeviceEmp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpID" Type="Int32" />
+    <Property Name="DeviceID" Type="Int32" />
+    <Property Name="TypeID" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Finger" Type="Boolean" />
+    <Property Name="Db" Type="Boolean" />
+    <Property Name="Picture" Type="Boolean" />
+    <NavigationProperty Name="Device" Relationship="EchoDBModel.FK_DeviceEmp_Device" FromRole="DeviceEmp" ToRole="Device" />
+    <NavigationProperty Name="Employee" Relationship="EchoDBModel.FK_DeviceEmp_Employee" FromRole="DeviceEmp" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="DeviseScreen">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ImageID" Type="Int32" />
+    <Property Name="DeviceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Device" Relationship="EchoDBModel.FK_DeviseScreen_Device" FromRole="DeviseScreen" ToRole="Device" />
+    <NavigationProperty Name="Image" Relationship="EchoDBModel.FK_DeviseScreen_Image" FromRole="DeviseScreen" ToRole="Image" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpFname" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmpLname" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmpNationalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PersonalNum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="EmpPinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="AuthenticationMode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TelePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Post" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HasFinger" Type="Boolean" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="HasCard" Type="Boolean" />
+    <Property Name="MenuAccess" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Cards" Relationship="EchoDBModel.FK_Card_Employee" FromRole="Employee" ToRole="Card" />
+    <NavigationProperty Name="DeviceEmps" Relationship="EchoDBModel.FK_DeviceEmp_Employee" FromRole="Employee" ToRole="DeviceEmp" />
+    <NavigationProperty Name="Fingers" Relationship="EchoDBModel.FK_Finger_Employee" FromRole="Employee" ToRole="Finger" />
+  </EntityType>
+  <EntityType Name="EmpZone">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpID" Type="Int32" />
+    <Property Name="ZoneID" Type="Int32" />
+    <NavigationProperty Name="Zone" Relationship="EchoDBModel.FK_EmpZone_Zone" FromRole="EmpZone" ToRole="Zone" />
+  </EntityType>
+  <EntityType Name="Finger">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpID" Type="Int32" />
+    <Property Name="FingerNum" Type="Int32" />
+    <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Employee" Relationship="EchoDBModel.FK_Finger_Employee" FromRole="Finger" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="DeviseScreens" Relationship="EchoDBModel.FK_DeviseScreen_Image" FromRole="Image" ToRole="DeviseScreen" />
+  </EntityType>
+  <EntityType Name="OnlineDeviceLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceID" Type="Int32" />
+    <Property Name="OnlineDate" Type="Time" Precision="7" />
+    <Property Name="OfflineDate" Type="Time" Precision="7" />
+    <NavigationProperty Name="Device" Relationship="EchoDBModel.FK_OnlineDeviceLog_Device" FromRole="OnlineDeviceLog" ToRole="Device" />
+  </EntityType>
+  <EntityType Name="Operator">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Lname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceID" Type="Int32" />
+    <Property Name="EchoDir" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="EchoName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DHCP" Type="Boolean" />
+    <Property Name="IP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Subnet" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="gateway" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ServerEnabled" Type="Boolean" />
+    <Property Name="ServerIP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ServerPort" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="UDPPort" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TimeOutMenu" Type="Int32" />
+    <Property Name="NormalBrightness" Type="Int32" />
+    <Property Name="SleepBrightness" Type="Int32" />
+    <Property Name="LockHomeScreen" Type="Boolean" />
+    <Property Name="VacationDuty" Type="Boolean" />
+    <Property Name="DeviceInfo" Type="Boolean" />
+    <Property Name="AuthenticationType" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Relay" Type="Boolean" />
+    <Property Name="RelayDuration" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="RelayDriven" Type="Int32" />
+    <Property Name="Audio" Type="Boolean" />
+    <Property Name="PreventConsecutive" Type="Boolean" />
+    <Property Name="ConsecutivePassessDelay" Type="Int32" />
+    <Property Name="WebUser" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="WebPass" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Device" Relationship="EchoDBModel.FK_Setting_Device" FromRole="Setting" ToRole="Device" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TrafficLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Time" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DeviceID" Type="Int32" />
+    <Property Name="EmpID" Type="Int32" Nullable="false" />
+    <Property Name="Mode" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Date" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Zone">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Devices" Relationship="EchoDBModel.FK_Device_Zone" FromRole="Zone" ToRole="Device" />
+    <NavigationProperty Name="EmpZones" Relationship="EchoDBModel.FK_EmpZone_Zone" FromRole="Zone" ToRole="EmpZone" />
+  </EntityType>
+  <Association Name="FK_Card_Employee">
+    <End Type="EchoDBModel.Employee" Role="Employee" Multiplicity="0..1" />
+    <End Type="EchoDBModel.Card" Role="Card" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Card">
+        <PropertyRef Name="EmpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Device_Zone">
+    <End Type="EchoDBModel.Zone" Role="Zone" Multiplicity="0..1" />
+    <End Type="EchoDBModel.Device" Role="Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zone">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="ZoneID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeviceEmp_Device">
+    <End Type="EchoDBModel.Device" Role="Device" Multiplicity="0..1" />
+    <End Type="EchoDBModel.DeviceEmp" Role="DeviceEmp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DeviceEmp">
+        <PropertyRef Name="DeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeviseScreen_Device">
+    <End Type="EchoDBModel.Device" Role="Device" Multiplicity="1" />
+    <End Type="EchoDBModel.DeviseScreen" Role="DeviseScreen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DeviseScreen">
+        <PropertyRef Name="DeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OnlineDeviceLog_Device">
+    <End Type="EchoDBModel.Device" Role="Device" Multiplicity="0..1" />
+    <End Type="EchoDBModel.OnlineDeviceLog" Role="OnlineDeviceLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OnlineDeviceLog">
+        <PropertyRef Name="DeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Setting_Device">
+    <End Type="EchoDBModel.Device" Role="Device" Multiplicity="0..1" />
+    <End Type="EchoDBModel.Setting" Role="Setting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Setting">
+        <PropertyRef Name="DeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeviceEmp_Employee">
+    <End Type="EchoDBModel.Employee" Role="Employee" Multiplicity="0..1" />
+    <End Type="EchoDBModel.DeviceEmp" Role="DeviceEmp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DeviceEmp">
+        <PropertyRef Name="EmpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeviseScreen_Image">
+    <End Type="EchoDBModel.Image" Role="Image" Multiplicity="0..1" />
+    <End Type="EchoDBModel.DeviseScreen" Role="DeviseScreen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Image">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DeviseScreen">
+        <PropertyRef Name="ImageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Finger_Employee">
+    <End Type="EchoDBModel.Employee" Role="Employee" Multiplicity="0..1" />
+    <End Type="EchoDBModel.Finger" Role="Finger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Finger">
+        <PropertyRef Name="EmpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpZone_Zone">
+    <End Type="EchoDBModel.Zone" Role="Zone" Multiplicity="0..1" />
+    <End Type="EchoDBModel.EmpZone" Role="EmpZone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zone">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EmpZone">
+        <PropertyRef Name="ZoneID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

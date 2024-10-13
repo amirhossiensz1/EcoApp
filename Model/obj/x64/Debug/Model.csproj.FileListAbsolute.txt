@@ -1,0 +1,14 @@
+C:\Users\AmirHosein\Desktop\ECOApp\Model\bin\x64\Debug\Model.dll.config
+C:\Users\AmirHosein\Desktop\ECOApp\Model\bin\x64\Debug\Model.dll
+C:\Users\AmirHosein\Desktop\ECOApp\Model\bin\x64\Debug\Model.pdb
+C:\Users\AmirHosein\Desktop\ECOApp\Model\bin\x64\Debug\dotMemory.Unit.dll
+C:\Users\AmirHosein\Desktop\ECOApp\Model\bin\x64\Debug\EntityFramework.dll
+C:\Users\AmirHosein\Desktop\ECOApp\Model\bin\x64\Debug\EntityFramework.SqlServer.dll
+C:\Users\AmirHosein\Desktop\ECOApp\Model\bin\x64\Debug\dotMemory.Unit.xml
+C:\Users\AmirHosein\Desktop\ECOApp\Model\bin\x64\Debug\EntityFramework.xml
+C:\Users\AmirHosein\Desktop\ECOApp\Model\bin\x64\Debug\EntityFramework.SqlServer.xml
+C:\Users\AmirHosein\Desktop\ECOApp\Model\obj\x64\Debug\Model.csprojAssemblyReference.cache
+C:\Users\AmirHosein\Desktop\ECOApp\Model\obj\x64\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\AmirHosein\Desktop\ECOApp\Model\obj\x64\Debug\Model.csproj.CopyComplete
+C:\Users\AmirHosein\Desktop\ECOApp\Model\obj\x64\Debug\Model.dll
+C:\Users\AmirHosein\Desktop\ECOApp\Model\obj\x64\Debug\Model.pdb

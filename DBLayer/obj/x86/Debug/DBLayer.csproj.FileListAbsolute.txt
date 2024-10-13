@@ -1,0 +1,15 @@
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\bin\x86\Debug\DBLayer.dll.config
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\bin\x86\Debug\DBLayer.dll
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\bin\x86\Debug\DBLayer.pdb
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\bin\x86\Debug\EntityFramework.dll
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\bin\x86\Debug\EntityFramework.SqlServer.dll
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\bin\x86\Debug\Model.dll
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\bin\x86\Debug\Model.pdb
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\bin\x86\Debug\Model.dll.config
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\bin\x86\Debug\EntityFramework.xml
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\bin\x86\Debug\EntityFramework.SqlServer.xml
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\obj\x86\Debug\DBLayer.csprojAssemblyReference.cache
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\obj\x86\Debug\DBLayer.csproj.CoreCompileInputs.cache
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\obj\x86\Debug\DBLayer.csproj.CopyComplete
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\obj\x86\Debug\DBLayer.dll
+H:\My Source\Controller Project\Controller\ECOApp\DBLayer\obj\x86\Debug\DBLayer.pdb

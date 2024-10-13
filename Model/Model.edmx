@@ -1,0 +1,1967 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EchoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AccessArea">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="AccessGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AccessType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="AcsGroupAcsArea">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AcsGroupID" Type="int" />
+          <Property Name="AcsAreaID" Type="int" />
+        </EntityType>
+        <EntityType Name="Card">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CardNumber" Type="int" />
+          <Property Name="CardData" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="StartDate" Type="nvarchar" MaxLength="12" />
+          <Property Name="EndDate" Type="nvarchar" MaxLength="12" />
+          <Property Name="EmpID" Type="int" />
+          <Property Name="IsGuest" Type="bit" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientName" Type="nvarchar(max)" />
+          <Property Name="ClientIP" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="ClientPort" Type="int" Nullable="false" />
+          <Property Name="ServerIP" Type="nvarchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DaySchedule">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StartTime" Type="nvarchar" MaxLength="15" />
+          <Property Name="EndTime" Type="nvarchar" MaxLength="15" />
+          <Property Name="AccessTypeID" Type="int" />
+          <Property Name="DayTypeID" Type="int" />
+        </EntityType>
+        <EntityType Name="DayType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DeviceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IP" Type="nvarchar" MaxLength="15" />
+          <Property Name="Port" Type="int" />
+          <Property Name="SettingID" Type="int" />
+          <Property Name="ZoneID" Type="int" />
+          <Property Name="UDPPort" Type="int" />
+          <Property Name="DeviceSerial" Type="nvarchar" MaxLength="15" />
+          <Property Name="RegistrationCode" Type="nvarchar" MaxLength="9" />
+          <Property Name="ActivationCode" Type="nvarchar" MaxLength="65" />
+          <Property Name="ServerIP" Type="nvarchar" MaxLength="15" />
+          <Property Name="webUser" Type="nvarchar" MaxLength="15" />
+          <Property Name="webPass" Type="nvarchar" MaxLength="15" />
+          <Property Name="TypeId" Type="int" />
+        </EntityType>
+        <EntityType Name="DeviceEmp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpID" Type="int" />
+          <Property Name="DeviceID" Type="int" />
+          <Property Name="TypeID" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="25" />
+          <Property Name="Finger" Type="bit" />
+          <Property Name="Db" Type="bit" />
+          <Property Name="Picture" Type="bit" />
+        </EntityType>
+        <EntityType Name="DeviceSchGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AcsAreaID" Type="int" />
+          <Property Name="SchgroupID" Type="int" />
+          <Property Name="DeviceID" Type="int" />
+        </EntityType>
+        <EntityType Name="DeviceType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrganizationID" Type="int" />
+          <Property Name="AcsGroupID" Type="int" />
+          <Property Name="EmpFname" Type="nvarchar(max)" />
+          <Property Name="EmpLname" Type="nvarchar(max)" />
+          <Property Name="EmpNationalCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="PersonalNum" Type="nvarchar" MaxLength="10" />
+          <Property Name="EmpPinCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="AuthenticationMode" Type="nvarchar" MaxLength="10" />
+          <Property Name="TelePhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Post" Type="nvarchar" MaxLength="50" />
+          <Property Name="HasFinger" Type="bit" />
+          <Property Name="Image" Type="image" />
+          <Property Name="HasCard" Type="bit" />
+          <Property Name="MenuAccess" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsGuest" Type="bit" />
+          <Property Name="PrivateAccess" Type="bit" />
+          <Property Name="SendToZK" Type="bit" />
+          <Property Name="IsAdmin" Type="bit" />
+        </EntityType>
+        <EntityType Name="Face">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FaceData" Type="nvarchar(max)" />
+          <Property Name="EmpId" Type="int" />
+          <Property Name="PersonalNum" Type="nvarchar" MaxLength="15" />
+          <Property Name="image" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Finger">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpID" Type="int" />
+          <Property Name="FingerNum" Type="int" />
+          <Property Name="Data" Type="image" />
+          <Property Name="Md5" Type="nvarchar(max)" />
+          <Property Name="DataLength" Type="int" />
+          <Property Name="EnrollTime" Type="nvarchar(max)" />
+          <Property Name="fingerQuality" Type="int" />
+          <Property Name="PdpID" Type="nvarchar" MaxLength="10" />
+          <Property Name="DataStr" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="HoliDays">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="nvarchar" MaxLength="50" />
+          <Property Name="HolidaysGrpID" Type="int" />
+        </EntityType>
+        <EntityType Name="HoliDaysGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HoliDaysSchGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HoliDaysGroupID" Type="int" />
+          <Property Name="SchGroupID" Type="int" />
+        </EntityType>
+        <EntityType Name="Operator">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+          <Property Name="Password" Type="nvarchar" MaxLength="20" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" />
+          <Property Name="Lname" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Organization">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrganizationID" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="AcsGroupID" Type="int" />
+        </EntityType>
+        <EntityType Name="ScheduleGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="year" Type="nchar" MaxLength="4" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DeviceID" Type="int" />
+          <Property Name="EchoDir" Type="nvarchar" MaxLength="15" />
+          <Property Name="EchoName" Type="nvarchar" MaxLength="15" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="DHCP" Type="bit" />
+          <Property Name="IP" Type="nvarchar" MaxLength="15" />
+          <Property Name="Subnet" Type="nvarchar" MaxLength="15" />
+          <Property Name="gateway" Type="nvarchar" MaxLength="15" />
+          <Property Name="ServerEnabled" Type="bit" />
+          <Property Name="ServerIP" Type="nvarchar" MaxLength="15" />
+          <Property Name="ServerPort" Type="nvarchar" MaxLength="15" />
+          <Property Name="UDPPort" Type="nvarchar" MaxLength="15" />
+          <Property Name="TimeOutMenu" Type="int" />
+          <Property Name="NormalBrightness" Type="int" />
+          <Property Name="SleepBrightness" Type="int" />
+          <Property Name="LockHomeScreen" Type="bit" />
+          <Property Name="VacationDuty" Type="bit" />
+          <Property Name="DeviceInfo" Type="bit" />
+          <Property Name="AuthenticationType" Type="nvarchar" MaxLength="15" />
+          <Property Name="Relay" Type="bit" />
+          <Property Name="RelayDuration" Type="nvarchar" MaxLength="15" />
+          <Property Name="RelayDriven" Type="int" />
+          <Property Name="Audio" Type="bit" />
+          <Property Name="PreventConsecutive" Type="bit" />
+          <Property Name="ConsecutivePassessDelay" Type="int" />
+          <Property Name="WebUser" Type="nvarchar" MaxLength="10" />
+          <Property Name="WebPass" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TrafficLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Time" Type="nvarchar" MaxLength="10" />
+          <Property Name="DeviceID" Type="int" />
+          <Property Name="DeviceSerialNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="ReaderNo" Type="nchar" MaxLength="5" />
+          <Property Name="PersonalNum" Type="nvarchar" MaxLength="10" />
+          <Property Name="EmpID" Type="int" />
+          <Property Name="Mode" Type="int" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Date" Type="nvarchar" MaxLength="12" />
+          <Property Name="status" Type="bit" />
+          <Property Name="SuccessPass" Type="bit" />
+          <Property Name="TimeOfSpi" Type="nvarchar" MaxLength="10" />
+          <Property Name="Access" Type="bit" />
+          <Property Name="ReqType" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="WeekSchedule">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="weekday" Type="int" />
+          <Property Name="SchGroupID" Type="int" />
+          <Property Name="DayTypeID" Type="int" />
+        </EntityType>
+        <Association Name="FK_AcsGroupAcsArea_AccessArea">
+          <End Role="AccessArea" Type="Self.AccessArea" Multiplicity="0..1" />
+          <End Role="AcsGroupAcsArea" Type="Self.AcsGroupAcsArea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessArea">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AcsGroupAcsArea">
+              <PropertyRef Name="AcsAreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AcsGroupAcsArea_AccessGroup">
+          <End Role="AccessGroup" Type="Self.AccessGroup" Multiplicity="0..1" />
+          <End Role="AcsGroupAcsArea" Type="Self.AcsGroupAcsArea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AcsGroupAcsArea">
+              <PropertyRef Name="AcsGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Card_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Card" Type="Self.Card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Card">
+              <PropertyRef Name="EmpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaySchedule_AccessType">
+          <End Role="AccessType" Type="Self.AccessType" Multiplicity="0..1" />
+          <End Role="DaySchedule" Type="Self.DaySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DaySchedule">
+              <PropertyRef Name="AccessTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaySchedule_DayType">
+          <End Role="DayType" Type="Self.DayType" Multiplicity="0..1" />
+          <End Role="DaySchedule" Type="Self.DaySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DayType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DaySchedule">
+              <PropertyRef Name="DayTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Device_DeviceType">
+          <End Role="DeviceType" Type="Self.DeviceType" Multiplicity="0..1" />
+          <End Role="Device" Type="Self.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="TypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceEmp_Device">
+          <End Role="Device" Type="Self.Device" Multiplicity="0..1" />
+          <End Role="DeviceEmp" Type="Self.DeviceEmp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceEmp">
+              <PropertyRef Name="DeviceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceEmp_DeviceType">
+          <End Role="DeviceType" Type="Self.DeviceType" Multiplicity="0..1" />
+          <End Role="DeviceEmp" Type="Self.DeviceEmp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceEmp">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceEmp_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="DeviceEmp" Type="Self.DeviceEmp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceEmp">
+              <PropertyRef Name="EmpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceSchGroup_AccessArea">
+          <End Role="AccessArea" Type="Self.AccessArea" Multiplicity="0..1" />
+          <End Role="DeviceSchGroup" Type="Self.DeviceSchGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessArea">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceSchGroup">
+              <PropertyRef Name="AcsAreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceSchGroup_Device">
+          <End Role="Device" Type="Self.Device" Multiplicity="0..1" />
+          <End Role="DeviceSchGroup" Type="Self.DeviceSchGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceSchGroup">
+              <PropertyRef Name="DeviceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceSchGroup_ScheduleGroup">
+          <End Role="ScheduleGroup" Type="Self.ScheduleGroup" Multiplicity="0..1" />
+          <End Role="DeviceSchGroup" Type="Self.DeviceSchGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceSchGroup">
+              <PropertyRef Name="SchgroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_AccessGroup">
+          <End Role="AccessGroup" Type="Self.AccessGroup" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="AcsGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Organization">
+          <End Role="Organization" Type="Self.Organization" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Face_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Face" Type="Self.Face" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Face">
+              <PropertyRef Name="EmpId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Finger_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Finger" Type="Self.Finger" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Finger">
+              <PropertyRef Name="EmpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoliDays_HoliDaysGroup">
+          <End Role="HoliDaysGroup" Type="Self.HoliDaysGroup" Multiplicity="0..1" />
+          <End Role="HoliDays" Type="Self.HoliDays" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoliDaysGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HoliDays">
+              <PropertyRef Name="HolidaysGrpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoliDaysSchGroup_HoliDaysGroup">
+          <End Role="HoliDaysGroup" Type="Self.HoliDaysGroup" Multiplicity="0..1" />
+          <End Role="HoliDaysSchGroup" Type="Self.HoliDaysSchGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoliDaysGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HoliDaysSchGroup">
+              <PropertyRef Name="HoliDaysGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoliDaysSchGroup_ScheduleGroup">
+          <End Role="ScheduleGroup" Type="Self.ScheduleGroup" Multiplicity="0..1" />
+          <End Role="HoliDaysSchGroup" Type="Self.HoliDaysSchGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HoliDaysSchGroup">
+              <PropertyRef Name="SchGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Organization_AccessGroup">
+          <End Role="AccessGroup" Type="Self.AccessGroup" Multiplicity="0..1" />
+          <End Role="Organization" Type="Self.Organization" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Organization">
+              <PropertyRef Name="AcsGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Setting_Device">
+          <End Role="Device" Type="Self.Device" Multiplicity="0..1" />
+          <End Role="Setting" Type="Self.Setting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Setting">
+              <PropertyRef Name="DeviceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeekSchedule_DayType">
+          <End Role="DayType" Type="Self.DayType" Multiplicity="0..1" />
+          <End Role="WeekSchedule" Type="Self.WeekSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DayType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WeekSchedule">
+              <PropertyRef Name="DayTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeekSchedule_ScheduleGroup">
+          <End Role="ScheduleGroup" Type="Self.ScheduleGroup" Multiplicity="0..1" />
+          <End Role="WeekSchedule" Type="Self.WeekSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WeekSchedule">
+              <PropertyRef Name="SchGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_checkPermission" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmpId" Type="int" Mode="In" />
+          <Parameter Name="WeekDay" Type="int" Mode="In" />
+          <Parameter Name="Year" Type="int" Mode="In" />
+          <Parameter Name="Time" Type="nvarchar" Mode="In" />
+          <Parameter Name="ConvertedTime" Type="nvarchar" Mode="In" />
+          <Parameter Name="DeviceSerial" Type="int" Mode="In" />
+          <Parameter Name="direction" Type="int" Mode="In" />
+          <Parameter Name="Date" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_reportTrafficStatistics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FromDate" Type="varchar" Mode="In" />
+          <Parameter Name="ToDate" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="EchoDBModelStoreContainer">
+          <EntitySet Name="AccessArea" EntityType="Self.AccessArea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccessGroup" EntityType="Self.AccessGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccessType" EntityType="Self.AccessType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AcsGroupAcsArea" EntityType="Self.AcsGroupAcsArea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Card" EntityType="Self.Card" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DaySchedule" EntityType="Self.DaySchedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DayType" EntityType="Self.DayType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Device" EntityType="Self.Device" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeviceEmp" EntityType="Self.DeviceEmp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeviceSchGroup" EntityType="Self.DeviceSchGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeviceType" EntityType="Self.DeviceType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Face" EntityType="Self.Face" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Finger" EntityType="Self.Finger" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoliDays" EntityType="Self.HoliDays" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoliDaysGroup" EntityType="Self.HoliDaysGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoliDaysSchGroup" EntityType="Self.HoliDaysSchGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Operator" EntityType="Self.Operator" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Organization" EntityType="Self.Organization" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ScheduleGroup" EntityType="Self.ScheduleGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Setting" EntityType="Self.Setting" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrafficLog" EntityType="Self.TrafficLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WeekSchedule" EntityType="Self.WeekSchedule" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_AcsGroupAcsArea_AccessArea" Association="Self.FK_AcsGroupAcsArea_AccessArea">
+            <End Role="AccessArea" EntitySet="AccessArea" />
+            <End Role="AcsGroupAcsArea" EntitySet="AcsGroupAcsArea" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AcsGroupAcsArea_AccessGroup" Association="Self.FK_AcsGroupAcsArea_AccessGroup">
+            <End Role="AccessGroup" EntitySet="AccessGroup" />
+            <End Role="AcsGroupAcsArea" EntitySet="AcsGroupAcsArea" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Card_Employee" Association="Self.FK_Card_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Card" EntitySet="Card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaySchedule_AccessType" Association="Self.FK_DaySchedule_AccessType">
+            <End Role="AccessType" EntitySet="AccessType" />
+            <End Role="DaySchedule" EntitySet="DaySchedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaySchedule_DayType" Association="Self.FK_DaySchedule_DayType">
+            <End Role="DayType" EntitySet="DayType" />
+            <End Role="DaySchedule" EntitySet="DaySchedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Device_DeviceType" Association="Self.FK_Device_DeviceType">
+            <End Role="DeviceType" EntitySet="DeviceType" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceEmp_Device" Association="Self.FK_DeviceEmp_Device">
+            <End Role="Device" EntitySet="Device" />
+            <End Role="DeviceEmp" EntitySet="DeviceEmp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceEmp_DeviceType" Association="Self.FK_DeviceEmp_DeviceType">
+            <End Role="DeviceType" EntitySet="DeviceType" />
+            <End Role="DeviceEmp" EntitySet="DeviceEmp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceEmp_Employee" Association="Self.FK_DeviceEmp_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="DeviceEmp" EntitySet="DeviceEmp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceSchGroup_AccessArea" Association="Self.FK_DeviceSchGroup_AccessArea">
+            <End Role="AccessArea" EntitySet="AccessArea" />
+            <End Role="DeviceSchGroup" EntitySet="DeviceSchGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceSchGroup_Device" Association="Self.FK_DeviceSchGroup_Device">
+            <End Role="Device" EntitySet="Device" />
+            <End Role="DeviceSchGroup" EntitySet="DeviceSchGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceSchGroup_ScheduleGroup" Association="Self.FK_DeviceSchGroup_ScheduleGroup">
+            <End Role="ScheduleGroup" EntitySet="ScheduleGroup" />
+            <End Role="DeviceSchGroup" EntitySet="DeviceSchGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_AccessGroup" Association="Self.FK_Employee_AccessGroup">
+            <End Role="AccessGroup" EntitySet="AccessGroup" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Organization" Association="Self.FK_Employee_Organization">
+            <End Role="Organization" EntitySet="Organization" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Face_Employee" Association="Self.FK_Face_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Face" EntitySet="Face" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Finger_Employee" Association="Self.FK_Finger_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Finger" EntitySet="Finger" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoliDays_HoliDaysGroup" Association="Self.FK_HoliDays_HoliDaysGroup">
+            <End Role="HoliDaysGroup" EntitySet="HoliDaysGroup" />
+            <End Role="HoliDays" EntitySet="HoliDays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoliDaysSchGroup_HoliDaysGroup" Association="Self.FK_HoliDaysSchGroup_HoliDaysGroup">
+            <End Role="HoliDaysGroup" EntitySet="HoliDaysGroup" />
+            <End Role="HoliDaysSchGroup" EntitySet="HoliDaysSchGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoliDaysSchGroup_ScheduleGroup" Association="Self.FK_HoliDaysSchGroup_ScheduleGroup">
+            <End Role="ScheduleGroup" EntitySet="ScheduleGroup" />
+            <End Role="HoliDaysSchGroup" EntitySet="HoliDaysSchGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Organization_AccessGroup" Association="Self.FK_Organization_AccessGroup">
+            <End Role="AccessGroup" EntitySet="AccessGroup" />
+            <End Role="Organization" EntitySet="Organization" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Setting_Device" Association="Self.FK_Setting_Device">
+            <End Role="Device" EntitySet="Device" />
+            <End Role="Setting" EntitySet="Setting" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeekSchedule_DayType" Association="Self.FK_WeekSchedule_DayType">
+            <End Role="DayType" EntitySet="DayType" />
+            <End Role="WeekSchedule" EntitySet="WeekSchedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeekSchedule_ScheduleGroup" Association="Self.FK_WeekSchedule_ScheduleGroup">
+            <End Role="ScheduleGroup" EntitySet="ScheduleGroup" />
+            <End Role="WeekSchedule" EntitySet="WeekSchedule" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EchoDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EchoDBEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_checkPermission" ReturnType="Collection(Int32)">
+            <Parameter Name="EmpId" Mode="In" Type="Int32" />
+            <Parameter Name="WeekDay" Mode="In" Type="Int32" />
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+            <Parameter Name="Time" Mode="In" Type="String" />
+            <Parameter Name="ConvertedTime" Mode="In" Type="String" />
+            <Parameter Name="DeviceSerial" Mode="In" Type="Int32" />
+            <Parameter Name="direction" Mode="In" Type="Int32" />
+            <Parameter Name="Date" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(EchoDBModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(EchoDBModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_reportTrafficStatistics" ReturnType="Collection(EchoDBModel.sp_reportTrafficStatistics_Result)">
+            <Parameter Name="FromDate" Mode="In" Type="String" />
+            <Parameter Name="ToDate" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="sp_alterdiagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_checkPermission1" ReturnType="Collection(Int32)">
+            <Parameter Name="EmpId" Mode="In" Type="Int32" />
+            <Parameter Name="WeekDay" Mode="In" Type="Int32" />
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+            <Parameter Name="Time" Mode="In" Type="String" />
+            <Parameter Name="ConvertedTime" Mode="In" Type="String" />
+            <Parameter Name="DeviceSerial" Mode="In" Type="Int32" />
+            <Parameter Name="direction" Mode="In" Type="Int32" />
+            <Parameter Name="Date" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition1" ReturnType="Collection(EchoDBModel.sp_helpdiagramdefinition1_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams1" ReturnType="Collection(EchoDBModel.sp_helpdiagrams1_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_reportTrafficStatistics1" ReturnType="Collection(EchoDBModel.sp_reportTrafficStatistics1_Result)">
+            <Parameter Name="FromDate" Mode="In" Type="String" />
+            <Parameter Name="ToDate" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams1" />
+          <EntitySet Name="AccessAreas" EntityType="EchoDBModel.AccessArea" />
+          <EntitySet Name="AccessGroups" EntityType="EchoDBModel.AccessGroup" />
+          <EntitySet Name="AccessTypes" EntityType="EchoDBModel.AccessType" />
+          <EntitySet Name="AcsGroupAcsAreas" EntityType="EchoDBModel.AcsGroupAcsArea" />
+          <EntitySet Name="Cards" EntityType="EchoDBModel.Card" />
+          <EntitySet Name="Clients" EntityType="EchoDBModel.Client" />
+          <EntitySet Name="DaySchedules" EntityType="EchoDBModel.DaySchedule" />
+          <EntitySet Name="DayTypes" EntityType="EchoDBModel.DayType" />
+          <EntitySet Name="Devices" EntityType="EchoDBModel.Device" />
+          <EntitySet Name="DeviceEmps" EntityType="EchoDBModel.DeviceEmp" />
+          <EntitySet Name="DeviceSchGroups" EntityType="EchoDBModel.DeviceSchGroup" />
+          <EntitySet Name="DeviceTypes" EntityType="EchoDBModel.DeviceType" />
+          <EntitySet Name="Employees" EntityType="EchoDBModel.Employee" />
+          <EntitySet Name="Faces" EntityType="EchoDBModel.Face" />
+          <EntitySet Name="Fingers" EntityType="EchoDBModel.Finger" />
+          <EntitySet Name="HoliDays" EntityType="EchoDBModel.HoliDay" />
+          <EntitySet Name="HoliDaysGroups" EntityType="EchoDBModel.HoliDaysGroup" />
+          <EntitySet Name="HoliDaysSchGroups" EntityType="EchoDBModel.HoliDaysSchGroup" />
+          <EntitySet Name="Operators" EntityType="EchoDBModel.Operator" />
+          <EntitySet Name="Organizations" EntityType="EchoDBModel.Organization" />
+          <EntitySet Name="ScheduleGroups" EntityType="EchoDBModel.ScheduleGroup" />
+          <EntitySet Name="Settings" EntityType="EchoDBModel.Setting" />
+          <EntitySet Name="sysdiagrams" EntityType="EchoDBModel.sysdiagram" />
+          <EntitySet Name="TrafficLogs" EntityType="EchoDBModel.TrafficLog" />
+          <EntitySet Name="WeekSchedules" EntityType="EchoDBModel.WeekSchedule" />
+          <AssociationSet Name="FK_AcsGroupAcsArea_AccessArea" Association="EchoDBModel.FK_AcsGroupAcsArea_AccessArea">
+            <End Role="AccessArea" EntitySet="AccessAreas" />
+            <End Role="AcsGroupAcsArea" EntitySet="AcsGroupAcsAreas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceSchGroup_AccessArea" Association="EchoDBModel.FK_DeviceSchGroup_AccessArea">
+            <End Role="AccessArea" EntitySet="AccessAreas" />
+            <End Role="DeviceSchGroup" EntitySet="DeviceSchGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AcsGroupAcsArea_AccessGroup" Association="EchoDBModel.FK_AcsGroupAcsArea_AccessGroup">
+            <End Role="AccessGroup" EntitySet="AccessGroups" />
+            <End Role="AcsGroupAcsArea" EntitySet="AcsGroupAcsAreas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_AccessGroup" Association="EchoDBModel.FK_Employee_AccessGroup">
+            <End Role="AccessGroup" EntitySet="AccessGroups" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Organization_AccessGroup" Association="EchoDBModel.FK_Organization_AccessGroup">
+            <End Role="AccessGroup" EntitySet="AccessGroups" />
+            <End Role="Organization" EntitySet="Organizations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaySchedule_AccessType" Association="EchoDBModel.FK_DaySchedule_AccessType">
+            <End Role="AccessType" EntitySet="AccessTypes" />
+            <End Role="DaySchedule" EntitySet="DaySchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Card_Employee" Association="EchoDBModel.FK_Card_Employee">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Card" EntitySet="Cards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaySchedule_DayType" Association="EchoDBModel.FK_DaySchedule_DayType">
+            <End Role="DayType" EntitySet="DayTypes" />
+            <End Role="DaySchedule" EntitySet="DaySchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeekSchedule_DayType" Association="EchoDBModel.FK_WeekSchedule_DayType">
+            <End Role="DayType" EntitySet="DayTypes" />
+            <End Role="WeekSchedule" EntitySet="WeekSchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Device_DeviceType" Association="EchoDBModel.FK_Device_DeviceType">
+            <End Role="DeviceType" EntitySet="DeviceTypes" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceEmp_Device" Association="EchoDBModel.FK_DeviceEmp_Device">
+            <End Role="Device" EntitySet="Devices" />
+            <End Role="DeviceEmp" EntitySet="DeviceEmps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceSchGroup_Device" Association="EchoDBModel.FK_DeviceSchGroup_Device">
+            <End Role="Device" EntitySet="Devices" />
+            <End Role="DeviceSchGroup" EntitySet="DeviceSchGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Setting_Device" Association="EchoDBModel.FK_Setting_Device">
+            <End Role="Device" EntitySet="Devices" />
+            <End Role="Setting" EntitySet="Settings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceEmp_DeviceType" Association="EchoDBModel.FK_DeviceEmp_DeviceType">
+            <End Role="DeviceType" EntitySet="DeviceTypes" />
+            <End Role="DeviceEmp" EntitySet="DeviceEmps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceEmp_Employee" Association="EchoDBModel.FK_DeviceEmp_Employee">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="DeviceEmp" EntitySet="DeviceEmps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeviceSchGroup_ScheduleGroup" Association="EchoDBModel.FK_DeviceSchGroup_ScheduleGroup">
+            <End Role="ScheduleGroup" EntitySet="ScheduleGroups" />
+            <End Role="DeviceSchGroup" EntitySet="DeviceSchGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Organization" Association="EchoDBModel.FK_Employee_Organization">
+            <End Role="Organization" EntitySet="Organizations" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Face_Employee" Association="EchoDBModel.FK_Face_Employee">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Face" EntitySet="Faces" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Finger_Employee" Association="EchoDBModel.FK_Finger_Employee">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Finger" EntitySet="Fingers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoliDays_HoliDaysGroup" Association="EchoDBModel.FK_HoliDays_HoliDaysGroup">
+            <End Role="HoliDaysGroup" EntitySet="HoliDaysGroups" />
+            <End Role="HoliDay" EntitySet="HoliDays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoliDaysSchGroup_HoliDaysGroup" Association="EchoDBModel.FK_HoliDaysSchGroup_HoliDaysGroup">
+            <End Role="HoliDaysGroup" EntitySet="HoliDaysGroups" />
+            <End Role="HoliDaysSchGroup" EntitySet="HoliDaysSchGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoliDaysSchGroup_ScheduleGroup" Association="EchoDBModel.FK_HoliDaysSchGroup_ScheduleGroup">
+            <End Role="ScheduleGroup" EntitySet="ScheduleGroups" />
+            <End Role="HoliDaysSchGroup" EntitySet="HoliDaysSchGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeekSchedule_ScheduleGroup" Association="EchoDBModel.FK_WeekSchedule_ScheduleGroup">
+            <End Role="ScheduleGroup" EntitySet="ScheduleGroups" />
+            <End Role="WeekSchedule" EntitySet="WeekSchedules" />
+          </AssociationSet>
+          </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_reportTrafficStatistics_Result">
+          <Property Type="String" Name="DeviceName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="countTraffic" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition1_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams1_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_reportTrafficStatistics1_Result">
+          <Property Type="String" Name="DeviceName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="countTraffic" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="AccessArea">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AcsGroupAcsAreas" Relationship="EchoDBModel.FK_AcsGroupAcsArea_AccessArea" FromRole="AccessArea" ToRole="AcsGroupAcsArea" />
+          <NavigationProperty Name="DeviceSchGroups" Relationship="EchoDBModel.FK_DeviceSchGroup_AccessArea" FromRole="AccessArea" ToRole="DeviceSchGroup" />
+        </EntityType>
+        <EntityType Name="AccessGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AcsGroupAcsAreas" Relationship="EchoDBModel.FK_AcsGroupAcsArea_AccessGroup" FromRole="AccessGroup" ToRole="AcsGroupAcsArea" />
+          <NavigationProperty Name="Employees" Relationship="EchoDBModel.FK_Employee_AccessGroup" FromRole="AccessGroup" ToRole="Employee" />
+          <NavigationProperty Name="Organizations" Relationship="EchoDBModel.FK_Organization_AccessGroup" FromRole="AccessGroup" ToRole="Organization" />
+        </EntityType>
+        <EntityType Name="AccessType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DaySchedules" Relationship="EchoDBModel.FK_DaySchedule_AccessType" FromRole="AccessType" ToRole="DaySchedule" />
+        </EntityType>
+        <EntityType Name="AcsGroupAcsArea">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AcsGroupID" Type="Int32" />
+          <Property Name="AcsAreaID" Type="Int32" />
+          <NavigationProperty Name="AccessArea" Relationship="EchoDBModel.FK_AcsGroupAcsArea_AccessArea" FromRole="AcsGroupAcsArea" ToRole="AccessArea" />
+          <NavigationProperty Name="AccessGroup" Relationship="EchoDBModel.FK_AcsGroupAcsArea_AccessGroup" FromRole="AcsGroupAcsArea" ToRole="AccessGroup" />
+        </EntityType>
+        <EntityType Name="Card">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CardNumber" Type="Int32" />
+          <Property Name="CardData" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="EndDate" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="EmpID" Type="Int32" />
+          <Property Name="IsGuest" Type="Boolean" />
+          <NavigationProperty Name="Employee" Relationship="EchoDBModel.FK_Card_Employee" FromRole="Card" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClientIP" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ClientPort" Type="Int32" Nullable="false" />
+          <Property Name="ServerIP" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DaySchedule">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StartTime" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="EndTime" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="AccessTypeID" Type="Int32" />
+          <Property Name="DayTypeID" Type="Int32" />
+          <NavigationProperty Name="AccessType" Relationship="EchoDBModel.FK_DaySchedule_AccessType" FromRole="DaySchedule" ToRole="AccessType" />
+          <NavigationProperty Name="DayType" Relationship="EchoDBModel.FK_DaySchedule_DayType" FromRole="DaySchedule" ToRole="DayType" />
+        </EntityType>
+        <EntityType Name="DayType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DaySchedules" Relationship="EchoDBModel.FK_DaySchedule_DayType" FromRole="DayType" ToRole="DaySchedule" />
+          <NavigationProperty Name="WeekSchedules" Relationship="EchoDBModel.FK_WeekSchedule_DayType" FromRole="DayType" ToRole="WeekSchedule" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeviceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Port" Type="Int32" />
+          <Property Name="SettingID" Type="Int32" />
+          <Property Name="ZoneID" Type="Int32" />
+          <Property Name="UDPPort" Type="Int32" />
+          <Property Name="DeviceSerial" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="RegistrationCode" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="ActivationCode" Type="String" MaxLength="65" FixedLength="false" Unicode="true" />
+          <Property Name="ServerIP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="webUser" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="webPass" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="TypeId" Type="Int32" />
+          <NavigationProperty Name="DeviceType" Relationship="EchoDBModel.FK_Device_DeviceType" FromRole="Device" ToRole="DeviceType" />
+          <NavigationProperty Name="DeviceEmps" Relationship="EchoDBModel.FK_DeviceEmp_Device" FromRole="Device" ToRole="DeviceEmp" />
+          <NavigationProperty Name="DeviceSchGroups" Relationship="EchoDBModel.FK_DeviceSchGroup_Device" FromRole="Device" ToRole="DeviceSchGroup" />
+          <NavigationProperty Name="Settings" Relationship="EchoDBModel.FK_Setting_Device" FromRole="Device" ToRole="Setting" />
+        </EntityType>
+        <EntityType Name="DeviceEmp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpID" Type="Int32" />
+          <Property Name="DeviceID" Type="Int32" />
+          <Property Name="TypeID" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Finger" Type="Boolean" />
+          <Property Name="Db" Type="Boolean" />
+          <Property Name="Picture" Type="Boolean" />
+          <NavigationProperty Name="Device" Relationship="EchoDBModel.FK_DeviceEmp_Device" FromRole="DeviceEmp" ToRole="Device" />
+          <NavigationProperty Name="DeviceType" Relationship="EchoDBModel.FK_DeviceEmp_DeviceType" FromRole="DeviceEmp" ToRole="DeviceType" />
+          <NavigationProperty Name="Employee" Relationship="EchoDBModel.FK_DeviceEmp_Employee" FromRole="DeviceEmp" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="DeviceSchGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AcsAreaID" Type="Int32" />
+          <Property Name="SchgroupID" Type="Int32" />
+          <Property Name="DeviceID" Type="Int32" />
+          <NavigationProperty Name="AccessArea" Relationship="EchoDBModel.FK_DeviceSchGroup_AccessArea" FromRole="DeviceSchGroup" ToRole="AccessArea" />
+          <NavigationProperty Name="Device" Relationship="EchoDBModel.FK_DeviceSchGroup_Device" FromRole="DeviceSchGroup" ToRole="Device" />
+          <NavigationProperty Name="ScheduleGroup" Relationship="EchoDBModel.FK_DeviceSchGroup_ScheduleGroup" FromRole="DeviceSchGroup" ToRole="ScheduleGroup" />
+        </EntityType>
+        <EntityType Name="DeviceType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Devices" Relationship="EchoDBModel.FK_Device_DeviceType" FromRole="DeviceType" ToRole="Device" />
+          <NavigationProperty Name="DeviceEmps" Relationship="EchoDBModel.FK_DeviceEmp_DeviceType" FromRole="DeviceType" ToRole="DeviceEmp" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrganizationID" Type="Int32" />
+          <Property Name="AcsGroupID" Type="Int32" />
+          <Property Name="EmpFname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmpLname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmpNationalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PersonalNum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="EmpPinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="AuthenticationMode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TelePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Post" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HasFinger" Type="Boolean" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HasCard" Type="Boolean" />
+          <Property Name="MenuAccess" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsGuest" Type="Boolean" />
+          <Property Name="PrivateAccess" Type="Boolean" />
+          <Property Name="SendToZK" Type="Boolean" />
+          <Property Name="IsAdmin" Type="Boolean" />
+          <NavigationProperty Name="AccessGroup" Relationship="EchoDBModel.FK_Employee_AccessGroup" FromRole="Employee" ToRole="AccessGroup" />
+          <NavigationProperty Name="Cards" Relationship="EchoDBModel.FK_Card_Employee" FromRole="Employee" ToRole="Card" />
+          <NavigationProperty Name="DeviceEmps" Relationship="EchoDBModel.FK_DeviceEmp_Employee" FromRole="Employee" ToRole="DeviceEmp" />
+          <NavigationProperty Name="Organization" Relationship="EchoDBModel.FK_Employee_Organization" FromRole="Employee" ToRole="Organization" />
+          <NavigationProperty Name="Faces" Relationship="EchoDBModel.FK_Face_Employee" FromRole="Employee" ToRole="Face" />
+          <NavigationProperty Name="Fingers" Relationship="EchoDBModel.FK_Finger_Employee" FromRole="Employee" ToRole="Finger" />
+        </EntityType>
+        <EntityType Name="Face">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FaceData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmpId" Type="Int32" />
+          <Property Name="PersonalNum" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Employee" Relationship="EchoDBModel.FK_Face_Employee" FromRole="Face" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Finger">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpID" Type="Int32" />
+          <Property Name="FingerNum" Type="Int32" />
+          <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Md5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DataLength" Type="Int32" />
+          <Property Name="EnrollTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fingerQuality" Type="Int32" />
+          <Property Name="PdpID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DataStr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="EchoDBModel.FK_Finger_Employee" FromRole="Finger" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="HoliDay">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HolidaysGrpID" Type="Int32" />
+          <NavigationProperty Name="HoliDaysGroup" Relationship="EchoDBModel.FK_HoliDays_HoliDaysGroup" FromRole="HoliDay" ToRole="HoliDaysGroup" />
+        </EntityType>
+        <EntityType Name="HoliDaysGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HoliDays" Relationship="EchoDBModel.FK_HoliDays_HoliDaysGroup" FromRole="HoliDaysGroup" ToRole="HoliDay" />
+          <NavigationProperty Name="HoliDaysSchGroups" Relationship="EchoDBModel.FK_HoliDaysSchGroup_HoliDaysGroup" FromRole="HoliDaysGroup" ToRole="HoliDaysSchGroup" />
+        </EntityType>
+        <EntityType Name="HoliDaysSchGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HoliDaysGroupID" Type="Int32" />
+          <Property Name="SchGroupID" Type="Int32" />
+          <NavigationProperty Name="HoliDaysGroup" Relationship="EchoDBModel.FK_HoliDaysSchGroup_HoliDaysGroup" FromRole="HoliDaysSchGroup" ToRole="HoliDaysGroup" />
+          <NavigationProperty Name="ScheduleGroup" Relationship="EchoDBModel.FK_HoliDaysSchGroup_ScheduleGroup" FromRole="HoliDaysSchGroup" ToRole="ScheduleGroup" />
+        </EntityType>
+        <EntityType Name="Operator">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Lname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Organization">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrganizationID" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AcsGroupID" Type="Int32" />
+          <NavigationProperty Name="AccessGroup" Relationship="EchoDBModel.FK_Organization_AccessGroup" FromRole="Organization" ToRole="AccessGroup" />
+          <NavigationProperty Name="Employees" Relationship="EchoDBModel.FK_Employee_Organization" FromRole="Organization" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="ScheduleGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="year" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DeviceSchGroups" Relationship="EchoDBModel.FK_DeviceSchGroup_ScheduleGroup" FromRole="ScheduleGroup" ToRole="DeviceSchGroup" />
+          <NavigationProperty Name="HoliDaysSchGroups" Relationship="EchoDBModel.FK_HoliDaysSchGroup_ScheduleGroup" FromRole="ScheduleGroup" ToRole="HoliDaysSchGroup" />
+          <NavigationProperty Name="WeekSchedules" Relationship="EchoDBModel.FK_WeekSchedule_ScheduleGroup" FromRole="ScheduleGroup" ToRole="WeekSchedule" />
+        </EntityType>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeviceID" Type="Int32" />
+          <Property Name="EchoDir" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="EchoName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DHCP" Type="Boolean" />
+          <Property Name="IP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Subnet" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="gateway" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ServerEnabled" Type="Boolean" />
+          <Property Name="ServerIP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ServerPort" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="UDPPort" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="TimeOutMenu" Type="Int32" />
+          <Property Name="NormalBrightness" Type="Int32" />
+          <Property Name="SleepBrightness" Type="Int32" />
+          <Property Name="LockHomeScreen" Type="Boolean" />
+          <Property Name="VacationDuty" Type="Boolean" />
+          <Property Name="DeviceInfo" Type="Boolean" />
+          <Property Name="AuthenticationType" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Relay" Type="Boolean" />
+          <Property Name="RelayDuration" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="RelayDriven" Type="Int32" />
+          <Property Name="Audio" Type="Boolean" />
+          <Property Name="PreventConsecutive" Type="Boolean" />
+          <Property Name="ConsecutivePassessDelay" Type="Int32" />
+          <Property Name="WebUser" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="WebPass" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Device" Relationship="EchoDBModel.FK_Setting_Device" FromRole="Setting" ToRole="Device" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TrafficLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Time" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DeviceID" Type="Int32" />
+          <Property Name="DeviceSerialNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ReaderNo" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="PersonalNum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="EmpID" Type="Int32" />
+          <Property Name="Mode" Type="Int32" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Date" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Boolean" />
+          <Property Name="SuccessPass" Type="Boolean" />
+          <Property Name="TimeOfSpi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Access" Type="Boolean" />
+          <Property Name="ReqType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="WeekSchedule">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="weekday" Type="Int32" />
+          <Property Name="SchGroupID" Type="Int32" />
+          <Property Name="DayTypeID" Type="Int32" />
+          <NavigationProperty Name="DayType" Relationship="EchoDBModel.FK_WeekSchedule_DayType" FromRole="WeekSchedule" ToRole="DayType" />
+          <NavigationProperty Name="ScheduleGroup" Relationship="EchoDBModel.FK_WeekSchedule_ScheduleGroup" FromRole="WeekSchedule" ToRole="ScheduleGroup" />
+        </EntityType>
+        <Association Name="FK_AcsGroupAcsArea_AccessArea">
+          <End Type="EchoDBModel.AccessArea" Role="AccessArea" Multiplicity="0..1" />
+          <End Type="EchoDBModel.AcsGroupAcsArea" Role="AcsGroupAcsArea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessArea">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AcsGroupAcsArea">
+              <PropertyRef Name="AcsAreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceSchGroup_AccessArea">
+          <End Type="EchoDBModel.AccessArea" Role="AccessArea" Multiplicity="0..1" />
+          <End Type="EchoDBModel.DeviceSchGroup" Role="DeviceSchGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessArea">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceSchGroup">
+              <PropertyRef Name="AcsAreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AcsGroupAcsArea_AccessGroup">
+          <End Type="EchoDBModel.AccessGroup" Role="AccessGroup" Multiplicity="0..1" />
+          <End Type="EchoDBModel.AcsGroupAcsArea" Role="AcsGroupAcsArea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AcsGroupAcsArea">
+              <PropertyRef Name="AcsGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_AccessGroup">
+          <End Type="EchoDBModel.AccessGroup" Role="AccessGroup" Multiplicity="0..1" />
+          <End Type="EchoDBModel.Employee" Role="Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="AcsGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Organization_AccessGroup">
+          <End Type="EchoDBModel.AccessGroup" Role="AccessGroup" Multiplicity="0..1" />
+          <End Type="EchoDBModel.Organization" Role="Organization" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Organization">
+              <PropertyRef Name="AcsGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaySchedule_AccessType">
+          <End Type="EchoDBModel.AccessType" Role="AccessType" Multiplicity="0..1" />
+          <End Type="EchoDBModel.DaySchedule" Role="DaySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccessType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DaySchedule">
+              <PropertyRef Name="AccessTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Card_Employee">
+          <End Type="EchoDBModel.Employee" Role="Employee" Multiplicity="0..1" />
+          <End Type="EchoDBModel.Card" Role="Card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Card">
+              <PropertyRef Name="EmpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaySchedule_DayType">
+          <End Type="EchoDBModel.DayType" Role="DayType" Multiplicity="0..1" />
+          <End Type="EchoDBModel.DaySchedule" Role="DaySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DayType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DaySchedule">
+              <PropertyRef Name="DayTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeekSchedule_DayType">
+          <End Type="EchoDBModel.DayType" Role="DayType" Multiplicity="0..1" />
+          <End Type="EchoDBModel.WeekSchedule" Role="WeekSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DayType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WeekSchedule">
+              <PropertyRef Name="DayTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Device_DeviceType">
+          <End Type="EchoDBModel.DeviceType" Role="DeviceType" Multiplicity="0..1" />
+          <End Type="EchoDBModel.Device" Role="Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="TypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceEmp_Device">
+          <End Type="EchoDBModel.Device" Role="Device" Multiplicity="0..1" />
+          <End Type="EchoDBModel.DeviceEmp" Role="DeviceEmp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceEmp">
+              <PropertyRef Name="DeviceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceSchGroup_Device">
+          <End Type="EchoDBModel.Device" Role="Device" Multiplicity="0..1" />
+          <End Type="EchoDBModel.DeviceSchGroup" Role="DeviceSchGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceSchGroup">
+              <PropertyRef Name="DeviceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Setting_Device">
+          <End Type="EchoDBModel.Device" Role="Device" Multiplicity="0..1" />
+          <End Type="EchoDBModel.Setting" Role="Setting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Setting">
+              <PropertyRef Name="DeviceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceEmp_DeviceType">
+          <End Type="EchoDBModel.DeviceType" Role="DeviceType" Multiplicity="0..1" />
+          <End Type="EchoDBModel.DeviceEmp" Role="DeviceEmp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceEmp">
+              <PropertyRef Name="TypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceEmp_Employee">
+          <End Type="EchoDBModel.Employee" Role="Employee" Multiplicity="0..1" />
+          <End Type="EchoDBModel.DeviceEmp" Role="DeviceEmp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceEmp">
+              <PropertyRef Name="EmpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeviceSchGroup_ScheduleGroup">
+          <End Type="EchoDBModel.ScheduleGroup" Role="ScheduleGroup" Multiplicity="0..1" />
+          <End Type="EchoDBModel.DeviceSchGroup" Role="DeviceSchGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DeviceSchGroup">
+              <PropertyRef Name="SchgroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Organization">
+          <End Type="EchoDBModel.Organization" Role="Organization" Multiplicity="0..1" />
+          <End Type="EchoDBModel.Employee" Role="Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organization">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Face_Employee">
+          <End Type="EchoDBModel.Employee" Role="Employee" Multiplicity="0..1" />
+          <End Type="EchoDBModel.Face" Role="Face" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Face">
+              <PropertyRef Name="EmpId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Finger_Employee">
+          <End Type="EchoDBModel.Employee" Role="Employee" Multiplicity="0..1" />
+          <End Type="EchoDBModel.Finger" Role="Finger" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Finger">
+              <PropertyRef Name="EmpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoliDays_HoliDaysGroup">
+          <End Type="EchoDBModel.HoliDaysGroup" Role="HoliDaysGroup" Multiplicity="0..1" />
+          <End Type="EchoDBModel.HoliDay" Role="HoliDay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoliDaysGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HoliDay">
+              <PropertyRef Name="HolidaysGrpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoliDaysSchGroup_HoliDaysGroup">
+          <End Type="EchoDBModel.HoliDaysGroup" Role="HoliDaysGroup" Multiplicity="0..1" />
+          <End Type="EchoDBModel.HoliDaysSchGroup" Role="HoliDaysSchGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoliDaysGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HoliDaysSchGroup">
+              <PropertyRef Name="HoliDaysGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoliDaysSchGroup_ScheduleGroup">
+          <End Type="EchoDBModel.ScheduleGroup" Role="ScheduleGroup" Multiplicity="0..1" />
+          <End Type="EchoDBModel.HoliDaysSchGroup" Role="HoliDaysSchGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HoliDaysSchGroup">
+              <PropertyRef Name="SchGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeekSchedule_ScheduleGroup">
+          <End Type="EchoDBModel.ScheduleGroup" Role="ScheduleGroup" Multiplicity="0..1" />
+          <End Type="EchoDBModel.WeekSchedule" Role="WeekSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WeekSchedule">
+              <PropertyRef Name="SchGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EchoDBModelStoreContainer" CdmEntityContainer="EchoDBEntities">
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram1" FunctionName="EchoDBModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_checkPermission1" FunctionName="EchoDBModel.Store.sp_checkPermission" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram1" FunctionName="EchoDBModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram1" FunctionName="EchoDBModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition1" FunctionName="EchoDBModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EchoDBModel.sp_helpdiagramdefinition1_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams1" FunctionName="EchoDBModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EchoDBModel.sp_helpdiagrams1_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram1" FunctionName="EchoDBModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_reportTrafficStatistics1" FunctionName="EchoDBModel.Store.sp_reportTrafficStatistics">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EchoDBModel.sp_reportTrafficStatistics1_Result">
+                <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+                <ScalarProperty Name="countTraffic" ColumnName="countTraffic" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams1" FunctionName="EchoDBModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="AccessAreas">
+            <EntityTypeMapping TypeName="EchoDBModel.AccessArea">
+              <MappingFragment StoreEntitySet="AccessArea">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccessGroups">
+            <EntityTypeMapping TypeName="EchoDBModel.AccessGroup">
+              <MappingFragment StoreEntitySet="AccessGroup">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccessTypes">
+            <EntityTypeMapping TypeName="EchoDBModel.AccessType">
+              <MappingFragment StoreEntitySet="AccessType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AcsGroupAcsAreas">
+            <EntityTypeMapping TypeName="EchoDBModel.AcsGroupAcsArea">
+              <MappingFragment StoreEntitySet="AcsGroupAcsArea">
+                <ScalarProperty Name="AcsAreaID" ColumnName="AcsAreaID" />
+                <ScalarProperty Name="AcsGroupID" ColumnName="AcsGroupID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cards">
+            <EntityTypeMapping TypeName="EchoDBModel.Card">
+              <MappingFragment StoreEntitySet="Card">
+                <ScalarProperty Name="IsGuest" ColumnName="IsGuest" />
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="CardData" ColumnName="CardData" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="EchoDBModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+                <ScalarProperty Name="ClientPort" ColumnName="ClientPort" />
+                <ScalarProperty Name="ClientIP" ColumnName="ClientIP" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DaySchedules">
+            <EntityTypeMapping TypeName="EchoDBModel.DaySchedule">
+              <MappingFragment StoreEntitySet="DaySchedule">
+                <ScalarProperty Name="DayTypeID" ColumnName="DayTypeID" />
+                <ScalarProperty Name="AccessTypeID" ColumnName="AccessTypeID" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DayTypes">
+            <EntityTypeMapping TypeName="EchoDBModel.DayType">
+              <MappingFragment StoreEntitySet="DayType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Devices">
+            <EntityTypeMapping TypeName="EchoDBModel.Device">
+              <MappingFragment StoreEntitySet="Device">
+                <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+                <ScalarProperty Name="webPass" ColumnName="webPass" />
+                <ScalarProperty Name="webUser" ColumnName="webUser" />
+                <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+                <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+                <ScalarProperty Name="RegistrationCode" ColumnName="RegistrationCode" />
+                <ScalarProperty Name="DeviceSerial" ColumnName="DeviceSerial" />
+                <ScalarProperty Name="UDPPort" ColumnName="UDPPort" />
+                <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+                <ScalarProperty Name="SettingID" ColumnName="SettingID" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceEmps">
+            <EntityTypeMapping TypeName="EchoDBModel.DeviceEmp">
+              <MappingFragment StoreEntitySet="DeviceEmp">
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Db" ColumnName="Db" />
+                <ScalarProperty Name="Finger" ColumnName="Finger" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceSchGroups">
+            <EntityTypeMapping TypeName="EchoDBModel.DeviceSchGroup">
+              <MappingFragment StoreEntitySet="DeviceSchGroup">
+                <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+                <ScalarProperty Name="SchgroupID" ColumnName="SchgroupID" />
+                <ScalarProperty Name="AcsAreaID" ColumnName="AcsAreaID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceTypes">
+            <EntityTypeMapping TypeName="EchoDBModel.DeviceType">
+              <MappingFragment StoreEntitySet="DeviceType">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="EchoDBModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="SendToZK" ColumnName="SendToZK" />
+                <ScalarProperty Name="PrivateAccess" ColumnName="PrivateAccess" />
+                <ScalarProperty Name="IsGuest" ColumnName="IsGuest" />
+                <ScalarProperty Name="MenuAccess" ColumnName="MenuAccess" />
+                <ScalarProperty Name="HasCard" ColumnName="HasCard" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="HasFinger" ColumnName="HasFinger" />
+                <ScalarProperty Name="Post" ColumnName="Post" />
+                <ScalarProperty Name="TelePhone" ColumnName="TelePhone" />
+                <ScalarProperty Name="AuthenticationMode" ColumnName="AuthenticationMode" />
+                <ScalarProperty Name="EmpPinCode" ColumnName="EmpPinCode" />
+                <ScalarProperty Name="PersonalNum" ColumnName="PersonalNum" />
+                <ScalarProperty Name="EmpNationalCode" ColumnName="EmpNationalCode" />
+                <ScalarProperty Name="EmpLname" ColumnName="EmpLname" />
+                <ScalarProperty Name="EmpFname" ColumnName="EmpFname" />
+                <ScalarProperty Name="AcsGroupID" ColumnName="AcsGroupID" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Faces">
+            <EntityTypeMapping TypeName="EchoDBModel.Face">
+              <MappingFragment StoreEntitySet="Face">
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="PersonalNum" ColumnName="PersonalNum" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+                <ScalarProperty Name="FaceData" ColumnName="FaceData" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fingers">
+            <EntityTypeMapping TypeName="EchoDBModel.Finger">
+              <MappingFragment StoreEntitySet="Finger">
+                <ScalarProperty Name="DataStr" ColumnName="DataStr" />
+                <ScalarProperty Name="PdpID" ColumnName="PdpID" />
+                <ScalarProperty Name="fingerQuality" ColumnName="fingerQuality" />
+                <ScalarProperty Name="EnrollTime" ColumnName="EnrollTime" />
+                <ScalarProperty Name="DataLength" ColumnName="DataLength" />
+                <ScalarProperty Name="Md5" ColumnName="Md5" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="FingerNum" ColumnName="FingerNum" />
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoliDays">
+            <EntityTypeMapping TypeName="EchoDBModel.HoliDay">
+              <MappingFragment StoreEntitySet="HoliDays">
+                <ScalarProperty Name="HolidaysGrpID" ColumnName="HolidaysGrpID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoliDaysGroups">
+            <EntityTypeMapping TypeName="EchoDBModel.HoliDaysGroup">
+              <MappingFragment StoreEntitySet="HoliDaysGroup">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoliDaysSchGroups">
+            <EntityTypeMapping TypeName="EchoDBModel.HoliDaysSchGroup">
+              <MappingFragment StoreEntitySet="HoliDaysSchGroup">
+                <ScalarProperty Name="SchGroupID" ColumnName="SchGroupID" />
+                <ScalarProperty Name="HoliDaysGroupID" ColumnName="HoliDaysGroupID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Operators">
+            <EntityTypeMapping TypeName="EchoDBModel.Operator">
+              <MappingFragment StoreEntitySet="Operator">
+                <ScalarProperty Name="Lname" ColumnName="Lname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Organizations">
+            <EntityTypeMapping TypeName="EchoDBModel.Organization">
+              <MappingFragment StoreEntitySet="Organization">
+                <ScalarProperty Name="AcsGroupID" ColumnName="AcsGroupID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ScheduleGroups">
+            <EntityTypeMapping TypeName="EchoDBModel.ScheduleGroup">
+              <MappingFragment StoreEntitySet="ScheduleGroup">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="EchoDBModel.Setting">
+              <MappingFragment StoreEntitySet="Setting">
+                <ScalarProperty Name="WebPass" ColumnName="WebPass" />
+                <ScalarProperty Name="WebUser" ColumnName="WebUser" />
+                <ScalarProperty Name="ConsecutivePassessDelay" ColumnName="ConsecutivePassessDelay" />
+                <ScalarProperty Name="PreventConsecutive" ColumnName="PreventConsecutive" />
+                <ScalarProperty Name="Audio" ColumnName="Audio" />
+                <ScalarProperty Name="RelayDriven" ColumnName="RelayDriven" />
+                <ScalarProperty Name="RelayDuration" ColumnName="RelayDuration" />
+                <ScalarProperty Name="Relay" ColumnName="Relay" />
+                <ScalarProperty Name="AuthenticationType" ColumnName="AuthenticationType" />
+                <ScalarProperty Name="DeviceInfo" ColumnName="DeviceInfo" />
+                <ScalarProperty Name="VacationDuty" ColumnName="VacationDuty" />
+                <ScalarProperty Name="LockHomeScreen" ColumnName="LockHomeScreen" />
+                <ScalarProperty Name="SleepBrightness" ColumnName="SleepBrightness" />
+                <ScalarProperty Name="NormalBrightness" ColumnName="NormalBrightness" />
+                <ScalarProperty Name="TimeOutMenu" ColumnName="TimeOutMenu" />
+                <ScalarProperty Name="UDPPort" ColumnName="UDPPort" />
+                <ScalarProperty Name="ServerPort" ColumnName="ServerPort" />
+                <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+                <ScalarProperty Name="ServerEnabled" ColumnName="ServerEnabled" />
+                <ScalarProperty Name="gateway" ColumnName="gateway" />
+                <ScalarProperty Name="Subnet" ColumnName="Subnet" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="DHCP" ColumnName="DHCP" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="EchoName" ColumnName="EchoName" />
+                <ScalarProperty Name="EchoDir" ColumnName="EchoDir" />
+                <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="EchoDBModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrafficLogs">
+            <EntityTypeMapping TypeName="EchoDBModel.TrafficLog">
+              <MappingFragment StoreEntitySet="TrafficLog">
+                <ScalarProperty Name="ReqType" ColumnName="ReqType" />
+                <ScalarProperty Name="Access" ColumnName="Access" />
+                <ScalarProperty Name="TimeOfSpi" ColumnName="TimeOfSpi" />
+                <ScalarProperty Name="SuccessPass" ColumnName="SuccessPass" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+                <ScalarProperty Name="PersonalNum" ColumnName="PersonalNum" />
+                <ScalarProperty Name="ReaderNo" ColumnName="ReaderNo" />
+                <ScalarProperty Name="DeviceSerialNumber" ColumnName="DeviceSerialNumber" />
+                <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WeekSchedules">
+            <EntityTypeMapping TypeName="EchoDBModel.WeekSchedule">
+              <MappingFragment StoreEntitySet="WeekSchedule">
+                <ScalarProperty Name="DayTypeID" ColumnName="DayTypeID" />
+                <ScalarProperty Name="SchGroupID" ColumnName="SchGroupID" />
+                <ScalarProperty Name="weekday" ColumnName="weekday" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+    </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

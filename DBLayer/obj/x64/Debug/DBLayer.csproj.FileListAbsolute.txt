@@ -1,0 +1,15 @@
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\bin\x64\Debug\DBLayer.dll.config
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\bin\x64\Debug\DBLayer.dll
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\bin\x64\Debug\DBLayer.pdb
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\bin\x64\Debug\EntityFramework.dll
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\bin\x64\Debug\EntityFramework.SqlServer.dll
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\bin\x64\Debug\Model.dll
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\bin\x64\Debug\Model.pdb
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\bin\x64\Debug\Model.dll.config
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\bin\x64\Debug\EntityFramework.xml
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\bin\x64\Debug\EntityFramework.SqlServer.xml
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\obj\x64\Debug\DBLayer.csprojAssemblyReference.cache
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\obj\x64\Debug\DBLayer.csproj.CoreCompileInputs.cache
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\obj\x64\Debug\DBLayer.csproj.CopyComplete
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\obj\x64\Debug\DBLayer.dll
+C:\Users\AmirHosein\Desktop\ECOApp\DBLayer\obj\x64\Debug\DBLayer.pdb

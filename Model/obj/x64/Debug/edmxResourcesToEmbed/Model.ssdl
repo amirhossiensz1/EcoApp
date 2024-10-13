@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EchoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AccessArea">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AccessGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AccessType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AcsGroupAcsArea">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AcsGroupID" Type="int" />
+    <Property Name="AcsAreaID" Type="int" />
+  </EntityType>
+  <EntityType Name="Card">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CardNumber" Type="int" />
+    <Property Name="CardData" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="StartDate" Type="nvarchar" MaxLength="12" />
+    <Property Name="EndDate" Type="nvarchar" MaxLength="12" />
+    <Property Name="EmpID" Type="int" />
+    <Property Name="IsGuest" Type="bit" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientName" Type="nvarchar(max)" />
+    <Property Name="ClientIP" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="ClientPort" Type="int" Nullable="false" />
+    <Property Name="ServerIP" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DaySchedule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StartTime" Type="nvarchar" MaxLength="15" />
+    <Property Name="EndTime" Type="nvarchar" MaxLength="15" />
+    <Property Name="AccessTypeID" Type="int" />
+    <Property Name="DayTypeID" Type="int" />
+  </EntityType>
+  <EntityType Name="DayType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeviceName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IP" Type="nvarchar" MaxLength="15" />
+    <Property Name="Port" Type="int" />
+    <Property Name="SettingID" Type="int" />
+    <Property Name="ZoneID" Type="int" />
+    <Property Name="UDPPort" Type="int" />
+    <Property Name="DeviceSerial" Type="nvarchar" MaxLength="15" />
+    <Property Name="RegistrationCode" Type="nvarchar" MaxLength="9" />
+    <Property Name="ActivationCode" Type="nvarchar" MaxLength="65" />
+    <Property Name="ServerIP" Type="nvarchar" MaxLength="15" />
+    <Property Name="webUser" Type="nvarchar" MaxLength="15" />
+    <Property Name="webPass" Type="nvarchar" MaxLength="15" />
+    <Property Name="TypeId" Type="int" />
+  </EntityType>
+  <EntityType Name="DeviceEmp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpID" Type="int" />
+    <Property Name="DeviceID" Type="int" />
+    <Property Name="TypeID" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="25" />
+    <Property Name="Finger" Type="bit" />
+    <Property Name="Db" Type="bit" />
+    <Property Name="Picture" Type="bit" />
+  </EntityType>
+  <EntityType Name="DeviceSchGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AcsAreaID" Type="int" />
+    <Property Name="SchgroupID" Type="int" />
+    <Property Name="DeviceID" Type="int" />
+  </EntityType>
+  <EntityType Name="DeviceType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrganizationID" Type="int" />
+    <Property Name="AcsGroupID" Type="int" />
+    <Property Name="EmpFname" Type="nvarchar(max)" />
+    <Property Name="EmpLname" Type="nvarchar(max)" />
+    <Property Name="EmpNationalCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="PersonalNum" Type="nvarchar" MaxLength="10" />
+    <Property Name="EmpPinCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="AuthenticationMode" Type="nvarchar" MaxLength="10" />
+    <Property Name="TelePhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Post" Type="nvarchar" MaxLength="50" />
+    <Property Name="HasFinger" Type="bit" />
+    <Property Name="Image" Type="image" />
+    <Property Name="HasCard" Type="bit" />
+    <Property Name="MenuAccess" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsGuest" Type="bit" />
+    <Property Name="PrivateAccess" Type="bit" />
+    <Property Name="SendToZK" Type="bit" />
+    <Property Name="IsAdmin" Type="bit" />
+  </EntityType>
+  <EntityType Name="Face">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FaceData" Type="nvarchar(max)" />
+    <Property Name="EmpId" Type="int" />
+    <Property Name="PersonalNum" Type="nvarchar" MaxLength="15" />
+    <Property Name="image" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Finger">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpID" Type="int" />
+    <Property Name="FingerNum" Type="int" />
+    <Property Name="Data" Type="image" />
+    <Property Name="Md5" Type="nvarchar(max)" />
+    <Property Name="DataLength" Type="int" />
+    <Property Name="EnrollTime" Type="nvarchar(max)" />
+    <Property Name="fingerQuality" Type="int" />
+    <Property Name="PdpID" Type="nvarchar" MaxLength="10" />
+    <Property Name="DataStr" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="HoliDays">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="nvarchar" MaxLength="50" />
+    <Property Name="HolidaysGrpID" Type="int" />
+  </EntityType>
+  <EntityType Name="HoliDaysGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HoliDaysSchGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoliDaysGroupID" Type="int" />
+    <Property Name="SchGroupID" Type="int" />
+  </EntityType>
+  <EntityType Name="Operator">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Lname" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Organization">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrganizationID" Type="int" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="AcsGroupID" Type="int" />
+  </EntityType>
+  <EntityType Name="ScheduleGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="year" Type="nchar" MaxLength="4" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeviceID" Type="int" />
+    <Property Name="EchoDir" Type="nvarchar" MaxLength="15" />
+    <Property Name="EchoName" Type="nvarchar" MaxLength="15" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="DHCP" Type="bit" />
+    <Property Name="IP" Type="nvarchar" MaxLength="15" />
+    <Property Name="Subnet" Type="nvarchar" MaxLength="15" />
+    <Property Name="gateway" Type="nvarchar" MaxLength="15" />
+    <Property Name="ServerEnabled" Type="bit" />
+    <Property Name="ServerIP" Type="nvarchar" MaxLength="15" />
+    <Property Name="ServerPort" Type="nvarchar" MaxLength="15" />
+    <Property Name="UDPPort" Type="nvarchar" MaxLength="15" />
+    <Property Name="TimeOutMenu" Type="int" />
+    <Property Name="NormalBrightness" Type="int" />
+    <Property Name="SleepBrightness" Type="int" />
+    <Property Name="LockHomeScreen" Type="bit" />
+    <Property Name="VacationDuty" Type="bit" />
+    <Property Name="DeviceInfo" Type="bit" />
+    <Property Name="AuthenticationType" Type="nvarchar" MaxLength="15" />
+    <Property Name="Relay" Type="bit" />
+    <Property Name="RelayDuration" Type="nvarchar" MaxLength="15" />
+    <Property Name="RelayDriven" Type="int" />
+    <Property Name="Audio" Type="bit" />
+    <Property Name="PreventConsecutive" Type="bit" />
+    <Property Name="ConsecutivePassessDelay" Type="int" />
+    <Property Name="WebUser" Type="nvarchar" MaxLength="10" />
+    <Property Name="WebPass" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TrafficLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Time" Type="nvarchar" MaxLength="10" />
+    <Property Name="DeviceID" Type="int" />
+    <Property Name="DeviceSerialNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="ReaderNo" Type="nchar" MaxLength="5" />
+    <Property Name="PersonalNum" Type="nvarchar" MaxLength="10" />
+    <Property Name="EmpID" Type="int" />
+    <Property Name="Mode" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Date" Type="nvarchar" MaxLength="12" />
+    <Property Name="status" Type="bit" />
+    <Property Name="SuccessPass" Type="bit" />
+    <Property Name="TimeOfSpi" Type="nvarchar" MaxLength="10" />
+    <Property Name="Access" Type="bit" />
+    <Property Name="ReqType" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="WeekSchedule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="weekday" Type="int" />
+    <Property Name="SchGroupID" Type="int" />
+    <Property Name="DayTypeID" Type="int" />
+  </EntityType>
+  <Association Name="FK_AcsGroupAcsArea_AccessArea">
+    <End Role="AccessArea" Type="Self.AccessArea" Multiplicity="0..1" />
+    <End Role="AcsGroupAcsArea" Type="Self.AcsGroupAcsArea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccessArea">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AcsGroupAcsArea">
+        <PropertyRef Name="AcsAreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AcsGroupAcsArea_AccessGroup">
+    <End Role="AccessGroup" Type="Self.AccessGroup" Multiplicity="0..1" />
+    <End Role="AcsGroupAcsArea" Type="Self.AcsGroupAcsArea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccessGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AcsGroupAcsArea">
+        <PropertyRef Name="AcsGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Card_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Card" Type="Self.Card" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Card">
+        <PropertyRef Name="EmpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaySchedule_AccessType">
+    <End Role="AccessType" Type="Self.AccessType" Multiplicity="0..1" />
+    <End Role="DaySchedule" Type="Self.DaySchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccessType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DaySchedule">
+        <PropertyRef Name="AccessTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaySchedule_DayType">
+    <End Role="DayType" Type="Self.DayType" Multiplicity="0..1" />
+    <End Role="DaySchedule" Type="Self.DaySchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DayType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DaySchedule">
+        <PropertyRef Name="DayTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Device_DeviceType">
+    <End Role="DeviceType" Type="Self.DeviceType" Multiplicity="0..1" />
+    <End Role="Device" Type="Self.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeviceEmp_Device">
+    <End Role="Device" Type="Self.Device" Multiplicity="0..1" />
+    <End Role="DeviceEmp" Type="Self.DeviceEmp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DeviceEmp">
+        <PropertyRef Name="DeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeviceEmp_DeviceType">
+    <End Role="DeviceType" Type="Self.DeviceType" Multiplicity="0..1" />
+    <End Role="DeviceEmp" Type="Self.DeviceEmp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DeviceEmp">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeviceEmp_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="DeviceEmp" Type="Self.DeviceEmp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DeviceEmp">
+        <PropertyRef Name="EmpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeviceSchGroup_AccessArea">
+    <End Role="AccessArea" Type="Self.AccessArea" Multiplicity="0..1" />
+    <End Role="DeviceSchGroup" Type="Self.DeviceSchGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccessArea">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DeviceSchGroup">
+        <PropertyRef Name="AcsAreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeviceSchGroup_Device">
+    <End Role="Device" Type="Self.Device" Multiplicity="0..1" />
+    <End Role="DeviceSchGroup" Type="Self.DeviceSchGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DeviceSchGroup">
+        <PropertyRef Name="DeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeviceSchGroup_ScheduleGroup">
+    <End Role="ScheduleGroup" Type="Self.ScheduleGroup" Multiplicity="0..1" />
+    <End Role="DeviceSchGroup" Type="Self.DeviceSchGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ScheduleGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DeviceSchGroup">
+        <PropertyRef Name="SchgroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_AccessGroup">
+    <End Role="AccessGroup" Type="Self.AccessGroup" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccessGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="AcsGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Organization">
+    <End Role="Organization" Type="Self.Organization" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organization">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Face_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Face" Type="Self.Face" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Face">
+        <PropertyRef Name="EmpId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Finger_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Finger" Type="Self.Finger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Finger">
+        <PropertyRef Name="EmpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoliDays_HoliDaysGroup">
+    <End Role="HoliDaysGroup" Type="Self.HoliDaysGroup" Multiplicity="0..1" />
+    <End Role="HoliDays" Type="Self.HoliDays" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoliDaysGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoliDays">
+        <PropertyRef Name="HolidaysGrpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoliDaysSchGroup_HoliDaysGroup">
+    <End Role="HoliDaysGroup" Type="Self.HoliDaysGroup" Multiplicity="0..1" />
+    <End Role="HoliDaysSchGroup" Type="Self.HoliDaysSchGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoliDaysGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoliDaysSchGroup">
+        <PropertyRef Name="HoliDaysGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoliDaysSchGroup_ScheduleGroup">
+    <End Role="ScheduleGroup" Type="Self.ScheduleGroup" Multiplicity="0..1" />
+    <End Role="HoliDaysSchGroup" Type="Self.HoliDaysSchGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ScheduleGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoliDaysSchGroup">
+        <PropertyRef Name="SchGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organization_AccessGroup">
+    <End Role="AccessGroup" Type="Self.AccessGroup" Multiplicity="0..1" />
+    <End Role="Organization" Type="Self.Organization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccessGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Organization">
+        <PropertyRef Name="AcsGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Setting_Device">
+    <End Role="Device" Type="Self.Device" Multiplicity="0..1" />
+    <End Role="Setting" Type="Self.Setting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Setting">
+        <PropertyRef Name="DeviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WeekSchedule_DayType">
+    <End Role="DayType" Type="Self.DayType" Multiplicity="0..1" />
+    <End Role="WeekSchedule" Type="Self.WeekSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DayType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="WeekSchedule">
+        <PropertyRef Name="DayTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WeekSchedule_ScheduleGroup">
+    <End Role="ScheduleGroup" Type="Self.ScheduleGroup" Multiplicity="0..1" />
+    <End Role="WeekSchedule" Type="Self.WeekSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ScheduleGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="WeekSchedule">
+        <PropertyRef Name="SchGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_checkPermission" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmpId" Type="int" Mode="In" />
+    <Parameter Name="WeekDay" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="Time" Type="nvarchar" Mode="In" />
+    <Parameter Name="ConvertedTime" Type="nvarchar" Mode="In" />
+    <Parameter Name="DeviceSerial" Type="int" Mode="In" />
+    <Parameter Name="direction" Type="int" Mode="In" />
+    <Parameter Name="Date" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_reportTrafficStatistics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ToDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="EchoDBModelStoreContainer">
+    <EntitySet Name="AccessArea" EntityType="Self.AccessArea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AccessGroup" EntityType="Self.AccessGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AccessType" EntityType="Self.AccessType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AcsGroupAcsArea" EntityType="Self.AcsGroupAcsArea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Card" EntityType="Self.Card" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaySchedule" EntityType="Self.DaySchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DayType" EntityType="Self.DayType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Device" EntityType="Self.Device" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeviceEmp" EntityType="Self.DeviceEmp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeviceSchGroup" EntityType="Self.DeviceSchGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeviceType" EntityType="Self.DeviceType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Face" EntityType="Self.Face" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Finger" EntityType="Self.Finger" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoliDays" EntityType="Self.HoliDays" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoliDaysGroup" EntityType="Self.HoliDaysGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoliDaysSchGroup" EntityType="Self.HoliDaysSchGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Operator" EntityType="Self.Operator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organization" EntityType="Self.Organization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScheduleGroup" EntityType="Self.ScheduleGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Setting" EntityType="Self.Setting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrafficLog" EntityType="Self.TrafficLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WeekSchedule" EntityType="Self.WeekSchedule" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AcsGroupAcsArea_AccessArea" Association="Self.FK_AcsGroupAcsArea_AccessArea">
+      <End Role="AccessArea" EntitySet="AccessArea" />
+      <End Role="AcsGroupAcsArea" EntitySet="AcsGroupAcsArea" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AcsGroupAcsArea_AccessGroup" Association="Self.FK_AcsGroupAcsArea_AccessGroup">
+      <End Role="AccessGroup" EntitySet="AccessGroup" />
+      <End Role="AcsGroupAcsArea" EntitySet="AcsGroupAcsArea" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Card_Employee" Association="Self.FK_Card_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Card" EntitySet="Card" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaySchedule_AccessType" Association="Self.FK_DaySchedule_AccessType">
+      <End Role="AccessType" EntitySet="AccessType" />
+      <End Role="DaySchedule" EntitySet="DaySchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaySchedule_DayType" Association="Self.FK_DaySchedule_DayType">
+      <End Role="DayType" EntitySet="DayType" />
+      <End Role="DaySchedule" EntitySet="DaySchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Device_DeviceType" Association="Self.FK_Device_DeviceType">
+      <End Role="DeviceType" EntitySet="DeviceType" />
+      <End Role="Device" EntitySet="Device" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeviceEmp_Device" Association="Self.FK_DeviceEmp_Device">
+      <End Role="Device" EntitySet="Device" />
+      <End Role="DeviceEmp" EntitySet="DeviceEmp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeviceEmp_DeviceType" Association="Self.FK_DeviceEmp_DeviceType">
+      <End Role="DeviceType" EntitySet="DeviceType" />
+      <End Role="DeviceEmp" EntitySet="DeviceEmp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeviceEmp_Employee" Association="Self.FK_DeviceEmp_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="DeviceEmp" EntitySet="DeviceEmp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeviceSchGroup_AccessArea" Association="Self.FK_DeviceSchGroup_AccessArea">
+      <End Role="AccessArea" EntitySet="AccessArea" />
+      <End Role="DeviceSchGroup" EntitySet="DeviceSchGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeviceSchGroup_Device" Association="Self.FK_DeviceSchGroup_Device">
+      <End Role="Device" EntitySet="Device" />
+      <End Role="DeviceSchGroup" EntitySet="DeviceSchGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeviceSchGroup_ScheduleGroup" Association="Self.FK_DeviceSchGroup_ScheduleGroup">
+      <End Role="ScheduleGroup" EntitySet="ScheduleGroup" />
+      <End Role="DeviceSchGroup" EntitySet="DeviceSchGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_AccessGroup" Association="Self.FK_Employee_AccessGroup">
+      <End Role="AccessGroup" EntitySet="AccessGroup" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Organization" Association="Self.FK_Employee_Organization">
+      <End Role="Organization" EntitySet="Organization" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Face_Employee" Association="Self.FK_Face_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Face" EntitySet="Face" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Finger_Employee" Association="Self.FK_Finger_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Finger" EntitySet="Finger" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoliDays_HoliDaysGroup" Association="Self.FK_HoliDays_HoliDaysGroup">
+      <End Role="HoliDaysGroup" EntitySet="HoliDaysGroup" />
+      <End Role="HoliDays" EntitySet="HoliDays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoliDaysSchGroup_HoliDaysGroup" Association="Self.FK_HoliDaysSchGroup_HoliDaysGroup">
+      <End Role="HoliDaysGroup" EntitySet="HoliDaysGroup" />
+      <End Role="HoliDaysSchGroup" EntitySet="HoliDaysSchGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoliDaysSchGroup_ScheduleGroup" Association="Self.FK_HoliDaysSchGroup_ScheduleGroup">
+      <End Role="ScheduleGroup" EntitySet="ScheduleGroup" />
+      <End Role="HoliDaysSchGroup" EntitySet="HoliDaysSchGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organization_AccessGroup" Association="Self.FK_Organization_AccessGroup">
+      <End Role="AccessGroup" EntitySet="AccessGroup" />
+      <End Role="Organization" EntitySet="Organization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Setting_Device" Association="Self.FK_Setting_Device">
+      <End Role="Device" EntitySet="Device" />
+      <End Role="Setting" EntitySet="Setting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WeekSchedule_DayType" Association="Self.FK_WeekSchedule_DayType">
+      <End Role="DayType" EntitySet="DayType" />
+      <End Role="WeekSchedule" EntitySet="WeekSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WeekSchedule_ScheduleGroup" Association="Self.FK_WeekSchedule_ScheduleGroup">
+      <End Role="ScheduleGroup" EntitySet="ScheduleGroup" />
+      <End Role="WeekSchedule" EntitySet="WeekSchedule" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

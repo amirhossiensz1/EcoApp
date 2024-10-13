@@ -1,0 +1,46 @@
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\BLL.dll.config
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\BLL.dll
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\BLL.pdb
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\DBLayer.dll
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\EntityFramework.dll
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\Model.dll
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\DBLayer.pdb
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\DBLayer.dll.config
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\Model.pdb
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\Model.dll.config
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\EntityFramework.xml
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\bin\x86\Debug\Interop.zkemkeeper.dll
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\obj\x86\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\obj\x86\Debug\Interop.zkemkeeper.dll
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\obj\x86\Debug\BLL.csproj.ResolveComReference.cache
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\obj\x86\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\obj\x86\Debug\BLL.csproj.CopyComplete
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\obj\x86\Debug\BLL.dll
+C:\Users\AmirHosein\Desktop\ECOApp\BLL\obj\x86\Debug\BLL.pdb
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\BLL.dll.config
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\BLL.dll
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\BLL.pdb
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\DBLayer.dll
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\EntityFramework.dll
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\EntityFramework.SqlServer.dll
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\Model.dll
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\Newtonsoft.Json.dll
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\DBLayer.pdb
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\DBLayer.dll.config
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\Model.pdb
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\Model.dll.config
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\EntityFramework.xml
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\EntityFramework.SqlServer.xml
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\Newtonsoft.Json.xml
+H:\My Source\Controller Project\Controller\ECOApp\BLL\bin\x86\Debug\Interop.zkemkeeper.dll
+H:\My Source\Controller Project\Controller\ECOApp\BLL\obj\x86\Debug\BLL.csprojAssemblyReference.cache
+H:\My Source\Controller Project\Controller\ECOApp\BLL\obj\x86\Debug\Interop.zkemkeeper.dll
+H:\My Source\Controller Project\Controller\ECOApp\BLL\obj\x86\Debug\BLL.csproj.ResolveComReference.cache
+H:\My Source\Controller Project\Controller\ECOApp\BLL\obj\x86\Debug\BLL.csproj.CoreCompileInputs.cache
+H:\My Source\Controller Project\Controller\ECOApp\BLL\obj\x86\Debug\BLL.csproj.CopyComplete
+H:\My Source\Controller Project\Controller\ECOApp\BLL\obj\x86\Debug\BLL.dll
+H:\My Source\Controller Project\Controller\ECOApp\BLL\obj\x86\Debug\BLL.pdb

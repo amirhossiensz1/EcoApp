@@ -1,0 +1,16 @@
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\BLL.dll.config
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\BLL.dll
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\BLL.pdb
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\DBLayer.dll
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\EntityFramework.dll
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\Model.dll
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\DBLayer.pdb
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\Model.pdb
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\EntityFramework.xml
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\bin\Release\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\obj\Release\BLL.dll
+C:\Users\Administrator\Desktop\New folder\WindowsFormsApplication1\BLL\obj\Release\BLL.pdb

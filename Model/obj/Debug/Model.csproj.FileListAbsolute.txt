@@ -295,3 +295,17 @@ H:\My Source\Light\Controller Project\Controller\ECOApp\Model\obj\Debug\Model.cs
 H:\My Source\Light\Controller Project\Controller\ECOApp\Model\obj\Debug\Model.csproj.CopyComplete
 H:\My Source\Light\Controller Project\Controller\ECOApp\Model\obj\Debug\Model.dll
 H:\My Source\Light\Controller Project\Controller\ECOApp\Model\obj\Debug\Model.pdb
+H:\My Source\Light\Controller Project\Controller\Eco\Model\bin\Debug\Model.dll.config
+H:\My Source\Light\Controller Project\Controller\Eco\Model\bin\Debug\Model.dll
+H:\My Source\Light\Controller Project\Controller\Eco\Model\bin\Debug\Model.pdb
+H:\My Source\Light\Controller Project\Controller\Eco\Model\bin\Debug\dotMemory.Unit.dll
+H:\My Source\Light\Controller Project\Controller\Eco\Model\bin\Debug\EntityFramework.dll
+H:\My Source\Light\Controller Project\Controller\Eco\Model\bin\Debug\EntityFramework.SqlServer.dll
+H:\My Source\Light\Controller Project\Controller\Eco\Model\bin\Debug\dotMemory.Unit.xml
+H:\My Source\Light\Controller Project\Controller\Eco\Model\bin\Debug\EntityFramework.xml
+H:\My Source\Light\Controller Project\Controller\Eco\Model\bin\Debug\EntityFramework.SqlServer.xml
+H:\My Source\Light\Controller Project\Controller\Eco\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+H:\My Source\Light\Controller Project\Controller\Eco\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+H:\My Source\Light\Controller Project\Controller\Eco\Model\obj\Debug\Model.csproj.CopyComplete
+H:\My Source\Light\Controller Project\Controller\Eco\Model\obj\Debug\Model.dll
+H:\My Source\Light\Controller Project\Controller\Eco\Model\obj\Debug\Model.pdb

@@ -225,18 +225,6 @@
   <data name="gridViewDevice.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
   </data>
-  <data name="grdViewDevice.Appearance.GroupPanel.BorderColor" type="System.Drawing.Color, System.Drawing">
-    <value>White</value>
-  </data>
-  <data name="grdViewDevice.Appearance.GroupPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
-    <value>DarkGray</value>
-  </data>
-  <data name="grdViewDevice.Appearance.ViewCaption.BorderColor" type="System.Drawing.Color, System.Drawing">
-    <value>Black</value>
-  </data>
-  <data name="grdViewDevice.Appearance.ViewCaption.ForeColor" type="System.Drawing.Color, System.Drawing">
-    <value>Black</value>
-  </data>
   <data name="GrdName.Caption" xml:space="preserve">
     <value>نام دستگاه</value>
   </data>
@@ -415,7 +403,7 @@
     <value>731, 15</value>
   </data>
   <data name="lblTypeExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 16</value>
+    <value>115, 16</value>
   </data>
   <data name="lblTypeExport.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -489,12 +477,6 @@
   <data name="grdViewEmp.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
   </data>
-  <data name="gridViewEmp.Appearance.GroupPanel.BackColor" type="System.Drawing.Color, System.Drawing">
-    <value>OldLace</value>
-  </data>
-  <data name="gridViewEmp.Appearance.OddRow.BackColor" type="System.Drawing.Color, System.Drawing">
-    <value>Linen</value>
-  </data>
   <data name="GrdopertCode.Caption" xml:space="preserve">
     <value>کدکاربری</value>
   </data>
@@ -510,7 +492,7 @@
   <data name="GrdFName.Caption" xml:space="preserve">
     <value>نام</value>
   </data>
-  <data name="GrdFName.ImageAlignment" type="System.Drawing.StringAlignment, System.Drawing">
+  <data name="GrdFName.ImageOptions.Alignment" type="System.Drawing.StringAlignment, System.Drawing">
     <value>Center</value>
   </data>
   <data name="GrdFName.Visible" type="System.Boolean, mscorlib">
@@ -582,7 +564,7 @@
   <data name="GrdPicture.Caption" xml:space="preserve">
     <value>تصویر</value>
   </data>
-  <data name="GrdPicture.ImageAlignment" type="System.Drawing.StringAlignment, System.Drawing">
+  <data name="GrdPicture.ImageOptions.Alignment" type="System.Drawing.StringAlignment, System.Drawing">
     <value>Center</value>
   </data>
   <data name="GrdPicture.Visible" type="System.Boolean, mscorlib">
@@ -636,17 +618,14 @@
   <data name="&gt;&gt;panelEmp.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="menu.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
-    <value>Lavender</value>
-  </data>
   <data name="menu.Appearance.BackColor2" type="System.Drawing.Color, System.Drawing">
-    <value>192, 192, 255</value>
-  </data>
-  <data name="menu.Appearance.BorderColor" type="System.Drawing.Color, System.Drawing">
     <value>192, 192, 255</value>
   </data>
   <data name="menu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
+  </data>
+  <data name="navBarMonitor.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
   </data>
   <data name="navBarMonitor.Caption" xml:space="preserve">
     <value>نظارتهای آنلاین</value>
@@ -654,17 +633,14 @@
   <data name="navBarOnlinePdp.Caption" xml:space="preserve">
     <value>نمایش دستگاههای آنلاین</value>
   </data>
-  <data name="navBarOnlineTrafic.AppearanceHotTracked.ForeColor" type="System.Drawing.Color, System.Drawing">
-    <value>255, 128, 128</value>
-  </data>
-  <data name="navBarOnlineTrafic.AppearancePressed.ForeColor" type="System.Drawing.Color, System.Drawing">
-    <value>Red</value>
-  </data>
   <data name="navBarOnlineTrafic.Caption" xml:space="preserve">
     <value>نمایش آنلاین ترددها</value>
   </data>
   <data name="nvBrCtrlMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
+  </data>
+  <data name="navBarDevices.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="navBarDevices.Caption" xml:space="preserve">
     <value>مدیریت دستگاه ها</value>
@@ -678,8 +654,8 @@
   <data name="navBarFirmWare.Caption" xml:space="preserve">
     <value>بروزرسانی FirmWare</value>
   </data>
-  <data name="navBarEmployee.AppearancePressed.ForeColor" type="System.Drawing.Color, System.Drawing">
-    <value>Black</value>
+  <data name="navBarEmployee.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="navBarEmployee.Caption" xml:space="preserve">
     <value>مدیریت کارمندان</value>
@@ -692,6 +668,9 @@
   </data>
   <data name="EmployeeGroup.Caption" xml:space="preserve">
     <value>چارت سازمانی</value>
+  </data>
+  <data name="navSchaduler.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="navSchaduler.Caption" xml:space="preserve">
     <value>کنترل دسترسی</value>
@@ -711,6 +690,9 @@
   <data name="Holidays.Caption" xml:space="preserve">
     <value>گروه تعطیلات</value>
   </data>
+  <data name="navBarGuest.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
   <data name="navBarGuest.Caption" xml:space="preserve">
     <value>مهمان</value>
   </data>
@@ -719,6 +701,9 @@
   </data>
   <data name="navBarAddGuest.Caption" xml:space="preserve">
     <value>تعریف کارت مهمان</value>
+  </data>
+  <data name="navBarLog.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
   </data>
   <data name="navBarLog.Caption" xml:space="preserve">
     <value>گزارش تردد</value>
@@ -736,10 +721,10 @@
     <value>0, 0</value>
   </data>
   <data name="resource.ExpandedWidth" type="System.Int32, mscorlib">
-    <value>219</value>
+    <value>220</value>
   </data>
   <data name="nvBrCtrlMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 521</value>
+    <value>220, 519</value>
   </data>
   <data name="nvBrCtrlMenu.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -760,10 +745,10 @@
     <value>0</value>
   </data>
   <data name="dockPanel_Container.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 23</value>
+    <value>4, 26</value>
   </data>
   <data name="dockPanel_Container.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 521</value>
+    <value>220, 519</value>
   </data>
   <data name="dockPanel_Container.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

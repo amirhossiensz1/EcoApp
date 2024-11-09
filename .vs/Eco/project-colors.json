@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e1107126-1ea2-46bd-9308-1ba42ff4521b": {
+      "ProjectGuid": "e1107126-1ea2-46bd-9308-1ba42ff4521b",
+      "DisplayName": "DBLayer",
+      "ColorIndex": 0
+    },
+    "f76d21d3-998b-48e9-8785-6341a559b700": {
+      "ProjectGuid": "f76d21d3-998b-48e9-8785-6341a559b700",
+      "DisplayName": "UI",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

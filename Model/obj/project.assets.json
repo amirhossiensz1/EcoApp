@@ -1,58 +1,58 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.6.1": {},
-    ".NETFramework,Version=v4.6.1/win": {},
-    ".NETFramework,Version=v4.6.1/win-x64": {},
-    ".NETFramework,Version=v4.6.1/win-x86": {}
+    ".NETFramework,Version=v4.8": {},
+    ".NETFramework,Version=v4.8/win": {},
+    ".NETFramework,Version=v4.8/win-x64": {},
+    ".NETFramework,Version=v4.8/win-x86": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.6.1": [
+    ".NETFramework,Version=v4.8": [
       "EntityFramework >= 6.2.0"
     ]
   },
   "packageFolders": {
     "C:\\Users\\AmirHosein\\.nuget\\packages\\": {},
     "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
-    "C:\\ProgramData\\Xamarin\\NuGet\\": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\My Source\\Light\\Controller Project\\Controller\\ECOApp\\Model\\Model.csproj",
+      "projectUniqueName": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "H:\\My Source\\Light\\Controller Project\\Controller\\ECOApp\\Model\\Model.csproj",
+      "projectPath": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj",
       "packagesPath": "C:\\Users\\AmirHosein\\.nuget\\packages\\",
-      "outputPath": "H:\\My Source\\Light\\Controller Project\\Controller\\ECOApp\\Model\\obj\\",
+      "outputPath": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-        "C:\\ProgramData\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\AmirHosein\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net461"
+        "net48"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {}
       },
       "frameworks": {
-        "net461": {
+        "net48": {
           "projectReferences": {}
         }
       }
     },
     "frameworks": {
-      "net461": {
+      "net48": {
         "dependencies": {
           "EntityFramework": {
             "target": "Package",
@@ -80,10 +80,10 @@
       "message": "Unable to find package EntityFramework. No packages exist with this id in source(s): DevExpress 24.1 Local, Microsoft Visual Studio Offline Packages",
       "libraryId": "EntityFramework",
       "targetGraphs": [
-        ".NETFramework,Version=v4.6.1",
-        ".NETFramework,Version=v4.6.1/win",
-        ".NETFramework,Version=v4.6.1/win-x64",
-        ".NETFramework,Version=v4.6.1/win-x86"
+        ".NETFramework,Version=v4.8",
+        ".NETFramework,Version=v4.8/win",
+        ".NETFramework,Version=v4.8/win-x64",
+        ".NETFramework,Version=v4.8/win-x86"
       ]
     }
   ]

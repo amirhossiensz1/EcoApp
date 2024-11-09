@@ -1,45 +1,45 @@
 {
   "format": 1,
   "restore": {
-    "H:\\My Source\\Light\\Controller Project\\Controller\\ECOApp\\Model\\Model.csproj": {}
+    "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj": {}
   },
   "projects": {
-    "H:\\My Source\\Light\\Controller Project\\Controller\\ECOApp\\Model\\Model.csproj": {
+    "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\My Source\\Light\\Controller Project\\Controller\\ECOApp\\Model\\Model.csproj",
+        "projectUniqueName": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "H:\\My Source\\Light\\Controller Project\\Controller\\ECOApp\\Model\\Model.csproj",
+        "projectPath": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\AmirHosein\\.nuget\\packages\\",
-        "outputPath": "H:\\My Source\\Light\\Controller Project\\Controller\\ECOApp\\Model\\obj\\",
+        "outputPath": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-          "C:\\ProgramData\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\AmirHosein\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net461"
+          "net48"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {}
         },
         "frameworks": {
-          "net461": {
+          "net48": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "net461": {
+        "net48": {
           "dependencies": {
             "EntityFramework": {
               "target": "Package",

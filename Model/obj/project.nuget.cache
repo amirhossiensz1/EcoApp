@@ -1,10 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "GHAOkyrek4VyeZNUvfnce22hHCjIXodcvoyMMbIUbSwdw6dFLR1SZCo716xihkKjUp1+1o2+3CazWhQH+u53VA==",
-  "success": true,
-  "projectFilePath": "D:\\Project\\C#Project\\ControllerProject\\ECOApp\\Model\\Model.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\win10\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512"
-  ],
-  "logs": []
+  "dgSpecHash": "/Y9MifM4QFayYP1zQSbV9mlm4KfBqaLblb4A12PU8IGVLruj+Bljnf7jOB7bBE2blJcSUoy9Jn/qLjsC1ua/Fw==",
+  "success": false,
+  "projectFilePath": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package EntityFramework. No packages exist with this id in source(s): DevExpress 24.1 Local, Microsoft Visual Studio Offline Packages",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.8",
+        ".NETFramework,Version=v4.8/win",
+        ".NETFramework,Version=v4.8/win-x64",
+        ".NETFramework,Version=v4.8/win-x86"
+      ]
+    }
+  ]
 }

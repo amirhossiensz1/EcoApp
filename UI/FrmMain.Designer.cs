@@ -193,17 +193,18 @@ namespace UI
             // 
             // menu
             // 
-            this.menu.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
-            this.menu.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("menu.Appearance.BackColor")));
+            this.menu.Appearance.BackColor = System.Drawing.Color.Lavender;
             this.menu.Appearance.BackColor2 = ((System.Drawing.Color)(resources.GetObject("menu.Appearance.BackColor2")));
-            this.menu.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("menu.Appearance.BorderColor")));
+            this.menu.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.menu.Appearance.Options.UseBackColor = true;
             this.menu.Appearance.Options.UseBorderColor = true;
             resources.ApplyResources(this.menu, "menu");
             this.menu.Controls.Add(this.dockPanel_Container);
             this.menu.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.menu.DockVertical = DevExpress.Utils.DefaultBoolean.False;
+            this.menu.FloatSize = new System.Drawing.Size(50, 50);
             this.menu.ID = new System.Guid("28637168-bdab-458a-85f8-5be629920cc6");
+            this.menu.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
             this.menu.Name = "menu";
             this.menu.Options.AllowDockBottom = false;
             this.menu.Options.AllowDockFill = false;
@@ -262,8 +263,10 @@ namespace UI
             // 
             // navBarMonitor
             // 
+            this.navBarMonitor.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("navBarMonitor.Appearance.Font")));
+            this.navBarMonitor.Appearance.Options.UseFont = true;
             this.navBarMonitor.Appearance.Options.UseTextOptions = true;
-            this.navBarMonitor.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.navBarMonitor.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.navBarMonitor.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             resources.ApplyResources(this.navBarMonitor, "navBarMonitor");
             this.navBarMonitor.CollapsedNavPaneContentControl = this.grdViewEmp;
@@ -279,7 +282,6 @@ namespace UI
             // 
             this.grdViewEmp.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.grdViewEmp, "grdViewEmp");
-            this.grdViewEmp.LookAndFeel.SkinName = "Blue";
             this.grdViewEmp.MainView = this.gridViewEmp;
             this.grdViewEmp.Name = "grdViewEmp";
             this.grdViewEmp.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -289,13 +291,13 @@ namespace UI
             // 
             // gridViewEmp
             // 
-            this.gridViewEmp.Appearance.GroupPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridViewEmp.Appearance.GroupPanel.BackColor")));
+            this.gridViewEmp.Appearance.GroupPanel.BackColor = System.Drawing.Color.OldLace;
             this.gridViewEmp.Appearance.GroupPanel.Options.UseBackColor = true;
             this.gridViewEmp.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridViewEmp.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridViewEmp.Appearance.HeaderPanel.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Show;
             this.gridViewEmp.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridViewEmp.Appearance.OddRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridViewEmp.Appearance.OddRow.BackColor")));
+            this.gridViewEmp.Appearance.OddRow.BackColor = System.Drawing.Color.Linen;
             this.gridViewEmp.Appearance.OddRow.Options.UseBackColor = true;
             this.gridViewEmp.Appearance.Row.Options.UseTextOptions = true;
             this.gridViewEmp.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -351,6 +353,7 @@ namespace UI
             // 
             resources.ApplyResources(this.GrdFName, "GrdFName");
             this.GrdFName.FieldName = "EmpFname";
+            this.GrdFName.ImageOptions.Alignment = ((System.Drawing.StringAlignment)(resources.GetObject("GrdFName.ImageOptions.Alignment")));
             this.GrdFName.Name = "GrdFName";
             this.GrdFName.OptionsColumn.AllowEdit = false;
             this.GrdFName.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
@@ -419,6 +422,7 @@ namespace UI
             // 
             resources.ApplyResources(this.GrdPicture, "GrdPicture");
             this.GrdPicture.FieldName = "Image";
+            this.GrdPicture.ImageOptions.Alignment = ((System.Drawing.StringAlignment)(resources.GetObject("GrdPicture.ImageOptions.Alignment")));
             this.GrdPicture.Name = "GrdPicture";
             this.GrdPicture.OptionsColumn.AllowSize = false;
             this.GrdPicture.UnboundType = DevExpress.Data.UnboundColumnType.Object;
@@ -431,8 +435,8 @@ namespace UI
             // 
             // navBarOnlineTrafic
             // 
-            this.navBarOnlineTrafic.AppearanceHotTracked.ForeColor = ((System.Drawing.Color)(resources.GetObject("navBarOnlineTrafic.AppearanceHotTracked.ForeColor")));
-            this.navBarOnlineTrafic.AppearancePressed.ForeColor = ((System.Drawing.Color)(resources.GetObject("navBarOnlineTrafic.AppearancePressed.ForeColor")));
+            this.navBarOnlineTrafic.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.navBarOnlineTrafic.AppearancePressed.ForeColor = System.Drawing.Color.Red;
             this.navBarOnlineTrafic.CanDrag = false;
             resources.ApplyResources(this.navBarOnlineTrafic, "navBarOnlineTrafic");
             this.navBarOnlineTrafic.Name = "navBarOnlineTrafic";
@@ -440,17 +444,19 @@ namespace UI
             // 
             // navBarDevices
             // 
+            this.navBarDevices.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("navBarDevices.Appearance.Font")));
+            this.navBarDevices.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.navBarDevices, "navBarDevices");
             this.navBarDevices.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
+            this.navBarDevices.ImageOptions.LargeImageSize = new System.Drawing.Size(20, 20);
+            this.navBarDevices.ImageOptions.SmallImageSize = new System.Drawing.Size(20, 20);
             this.navBarDevices.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarAddDevice),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSetting),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarFirmWare)});
-            this.navBarDevices.LargeImageSize = new System.Drawing.Size(20, 20);
             this.navBarDevices.Name = "navBarDevices";
             this.navBarDevices.NavigationPaneVisible = false;
             this.navBarDevices.ShowIcons = DevExpress.Utils.DefaultBoolean.True;
-            this.navBarDevices.SmallImageSize = new System.Drawing.Size(20, 20);
             this.navBarDevices.ItemChanged += new System.EventHandler(this.navBarDevices_ItemChanged);
             // 
             // navBarAddDevice
@@ -474,9 +480,10 @@ namespace UI
             // 
             // navBarEmployee
             // 
-            this.navBarEmployee.AppearancePressed.ForeColor = ((System.Drawing.Color)(resources.GetObject("navBarEmployee.AppearancePressed.ForeColor")));
+            this.navBarEmployee.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("navBarEmployee.Appearance.Font")));
+            this.navBarEmployee.Appearance.Options.UseFont = true;
+            this.navBarEmployee.AppearancePressed.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.navBarEmployee, "navBarEmployee");
-            this.navBarEmployee.Expanded = true;
             this.navBarEmployee.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarEmployee.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarAddEmp),
@@ -505,8 +512,9 @@ namespace UI
             // 
             // navSchaduler
             // 
+            this.navSchaduler.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("navSchaduler.Appearance.Font")));
+            this.navSchaduler.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.navSchaduler, "navSchaduler");
-            this.navSchaduler.Expanded = true;
             this.navSchaduler.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.DayType),
             new DevExpress.XtraNavBar.NavBarItemLink(this.SchGroup),
@@ -548,6 +556,8 @@ namespace UI
             // 
             // navBarGuest
             // 
+            this.navBarGuest.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("navBarGuest.Appearance.Font")));
+            this.navBarGuest.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.navBarGuest, "navBarGuest");
             this.navBarGuest.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarGuest.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -569,6 +579,8 @@ namespace UI
             // 
             // navBarLog
             // 
+            this.navBarLog.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("navBarLog.Appearance.Font")));
+            this.navBarLog.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.navBarLog, "navBarLog");
             this.navBarLog.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarLog.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -701,8 +713,8 @@ namespace UI
             // 
             // grdViewDevice
             // 
-            this.grdViewDevice.Appearance.GroupPanel.BorderColor = ((System.Drawing.Color)(resources.GetObject("grdViewDevice.Appearance.GroupPanel.BorderColor")));
-            this.grdViewDevice.Appearance.GroupPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("grdViewDevice.Appearance.GroupPanel.ForeColor")));
+            this.grdViewDevice.Appearance.GroupPanel.BorderColor = System.Drawing.Color.White;
+            this.grdViewDevice.Appearance.GroupPanel.ForeColor = System.Drawing.Color.DarkGray;
             this.grdViewDevice.Appearance.GroupPanel.Options.UseBorderColor = true;
             this.grdViewDevice.Appearance.GroupPanel.Options.UseFont = true;
             this.grdViewDevice.Appearance.GroupPanel.Options.UseForeColor = true;
@@ -714,8 +726,8 @@ namespace UI
             this.grdViewDevice.Appearance.Row.Options.UseTextOptions = true;
             this.grdViewDevice.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdViewDevice.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.grdViewDevice.Appearance.ViewCaption.BorderColor = ((System.Drawing.Color)(resources.GetObject("grdViewDevice.Appearance.ViewCaption.BorderColor")));
-            this.grdViewDevice.Appearance.ViewCaption.ForeColor = ((System.Drawing.Color)(resources.GetObject("grdViewDevice.Appearance.ViewCaption.ForeColor")));
+            this.grdViewDevice.Appearance.ViewCaption.BorderColor = System.Drawing.Color.Black;
+            this.grdViewDevice.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Black;
             this.grdViewDevice.Appearance.ViewCaption.Options.UseBorderColor = true;
             this.grdViewDevice.Appearance.ViewCaption.Options.UseForeColor = true;
             this.grdViewDevice.Appearance.ViewCaption.Options.UseTextOptions = true;

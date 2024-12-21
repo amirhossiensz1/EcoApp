@@ -10,7 +10,22 @@
       "ProjectGuid": "f76d21d3-998b-48e9-8785-6341a559b700",
       "DisplayName": "UI",
       "ColorIndex": 1
+    },
+    "27ff6f73-3d4c-4e82-841c-279afe556a43": {
+      "ProjectGuid": "27ff6f73-3d4c-4e82-841c-279afe556a43",
+      "DisplayName": "Model",
+      "ColorIndex": 2
+    },
+    "164734b9-5ef7-4e52-a82b-4110993c42d1": {
+      "ProjectGuid": "164734b9-5ef7-4e52-a82b-4110993c42d1",
+      "DisplayName": "BLL",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }

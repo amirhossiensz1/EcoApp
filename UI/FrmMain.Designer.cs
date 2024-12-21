@@ -270,7 +270,6 @@ namespace UI
             this.navBarMonitor.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             resources.ApplyResources(this.navBarMonitor, "navBarMonitor");
             this.navBarMonitor.CollapsedNavPaneContentControl = this.grdViewEmp;
-            this.navBarMonitor.Expanded = true;
             this.navBarMonitor.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarMonitor.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarOnlinePdp),
@@ -582,6 +581,7 @@ namespace UI
             this.navBarLog.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("navBarLog.Appearance.Font")));
             this.navBarLog.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.navBarLog, "navBarLog");
+            this.navBarLog.Expanded = true;
             this.navBarLog.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarLog.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarAllLog),

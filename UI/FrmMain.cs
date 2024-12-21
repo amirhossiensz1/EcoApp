@@ -1853,7 +1853,8 @@ namespace UI
                     MainPanel.Controls.Add(_frmAllLogs);
                     _frmAllLogs.Dock = DockStyle.Fill;
 
-                    Invoke((MethodInvoker)delegate { _frmAllLogs.Visible = true; });
+                    // Invoke((MethodInvoker)delegate { _frmAllLogs.Visible = true; });
+                    _frmAllLogs.Visible = true;
                     _frmAllLogs.FrmAllLogs_Load(sender, e);
                     navSchaduler.Expanded = false;
                     navBarEmployee.Expanded = false;

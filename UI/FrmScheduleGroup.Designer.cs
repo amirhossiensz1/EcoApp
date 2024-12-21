@@ -785,7 +785,7 @@
             // YearSpinEditor
             // 
             this.YearSpinEditor.EditValue = new decimal(new int[] {
-            1390,
+            1400,
             0,
             0,
             0});
@@ -794,7 +794,6 @@
             this.YearSpinEditor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.YearSpinEditor.Properties.IsFloatValue = false;
-            this.YearSpinEditor.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.YearSpinEditor.Properties.MaxLength = 4;
             this.YearSpinEditor.Properties.MaxValue = new decimal(new int[] {
             1500,
@@ -808,7 +807,6 @@
             0});
             this.YearSpinEditor.Properties.NullText = "1390";
             this.YearSpinEditor.Properties.NullValuePrompt = "1390";
-            this.YearSpinEditor.Properties.ShowNullValuePromptWhenFocused = true;
             this.YearSpinEditor.Size = new System.Drawing.Size(100, 20);
             this.YearSpinEditor.TabIndex = 4;
             // 

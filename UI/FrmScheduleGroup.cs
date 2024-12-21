@@ -59,8 +59,8 @@ namespace Eco
 
         private void SetYearSpinEditor()
         {
-            var persianDate = DateTime.Now;
-            YearSpinEditor.Value = Convert.ToInt32(persianDate.Date.ToString().Substring(6, 4));
+            //var persianDate = DateTime.Now;
+           //YearSpinEditor.Value = Convert.ToInt32(persianDate.Date.ToString().Substring(6, 4));
         }
 
         private void LoadHolidayCombobox()
@@ -273,7 +273,7 @@ namespace Eco
 
                         SendHolidayToZkDevice(schGroupId);
 
-                        MessageBox.Show(@"عملیات با موفقیت انجام شد", @"هشدار", MessageBoxButtons.OK,
+                        MessageBox.Show(@"عملیات به اتمام رسید", @"هشدار", MessageBoxButtons.OK,
                             MessageBoxIcon.None, MessageBoxDefaultButton.Button1,
                             MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
                         LoadScheduleGroupListBox();
@@ -358,6 +358,7 @@ namespace Eco
                 }
 
                 var devices = deviceBll.SelectDevices().Where(d => d.DeviceType.ID == 4);
+                List<Device> notSendDevices = new List<Device>();    
 
                 foreach (var device in devices)
                 {
@@ -368,21 +369,36 @@ namespace Eco
                         if (_czkem.Connect_Net(device.IP, (int)device.Port))
                         {
                             var a = _czkem.SetTZInfo(1, schGroupId, TimeZoneInfo[1] + TimeZoneInfo[2] + TimeZoneInfo[3] + TimeZoneInfo[4] + TimeZoneInfo[5] + TimeZoneInfo[6] + TimeZoneInfo[0]);
-                            //if (a)
-                            //    return true;
-                            //return false;
+                            if (!a)
+                                notSendDevices.Add(device);
                         }
-
-                        // return false;
+                        else
+                        {
+                            notSendDevices.Add(device);
+                        }
                     }
-                    // return false;
+                    else
+                    {
+                        notSendDevices.Add(device);
+                    }
                 }
-
+                if(notSendDevices.Count !=0)
+                    ShowMessage(notSendDevices);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
             }
+        }
+
+        private void ShowMessage(List<Device> notSendDevices)
+        {
+            string result = "";
+            foreach (var device in notSendDevices)
+            {
+                result += " " + device.DeviceName;
+            }
+            MessageBox.Show(@" زمانبندی به دستگاه ها روبرو ارسال نشد" + result);    
         }
 
         private void CreateSchFile(int schGroupId, string year)

@@ -619,14 +619,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="901632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="902144">
       <assemblyIdentity name="Eco" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mA14nciTrKI6+aDenS+8FjNMzLi2gv9blQ87KZm1pAY=</dsig:DigestValue>
+        <dsig:DigestValue>wWEruv9ZpHrsphJg6EYP53836DUuBqPEEpHiRhl5PDM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -638,7 +638,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>49R+K03fRRTqPxRPP3kS7m8KRLPeaQ7S7aqNe1avUmU=</dsig:DigestValue>
+        <dsig:DigestValue>PJDHLJWgpCyrkoWN/xFEcy3eA5WUEyiX1c4MD0Yy9Fg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -650,7 +650,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/kTluojazUzPfg9KB9B7BeZ+5ghCJRuuQ71gr3eloos=</dsig:DigestValue>
+        <dsig:DigestValue>Pwj4ZBu6Iv81FJIS3nIaGhB+D5WIkPkfopDNECHIGFA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

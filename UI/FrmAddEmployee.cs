@@ -2481,15 +2481,15 @@ namespace UI
                 throw new Exception(ex.Message, ex);
             }
         }
-
+        string tempData = "";
+        int tempLength = 0;
         private void BtnGetFace_Click(object sender, EventArgs e)
         {
             try
             {
                 CZKEMClass czkem = new CZKEMClass();
                 FaceBll faceBll = new FaceBll();
-                string tempData = "";
-                int tempLength = 0;
+
                 Byte[] photoData = new Byte[1024*1024];
                 int photoSize = 0;
                 var id = (int)cmbbxSelectEncoder.SelectedValue;
@@ -2510,20 +2510,23 @@ namespace UI
                 if (czkem.Connect_Net(device.IP, (int)device.Port))
                 {
                     var res = czkem.GetUserFaceStr(iMachineNumber, employees[0].PersonalNum, 50, ref tempData, ref tempLength);
-                    //var result = czkem.GetUserFace(iMachineNumber, employees[0].PersonalNum, 50, ref photoData[0],
-                    //    ref tempLength);
+                    var result2 = czkem.GetUserFace(iMachineNumber, employees[0].PersonalNum, 50, ref photoData[0],
+                       ref tempLength);
 
 
+                   byte[] bytes = System.Convert.FromBase64String(tempData);
                     var result = czkem.GetUserFacePhotoByName(iMachineNumber, employees[0].PersonalNum + ".jpg", out photoData[0], out photoSize);
                     if (result)
                     {
-                        this.PicBox.Image = ResizeImage(new Bitmap(new MemoryStream(photoData, 0, photoData.Length)),
-                            new Size(116, 129));
+                        var a = new MemoryStream(photoData, 0, photoData.Length);
+                        //var a = new MemoryStream(bytes, 0, bytes.Length);
+                        var b = new Bitmap(a);
+                        this.PicBox.Image = ResizeImage(b,new Size(116, 129));
                     }
 
 
 
-                    if (res & result)
+                    if (res || result)
                     {
                         if (FaceBll.ExistEmployeeFace(_employees.ID))
                         {
@@ -2571,7 +2574,7 @@ namespace UI
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-                throw;
+                //throw;
             }
         }
 
@@ -2579,7 +2582,10 @@ namespace UI
         {
             try
             {
-                FrmSendInfo frmSendInfo = new FrmSendInfo(true,_employees);
+
+                CZKEMClass czkem = new CZKEMClass();
+
+                FrmSendInfo frmSendInfo = new FrmSendInfo(true, _employees);
                 frmSendInfo.ShowDialog();
             }
             catch (Exception ex)

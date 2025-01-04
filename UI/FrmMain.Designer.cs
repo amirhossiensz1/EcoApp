@@ -320,6 +320,7 @@ namespace UI
             this.gridViewEmp.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
             this.gridViewEmp.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewEmp.OptionsBehavior.Editable = false;
+            this.gridViewEmp.OptionsFilter.InHeaderSearchMode = DevExpress.XtraGrid.Views.Grid.GridInHeaderSearchMode.TextFilter;
             this.gridViewEmp.OptionsFind.AlwaysVisible = true;
             this.gridViewEmp.OptionsFind.FindNullPrompt = "کلمه مورد نظر را وارد کنید ....";
             this.gridViewEmp.OptionsFind.ShowClearButton = false;

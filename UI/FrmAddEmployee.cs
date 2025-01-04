@@ -16,6 +16,7 @@ using System.Windows.Forms;
 using BLL;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
+using Eco;
 using Eco.Properties;
 using Model;
 using Telerik.WinControls.UI;
@@ -178,7 +179,7 @@ namespace UI
             progressPanel.Visible = false;
             grpAuthType.Visible = true;
             grpAuthTypeForZk.Visible = false;
-            grpAuthTypeForZk.Location = new Point(378, 461);
+            grpAuthTypeForZk.Location = new Point(6, 461);
             cmbAcsGroup.Enabled = false;
             FillAuthenticationComboBox();
             
@@ -2283,7 +2284,6 @@ namespace UI
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
             }
         }
 
@@ -2514,7 +2514,7 @@ namespace UI
                        ref tempLength);
 
 
-                   byte[] bytes = System.Convert.FromBase64String(tempData);
+                  // byte[] bytes = System.Convert.FromBase64String(tempData);
                     var result = czkem.GetUserFacePhotoByName(iMachineNumber, employees[0].PersonalNum + ".jpg", out photoData[0], out photoSize);
                     if (result)
                     {
@@ -2671,6 +2671,15 @@ namespace UI
             s = _czkem.GetAppOfRole(1, 4, out name);
             s = _czkem.GetFunOfRole(1,4,out name);
             s = _czkem.SetPermOfAppFun(1, 4, "comset", "wifiset");
+        }
+
+        private void btnSetPrivateAccessGroup_Click(object sender, EventArgs e)
+        {
+            FrmAccessGroup frm = new FrmAccessGroup(true,txtLName.Text);
+            frm.ShowDialog();
+            FillAcsGroup();
+            chkPrivateAccess.Checked = true;
+            cmbAcsGroup.SelectedValue = frm.AcessGroupID;
         }
     }
 

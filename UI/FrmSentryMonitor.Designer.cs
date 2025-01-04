@@ -53,7 +53,7 @@
             this.grdViewTrafic.Location = new System.Drawing.Point(0, 0);
             this.grdViewTrafic.MainView = this.grdTrafic;
             this.grdViewTrafic.Name = "grdViewTrafic";
-            this.grdViewTrafic.Size = new System.Drawing.Size(963, 554);
+            this.grdViewTrafic.Size = new System.Drawing.Size(902, 554);
             this.grdViewTrafic.TabIndex = 0;
             this.grdViewTrafic.UseEmbeddedNavigator = true;
             this.grdViewTrafic.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -239,7 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 554);
+            this.ClientSize = new System.Drawing.Size(902, 554);
             this.Controls.Add(this.grdViewTrafic);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmSentryMonitor";

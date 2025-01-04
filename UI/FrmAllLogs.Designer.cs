@@ -44,7 +44,6 @@
             this.grdpictureCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CmbBxType = new System.Windows.Forms.ComboBox();
             this.lblTypeExport = new System.Windows.Forms.Label();
-            this.BtnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.BtnExport = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewAllLogs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.girdViewAllLogs)).BeginInit();
@@ -56,7 +55,7 @@
             this.grdViewAllLogs.Location = new System.Drawing.Point(0, 0);
             this.grdViewAllLogs.MainView = this.girdViewAllLogs;
             this.grdViewAllLogs.Name = "grdViewAllLogs";
-            this.grdViewAllLogs.Size = new System.Drawing.Size(948, 462);
+            this.grdViewAllLogs.Size = new System.Drawing.Size(789, 462);
             this.grdViewAllLogs.TabIndex = 0;
             this.grdViewAllLogs.UseEmbeddedNavigator = true;
             this.grdViewAllLogs.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -85,8 +84,10 @@
             this.girdViewAllLogs.Name = "girdViewAllLogs";
             this.girdViewAllLogs.OptionsBehavior.AutoSelectAllInEditor = false;
             this.girdViewAllLogs.OptionsBehavior.Editable = false;
+            this.girdViewAllLogs.OptionsFilter.InHeaderSearchMode = DevExpress.XtraGrid.Views.Grid.GridInHeaderSearchMode.TextSearch;
             this.girdViewAllLogs.OptionsFind.AlwaysVisible = true;
             this.girdViewAllLogs.OptionsFind.FindNullPrompt = "کلمه مورد نظر را وارد کنید ....";
+            this.girdViewAllLogs.OptionsFind.SearchInPreview = true;
             this.girdViewAllLogs.OptionsPrint.PrintDetails = true;
             this.girdViewAllLogs.OptionsPrint.PrintFilterInfo = true;
             this.girdViewAllLogs.OptionsPrint.PrintFooter = false;
@@ -273,36 +274,29 @@
             this.CmbBxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbBxType.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.CmbBxType.FormattingEnabled = true;
-            this.CmbBxType.Location = new System.Drawing.Point(137, 12);
+            this.CmbBxType.Location = new System.Drawing.Point(604, 12);
             this.CmbBxType.Name = "CmbBxType";
             this.CmbBxType.Size = new System.Drawing.Size(121, 24);
             this.CmbBxType.TabIndex = 16;
+            this.CmbBxType.SelectedIndexChanged += new System.EventHandler(this.CmbBxType_SelectedIndexChanged);
             // 
             // lblTypeExport
             // 
             this.lblTypeExport.AutoSize = true;
             this.lblTypeExport.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblTypeExport.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblTypeExport.Location = new System.Drawing.Point(15, 15);
+            this.lblTypeExport.Location = new System.Drawing.Point(483, 15);
             this.lblTypeExport.Name = "lblTypeExport";
-            this.lblTypeExport.Size = new System.Drawing.Size(116, 16);
+            this.lblTypeExport.Size = new System.Drawing.Size(115, 16);
             this.lblTypeExport.TabIndex = 15;
             this.lblTypeExport.Text = "انتخاب نوع خروجی:";
-            // 
-            // BtnPrint
-            // 
-            this.BtnPrint.Location = new System.Drawing.Point(356, 12);
-            this.BtnPrint.Name = "BtnPrint";
-            this.BtnPrint.Size = new System.Drawing.Size(75, 23);
-            this.BtnPrint.TabIndex = 14;
-            this.BtnPrint.Text = "چاپ";
-            this.BtnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
+            this.lblTypeExport.Click += new System.EventHandler(this.lblTypeExport_Click);
             // 
             // BtnExport
             // 
-            this.BtnExport.Location = new System.Drawing.Point(266, 12);
+            this.BtnExport.Location = new System.Drawing.Point(731, 12);
             this.BtnExport.Name = "BtnExport";
-            this.BtnExport.Size = new System.Drawing.Size(75, 23);
+            this.BtnExport.Size = new System.Drawing.Size(52, 23);
             this.BtnExport.TabIndex = 13;
             this.BtnExport.Text = "خروجی ";
             this.BtnExport.Click += new System.EventHandler(this.BtnExport_Click);
@@ -313,10 +307,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(948, 462);
+            this.ClientSize = new System.Drawing.Size(789, 462);
             this.Controls.Add(this.CmbBxType);
             this.Controls.Add(this.lblTypeExport);
-            this.Controls.Add(this.BtnPrint);
             this.Controls.Add(this.BtnExport);
             this.Controls.Add(this.grdViewAllLogs);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -351,7 +344,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn grdpictureCol;
         private System.Windows.Forms.ComboBox CmbBxType;
         private System.Windows.Forms.Label lblTypeExport;
-        private DevExpress.XtraEditors.SimpleButton BtnPrint;
         private DevExpress.XtraEditors.SimpleButton BtnExport;
         private DevExpress.XtraGrid.Columns.GridColumn GrdPersonalNum;
         private DevExpress.XtraGrid.Columns.GridColumn Id;

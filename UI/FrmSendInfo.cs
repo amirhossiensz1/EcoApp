@@ -607,7 +607,7 @@ namespace UI
 
                             if (employee.PrivateAccess != null && (bool)employee.PrivateAccess)
                             {
-                                _czkem.SetUserGroup(1, Convert.ToInt32(employee.PersonalNum), (int)employee.AcsGroupID);
+                                 var h = _czkem.SetUserGroup(1, Convert.ToInt32(employee.PersonalNum), (int)employee.AcsGroupID);
                             }
                             else
                             {

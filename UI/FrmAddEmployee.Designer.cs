@@ -44,6 +44,7 @@
             this.xtraTab = new DevExpress.XtraTab.XtraTabControl();
             this.TabBasicInfo = new DevExpress.XtraTab.XtraTabPage();
             this.GrpAddEmp = new DevExpress.XtraEditors.GroupControl();
+            this.btnSetPrivateAccessGroup = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbAdmin = new System.Windows.Forms.RadioButton();
             this.rdbUser = new System.Windows.Forms.RadioButton();
@@ -55,6 +56,13 @@
             this.rdbtnRaya = new System.Windows.Forms.RadioButton();
             this.rdbtnZk = new System.Windows.Forms.RadioButton();
             this.rdbtnEco = new System.Windows.Forms.RadioButton();
+            this.grpMenuAccess = new System.Windows.Forms.GroupBox();
+            this.chkDeviceMenu = new System.Windows.Forms.CheckBox();
+            this.chkOperatorMenu = new System.Windows.Forms.CheckBox();
+            this.chkNetworkMenu = new System.Windows.Forms.CheckBox();
+            this.lblDeviceMenu = new System.Windows.Forms.Label();
+            this.lblOperatorMenu = new System.Windows.Forms.Label();
+            this.LblNetworkMenu = new System.Windows.Forms.Label();
             this.GrpOrganization = new System.Windows.Forms.GroupBox();
             this.TreeOrganization = new Telerik.WinControls.UI.RadTreeView();
             this.GrpPvInfo = new System.Windows.Forms.GroupBox();
@@ -78,13 +86,6 @@
             this.txtPin = new System.Windows.Forms.TextBox();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.txtEmpId = new System.Windows.Forms.TextBox();
-            this.grpMenuAccess = new System.Windows.Forms.GroupBox();
-            this.chkDeviceMenu = new System.Windows.Forms.CheckBox();
-            this.chkOperatorMenu = new System.Windows.Forms.CheckBox();
-            this.chkNetworkMenu = new System.Windows.Forms.CheckBox();
-            this.lblDeviceMenu = new System.Windows.Forms.Label();
-            this.lblOperatorMenu = new System.Windows.Forms.Label();
-            this.LblNetworkMenu = new System.Windows.Forms.Label();
             this.BtnBrows = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEmployee = new System.Windows.Forms.PictureBox();
             this.grpAuthType = new System.Windows.Forms.GroupBox();
@@ -144,10 +145,10 @@
             this.groupBox1.SuspendLayout();
             this.grpAuthTypeForZk.SuspendLayout();
             this.DeviceType.SuspendLayout();
+            this.grpMenuAccess.SuspendLayout();
             this.GrpOrganization.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TreeOrganization)).BeginInit();
             this.GrpPvInfo.SuspendLayout();
-            this.grpMenuAccess.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEmployee)).BeginInit();
             this.grpAuthType.SuspendLayout();
             this.TabFinger.SuspendLayout();
@@ -172,14 +173,14 @@
             // gridDeviceInfo
             // 
             this.gridDeviceInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridDeviceInfo.Location = new System.Drawing.Point(2, 20);
+            this.gridDeviceInfo.Location = new System.Drawing.Point(2, 23);
             this.gridDeviceInfo.MainView = this.GrdInfoInDevices;
             this.gridDeviceInfo.Name = "gridDeviceInfo";
             this.gridDeviceInfo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.chkEditDB,
             this.btnFingers,
             this.FigerLink});
-            this.gridDeviceInfo.Size = new System.Drawing.Size(761, 616);
+            this.gridDeviceInfo.Size = new System.Drawing.Size(761, 613);
             this.gridDeviceInfo.TabIndex = 0;
             this.gridDeviceInfo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GrdInfoInDevices});
@@ -317,14 +318,15 @@
             // GrpAddEmp
             // 
             this.GrpAddEmp.CaptionLocation = DevExpress.Utils.Locations.Top;
+            this.GrpAddEmp.Controls.Add(this.btnSetPrivateAccessGroup);
             this.GrpAddEmp.Controls.Add(this.groupBox1);
-            this.GrpAddEmp.Controls.Add(this.grpAuthTypeForZk);
             this.GrpAddEmp.Controls.Add(this.DeviceType);
+            this.GrpAddEmp.Controls.Add(this.grpMenuAccess);
             this.GrpAddEmp.Controls.Add(this.GrpOrganization);
             this.GrpAddEmp.Controls.Add(this.GrpPvInfo);
-            this.GrpAddEmp.Controls.Add(this.grpMenuAccess);
             this.GrpAddEmp.Controls.Add(this.BtnBrows);
             this.GrpAddEmp.Controls.Add(this.pictureEmployee);
+            this.GrpAddEmp.Controls.Add(this.grpAuthTypeForZk);
             this.GrpAddEmp.Controls.Add(this.grpAuthType);
             this.GrpAddEmp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GrpAddEmp.Location = new System.Drawing.Point(0, 0);
@@ -333,6 +335,17 @@
             this.GrpAddEmp.Size = new System.Drawing.Size(765, 638);
             this.GrpAddEmp.TabIndex = 15;
             this.GrpAddEmp.Text = "اضافه کردن کامند";
+            // 
+            // btnSetPrivateAccessGroup
+            // 
+            this.btnSetPrivateAccessGroup.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSetPrivateAccessGroup.Appearance.Options.UseBackColor = true;
+            this.btnSetPrivateAccessGroup.Location = new System.Drawing.Point(582, 407);
+            this.btnSetPrivateAccessGroup.Name = "btnSetPrivateAccessGroup";
+            this.btnSetPrivateAccessGroup.Size = new System.Drawing.Size(172, 38);
+            this.btnSetPrivateAccessGroup.TabIndex = 32;
+            this.btnSetPrivateAccessGroup.Text = "تعریف گروه دسترسی اختصاصی";
+            this.btnSetPrivateAccessGroup.Click += new System.EventHandler(this.btnSetPrivateAccessGroup_Click);
             // 
             // groupBox1
             // 
@@ -372,9 +385,9 @@
             this.grpAuthTypeForZk.Controls.Add(this.chkAuth);
             this.grpAuthTypeForZk.Controls.Add(this.label3);
             this.grpAuthTypeForZk.Controls.Add(this.VerfiCombo);
-            this.grpAuthTypeForZk.Location = new System.Drawing.Point(17, 403);
+            this.grpAuthTypeForZk.Location = new System.Drawing.Point(6, 461);
             this.grpAuthTypeForZk.Name = "grpAuthTypeForZk";
-            this.grpAuthTypeForZk.Size = new System.Drawing.Size(382, 97);
+            this.grpAuthTypeForZk.Size = new System.Drawing.Size(440, 110);
             this.grpAuthTypeForZk.TabIndex = 24;
             this.grpAuthTypeForZk.TabStop = false;
             this.grpAuthTypeForZk.Text = "نحوه احراز هویت";
@@ -413,10 +426,10 @@
             this.DeviceType.Controls.Add(this.rdbtnRaya);
             this.DeviceType.Controls.Add(this.rdbtnZk);
             this.DeviceType.Controls.Add(this.rdbtnEco);
-            this.DeviceType.Location = new System.Drawing.Point(384, 407);
+            this.DeviceType.Location = new System.Drawing.Point(6, 407);
             this.DeviceType.Name = "DeviceType";
             this.DeviceType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DeviceType.Size = new System.Drawing.Size(368, 48);
+            this.DeviceType.Size = new System.Drawing.Size(437, 48);
             this.DeviceType.TabIndex = 29;
             this.DeviceType.TabStop = false;
             this.DeviceType.Text = "انتخاب نوع دستگاه ";
@@ -460,6 +473,77 @@
             this.rdbtnEco.Text = "دستگاه اکو";
             this.rdbtnEco.UseVisualStyleBackColor = true;
             this.rdbtnEco.CheckedChanged += new System.EventHandler(this.rdbtnEco_CheckedChanged);
+            // 
+            // grpMenuAccess
+            // 
+            this.grpMenuAccess.Controls.Add(this.chkDeviceMenu);
+            this.grpMenuAccess.Controls.Add(this.chkOperatorMenu);
+            this.grpMenuAccess.Controls.Add(this.chkNetworkMenu);
+            this.grpMenuAccess.Controls.Add(this.lblDeviceMenu);
+            this.grpMenuAccess.Controls.Add(this.lblOperatorMenu);
+            this.grpMenuAccess.Controls.Add(this.LblNetworkMenu);
+            this.grpMenuAccess.Enabled = false;
+            this.grpMenuAccess.Location = new System.Drawing.Point(458, 461);
+            this.grpMenuAccess.Name = "grpMenuAccess";
+            this.grpMenuAccess.Size = new System.Drawing.Size(294, 168);
+            this.grpMenuAccess.TabIndex = 26;
+            this.grpMenuAccess.TabStop = false;
+            this.grpMenuAccess.Text = "سطح دسترسی به تنظیمات دستگاه";
+            // 
+            // chkDeviceMenu
+            // 
+            this.chkDeviceMenu.AutoSize = true;
+            this.chkDeviceMenu.Location = new System.Drawing.Point(181, 130);
+            this.chkDeviceMenu.Name = "chkDeviceMenu";
+            this.chkDeviceMenu.Size = new System.Drawing.Size(15, 14);
+            this.chkDeviceMenu.TabIndex = 8;
+            this.chkDeviceMenu.UseVisualStyleBackColor = true;
+            // 
+            // chkOperatorMenu
+            // 
+            this.chkOperatorMenu.AutoSize = true;
+            this.chkOperatorMenu.Location = new System.Drawing.Point(181, 81);
+            this.chkOperatorMenu.Name = "chkOperatorMenu";
+            this.chkOperatorMenu.Size = new System.Drawing.Size(15, 14);
+            this.chkOperatorMenu.TabIndex = 7;
+            this.chkOperatorMenu.UseVisualStyleBackColor = true;
+            // 
+            // chkNetworkMenu
+            // 
+            this.chkNetworkMenu.AutoSize = true;
+            this.chkNetworkMenu.Location = new System.Drawing.Point(181, 33);
+            this.chkNetworkMenu.Name = "chkNetworkMenu";
+            this.chkNetworkMenu.Size = new System.Drawing.Size(15, 14);
+            this.chkNetworkMenu.TabIndex = 6;
+            this.chkNetworkMenu.UseVisualStyleBackColor = true;
+            // 
+            // lblDeviceMenu
+            // 
+            this.lblDeviceMenu.AutoSize = true;
+            this.lblDeviceMenu.Location = new System.Drawing.Point(206, 130);
+            this.lblDeviceMenu.Name = "lblDeviceMenu";
+            this.lblDeviceMenu.Size = new System.Drawing.Size(82, 13);
+            this.lblDeviceMenu.TabIndex = 5;
+            this.lblDeviceMenu.Text = "تنظیمات دستگاه";
+            // 
+            // lblOperatorMenu
+            // 
+            this.lblOperatorMenu.AutoSize = true;
+            this.lblOperatorMenu.Location = new System.Drawing.Point(210, 81);
+            this.lblOperatorMenu.Name = "lblOperatorMenu";
+            this.lblOperatorMenu.Size = new System.Drawing.Size(78, 13);
+            this.lblOperatorMenu.TabIndex = 4;
+            this.lblOperatorMenu.Text = "تنظیمات کاربری";
+            // 
+            // LblNetworkMenu
+            // 
+            this.LblNetworkMenu.AutoSize = true;
+            this.LblNetworkMenu.Location = new System.Drawing.Point(213, 33);
+            this.LblNetworkMenu.Name = "LblNetworkMenu";
+            this.LblNetworkMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.LblNetworkMenu.Size = new System.Drawing.Size(75, 13);
+            this.LblNetworkMenu.TabIndex = 3;
+            this.LblNetworkMenu.Text = "تنظیمات شبکه";
             // 
             // GrpOrganization
             // 
@@ -733,77 +817,6 @@
             this.txtEmpId.TabIndex = 10;
             this.txtEmpId.TextChanged += new System.EventHandler(this.txtEmpId_TextChanged);
             // 
-            // grpMenuAccess
-            // 
-            this.grpMenuAccess.Controls.Add(this.chkDeviceMenu);
-            this.grpMenuAccess.Controls.Add(this.chkOperatorMenu);
-            this.grpMenuAccess.Controls.Add(this.chkNetworkMenu);
-            this.grpMenuAccess.Controls.Add(this.lblDeviceMenu);
-            this.grpMenuAccess.Controls.Add(this.lblOperatorMenu);
-            this.grpMenuAccess.Controls.Add(this.LblNetworkMenu);
-            this.grpMenuAccess.Enabled = false;
-            this.grpMenuAccess.Location = new System.Drawing.Point(5, 461);
-            this.grpMenuAccess.Name = "grpMenuAccess";
-            this.grpMenuAccess.Size = new System.Drawing.Size(367, 168);
-            this.grpMenuAccess.TabIndex = 26;
-            this.grpMenuAccess.TabStop = false;
-            this.grpMenuAccess.Text = "سطح دسترسی به تنظیمات دستگاه";
-            // 
-            // chkDeviceMenu
-            // 
-            this.chkDeviceMenu.AutoSize = true;
-            this.chkDeviceMenu.Location = new System.Drawing.Point(254, 149);
-            this.chkDeviceMenu.Name = "chkDeviceMenu";
-            this.chkDeviceMenu.Size = new System.Drawing.Size(15, 14);
-            this.chkDeviceMenu.TabIndex = 8;
-            this.chkDeviceMenu.UseVisualStyleBackColor = true;
-            // 
-            // chkOperatorMenu
-            // 
-            this.chkOperatorMenu.AutoSize = true;
-            this.chkOperatorMenu.Location = new System.Drawing.Point(254, 100);
-            this.chkOperatorMenu.Name = "chkOperatorMenu";
-            this.chkOperatorMenu.Size = new System.Drawing.Size(15, 14);
-            this.chkOperatorMenu.TabIndex = 7;
-            this.chkOperatorMenu.UseVisualStyleBackColor = true;
-            // 
-            // chkNetworkMenu
-            // 
-            this.chkNetworkMenu.AutoSize = true;
-            this.chkNetworkMenu.Location = new System.Drawing.Point(254, 52);
-            this.chkNetworkMenu.Name = "chkNetworkMenu";
-            this.chkNetworkMenu.Size = new System.Drawing.Size(15, 14);
-            this.chkNetworkMenu.TabIndex = 6;
-            this.chkNetworkMenu.UseVisualStyleBackColor = true;
-            // 
-            // lblDeviceMenu
-            // 
-            this.lblDeviceMenu.AutoSize = true;
-            this.lblDeviceMenu.Location = new System.Drawing.Point(279, 149);
-            this.lblDeviceMenu.Name = "lblDeviceMenu";
-            this.lblDeviceMenu.Size = new System.Drawing.Size(82, 13);
-            this.lblDeviceMenu.TabIndex = 5;
-            this.lblDeviceMenu.Text = "تنظیمات دستگاه";
-            // 
-            // lblOperatorMenu
-            // 
-            this.lblOperatorMenu.AutoSize = true;
-            this.lblOperatorMenu.Location = new System.Drawing.Point(283, 100);
-            this.lblOperatorMenu.Name = "lblOperatorMenu";
-            this.lblOperatorMenu.Size = new System.Drawing.Size(78, 13);
-            this.lblOperatorMenu.TabIndex = 4;
-            this.lblOperatorMenu.Text = "تنظیمات کاربری";
-            // 
-            // LblNetworkMenu
-            // 
-            this.LblNetworkMenu.AutoSize = true;
-            this.LblNetworkMenu.Location = new System.Drawing.Point(286, 52);
-            this.LblNetworkMenu.Name = "LblNetworkMenu";
-            this.LblNetworkMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LblNetworkMenu.Size = new System.Drawing.Size(75, 13);
-            this.LblNetworkMenu.TabIndex = 3;
-            this.LblNetworkMenu.Text = "تنظیمات شبکه";
-            // 
             // BtnBrows
             // 
             this.BtnBrows.Location = new System.Drawing.Point(31, 183);
@@ -842,9 +855,9 @@
             this.grpAuthType.Controls.Add(this.lbl3);
             this.grpAuthType.Controls.Add(this.lbl2);
             this.grpAuthType.Controls.Add(this.lbl1);
-            this.grpAuthType.Location = new System.Drawing.Point(378, 461);
+            this.grpAuthType.Location = new System.Drawing.Point(12, 461);
             this.grpAuthType.Name = "grpAuthType";
-            this.grpAuthType.Size = new System.Drawing.Size(382, 169);
+            this.grpAuthType.Size = new System.Drawing.Size(434, 169);
             this.grpAuthType.TabIndex = 16;
             this.grpAuthType.TabStop = false;
             this.grpAuthType.Text = "نحوه احراز هویت";
@@ -1270,7 +1283,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(781, 710);
+            this.ClientSize = new System.Drawing.Size(797, 710);
             this.Controls.Add(this.BtnSend);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSaveEmp);
@@ -1307,12 +1320,12 @@
             this.grpAuthTypeForZk.PerformLayout();
             this.DeviceType.ResumeLayout(false);
             this.DeviceType.PerformLayout();
+            this.grpMenuAccess.ResumeLayout(false);
+            this.grpMenuAccess.PerformLayout();
             this.GrpOrganization.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TreeOrganization)).EndInit();
             this.GrpPvInfo.ResumeLayout(false);
             this.GrpPvInfo.PerformLayout();
-            this.grpMenuAccess.ResumeLayout(false);
-            this.grpMenuAccess.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEmployee)).EndInit();
             this.grpAuthType.ResumeLayout(false);
             this.grpAuthType.PerformLayout();
@@ -1443,5 +1456,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdbAdmin;
         private System.Windows.Forms.RadioButton rdbUser;
+        private DevExpress.XtraEditors.SimpleButton btnSetPrivateAccessGroup;
     }
 }

@@ -187,5 +187,15 @@ namespace UI
             Excel,
             Csv
         };
+
+        private void lblTypeExport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbBxType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

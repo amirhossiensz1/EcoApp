@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hubfpNYUx+Tj9UTI47kw0u1L2/IyAj87u/YnVaz7qFg=</dsig:DigestValue>
+        <dsig:DigestValue>/r7hTeT5iS7cOzoNUQCkxdXbCG2Afg4P96PaoBDqYCo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>a7KIgOquT8M5aKNBvZtXxPwkcYJm5zPGLj9MdOF+GDM=</dsig:DigestValue>
+        <dsig:DigestValue>/maUjlR8m5h7HkgHMaFqn1fOXxns0mAEWXDMKLEJuK4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -619,14 +619,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="902144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="905216">
       <assemblyIdentity name="Eco" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wWEruv9ZpHrsphJg6EYP53836DUuBqPEEpHiRhl5PDM=</dsig:DigestValue>
+        <dsig:DigestValue>nwJwk/tDkfPdcmSnGy3Qu0I68CkdkFAKklPMo8SDcUc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -638,7 +638,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PJDHLJWgpCyrkoWN/xFEcy3eA5WUEyiX1c4MD0Yy9Fg=</dsig:DigestValue>
+        <dsig:DigestValue>TbFK9T4L5umBIH3ms7R/A6XH7c0mKhnl2S8XPiVn19o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -650,7 +650,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Pwj4ZBu6Iv81FJIS3nIaGhB+D5WIkPkfopDNECHIGFA=</dsig:DigestValue>
+        <dsig:DigestValue>PYCocoZ0W01yrYrvfr2gGfynjKVs5H2oeh/QGAxttD8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -715,14 +715,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.zkemkeeper.dll" size="68096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.zkemkeeper.dll" size="67584">
       <assemblyIdentity name="Interop.zkemkeeper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zqSMa2VK4uGFbWhO75J0S0ETG2CwG8dULnvu36WAdT4=</dsig:DigestValue>
+        <dsig:DigestValue>7y46oFvL64zPyTYWivYBAUpvDVf0/bsClSV8HjlAEEc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -734,7 +734,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dPsK/32KaUdr5NUfnY5bGcexoJJhyJ7ORvlWbSCvJL4=</dsig:DigestValue>
+        <dsig:DigestValue>omzfa3Iv96WeBG/1cHo5vYKECtwNMZe9WBorKWNW6dA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

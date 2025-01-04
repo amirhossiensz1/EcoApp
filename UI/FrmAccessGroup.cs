@@ -15,9 +15,20 @@ namespace Eco
     public partial class FrmAccessGroup : Form
     {
         private CZKEMClass czkem;
+        public bool PrivateAccesss { get; set; }
+        public string LastName { get; set; }
+
+        public int AcessGroupID { get; set; }
         public FrmAccessGroup()
         {
             InitializeComponent();
+        }
+
+        public FrmAccessGroup(bool privateAccess, string lastName)
+        {
+            InitializeComponent();
+            PrivateAccesss = privateAccess;
+            LastName = lastName;
         }
 
         public bool EditFlag { get; set; }
@@ -28,6 +39,8 @@ namespace Eco
             FillAcsArea();
             LoadVerfiyCombo();
             EditFlag = false;
+            if(PrivateAccesss)
+                txtAcsGroupName.Text = @"دسترسی اختصاصی " + LastName;    
         }
 
         private void LoadVerfiyCombo()
@@ -113,6 +126,8 @@ namespace Eco
                     SendToZkDevices(acsGroupAcsArea.AcsGroupID);
 
                     EditFlag = false;
+                    AcessGroupID = acsGroupBll.Select(accessGroup.ID).ID;   
+
                     MessageBox.Show(@"گروه دسترسی ثبت شد",
                         @"", MessageBoxButtons.OK,
                         MessageBoxIcon.Information, MessageBoxDefaultButton.Button1,
@@ -135,7 +150,7 @@ namespace Eco
                     ClearForm();
 
                     SendToZkDevices(acsGroupAcsArea.AcsGroupID);
-
+                    AcessGroupID = (int)acsGroupAcsArea.AcsGroupID;
                     MessageBox.Show(@"گروه دسترسی ثبت شد",
                         @"", MessageBoxButtons.OK,
                         MessageBoxIcon.Information, MessageBoxDefaultButton.Button1,
@@ -157,7 +172,7 @@ namespace Eco
                 var accessgroup = accessGroupBll.Select((int) acsGroupId);
 
                 var acsgroupArea = accessgroup.AcsGroupAcsAreas.ToList();
-
+                List<Device> notSendDevices = new List<Device>();
 
                 var zkdevices = deviceBll.SelectDevices().ToList().Where(c => c.DeviceType.ID == 4);
 
@@ -175,22 +190,47 @@ namespace Eco
                                 {
                                     var res = czkem.SSR_SetGroupTZ(1, (int)acsGroupId, (int)deviceSch.SchgroupID, 0, 0, 0, (int)VerfiCombo.SelectedValue);
                                     var rest = czkem.SSR_SetUnLockGroup(1, (int)acsGroupId, (int)acsGroupId,0,0,0,0);
+                                    if (!(res & rest))
+                                        notSendDevices.Add(device);
+
 
                                 }
                                 else
                                 {
                                     var res = czkem.SSR_SetGroupTZ(1, (int)acsGroupId, (int)0, 0, 0, 0, 0);
                                     var rest = czkem.SSR_SetUnLockGroup(1, (int)acsGroupId, (int)acsGroupId, 0, 0, 0, 0);
+                                    if (!(res & rest))
+                                        notSendDevices.Add(device);
                                 }
                             }
                         }
+                        else
+                        {
+                            notSendDevices.Add(device);
+                        }
+                    }
+                    else
+                    {
+                        notSendDevices.Add(device);
                     }
                 }
+                if (notSendDevices.Count != 0)
+                    ShowMessage(notSendDevices);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
             }
+        }
+
+        private void ShowMessage(List<Device> notSendDevices)
+        {
+            string result = "";
+            foreach (var device in notSendDevices)
+            {
+                result += " " + device.DeviceName;
+            }
+            MessageBox.Show(@" گروه دسترسی به دستگاه ها روبرو ارسال نشد" + result);
         }
 
         private void ClearForm()
@@ -366,7 +406,7 @@ namespace Eco
             }
             catch (Exception ex)
             {
-                throw;
+                //throw;
             }
         }
 

@@ -179,6 +179,7 @@
             // 
             this.chkListAcsGroup.CheckOnClick = true;
             this.chkListAcsGroup.DisplayMember = "NameID";
+            this.chkListAcsGroup.HorizontalScrollbar = true;
             this.chkListAcsGroup.Location = new System.Drawing.Point(6, 44);
             this.chkListAcsGroup.MultiColumn = true;
             this.chkListAcsGroup.Name = "chkListAcsGroup";

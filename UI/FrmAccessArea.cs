@@ -191,7 +191,6 @@ namespace Eco
             }
         }
 
-
         public DataTable ConvertToDataTable<T>(IList<T> data)
         {
             var properties =
@@ -213,7 +212,6 @@ namespace Eco
         {
             Close();
         }
-
 
         private void chkListAcsArea_ItemCheck(object sender, ItemCheckEventArgs e)
         {

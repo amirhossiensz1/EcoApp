@@ -586,6 +586,96 @@ namespace UI
                 int j = 0;
                 if (ConnectToDevice(device.IP, device.Port, _czkem))
                 {
+                    if (ConnectToDevice(device.IP, device.Port, _czkem))
+                    {
+                        if (_db)
+                        {
+                            ScheduleGroupBll schBll = new ScheduleGroupBll();
+                            WeekScheduleBll weekScheduleBll = new WeekScheduleBll();
+                            var ScheduleGroups = schBll.SelectAll();
+
+                            foreach (var ScheduleGroup in ScheduleGroups)
+                            {
+                                var weekSchedule = weekScheduleBll.SelectWeekDaysBySchGroupId(ScheduleGroup.ID);
+                                List<string> TimeZoneInfo = new List<string>();
+                                for (int k = 0; k < 7; k++)
+                                {
+
+                                    for (int q = 0; q < weekSchedule.Count; q++)
+                                    {
+                                        if (weekSchedule[q].weekday == k)
+                                        {
+                                            if (weekSchedule[q].DayType.DaySchedules.ToList()
+                                                .FirstOrDefault(c => c.AccessTypeID == 3) != null)
+                                            {
+
+                                                TimeZoneInfo.Add(weekSchedule[q].DayType.DaySchedules.ToList()
+                                                                     .FirstOrDefault(c => c.AccessTypeID == 3).StartTime.Substring(0, 4)
+                                                                 + weekSchedule[q].DayType.DaySchedules.ToList()
+                                                                     .FirstOrDefault(c => c.AccessTypeID == 3).EndTime.Substring(0, 4));
+                                                break;
+                                            }
+                                            TimeZoneInfo.Add("00000000");
+                                            break;
+                                        }
+                                    }
+                                    if (j == weekSchedule.Count)
+                                        TimeZoneInfo.Add("00000000");
+                                }
+
+                                var re = _czkem.SetTZInfo(1, ScheduleGroup.ID, TimeZoneInfo[1] + TimeZoneInfo[2] + TimeZoneInfo[3] + TimeZoneInfo[4] + TimeZoneInfo[5] + TimeZoneInfo[6] + TimeZoneInfo[0]);
+                            }
+
+
+                            //Send Holiday
+
+                            var holidaysGroups = new HoliDaysGroupBll().SelectAll();
+
+                            foreach (var holidaysGroup in holidaysGroups)
+                            {
+                                var holidays = new HoliDayBll().SelectHolidayByHolidayGroupId((int)holidaysGroup.ID);
+
+                                var holidayschGroups = new HoliDaysSchGroupBll().SelectAllHolidaySchGroup(holidaysGroup.ID);
+
+                                foreach (var holidayschGroup in holidayschGroups)
+                                {
+                                    foreach (var holiday in holidays)
+                                    {
+                                        _czkem.SSR_SetHoliday(1, holiday.ID,
+                                            Convert.ToInt32(holiday.Date.Substring(5, 2)),
+                                            Convert.ToInt32(holiday.Date.Substring(8, 2)),
+                                            Convert.ToInt32(holiday.Date.Substring(5, 2)),
+                                            Convert.ToInt32(holiday.Date.Substring(8, 2)), (int)holidayschGroup.SchGroupID);
+                                    }
+                                }
+
+                            }
+
+
+                            //send AceessGroup
+                            AccessGroupBll accessGroupBll = new AccessGroupBll();
+                            var accessGroupList = accessGroupBll.SelectAll();
+                            foreach (var accessGroup in accessGroupList)
+                            {
+                                var acsgroupArea = accessGroup.AcsGroupAcsAreas.ToList();
+                                foreach (var acsGroupAcsArea in acsgroupArea)
+                                {
+                                    var deviceSch = device.DeviceSchGroups.ToList().FirstOrDefault(dsg => dsg.AcsAreaID == acsGroupAcsArea.AcsAreaID);
+                                    if (deviceSch != null)
+                                    {
+                                        var re = _czkem.SSR_SetGroupTZ(1, (int)accessGroup.ID, (int)deviceSch.SchgroupID, 0, 0, 0, (int)0);
+                                        var r = _czkem.SSR_SetUnLockGroup(1, (int)accessGroup.ID, (int)accessGroup.ID, 0, 0, 0, 0);
+                                    }
+                                    else
+                                    {
+                                        var re = _czkem.SSR_SetGroupTZ(1, (int)accessGroup.ID, (int)0, 0, 0, 0, 0);
+                                        var r = _czkem.SSR_SetUnLockGroup(1, (int)accessGroup.ID, (int)accessGroup.ID, 0, 0, 0, 0);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     foreach (var employee in _employees)
                     {
                         if (ConnectToDevice(device.IP, device.Port, _czkem))

@@ -123,7 +123,7 @@ namespace Eco
                     FillAcsGroup();
                     ClearForm();
                    
-                    SendToZkDevices(acsGroupAcsArea.AcsGroupID);
+                    //SendToZkDevices(acsGroupAcsArea.AcsGroupID);
 
                     EditFlag = false;
                     AcessGroupID = acsGroupBll.Select(accessGroup.ID).ID;   
@@ -149,7 +149,7 @@ namespace Eco
                     
                     ClearForm();
 
-                    SendToZkDevices(acsGroupAcsArea.AcsGroupID);
+                   // SendToZkDevices(acsGroupAcsArea.AcsGroupID);
                     AcessGroupID = (int)acsGroupAcsArea.AcsGroupID;
                     MessageBox.Show(@"گروه دسترسی ثبت شد",
                         @"", MessageBoxButtons.OK,

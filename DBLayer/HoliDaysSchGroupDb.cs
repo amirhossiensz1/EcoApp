@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Model;
 
@@ -39,6 +40,11 @@ namespace DBLayer
             {
                 throw;
             }
+        }
+
+        public List<HoliDaysSchGroup> selectAllHolidaySchGroup(int HoliDaysGroupId)
+        {
+            return _ecoDbEntities.HoliDaysSchGroups.Where(x => x.HoliDaysGroupID == HoliDaysGroupId).ToList();
         }
 
         public int Delete(HoliDaysSchGroup holiDaysSchGroup)

@@ -25,10 +25,10 @@ namespace UI
         private int[] _progressbarIndex;
         private string[] _sendingResult;
 
-        
+
         private bool bIsConnected = false;//the boolean value identifies whether the device is connected
         private int iMachineNumber = 1;//the serial number of the device.After connecting the device ,this value will be changed.
-        private bool justFaceSend= false;
+        private bool justFaceSend = false;
 
         public FrmSendInfo()
         {
@@ -227,7 +227,7 @@ namespace UI
                         var row = 0;
                         for (var j = 0; j < result.Length; j++)
                         {
-                            if (onlineDevices[index].ID == (int) result[j])
+                            if (onlineDevices[index].ID == (int)result[j])
                                 row = rowNum[j];
                         }
                         if (selectedDevice.Length > index)
@@ -384,9 +384,9 @@ namespace UI
             var PicSendCorrupt = false;
             var DbSendCorrupt = false;
 
-             
 
-             var deviceBll = new DeviceBLL();
+
+            var deviceBll = new DeviceBLL();
 
             var dbPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
                 "Db");
@@ -579,49 +579,132 @@ namespace UI
 
                 bool flag = false;
                 int j = 0;
-                if (ConnectToDevice(device.IP, device.Port,_czkem))
+                if (ConnectToDevice(device.IP, device.Port, _czkem))
                 {
                     foreach (var employee in _employees)
                     {
                         if (ConnectToDevice(device.IP, device.Port, _czkem))
                         {
                             if (_db)
-                        {
-
-                            var a = from l in _employeeBll.SelectOneEmployees(employee.PersonalNum).Cards
-                                select l.CardData;
-                            if (a.Any())
                             {
-                                _czkem.SetStrCardNumber(a.First());
+
+                                var a = from l in _employeeBll.SelectOneEmployees(employee.PersonalNum).Cards
+                                        select l.CardData;
+                                if (a.Any())
+                                {
+                                    _czkem.SetStrCardNumber(a.First());
+
+                                }
+
+                                //SendTimeZone();
+                                ScheduleGroupBll schBll = new ScheduleGroupBll();
+                                WeekScheduleBll weekScheduleBll = new WeekScheduleBll();
+                                var ScheduleGroups = schBll.SelectAll();
+
+                                foreach (var ScheduleGroup in ScheduleGroups)
+                                {
+                                    var weekSchedule = weekScheduleBll.SelectWeekDaysBySchGroupId(ScheduleGroup.ID);
+                                    List<string> TimeZoneInfo = new List<string>();
+                                    for (int k = 0; k < 7; k++)
+                                    {
+
+                                        for (int q = 0; q < weekSchedule.Count; q++)
+                                        {
+                                            if (weekSchedule[q].weekday == k)
+                                            {
+                                                if (weekSchedule[q].DayType.DaySchedules.ToList()
+                                                    .FirstOrDefault(c => c.AccessTypeID == 3) != null)
+                                                {
+
+                                                    TimeZoneInfo.Add(weekSchedule[q].DayType.DaySchedules.ToList()
+                                                                         .FirstOrDefault(c => c.AccessTypeID == 3).StartTime.Substring(0, 4)
+                                                                     + weekSchedule[q].DayType.DaySchedules.ToList()
+                                                                         .FirstOrDefault(c => c.AccessTypeID == 3).EndTime.Substring(0, 4));
+                                                    break;
+                                                }
+                                                TimeZoneInfo.Add("00000000");
+                                                break;
+                                            }
+                                        }
+                                        if (j == weekSchedule.Count)
+                                            TimeZoneInfo.Add("00000000");
+                                    }
+
+                                    var re = _czkem.SetTZInfo(1, ScheduleGroup.ID, TimeZoneInfo[1] + TimeZoneInfo[2] + TimeZoneInfo[3] + TimeZoneInfo[4] + TimeZoneInfo[5] + TimeZoneInfo[6] + TimeZoneInfo[0]);
+                                }
+
+
+                                //Send Holiday
+
+                                var holidaysGroups = new HoliDaysGroupBll().SelectAll();
+
+                                foreach (var holidaysGroup in holidaysGroups)
+                                {
+                                    var holidays = new HoliDayBll().SelectHolidayByHolidayGroupId((int)holidaysGroup.ID);
+
+                                    var holidayschGroups = new HoliDaysSchGroupBll().SelectAllHolidaySchGroup(holidaysGroup.ID);
+
+                                    foreach (var holidayschGroup in holidayschGroups)
+                                    {
+                                        foreach (var holiday in holidays)
+                                        {
+                                            _czkem.SSR_SetHoliday(1, holiday.ID,
+                                                Convert.ToInt32(holiday.Date.Substring(5, 2)),
+                                                Convert.ToInt32(holiday.Date.Substring(8, 2)),
+                                                Convert.ToInt32(holiday.Date.Substring(5, 2)),
+                                                Convert.ToInt32(holiday.Date.Substring(8, 2)), (int)holidayschGroup.SchGroupID);
+                                        }
+                                    }
+
+                                }
+                                //send AceessGroup
+                                AccessGroupBll accessGroupBll = new AccessGroupBll();
+                                var accessGroupList = accessGroupBll.SelectAll();
+                                foreach (var accessGroup in accessGroupList)
+                                {
+                                    var acsgroupArea = accessGroup.AcsGroupAcsAreas.ToList();
+                                    foreach (var acsGroupAcsArea in acsgroupArea)
+                                    {
+                                        var deviceSch = device.DeviceSchGroups.ToList().FirstOrDefault(dsg => dsg.AcsAreaID == acsGroupAcsArea.AcsAreaID);
+                                        if (deviceSch != null)
+                                        {
+                                            var re = _czkem.SSR_SetGroupTZ(1, (int)accessGroup.ID, (int)deviceSch.SchgroupID, 0, 0, 0, (int)0);
+                                            var r = _czkem.SSR_SetUnLockGroup(1, (int)accessGroup.ID, (int)accessGroup.ID, 0, 0, 0, 0);
+                                        }
+                                        else
+                                        {
+                                            var re = _czkem.SSR_SetGroupTZ(1, (int)accessGroup.ID, (int)0, 0, 0, 0, 0);
+                                            var r= _czkem.SSR_SetUnLockGroup(1, (int)accessGroup.ID, (int)accessGroup.ID, 0, 0, 0, 0);
+                                        }
+                                    }
+                                }
+
+                                if ((bool)employee.IsAdmin)
+                                    flag = _czkem.SSR_SetUserInfo(1, employee.PersonalNum,
+                                        employee.EmpFname + employee.EmpLname, employee.EmpPinCode, 2, true);
+                                else
+                                {
+                                    flag = _czkem.SSR_SetUserInfo(1, employee.PersonalNum,
+                                        employee.EmpFname + employee.EmpLname, employee.EmpPinCode, 0, true);
+                                }
+
+                                if (employee.PrivateAccess != null && (bool)employee.PrivateAccess)
+                                {
+                                    var h = _czkem.SetUserGroup(1, Convert.ToInt32(employee.PersonalNum), (int)employee.AcsGroupID);
+                                }
+                                else
+                                {
+                                    if (employee.Organization != null)
+                                        if (employee.Organization.AcsGroupID != null)
+                                            _czkem.SetUserGroup(1, Convert.ToInt32(employee.PersonalNum), (int)employee.Organization.AcsGroupID);
+                                }
+
+                                byte _ = 0;
+                                var res = _czkem.SetUserInfoEx(1, Convert.ToInt32(employee.PersonalNum),
+                                    Convert.ToInt32(employee.AuthenticationMode), ref _);
+
 
                             }
-
-                            if ((bool)employee.IsAdmin)
-                                flag = _czkem.SSR_SetUserInfo(1, employee.PersonalNum,
-                                    employee.EmpFname + employee.EmpLname, employee.EmpPinCode,2, true);
-                            else
-                            {
-                                flag = _czkem.SSR_SetUserInfo(1, employee.PersonalNum,
-                                    employee.EmpFname + employee.EmpLname, employee.EmpPinCode, 0, true);
-                            }
-
-                            if (employee.PrivateAccess != null && (bool)employee.PrivateAccess)
-                            {
-                                 var h = _czkem.SetUserGroup(1, Convert.ToInt32(employee.PersonalNum), (int)employee.AcsGroupID);
-                            }
-                            else
-                            {
-                                if(employee.Organization != null)
-                                    if(employee.Organization.AcsGroupID != null)
-                                        _czkem.SetUserGroup(1, Convert.ToInt32(employee.PersonalNum), (int)employee.Organization.AcsGroupID);
-                            }
-
-                            byte _ = 0;
-                            var res = _czkem.SetUserInfoEx(1, Convert.ToInt32(employee.PersonalNum),
-                                Convert.ToInt32(employee.AuthenticationMode), ref _);
-
-
-                        }
 
                             if (_finger)
                             {
@@ -630,7 +713,7 @@ namespace UI
                                     if (finger.DataStr != null)
                                     {
                                         bool result;
-                                        result = _czkem.SSR_SetUserTmpStr(iMachineNumber, employee.PersonalNum, (int) (finger.FingerNum + (9 - (2 * finger.FingerNum))), finger.DataStr);
+                                        result = _czkem.SSR_SetUserTmpStr(iMachineNumber, employee.PersonalNum, (int)(finger.FingerNum + (9 - (2 * finger.FingerNum))), finger.DataStr);
                                     }
                                 }
                             }
@@ -661,7 +744,7 @@ namespace UI
                             if (_picture)
                             {
                                 var r = _employeeBll.GetPictureOfEmployeeForZK(employee, device);
-                                if(r)
+                                if (r)
                                 {
                                     var pic = _czkem.SendFile(iMachineNumber, picturePath + "\\" + employee.PersonalNum + ".jpg");
                                 }
@@ -692,7 +775,7 @@ namespace UI
             }
         }
 
-        public bool ConnectToDevice(string Ip, int? port,CZKEM czkem)
+        public bool ConnectToDevice(string Ip, int? port, CZKEM czkem)
         {
             int idwErrorCode = 0;
 

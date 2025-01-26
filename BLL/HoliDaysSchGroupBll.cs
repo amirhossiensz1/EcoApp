@@ -1,5 +1,7 @@
 ﻿using DBLayer;
 using Model;
+using System;
+using System.Collections.Generic;
 
 namespace BLL
 {
@@ -31,5 +33,11 @@ namespace BLL
         {
             return _holiDaysSchGroupDb.DeleteBySchGroupId(id);
         }
+
+        public List<HoliDaysSchGroup> SelectAllHolidaySchGroup(int holidaysGroupID)
+        {
+            return _holiDaysSchGroupDb.selectAllHolidaySchGroup(holidaysGroupID);
+        }
+
     }
 }

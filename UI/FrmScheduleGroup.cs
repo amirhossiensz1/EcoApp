@@ -239,10 +239,10 @@ namespace Eco
                     if (rst >= 0)
                     {
                         CreateSchFile(schGroupId, YearSpinEditor.Text);
-                        SendTimeZoneToDevices(schGroupId);
+                        //SendTimeZoneToDevices(schGroupId);
 
 
-                        SendHolidayToZkDevice(schGroupId);
+                      //  SendHolidayToZkDevice(schGroupId);
 
                         MessageBox.Show(@"عملیات با موفقیت انجام شد", @"پیغام", MessageBoxButtons.OK,
                             MessageBoxIcon.None, MessageBoxDefaultButton.Button1,
@@ -269,9 +269,9 @@ namespace Eco
                     if (result >= 0)
                     {
                         CreateSchFile(schGroupId, YearSpinEditor.Text);
-                        SendTimeZoneToDevices(schGroupId);
+                        //SendTimeZoneToDevices(schGroupId);
 
-                        SendHolidayToZkDevice(schGroupId);
+                        //SendHolidayToZkDevice(schGroupId);
 
                         MessageBox.Show(@"عملیات به اتمام رسید", @"هشدار", MessageBoxButtons.OK,
                             MessageBoxIcon.None, MessageBoxDefaultButton.Button1,

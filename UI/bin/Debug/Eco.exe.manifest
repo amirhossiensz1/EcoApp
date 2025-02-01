@@ -619,14 +619,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="908288">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="908800">
       <assemblyIdentity name="Eco" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZstsEAe8Da0R4v40nJwUxV2oniPg4rGKF216OAEPQpE=</dsig:DigestValue>
+        <dsig:DigestValue>ZpogWbSM9Ht6MqYYZUX+UQl03ABSXJyvCFoynGkzYMs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -638,7 +638,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QhZtpa2xUbqq4lpD+tf+OOyb+pHJKlhEGcRV/nV1RIY=</dsig:DigestValue>
+        <dsig:DigestValue>oO+vMzKWhpAL1oKGCsCy6uYgxRnm942sTjCEW0SLZkk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -650,7 +650,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YFK/ZjcNdau+XmKpsUIsZeO/cAXGvbY5W4EW6zOpZjI=</dsig:DigestValue>
+        <dsig:DigestValue>hA0S50rqrtcZWFFgeNKA3sJ5FoXoDv+PjNXqFyiE1bs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -810,13 +810,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Eco.exe.config" size="1664">
+  <file name="Eco.exe.config" size="2511">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>9LXWXliBFUuT1i7Ggi5oDa49rpk7ed3OQviz80JMVjU=</dsig:DigestValue>
+      <dsig:DigestValue>9DzoFstdyxcv1KwuVTlACIPlNdQtjt4UaczsAKCLdZg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Eco.ico" size="4286">

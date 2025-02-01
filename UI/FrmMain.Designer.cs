@@ -296,7 +296,7 @@ namespace UI
             this.gridViewEmp.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridViewEmp.Appearance.HeaderPanel.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Show;
             this.gridViewEmp.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridViewEmp.Appearance.OddRow.BackColor = System.Drawing.Color.Linen;
+            this.gridViewEmp.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.gridViewEmp.Appearance.OddRow.Options.UseBackColor = true;
             this.gridViewEmp.Appearance.Row.Options.UseTextOptions = true;
             this.gridViewEmp.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -333,9 +333,10 @@ namespace UI
             this.gridViewEmp.OptionsSelection.MultiSelect = true;
             this.gridViewEmp.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gridViewEmp.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
+            this.gridViewEmp.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewEmp.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewEmp.OptionsView.RowAutoHeight = true;
-            this.gridViewEmp.RowHeight = 75;
+            this.gridViewEmp.RowHeight = 50;
             this.gridViewEmp.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
             this.gridViewEmp.DoubleClick += new System.EventHandler(this.gridViewEmp_DoubleClick);
             // 
@@ -673,11 +674,16 @@ namespace UI
             // 
             // grdViewGuest
             // 
+            this.grdViewGuest.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.grdViewGuest.Appearance.OddRow.Options.UseBackColor = true;
             this.grdViewGuest.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.NameCol,
             this.CardNumber});
             this.grdViewGuest.GridControl = this.gridViewGuest;
             this.grdViewGuest.Name = "grdViewGuest";
+            this.grdViewGuest.OptionsView.EnableAppearanceEvenRow = true;
+            this.grdViewGuest.OptionsView.EnableAppearanceOddRow = true;
+            this.grdViewGuest.RowHeight = 35;
             // 
             // NameCol
             // 
@@ -714,6 +720,8 @@ namespace UI
             // 
             // grdViewDevice
             // 
+            this.grdViewDevice.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grdViewDevice.Appearance.EvenRow.Options.UseBackColor = true;
             this.grdViewDevice.Appearance.GroupPanel.BorderColor = System.Drawing.Color.White;
             this.grdViewDevice.Appearance.GroupPanel.ForeColor = System.Drawing.Color.DarkGray;
             this.grdViewDevice.Appearance.GroupPanel.Options.UseBorderColor = true;
@@ -724,6 +732,10 @@ namespace UI
             this.grdViewDevice.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdViewDevice.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.grdViewDevice.Appearance.HeaderPanel.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.grdViewDevice.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.grdViewDevice.Appearance.OddRow.Options.UseBackColor = true;
+            this.grdViewDevice.Appearance.Row.BackColor = System.Drawing.Color.White;
+            this.grdViewDevice.Appearance.Row.Options.UseBackColor = true;
             this.grdViewDevice.Appearance.Row.Options.UseTextOptions = true;
             this.grdViewDevice.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdViewDevice.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -749,6 +761,9 @@ namespace UI
             this.grdViewDevice.OptionsFind.SearchInPreview = true;
             this.grdViewDevice.OptionsFind.ShowClearButton = false;
             this.grdViewDevice.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.grdViewDevice.OptionsView.EnableAppearanceEvenRow = true;
+            this.grdViewDevice.OptionsView.EnableAppearanceOddRow = true;
+            this.grdViewDevice.RowHeight = 35;
             this.grdViewDevice.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.grdViewDevice_RowClick);
             this.grdViewDevice.DoubleClick += new System.EventHandler(this.grdViewDevice_DoubleClick);
             // 

@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fg62+xSxXvU6PU53T/D2+4NBUSP44DCunjCnXc3DBG4=</dsig:DigestValue>
+        <dsig:DigestValue>vt3wvD7rJDgduGyft6aDiAytR6Pc7703KYcxfMpsQks=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LswZ3ExO57xKsXL2d4Cr2kDc+t0YIjyZHlVHONayW28=</dsig:DigestValue>
+        <dsig:DigestValue>+yNdEMyIcs2VHJQXdksPR8pIolKw3g527vQCmq2rYTw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -619,14 +619,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="908800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eco.exe" size="909312">
       <assemblyIdentity name="Eco" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZpogWbSM9Ht6MqYYZUX+UQl03ABSXJyvCFoynGkzYMs=</dsig:DigestValue>
+        <dsig:DigestValue>nQYFnzqId/Y73I2gN41JbzCL6Q+iQlcArg6baf3NfpQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -638,7 +638,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>oO+vMzKWhpAL1oKGCsCy6uYgxRnm942sTjCEW0SLZkk=</dsig:DigestValue>
+        <dsig:DigestValue>TY5Wp0ccAqeFpzaV1Ejslmg6ZI5DDDNTu9Dup37n/P4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -650,7 +650,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hA0S50rqrtcZWFFgeNKA3sJ5FoXoDv+PjNXqFyiE1bs=</dsig:DigestValue>
+        <dsig:DigestValue>XctLPGfkwDCsQhf5dmG5jgA2ch6bKUHmoelv6Lun+/g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -715,14 +715,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.zkemkeeper.dll" size="67584">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.zkemkeeper.dll" size="52736">
       <assemblyIdentity name="Interop.zkemkeeper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GZFuenUFT+d2Y0k2acizrI2fk7cJo8uX5ZZwLIlvC1c=</dsig:DigestValue>
+        <dsig:DigestValue>DUc/8R9mm3fRfJ2tJ6boxToN/aw5yhHVXrJvecJ6dd4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -734,7 +734,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hpMI9S2lt3mZxZsIZBkpWkGR+bicDWn14/eyDAxBLnU=</dsig:DigestValue>
+        <dsig:DigestValue>2R9x+EUsb10xMisU7nsr5sTHXchAaMRdoGkL2i2d0go=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -810,13 +810,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Eco.exe.config" size="2511">
+  <file name="Eco.exe.config" size="2485">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>9DzoFstdyxcv1KwuVTlACIPlNdQtjt4UaczsAKCLdZg=</dsig:DigestValue>
+      <dsig:DigestValue>8WsZS6kGvhEP9m8HW3aGFCRxO2+bvNA7npYKndbswCo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Eco.ico" size="4286">

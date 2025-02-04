@@ -79,6 +79,9 @@ namespace UI
                 case 4:
                     _deviceType = "ZK";
                     break;
+                case 5:
+                    _deviceType = "U-Face";
+                    break;
             }
 
             cmbType.DataSource = deviceBll.SelectDevicesType();
@@ -101,6 +104,15 @@ namespace UI
                 txtwebpass.Text = _devices.webPass;
             }
             if (_deviceType == "ZK")
+            {
+                txtBxRegistrationCode.Enabled = false;
+                txtBxActivation.Enabled = false;
+                txtwebuser.Enabled = false;
+                txtwebpass.Enabled = false;
+                txtBxFtpPort.Enabled = false;
+                txtBxSerial.Enabled = false;
+            }
+            if (_deviceType == "U-Face")
             {
                 txtBxRegistrationCode.Enabled = false;
                 txtBxActivation.Enabled = false;
@@ -163,7 +175,7 @@ namespace UI
                         return;
                     }
                 }
-                if (_deviceType == "ZK")
+                if (_deviceType == "ZK" || _deviceType == "U-Face")
                 {
                     if (txtBxDeviceName.Text == "" || txtBxDeviceIP.Text == "" || txtBxDevicePort.Text == "" ||
                          txtBxIpServer.Text == "")
@@ -195,7 +207,7 @@ namespace UI
                     else
                     {
 
-                        if (_deviceType != "ZK")
+                        if (_deviceType == "Eco" || _deviceType == "Controller" || _deviceType == "PDP")
                         {
                             if (deviceBll.ExistSerial(ConvertSerialToId(txtBxSerial.Text)))
                             {
@@ -267,7 +279,7 @@ namespace UI
                             MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
                     }
                 }
-                if (_deviceType == "ZK")
+                if (_deviceType == "ZK" || _deviceType == "U-Face")
                 {
                     if (txtBxDeviceName.Text == "" || txtBxDeviceIP.Text == "" || txtBxDevicePort.Text == "" ||
                         txtBxIpServer.Text == "")
@@ -300,7 +312,7 @@ namespace UI
                     return;
                 }
 
-                if (_deviceType != "ZK")
+                if (_deviceType == "Eco" || _deviceType == "Controller" || _deviceType == "PDP")
                 {
                     if (ConvertIdToSerial(Convert.ToInt32(_devices.DeviceSerial)) != txtBxSerial.Text)
                     {
@@ -387,6 +399,15 @@ namespace UI
                     txtBxFtpPort.Enabled = false;
                     txtBxSerial.Enabled = false;
                     _deviceType = "ZK";
+                    break;
+                case 4:
+                    txtBxRegistrationCode.Enabled = false;
+                    txtBxActivation.Enabled = false;
+                    txtwebuser.Enabled = false;
+                    txtwebpass.Enabled = false;
+                    txtBxFtpPort.Enabled = false;
+                    txtBxSerial.Enabled = false;
+                    _deviceType = "U-Face";
                     break;
             }
         }

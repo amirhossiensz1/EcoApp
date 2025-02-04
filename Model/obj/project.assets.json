@@ -1,39 +1,129 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.8": {},
-    ".NETFramework,Version=v4.8/win": {},
-    ".NETFramework,Version=v4.8/win-x64": {},
-    ".NETFramework,Version=v4.8/win-x86": {}
+    ".NETFramework,Version=v4.8": {
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win": {
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x64": {
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x86": {
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "EntityFramework/6.2.0": {
+      "sha512": "ptGyXOf26qLrtn+2doAmylIlCxOnBJANwlyyLrXDmqIk9O18IzLWHyxDwwAyhgXkxmbiaA0WNpRy67WRReInBw==",
+      "type": "package",
+      "path": "entityframework/6.2.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.transform",
+        "entityframework.6.2.0.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "tools/EntityFramework.PowerShell.Utility.dll",
+        "tools/EntityFramework.PowerShell.dll",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/about_EntityFramework.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/migrate.exe"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8": [
       "EntityFramework >= 6.2.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AmirHosein\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\win10\\.nuget\\packages\\": {},
+    "D:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj",
+      "projectUniqueName": "D:\\Project\\C#Project\\Light\\EcoApp\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj",
-      "packagesPath": "C:\\Users\\AmirHosein\\.nuget\\packages\\",
-      "outputPath": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\obj\\",
+      "projectPath": "D:\\Project\\C#Project\\Light\\EcoApp\\Model\\Model.csproj",
+      "packagesPath": "C:\\Users\\win10\\.nuget\\packages\\",
+      "outputPath": "D:\\Project\\C#Project\\Light\\EcoApp\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\AmirHosein\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+        "C:\\Users\\win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -43,7 +133,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {}
+        "D:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+        "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {
         "net48": {
@@ -72,19 +163,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package EntityFramework. No packages exist with this id in source(s): DevExpress 24.1 Local, Microsoft Visual Studio Offline Packages",
-      "libraryId": "EntityFramework",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.8",
-        ".NETFramework,Version=v4.8/win",
-        ".NETFramework,Version=v4.8/win-x64",
-        ".NETFramework,Version=v4.8/win-x86"
-      ]
-    }
-  ]
+  }
 }

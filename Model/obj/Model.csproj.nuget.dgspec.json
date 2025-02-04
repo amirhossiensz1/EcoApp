@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj": {}
+    "D:\\Project\\C#Project\\Light\\EcoApp\\Model\\Model.csproj": {}
   },
   "projects": {
-    "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj": {
+    "D:\\Project\\C#Project\\Light\\EcoApp\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj",
+        "projectUniqueName": "D:\\Project\\C#Project\\Light\\EcoApp\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\AmirHosein\\.nuget\\packages\\",
-        "outputPath": "H:\\My Source\\Light\\Controller Project\\Controller\\Eco\\Model\\obj\\",
+        "projectPath": "D:\\Project\\C#Project\\Light\\EcoApp\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\win10\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\C#Project\\Light\\EcoApp\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\AmirHosein\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Users\\win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -30,7 +29,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {}
+          "D:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net48": {

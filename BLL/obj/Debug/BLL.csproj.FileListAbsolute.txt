@@ -450,3 +450,26 @@ H:\My Source\Light\Controller Project\Controller\Eco\BLL\obj\Debug\BLL.csproj.Co
 H:\My Source\Light\Controller Project\Controller\Eco\BLL\obj\Debug\BLL.csproj.CopyComplete
 H:\My Source\Light\Controller Project\Controller\Eco\BLL\obj\Debug\BLL.dll
 H:\My Source\Light\Controller Project\Controller\Eco\BLL\obj\Debug\BLL.pdb
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\BLL.dll.config
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\BLL.dll
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\BLL.pdb
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\DBLayer.dll
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\EntityFramework.dll
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\Model.dll
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\Newtonsoft.Json.dll
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\DBLayer.pdb
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\DBLayer.dll.config
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\Model.pdb
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\Model.dll.config
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\EntityFramework.xml
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\Newtonsoft.Json.xml
+D:\Project\C#Project\Light\EcoApp\BLL\bin\Debug\Interop.zkemkeeper.dll
+D:\Project\C#Project\Light\EcoApp\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Project\C#Project\Light\EcoApp\BLL\obj\Debug\Interop.zkemkeeper.dll
+D:\Project\C#Project\Light\EcoApp\BLL\obj\Debug\BLL.csproj.ResolveComReference.cache
+D:\Project\C#Project\Light\EcoApp\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Project\C#Project\Light\EcoApp\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Project\C#Project\Light\EcoApp\BLL\obj\Debug\BLL.dll
+D:\Project\C#Project\Light\EcoApp\BLL\obj\Debug\BLL.pdb

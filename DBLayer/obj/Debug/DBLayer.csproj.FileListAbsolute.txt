@@ -28,3 +28,18 @@ H:\My Source\Light\Controller Project\Controller\Eco\DBLayer\obj\Debug\DBLayer.c
 H:\My Source\Light\Controller Project\Controller\Eco\DBLayer\obj\Debug\DBLayer.csproj.CopyComplete
 H:\My Source\Light\Controller Project\Controller\Eco\DBLayer\obj\Debug\DBLayer.dll
 H:\My Source\Light\Controller Project\Controller\Eco\DBLayer\obj\Debug\DBLayer.pdb
+D:\Project\C#Project\Light\EcoApp\DBLayer\bin\Debug\DBLayer.dll.config
+D:\Project\C#Project\Light\EcoApp\DBLayer\bin\Debug\DBLayer.dll
+D:\Project\C#Project\Light\EcoApp\DBLayer\bin\Debug\DBLayer.pdb
+D:\Project\C#Project\Light\EcoApp\DBLayer\bin\Debug\EntityFramework.dll
+D:\Project\C#Project\Light\EcoApp\DBLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\C#Project\Light\EcoApp\DBLayer\bin\Debug\Model.dll
+D:\Project\C#Project\Light\EcoApp\DBLayer\bin\Debug\Model.pdb
+D:\Project\C#Project\Light\EcoApp\DBLayer\bin\Debug\Model.dll.config
+D:\Project\C#Project\Light\EcoApp\DBLayer\bin\Debug\EntityFramework.xml
+D:\Project\C#Project\Light\EcoApp\DBLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\C#Project\Light\EcoApp\DBLayer\obj\Debug\DBLayer.csproj.AssemblyReference.cache
+D:\Project\C#Project\Light\EcoApp\DBLayer\obj\Debug\DBLayer.csproj.CoreCompileInputs.cache
+D:\Project\C#Project\Light\EcoApp\DBLayer\obj\Debug\DBLayer.csproj.CopyComplete
+D:\Project\C#Project\Light\EcoApp\DBLayer\obj\Debug\DBLayer.dll
+D:\Project\C#Project\Light\EcoApp\DBLayer\obj\Debug\DBLayer.pdb

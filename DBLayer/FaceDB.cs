@@ -68,13 +68,20 @@ namespace DBLayer
         {
             try
             {
-                if (_echoDbEntities != null) return _echoDbEntities.Faces.FirstOrDefault(x => x.EmpId == employee.ID).FaceData;
+                if (_echoDbEntities != null)
+                {
+                    var face = _echoDbEntities.Faces.FirstOrDefault(x => x.EmpId == employee.ID);
+                    if (face != null)
+                        return face.FaceData;
+                    return "";
+                }
+                    
                 return "";
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
+                return "";
             }
         }
 

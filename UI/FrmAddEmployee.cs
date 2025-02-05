@@ -741,7 +741,7 @@ namespace UI
 
                 var enrollOk = -1;
 
-                if (device.DeviceType.Type == "ZK")
+                if (device.DeviceType.Type == "ZK" || device.DeviceType.Type == "U-Face")
                 {
                     Thread enrolfinger =
                         new Thread(() =>
@@ -1219,7 +1219,7 @@ namespace UI
                     return _flag[index];
                 }
 
-                if (deviceType == "ZK")
+                if (deviceType == "ZK" || deviceType == "U-Face")
                 {
                     if (deviceBll.Ping(device.IP, device.Port))
                     {
@@ -1758,7 +1758,7 @@ namespace UI
                         }
                     }
                 }
-                if (((DeviceType)((DataRowView)cmbbxSelectEncoder.SelectedItem).Row[14]).ID == 4)
+                if (((DeviceType)((DataRowView)cmbbxSelectEncoder.SelectedItem).Row[14]).ID == 4 || ((DeviceType)((DataRowView)cmbbxSelectEncoder.SelectedItem).Row[14]).ID == 5)
                 {
                     if (bIsConnected)
                     {
@@ -2270,7 +2270,7 @@ namespace UI
             {
                 FaceBll faceBll = new FaceBll();
                 byte[] img = faceBll.GetImage(_employees.ID);
-
+                var facestrr = faceBll.GetFaceStr(_employees);
                 if (img != null)
                 {
                     using (MemoryStream msCamera = new MemoryStream(img, 0, img.Length))
@@ -2280,6 +2280,11 @@ namespace UI
 
                     }
                 }
+                if (img == null && facestrr != "")
+                {
+                    PicBox.Image = ResizeImage(Resources.avatar, new Size(116, 129));
+                }
+                
             }
             catch (Exception e)
             {
@@ -2390,7 +2395,7 @@ namespace UI
                     }
                 }
 
-                if (((DeviceType)((DataRowView)cmbbxSelectEncoder.SelectedItem).Row[14]).ID == 4)
+                if (((DeviceType)((DataRowView)cmbbxSelectEncoder.SelectedItem).Row[14]).ID == 4 || ((DeviceType)((DataRowView)cmbbxSelectEncoder.SelectedItem).Row[14]).ID == 5)
                 {
 
                     if (_deviceBll.Ping(((DataRowView) cmbbxSelectEncoder.SelectedItem).Row[2].ToString(),
@@ -2443,7 +2448,7 @@ namespace UI
                 return;
             }
 
-            if (((int)cmbbxSelectEncoder.SelectedValue == 0 || ((DeviceType)((DataRowView)cmbbxSelectEncoder.SelectedItem).Row[14]).ID == 4))
+            if (((int)cmbbxSelectEncoder.SelectedValue == 0 || ((DeviceType)((DataRowView)cmbbxSelectEncoder.SelectedItem).Row[14]).ID == 4 || ((DeviceType)((DataRowView)cmbbxSelectEncoder.SelectedItem).Row[14]).ID == 5))
             {
                 btnConnect.Visible = true;
             }
@@ -2490,7 +2495,7 @@ namespace UI
                 CZKEMClass czkem = new CZKEMClass();
                 FaceBll faceBll = new FaceBll();
 
-                Byte[] photoData = new Byte[1024*1024];
+                Byte[] photoData = new Byte[300*300];
                 int photoSize = 0;
                 var id = (int)cmbbxSelectEncoder.SelectedValue;
 
@@ -2510,8 +2515,8 @@ namespace UI
                 if (czkem.Connect_Net(device.IP, (int)device.Port))
                 {
                     var res = czkem.GetUserFaceStr(iMachineNumber, employees[0].PersonalNum, 50, ref tempData, ref tempLength);
-                    var result2 = czkem.GetUserFace(iMachineNumber, employees[0].PersonalNum, 50, ref photoData[0],
-                       ref tempLength);
+                    //var result2 = czkem.GetUserFace(iMachineNumber, employees[0].PersonalNum, 50, ref photoData[0],
+                     //  ref tempLength);
 
 
                   // byte[] bytes = System.Convert.FromBase64String(tempData);
@@ -2523,17 +2528,37 @@ namespace UI
                         var b = new Bitmap(a);
                         this.PicBox.Image = ResizeImage(b,new Size(116, 129));
                     }
+                    if (res)
+                    {
+                        this.PicBox.Image = ResizeImage(Resources.avatar, new Size(116, 129));
+                    }
 
 
 
                     if (res || result)
                     {
-                        if (FaceBll.ExistEmployeeFace(_employees.ID))
+                        if (result)
                         {
-                            DialogResult r = MessageBox.Show(@"یک تصویر از این شخص در دیتابیس موجود است آیا می خواهید جایگزین شود؟", @"پیام", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                            if (r == DialogResult.Yes)
+                            if (FaceBll.ExistEmployeeFace(_employees.ID))
                             {
-                                if (faceBll.UpdateFace(new Face()
+                                DialogResult r = MessageBox.Show(@"یک تصویر از این شخص در دیتابیس موجود است آیا می خواهید جایگزین شود؟", @"پیام", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                                if (r == DialogResult.Yes)
+                                {
+                                    if (faceBll.UpdateFace(new Face()
+                                    {
+                                        FaceData = tempData,
+                                        EmpId = employees[0].ID,
+                                        PersonalNum = employees[0].PersonalNum,
+                                        image = photoData
+                                    }))
+                                    {
+                                        MessageBox.Show(@"تصویر چهره با موفقیت  ذخیره شد", @"پیام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (faceBll.InsertFace(new Face()
                                 {
                                     FaceData = tempData,
                                     EmpId = employees[0].ID,
@@ -2541,23 +2566,42 @@ namespace UI
                                     image = photoData
                                 }))
                                 {
-                                    MessageBox.Show(@"تصویر چهره با موفقیت  ذخیره شد", @"پیام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show(@"اطلاعات چهره در دستگاه وجود ندارد", @"پیام", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                             }
                         }
                         else
                         {
-                            if (faceBll.InsertFace(new Face()
+                            if (FaceBll.ExistEmployeeFace(_employees.ID))
                             {
-                                FaceData = tempData,
-                                EmpId = employees[0].ID,
-                                PersonalNum = employees[0].PersonalNum,
-                                image = photoData
-                            }))
+                                DialogResult r = MessageBox.Show(@"یک تصویر از این شخص در دیتابیس موجود است آیا می خواهید جایگزین شود؟", @"پیام", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                                if (r == DialogResult.Yes)
+                                {
+                                    if (faceBll.UpdateFace(new Face()
+                                    {
+                                        FaceData = tempData,
+                                        EmpId = employees[0].ID,
+                                        PersonalNum = employees[0].PersonalNum
+                                    }))
+                                    {
+                                        MessageBox.Show(@"تصویر چهره با موفقیت  ذخیره شد", @"پیام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                }
+                            }
+                            else
                             {
-                                MessageBox.Show(@"اطلاعات چهره در دستگاه وجود ندارد", @"پیام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                if (faceBll.InsertFace(new Face()
+                                {
+                                    FaceData = tempData,
+                                    EmpId = employees[0].ID,
+                                    PersonalNum = employees[0].PersonalNum
+                                }))
+                                {
+                                    MessageBox.Show(@"اطلاعات چهره در دستگاه وجود ندارد", @"پیام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                             }
                         }
+
 
                     }
                     else
@@ -2680,6 +2724,11 @@ namespace UI
             FillAcsGroup();
             chkPrivateAccess.Checked = true;
             cmbAcsGroup.SelectedValue = frm.AcessGroupID;
+        }
+
+        private void xtraTab_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

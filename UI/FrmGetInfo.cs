@@ -358,39 +358,75 @@ namespace Eco
 
                 var result = _czkem.GetUserFacePhotoByName(MachineNumber, employee.PersonalNum + ".jpg", out photoData[0], out photoSize);
 
-                if (res & result)
+                if (res || result)
                 {
-                    if (FaceBll.ExistEmployeeFace(employee.ID))
+                    if (result == false)
                     {
+                        if (FaceBll.ExistEmployeeFace(employee.ID))
+                        {
 
-                        if (faceBll.UpdateFace(new Face()
-                        {
-                            FaceData = tempData,
-                            EmpId = employee.ID,
-                            PersonalNum = employee.PersonalNum,
-                            image = photoData
-                        }))
-                        {
-                            return @"  چهره با موفقیت  ذخیره شد ";
+                            if (faceBll.UpdateFace(new Face()
+                            {
+                                FaceData = tempData,
+                                EmpId = employee.ID,
+                                PersonalNum = employee.PersonalNum
+                            }))
+                            {
+                                return @"  چهره با موفقیت  ذخیره شد ";
+                            }
+                            else
+                            {
+                                return @" این تصویر از قبل وجود دارد از  پروفایل شخص جهت دریافت چهره جدید استفاده کنید ";
+                            }
                         }
                         else
                         {
-                            return @" این تصویر از قبل وجود دارد از  پروفایل شخص جهت دریافت چهره جدید استفاده کنید ";
+                            if (faceBll.InsertFace(new Face()
+                            {
+                                FaceData = tempData,
+                                EmpId = employee.ID,
+                                PersonalNum = employee.PersonalNum
+                            }))
+                            {
+                                return @" چهره با موفقیت  ذخیره شد ";
+                            }
                         }
                     }
                     else
                     {
-                        if (faceBll.InsertFace(new Face()
+                        if (FaceBll.ExistEmployeeFace(employee.ID))
                         {
-                            FaceData = tempData,
-                            EmpId = employee.ID,
-                            PersonalNum = employee.PersonalNum,
-                            image = photoData
-                        }))
+
+                            if (faceBll.UpdateFace(new Face()
+                            {
+                                FaceData = tempData,
+                                EmpId = employee.ID,
+                                PersonalNum = employee.PersonalNum,
+                                image = photoData
+                            }))
+                            {
+                                return @"  چهره با موفقیت  ذخیره شد ";
+                            }
+                            else
+                            {
+                                return @" این تصویر از قبل وجود دارد از  پروفایل شخص جهت دریافت چهره جدید استفاده کنید ";
+                            }
+                        }
+                        else
                         {
-                            return @" چهره با موفقیت  ذخیره شد ";
+                            if (faceBll.InsertFace(new Face()
+                            {
+                                FaceData = tempData,
+                                EmpId = employee.ID,
+                                PersonalNum = employee.PersonalNum,
+                                image = photoData
+                            }))
+                            {
+                                return @" چهره با موفقیت  ذخیره شد ";
+                            }
                         }
                     }
+
 
                 }
                 else

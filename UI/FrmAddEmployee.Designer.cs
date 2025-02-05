@@ -48,10 +48,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbAdmin = new System.Windows.Forms.RadioButton();
             this.rdbUser = new System.Windows.Forms.RadioButton();
-            this.grpAuthTypeForZk = new System.Windows.Forms.GroupBox();
-            this.chkAuth = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.VerfiCombo = new System.Windows.Forms.ComboBox();
             this.DeviceType = new System.Windows.Forms.GroupBox();
             this.rdbtnRaya = new System.Windows.Forms.RadioButton();
             this.rdbtnZk = new System.Windows.Forms.RadioButton();
@@ -88,6 +84,10 @@
             this.txtEmpId = new System.Windows.Forms.TextBox();
             this.BtnBrows = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEmployee = new System.Windows.Forms.PictureBox();
+            this.grpAuthTypeForZk = new System.Windows.Forms.GroupBox();
+            this.chkAuth = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.VerfiCombo = new System.Windows.Forms.ComboBox();
             this.grpAuthType = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -139,21 +139,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnFingers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTab)).BeginInit();
             this.xtraTab.SuspendLayout();
-            this.TabBasicInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpAddEmp)).BeginInit();
-            this.GrpAddEmp.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.grpAuthTypeForZk.SuspendLayout();
             this.DeviceType.SuspendLayout();
             this.grpMenuAccess.SuspendLayout();
             this.GrpOrganization.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TreeOrganization)).BeginInit();
             this.GrpPvInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEmployee)).BeginInit();
+            this.grpAuthTypeForZk.SuspendLayout();
             this.grpAuthType.SuspendLayout();
-            this.TabFinger.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpctrlEncoder)).BeginInit();
-            this.GrpctrlEncoder.SuspendLayout();
             this.GrpPalm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.grpFace.SuspendLayout();
@@ -165,9 +161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RightHand)).BeginInit();
             this.grpEcoder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picExistCard)).BeginInit();
-            this.TabInfoDevices.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpctrInfoDevices)).BeginInit();
-            this.GrpctrInfoDevices.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridDeviceInfo
@@ -305,11 +299,13 @@
             this.TabFinger,
             this.TabInfoDevices});
             this.xtraTab.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTab_SelectedPageChanged);
+            this.xtraTab.Click += new System.EventHandler(this.xtraTab_Click);
             // 
             // TabBasicInfo
             // 
             this.TabBasicInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.TabBasicInfo.Controls.Add(this.GrpAddEmp);
+            this.TabBasicInfo.Enabled = true;
             this.TabBasicInfo.Name = "TabBasicInfo";
             this.TabBasicInfo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TabBasicInfo.Size = new System.Drawing.Size(765, 638);
@@ -379,47 +375,6 @@
             this.rdbUser.TabStop = true;
             this.rdbUser.Text = "کاربر عادی";
             this.rdbUser.UseVisualStyleBackColor = true;
-            // 
-            // grpAuthTypeForZk
-            // 
-            this.grpAuthTypeForZk.Controls.Add(this.chkAuth);
-            this.grpAuthTypeForZk.Controls.Add(this.label3);
-            this.grpAuthTypeForZk.Controls.Add(this.VerfiCombo);
-            this.grpAuthTypeForZk.Location = new System.Drawing.Point(6, 461);
-            this.grpAuthTypeForZk.Name = "grpAuthTypeForZk";
-            this.grpAuthTypeForZk.Size = new System.Drawing.Size(440, 110);
-            this.grpAuthTypeForZk.TabIndex = 24;
-            this.grpAuthTypeForZk.TabStop = false;
-            this.grpAuthTypeForZk.Text = "نحوه احراز هویت";
-            // 
-            // chkAuth
-            // 
-            this.chkAuth.AutoSize = true;
-            this.chkAuth.Location = new System.Drawing.Point(267, 62);
-            this.chkAuth.Name = "chkAuth";
-            this.chkAuth.Size = new System.Drawing.Size(102, 17);
-            this.chkAuth.TabIndex = 29;
-            this.chkAuth.Text = "اعمال حالت گروه";
-            this.chkAuth.UseVisualStyleBackColor = true;
-            this.chkAuth.CheckedChanged += new System.EventHandler(this.chkAuth_CheckedChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(256, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "نحوه احراز هویت شخص:";
-            // 
-            // VerfiCombo
-            // 
-            this.VerfiCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.VerfiCombo.FormattingEnabled = true;
-            this.VerfiCombo.Location = new System.Drawing.Point(37, 25);
-            this.VerfiCombo.Name = "VerfiCombo";
-            this.VerfiCombo.Size = new System.Drawing.Size(213, 21);
-            this.VerfiCombo.TabIndex = 5;
             // 
             // DeviceType
             // 
@@ -821,7 +776,6 @@
             // 
             this.BtnBrows.Location = new System.Drawing.Point(31, 183);
             this.BtnBrows.Name = "BtnBrows";
-            this.BtnBrows.Size = new System.Drawing.Size(75, 23);
             this.BtnBrows.TabIndex = 15;
             this.BtnBrows.Text = "انتخاب فایل";
             this.BtnBrows.Click += new System.EventHandler(this.BtnBrows_Click);
@@ -840,6 +794,47 @@
             this.pictureEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureEmployee.TabIndex = 20;
             this.pictureEmployee.TabStop = false;
+            // 
+            // grpAuthTypeForZk
+            // 
+            this.grpAuthTypeForZk.Controls.Add(this.chkAuth);
+            this.grpAuthTypeForZk.Controls.Add(this.label3);
+            this.grpAuthTypeForZk.Controls.Add(this.VerfiCombo);
+            this.grpAuthTypeForZk.Location = new System.Drawing.Point(6, 461);
+            this.grpAuthTypeForZk.Name = "grpAuthTypeForZk";
+            this.grpAuthTypeForZk.Size = new System.Drawing.Size(440, 110);
+            this.grpAuthTypeForZk.TabIndex = 24;
+            this.grpAuthTypeForZk.TabStop = false;
+            this.grpAuthTypeForZk.Text = "نحوه احراز هویت";
+            // 
+            // chkAuth
+            // 
+            this.chkAuth.AutoSize = true;
+            this.chkAuth.Location = new System.Drawing.Point(267, 62);
+            this.chkAuth.Name = "chkAuth";
+            this.chkAuth.Size = new System.Drawing.Size(102, 17);
+            this.chkAuth.TabIndex = 29;
+            this.chkAuth.Text = "اعمال حالت گروه";
+            this.chkAuth.UseVisualStyleBackColor = true;
+            this.chkAuth.CheckedChanged += new System.EventHandler(this.chkAuth_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(256, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "نحوه احراز هویت شخص:";
+            // 
+            // VerfiCombo
+            // 
+            this.VerfiCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VerfiCombo.FormattingEnabled = true;
+            this.VerfiCombo.Location = new System.Drawing.Point(37, 25);
+            this.VerfiCombo.Name = "VerfiCombo";
+            this.VerfiCombo.Size = new System.Drawing.Size(213, 21);
+            this.VerfiCombo.TabIndex = 5;
             // 
             // grpAuthType
             // 
@@ -974,6 +969,7 @@
             // TabFinger
             // 
             this.TabFinger.Controls.Add(this.GrpctrlEncoder);
+            this.TabFinger.Enabled = true;
             this.TabFinger.Name = "TabFinger";
             this.TabFinger.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TabFinger.Size = new System.Drawing.Size(765, 638);
@@ -1016,7 +1012,6 @@
             // 
             this.btnGetPalm.Location = new System.Drawing.Point(6, 120);
             this.btnGetPalm.Name = "btnGetPalm";
-            this.btnGetPalm.Size = new System.Drawing.Size(75, 23);
             this.btnGetPalm.TabIndex = 24;
             this.btnGetPalm.Text = "دریافت";
             this.btnGetPalm.Click += new System.EventHandler(this.BtnGetPalm_Click);
@@ -1037,7 +1032,6 @@
             // 
             this.BtnSendFace.Location = new System.Drawing.Point(6, 120);
             this.BtnSendFace.Name = "BtnSendFace";
-            this.BtnSendFace.Size = new System.Drawing.Size(75, 23);
             this.BtnSendFace.TabIndex = 24;
             this.BtnSendFace.Text = "ارسال";
             this.BtnSendFace.Click += new System.EventHandler(this.BtnSendFace_Click);
@@ -1046,7 +1040,6 @@
             // 
             this.btnGetFace.Location = new System.Drawing.Point(87, 120);
             this.btnGetFace.Name = "btnGetFace";
-            this.btnGetFace.Size = new System.Drawing.Size(75, 23);
             this.btnGetFace.TabIndex = 23;
             this.btnGetFace.Text = "دریافت";
             this.btnGetFace.Click += new System.EventHandler(this.BtnGetFace_Click);
@@ -1156,7 +1149,6 @@
             // 
             this.btnConnect.Location = new System.Drawing.Point(288, 36);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(75, 23);
             this.btnConnect.TabIndex = 4;
             this.btnConnect.Text = "اتصال به انکدر";
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
@@ -1166,7 +1158,6 @@
             this.btnEncode.Enabled = false;
             this.btnEncode.Location = new System.Drawing.Point(207, 36);
             this.btnEncode.Name = "btnEncode";
-            this.btnEncode.Size = new System.Drawing.Size(75, 23);
             this.btnEncode.TabIndex = 2;
             this.btnEncode.Text = "شروع";
             this.btnEncode.Click += new System.EventHandler(this.btnEncode_Click);
@@ -1175,7 +1166,6 @@
             // 
             this.btnDeleteCard.Location = new System.Drawing.Point(126, 36);
             this.btnDeleteCard.Name = "btnDeleteCard";
-            this.btnDeleteCard.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteCard.TabIndex = 3;
             this.btnDeleteCard.Text = "حذف کارت";
             this.btnDeleteCard.Visible = false;
@@ -1194,6 +1184,7 @@
             // TabInfoDevices
             // 
             this.TabInfoDevices.Controls.Add(this.GrpctrInfoDevices);
+            this.TabInfoDevices.Enabled = true;
             this.TabInfoDevices.Name = "TabInfoDevices";
             this.TabInfoDevices.PageVisible = false;
             this.TabInfoDevices.Size = new System.Drawing.Size(765, 638);
@@ -1235,7 +1226,6 @@
             // 
             this.btnCancelEmp.Location = new System.Drawing.Point(537, 674);
             this.btnCancelEmp.Name = "btnCancelEmp";
-            this.btnCancelEmp.Size = new System.Drawing.Size(75, 23);
             this.btnCancelEmp.TabIndex = 21;
             this.btnCancelEmp.Text = "لغو";
             this.btnCancelEmp.Visible = false;
@@ -1245,7 +1235,6 @@
             // 
             this.btnApply.Location = new System.Drawing.Point(618, 674);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(75, 23);
             this.btnApply.TabIndex = 17;
             this.btnApply.Text = "ثبت";
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
@@ -1254,7 +1243,6 @@
             // 
             this.btnSaveEmp.Location = new System.Drawing.Point(699, 674);
             this.btnSaveEmp.Name = "btnSaveEmp";
-            this.btnSaveEmp.Size = new System.Drawing.Size(75, 23);
             this.btnSaveEmp.TabIndex = 16;
             this.btnSaveEmp.Text = "افزودن";
             this.btnSaveEmp.Click += new System.EventHandler(this.btnSaveEmp_Click);
@@ -1263,7 +1251,6 @@
             // 
             this.btnEdit.Location = new System.Drawing.Point(699, 675);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 16;
             this.btnEdit.Text = "ثبت";
             this.btnEdit.Visible = false;
@@ -1273,7 +1260,6 @@
             // 
             this.BtnSend.Location = new System.Drawing.Point(618, 674);
             this.BtnSend.Name = "BtnSend";
-            this.BtnSend.Size = new System.Drawing.Size(75, 23);
             this.BtnSend.TabIndex = 22;
             this.BtnSend.Text = "ارسال";
             this.BtnSend.Click += new System.EventHandler(this.BtnSend_Click);
@@ -1285,11 +1271,11 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(797, 710);
             this.Controls.Add(this.BtnSend);
-            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSaveEmp);
             this.Controls.Add(this.btnApply);
-            this.Controls.Add(this.btnCancelEmp);
             this.Controls.Add(this.xtraTab);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnCancelEmp);
             this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1311,13 +1297,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnFingers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTab)).EndInit();
             this.xtraTab.ResumeLayout(false);
-            this.TabBasicInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GrpAddEmp)).EndInit();
-            this.GrpAddEmp.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.grpAuthTypeForZk.ResumeLayout(false);
-            this.grpAuthTypeForZk.PerformLayout();
             this.DeviceType.ResumeLayout(false);
             this.DeviceType.PerformLayout();
             this.grpMenuAccess.ResumeLayout(false);
@@ -1327,11 +1309,11 @@
             this.GrpPvInfo.ResumeLayout(false);
             this.GrpPvInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEmployee)).EndInit();
+            this.grpAuthTypeForZk.ResumeLayout(false);
+            this.grpAuthTypeForZk.PerformLayout();
             this.grpAuthType.ResumeLayout(false);
             this.grpAuthType.PerformLayout();
-            this.TabFinger.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GrpctrlEncoder)).EndInit();
-            this.GrpctrlEncoder.ResumeLayout(false);
             this.GrpPalm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.grpFace.ResumeLayout(false);
@@ -1345,9 +1327,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RightHand)).EndInit();
             this.grpEcoder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picExistCard)).EndInit();
-            this.TabInfoDevices.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GrpctrInfoDevices)).EndInit();
-            this.GrpctrInfoDevices.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

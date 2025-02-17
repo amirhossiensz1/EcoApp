@@ -58,6 +58,7 @@ namespace UI
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
+            DevExpress.XtraNavBar.ViewInfo.SkinExplorerBarViewInfoRegistrator skinExplorerBarViewInfoRegistrator1 = new DevExpress.XtraNavBar.ViewInfo.SkinExplorerBarViewInfoRegistrator();
             this.CheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemPictureEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
@@ -144,20 +145,16 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.grdViewEmp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewEmp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelEmp)).BeginInit();
-            this.panelEmp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpOnDvc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelGuest)).BeginInit();
-            this.panelGuest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewGuest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewGuest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDevice)).BeginInit();
-            this.panelDevice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDevice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewDevice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.TopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelOnDvc)).BeginInit();
-            this.panelOnDvc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,9 +190,9 @@ namespace UI
             // 
             // menu
             // 
-            this.menu.Appearance.BackColor = System.Drawing.Color.Lavender;
+            this.menu.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("menu.Appearance.BackColor")));
             this.menu.Appearance.BackColor2 = ((System.Drawing.Color)(resources.GetObject("menu.Appearance.BackColor2")));
-            this.menu.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.menu.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("menu.Appearance.BorderColor")));
             this.menu.Appearance.Options.UseBackColor = true;
             this.menu.Appearance.Options.UseBorderColor = true;
             resources.ApplyResources(this.menu, "menu");
@@ -258,7 +255,7 @@ namespace UI
             this.nvBrCtrlMenu.Name = "nvBrCtrlMenu";
             this.nvBrCtrlMenu.OptionsNavPane.CollapsedNavPaneContentControl = this.dockPanel_Container;
             this.nvBrCtrlMenu.OptionsNavPane.ExpandedWidth = ((int)(resources.GetObject("resource.ExpandedWidth")));
-            this.nvBrCtrlMenu.View = new DevExpress.XtraNavBar.ViewInfo.SkinExplorerBarViewInfoRegistrator();
+            this.nvBrCtrlMenu.View = skinExplorerBarViewInfoRegistrator1;
             this.nvBrCtrlMenu.Click += new System.EventHandler(this.nvBrCtrlMenu_Click);
             // 
             // navBarMonitor
@@ -271,9 +268,6 @@ namespace UI
             resources.ApplyResources(this.navBarMonitor, "navBarMonitor");
             this.navBarMonitor.CollapsedNavPaneContentControl = this.grdViewEmp;
             this.navBarMonitor.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
-            this.navBarMonitor.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarOnlinePdp),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarOnlineTrafic)});
             this.navBarMonitor.Name = "navBarMonitor";
             this.navBarMonitor.ItemChanged += new System.EventHandler(this.navBarMonitor_ItemChanged);
             // 
@@ -290,13 +284,13 @@ namespace UI
             // 
             // gridViewEmp
             // 
-            this.gridViewEmp.Appearance.GroupPanel.BackColor = System.Drawing.Color.OldLace;
+            this.gridViewEmp.Appearance.GroupPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridViewEmp.Appearance.GroupPanel.BackColor")));
             this.gridViewEmp.Appearance.GroupPanel.Options.UseBackColor = true;
             this.gridViewEmp.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridViewEmp.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridViewEmp.Appearance.HeaderPanel.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Show;
             this.gridViewEmp.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridViewEmp.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.gridViewEmp.Appearance.OddRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridViewEmp.Appearance.OddRow.BackColor")));
             this.gridViewEmp.Appearance.OddRow.Options.UseBackColor = true;
             this.gridViewEmp.Appearance.Row.Options.UseTextOptions = true;
             this.gridViewEmp.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -436,8 +430,8 @@ namespace UI
             // 
             // navBarOnlineTrafic
             // 
-            this.navBarOnlineTrafic.AppearanceHotTracked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.navBarOnlineTrafic.AppearancePressed.ForeColor = System.Drawing.Color.Red;
+            this.navBarOnlineTrafic.AppearanceHotTracked.ForeColor = ((System.Drawing.Color)(resources.GetObject("navBarOnlineTrafic.AppearanceHotTracked.ForeColor")));
+            this.navBarOnlineTrafic.AppearancePressed.ForeColor = ((System.Drawing.Color)(resources.GetObject("navBarOnlineTrafic.AppearancePressed.ForeColor")));
             this.navBarOnlineTrafic.CanDrag = false;
             resources.ApplyResources(this.navBarOnlineTrafic, "navBarOnlineTrafic");
             this.navBarOnlineTrafic.Name = "navBarOnlineTrafic";
@@ -451,10 +445,6 @@ namespace UI
             this.navBarDevices.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarDevices.ImageOptions.LargeImageSize = new System.Drawing.Size(20, 20);
             this.navBarDevices.ImageOptions.SmallImageSize = new System.Drawing.Size(20, 20);
-            this.navBarDevices.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarAddDevice),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSetting),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarFirmWare)});
             this.navBarDevices.Name = "navBarDevices";
             this.navBarDevices.NavigationPaneVisible = false;
             this.navBarDevices.ShowIcons = DevExpress.Utils.DefaultBoolean.True;
@@ -483,13 +473,9 @@ namespace UI
             // 
             this.navBarEmployee.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("navBarEmployee.Appearance.Font")));
             this.navBarEmployee.Appearance.Options.UseFont = true;
-            this.navBarEmployee.AppearancePressed.ForeColor = System.Drawing.Color.Black;
+            this.navBarEmployee.AppearancePressed.ForeColor = ((System.Drawing.Color)(resources.GetObject("navBarEmployee.AppearancePressed.ForeColor")));
             resources.ApplyResources(this.navBarEmployee, "navBarEmployee");
             this.navBarEmployee.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
-            this.navBarEmployee.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarAddEmp),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSendEmp),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.EmployeeGroup)});
             this.navBarEmployee.Name = "navBarEmployee";
             this.navBarEmployee.ItemChanged += new System.EventHandler(this.navBarEmployee_ItemChanged);
             // 
@@ -516,12 +502,6 @@ namespace UI
             this.navSchaduler.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("navSchaduler.Appearance.Font")));
             this.navSchaduler.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.navSchaduler, "navSchaduler");
-            this.navSchaduler.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.DayType),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.SchGroup),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.AccessArea),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.AcessGroup),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.Holidays)});
             this.navSchaduler.Name = "navSchaduler";
             this.navSchaduler.ItemChanged += new System.EventHandler(this.navSchaduler_ItemChanged);
             // 
@@ -561,9 +541,6 @@ namespace UI
             this.navBarGuest.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.navBarGuest, "navBarGuest");
             this.navBarGuest.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
-            this.navBarGuest.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarAllGuest),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarAddGuest)});
             this.navBarGuest.Name = "navBarGuest";
             // 
             // navBarAllGuest
@@ -585,9 +562,6 @@ namespace UI
             resources.ApplyResources(this.navBarLog, "navBarLog");
             this.navBarLog.Expanded = true;
             this.navBarLog.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
-            this.navBarLog.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarAllLog),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navbarChartTraffic)});
             this.navBarLog.Name = "navBarLog";
             this.navBarLog.ItemChanged += new System.EventHandler(this.navBarLog_ItemChanged);
             // 
@@ -674,7 +648,7 @@ namespace UI
             // 
             // grdViewGuest
             // 
-            this.grdViewGuest.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.grdViewGuest.Appearance.OddRow.BackColor = ((System.Drawing.Color)(resources.GetObject("grdViewGuest.Appearance.OddRow.BackColor")));
             this.grdViewGuest.Appearance.OddRow.Options.UseBackColor = true;
             this.grdViewGuest.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.NameCol,
@@ -720,10 +694,10 @@ namespace UI
             // 
             // grdViewDevice
             // 
-            this.grdViewDevice.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grdViewDevice.Appearance.EvenRow.BackColor = ((System.Drawing.Color)(resources.GetObject("grdViewDevice.Appearance.EvenRow.BackColor")));
             this.grdViewDevice.Appearance.EvenRow.Options.UseBackColor = true;
-            this.grdViewDevice.Appearance.GroupPanel.BorderColor = System.Drawing.Color.White;
-            this.grdViewDevice.Appearance.GroupPanel.ForeColor = System.Drawing.Color.DarkGray;
+            this.grdViewDevice.Appearance.GroupPanel.BorderColor = ((System.Drawing.Color)(resources.GetObject("grdViewDevice.Appearance.GroupPanel.BorderColor")));
+            this.grdViewDevice.Appearance.GroupPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("grdViewDevice.Appearance.GroupPanel.ForeColor")));
             this.grdViewDevice.Appearance.GroupPanel.Options.UseBorderColor = true;
             this.grdViewDevice.Appearance.GroupPanel.Options.UseFont = true;
             this.grdViewDevice.Appearance.GroupPanel.Options.UseForeColor = true;
@@ -732,15 +706,15 @@ namespace UI
             this.grdViewDevice.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdViewDevice.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.grdViewDevice.Appearance.HeaderPanel.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.grdViewDevice.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.grdViewDevice.Appearance.OddRow.BackColor = ((System.Drawing.Color)(resources.GetObject("grdViewDevice.Appearance.OddRow.BackColor")));
             this.grdViewDevice.Appearance.OddRow.Options.UseBackColor = true;
-            this.grdViewDevice.Appearance.Row.BackColor = System.Drawing.Color.White;
+            this.grdViewDevice.Appearance.Row.BackColor = ((System.Drawing.Color)(resources.GetObject("grdViewDevice.Appearance.Row.BackColor")));
             this.grdViewDevice.Appearance.Row.Options.UseBackColor = true;
             this.grdViewDevice.Appearance.Row.Options.UseTextOptions = true;
             this.grdViewDevice.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdViewDevice.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.grdViewDevice.Appearance.ViewCaption.BorderColor = System.Drawing.Color.Black;
-            this.grdViewDevice.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Black;
+            this.grdViewDevice.Appearance.ViewCaption.BorderColor = ((System.Drawing.Color)(resources.GetObject("grdViewDevice.Appearance.ViewCaption.BorderColor")));
+            this.grdViewDevice.Appearance.ViewCaption.ForeColor = ((System.Drawing.Color)(resources.GetObject("grdViewDevice.Appearance.ViewCaption.ForeColor")));
             this.grdViewDevice.Appearance.ViewCaption.Options.UseBorderColor = true;
             this.grdViewDevice.Appearance.ViewCaption.Options.UseForeColor = true;
             this.grdViewDevice.Appearance.ViewCaption.Options.UseTextOptions = true;
@@ -900,10 +874,10 @@ namespace UI
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.Gray;
             this.Controls.Add(this.MainPanel);
+            this.Controls.Add(this.panelEmp);
             this.Controls.Add(this.panelOnDvc);
             this.Controls.Add(this.panelDevice);
             this.Controls.Add(this.panelGuest);
-            this.Controls.Add(this.panelEmp);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.TopMenu);
             this.MainMenuStrip = this.TopMenu;
@@ -921,23 +895,17 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.grdViewEmp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewEmp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelEmp)).EndInit();
-            this.panelEmp.ResumeLayout(false);
-            this.panelEmp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpOnDvc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelGuest)).EndInit();
-            this.panelGuest.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewGuest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewGuest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDevice)).EndInit();
-            this.panelDevice.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDevice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewDevice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.TopMenu.ResumeLayout(false);
             this.TopMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelOnDvc)).EndInit();
-            this.panelOnDvc.ResumeLayout(false);
-            this.panelOnDvc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

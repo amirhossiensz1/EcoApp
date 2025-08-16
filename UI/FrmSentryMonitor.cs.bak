@@ -94,17 +94,17 @@ namespace Eco
                 foreach (var device in _deviceBll.SelectDevices())
                 {
 
-                    if (device.DeviceType.Type == "ZK" || device.DeviceType.Type == "U-Face")
+                    if (device.DeviceType.Type != "ZK")
                     {
-                        _czkem = new CZKEM();
-                        if (new DeviceBLL().Ping(device.IP, device.Port))
-                        {
-                            var c = _czkem.Connect_Net(device.IP, (int)device.Port);
-                            if (c)
-                                _zkList.Add(_czkem);
-                        }
+                        continue;
                     }
-
+                    _czkem = new CZKEM();
+                    if (new DeviceBLL().Ping(device.IP, device.Port))
+                    {
+                        var c = _czkem.Connect_Net(device.IP, (int) device.Port);
+                        if (c)
+                            _zkList.Add(_czkem);
+                    }
                 }
             }
             catch (Exception e)
@@ -349,8 +349,6 @@ namespace Eco
             acessCombo.LargeImages = images;
 
             reqTypeCombo.LargeImages = imagesReqType;
-
-            imageCombo.Items.Add(new ImageComboBoxItem("input", 0, 0));
 
             imageCombo.Items.Add(new ImageComboBoxItem("input", 1, 0));
 

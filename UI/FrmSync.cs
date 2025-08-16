@@ -576,7 +576,7 @@ namespace UI
 
 
 
-            if (device.DeviceType.Type == "ZK")
+            if (device.DeviceType.Type == "ZK" || device.DeviceType.Type == "U-Face")
             {
                 CZKEMClass _czkem = new CZKEMClass();
                 _progressbarIndex[row] = 0;
@@ -689,11 +689,11 @@ namespace UI
 
                                 if (employee.IsAdmin != null && (bool)employee.IsAdmin)
                                     flag = _czkem.SSR_SetUserInfo(1, employee.PersonalNum,
-                                        employee.EmpFname + employee.EmpLname, employee.EmpPinCode, 2, true);
+                                        employee.EmpFname + " "+ employee.EmpLname, employee.EmpPinCode, 2, true);
                                 if (employee.IsAdmin != null && !(bool)employee.IsAdmin)
                                 {
                                     flag = _czkem.SSR_SetUserInfo(1, employee.PersonalNum,
-                                        employee.EmpFname + employee.EmpLname, employee.EmpPinCode, 0, true);
+                                        employee.EmpFname + " " + employee.EmpLname, employee.EmpPinCode, 0, true);
                                 }
 
 
@@ -728,26 +728,39 @@ namespace UI
 
                             if (_face)
                             {
-                                if (!Directory.Exists(facePath))
-                                    Directory.CreateDirectory(facePath);
-                                var img = new FaceBll().GetImage(employee.ID);
-                                if (img != null)
+                                if (device.DeviceType.Type == "ZK")
                                 {
-                                    MemoryStream msCamera = new MemoryStream(img, 0, 300 * 300);
-                                    FileStream fs = new FileStream(facePath + "\\verify_biophoto_9_" + employee.PersonalNum + ".jpg", FileMode.OpenOrCreate);
-                                    msCamera.WriteTo(fs);
-                                    fs.Close();
-                                }
+                                    if (!Directory.Exists(facePath))
+                                        Directory.CreateDirectory(facePath);
+                                    var img = new FaceBll().GetImage(employee.ID);
+                                    if (img != null)
+                                    {
+                                        MemoryStream msCamera = new MemoryStream(img, 0, 300 * 300);
+                                        FileStream fs = new FileStream(facePath + "\\verify_biophoto_9_" + employee.PersonalNum + ".jpg", FileMode.OpenOrCreate);
+                                        msCamera.WriteTo(fs);
+                                        fs.Close();
+                                    }
 
 
-                                var fce = _czkem.SendFile(iMachineNumber, facePath + "\\verify_biophoto_9_" + employee.PersonalNum + ".jpg");
-                                _czkem.GetLastError(ref idwErrorCode);
-                                if (!fce)
-                                {
-                                    var success = _czkem.SendFile(iMachineNumber, facePath + "\\verify_biophoto_9_" + employee.PersonalNum + ".jpg");
-                                    if (!success)
-                                        success = _czkem.SendFile(iMachineNumber, facePath + "\\verify_biophoto_9_" + employee.PersonalNum + ".jpg");
+                                    var fce = _czkem.SendFile(iMachineNumber, facePath + "\\verify_biophoto_9_" + employee.PersonalNum + ".jpg");
+                                    _czkem.GetLastError(ref idwErrorCode);
+                                    if (!fce)
+                                    {
+                                        var success = _czkem.SendFile(iMachineNumber, facePath + "\\verify_biophoto_9_" + employee.PersonalNum + ".jpg");
+                                        if (!success)
+                                            success = _czkem.SendFile(iMachineNumber, facePath + "\\verify_biophoto_9_" + employee.PersonalNum + ".jpg");
+                                    }
                                 }
+                                if (device.DeviceType.Type == "U-Face")
+                                {
+                                    FaceBll faceBll = new FaceBll();
+                                    var faceStr = faceBll.GetFaceStr(employee);
+                                    if (faceStr != "")
+                                    {
+                                        var fce = _czkem.SetUserFaceStr(1, employee.PersonalNum, 1, faceStr, faceStr.Length);
+                                    }
+                                }
+
 
                             }
 

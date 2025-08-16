@@ -1966,5 +1966,11 @@ namespace UI
             FrmZkRoleManagment frmZkRoleManagment = new FrmZkRoleManagment();
             frmZkRoleManagment.ShowDialog();
         }
+
+        private void navBarGetLogs_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            FrmGetLogs frmGetLogs = new FrmGetLogs();
+            frmGetLogs.ShowDialog();
+        }
     }
 }

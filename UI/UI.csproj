@@ -300,6 +300,7 @@
     </Reference>
     <Reference Include="Telerik.WinControls, Version=2019.1.117.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Telerik.WinControls.GridView, Version=2019.1.117.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
       <Private>True</Private>
@@ -395,6 +396,12 @@
     </Compile>
     <Compile Include="FrmGetInfo.Designer.cs">
       <DependentUpon>FrmGetInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGetLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGetLogs.Designer.cs">
+      <DependentUpon>FrmGetLogs.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmHolidaygroup.cs">
       <SubType>Form</SubType>
@@ -544,6 +551,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGetInfo.resx">
       <DependentUpon>FrmGetInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGetLogs.resx">
+      <DependentUpon>FrmGetLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHolidaygroup.resx">
       <DependentUpon>FrmHolidaygroup.cs</DependentUpon>

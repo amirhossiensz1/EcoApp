@@ -371,3 +371,4 @@ H:\My Source\Light\Controller Project\Controller\Eco\UI\obj\Debug\Eco.applicatio
 H:\My Source\Light\Controller Project\Controller\Eco\UI\obj\Debug\UI.csproj.CopyComplete
 H:\My Source\Light\Controller Project\Controller\Eco\UI\obj\Debug\Eco.exe
 H:\My Source\Light\Controller Project\Controller\Eco\UI\obj\Debug\Eco.pdb
+H:\My Source\Light\Controller Project\Controller\Eco\UI\obj\Debug\Eco.FrmGetLogs.resources

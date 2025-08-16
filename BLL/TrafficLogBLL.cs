@@ -63,6 +63,10 @@ namespace BLL
                 throw;
             }
         }
+        public void InsertTrafficLog(TrafficLog t)
+        {
+            new TrafficLogDb().Insert(t);
+        }
 
         private string ConvertDate(string taDate)
         {
@@ -125,6 +129,13 @@ namespace BLL
             day = (day.Length == 1) ? "0" + day : day;
             month = (month.Length == 1) ? "0" + month : month;
             return ConvertDate((year + month + day));
+        }
+
+        public List<TrafficLog> SelectLog(TrafficLog t)
+        {
+            var trafficLogDb = new TrafficLogDb();
+            var trafficLogs = trafficLogDb.SelectLog(t);
+            return trafficLogs;
         }
 
 

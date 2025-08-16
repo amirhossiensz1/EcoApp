@@ -948,6 +948,11 @@ namespace BLL
             return new EmployeeDb().SelectNationalCodeFromTaInDevice(deviceIp);
         }
 
+        public Employee SelectEmployeeWithPersonalNumber(string PersonalNumber)
+        {
+            return new EmployeeDb().SelectOneEmployee(PersonalNumber);
+        }
+
         public Employee SelectEmployee(string empNationalCode)
         {
             return new EmployeeDb().SelectEmployee(empNationalCode);

@@ -158,6 +158,21 @@ namespace DBLayer
             }
         }
 
+        public List<TrafficLog> SelectLog(TrafficLog t)
+        {
+            try
+            {
+                var echoDbEntities = new EchoDBEntities();
+                var log = echoDbEntities.TrafficLogs.Where(x => x.EmpID == t.EmpID && x.DeviceID == t.DeviceID && x.Date == t.Date && x.Time == t.Time && x.ReqType == t.ReqType).ToList();
+                return log;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        }
+
         //public List<sp_reportTrafficStatistics_Result> GetTrafiicStatistic(string fromDate, string toDate)
         //{
         //    try

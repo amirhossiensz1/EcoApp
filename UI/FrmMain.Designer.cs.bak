@@ -135,7 +135,6 @@ namespace UI
             this.OnlineLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NewOpert = new System.Windows.Forms.ToolStripMenuItem();
             this.EditOpert = new System.Windows.Forms.ToolStripMenuItem();
-            this.navBarGetLogs = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.CheckEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
@@ -194,7 +193,9 @@ namespace UI
             // 
             // menu
             // 
+            this.menu.Appearance.BackColor = System.Drawing.Color.Lavender;
             this.menu.Appearance.BackColor2 = ((System.Drawing.Color)(resources.GetObject("menu.Appearance.BackColor2")));
+            this.menu.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.menu.Appearance.Options.UseBackColor = true;
             this.menu.Appearance.Options.UseBorderColor = true;
             resources.ApplyResources(this.menu, "menu");
@@ -251,8 +252,7 @@ namespace UI
             this.Holidays,
             this.EmployeeGroup,
             this.navBarFirmWare,
-            this.AccessArea,
-            this.navBarGetLogs});
+            this.AccessArea});
             this.nvBrCtrlMenu.LookAndFeel.SkinName = "VS2010";
             this.nvBrCtrlMenu.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.nvBrCtrlMenu.Name = "nvBrCtrlMenu";
@@ -291,6 +291,7 @@ namespace UI
             // 
             // gridViewEmp
             // 
+            this.gridViewEmp.Appearance.GroupPanel.BackColor = System.Drawing.Color.OldLace;
             this.gridViewEmp.Appearance.GroupPanel.Options.UseBackColor = true;
             this.gridViewEmp.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridViewEmp.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -587,8 +588,7 @@ namespace UI
             this.navBarLog.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarLog.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarAllLog),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navbarChartTraffic),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGetLogs)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navbarChartTraffic)});
             this.navBarLog.Name = "navBarLog";
             this.navBarLog.ItemChanged += new System.EventHandler(this.navBarLog_ItemChanged);
             // 
@@ -895,12 +895,6 @@ namespace UI
             this.EditOpert.Name = "EditOpert";
             resources.ApplyResources(this.EditOpert, "EditOpert");
             // 
-            // navBarGetLogs
-            // 
-            resources.ApplyResources(this.navBarGetLogs, "navBarGetLogs");
-            this.navBarGetLogs.Name = "navBarGetLogs";
-            this.navBarGetLogs.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarGetLogs_LinkClicked);
-            // 
             // MainFrm
             // 
             this.AllowDrop = true;
@@ -1030,7 +1024,6 @@ namespace UI
         private NavBarItem AccessArea;
         private GridColumn GrdAcsGRoup;
         private ToolStripMenuItem مدیریتنقشدردستگاهToolStripMenuItem;
-        private NavBarItem navBarGetLogs;
     }
 }
 
